@@ -1,1 +1,4 @@
-# m-b_thesis
+# Mind and Brain Thesis 
+
+# The following document includes: 
+
