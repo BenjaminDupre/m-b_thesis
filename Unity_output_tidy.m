@@ -17,10 +17,14 @@ behavioral_b = [];
 %%% ==============Iteration for every Participant.==============
 %all2 =cell(1,22);                                                           % preallocate for known total of participants.!!!CREATS ERROR 
 for i=numberOfFolders:-1:1
+    
     ptcp=parti(i).name;
     all2(i).ptcp = ptcp;
         
     % Setup the Import Options and import the data    
+
+        % function all= importdata(,) Trying to make a function to make it
+        % faster - no succes atm. 
         opts = delimitedTextImportOptions("NumVariables", 28);
         
         % Specify range and delimiter
@@ -69,7 +73,7 @@ for i=numberOfFolders:-1:1
         opts = setvaropts(opts, "ECG", 'DecimalSeparator', ",");
         
         % Define Work Space by Participant For Every Set. 
-                                                                 % This preallocates space
+        % This preallocates space
         mainFolder = fullfile('C:', 'Users', 'dupre', 'Dropbox', ...
             'My Mac (glaroam2-185-117.wireless.gla.ac.uk)', 'Documents',...
             'Research MaxPlank','P1_propioception', 'Data_Wrangling',...
@@ -86,7 +90,7 @@ for i=numberOfFolders:-1:1
             thissubdir = subdirs(j).name;
             subdirpath = join([mainFolder filesep thissubdir],'');
             data = readtable([subdirpath  filesep 'everything.csv'], opts);
-            data.set = ones(height(data),1)*j; 
+            data.set = ones(height(data),1)*j; % Creates varaible Set with the number of Set
             all = [all ; data];
         end
         
