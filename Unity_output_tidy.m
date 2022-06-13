@@ -228,15 +228,11 @@ for i=numberOfFolders:-1:1
         'level','mistake','stimuli','participant'});                        % this adds names 
     
     clear line mistakes mistakesf indx
-    
 
-    
-    %for m=1:size(all2,2)
         behavioral_a =[];
         responsetime = all2(i).rtime.data;
         responsetime.ptcp = ones(size(all2(i).rtime.data,1),1)*i;
         behavioral_a = [behavioral_a;responsetime ];
-    %end
     
     for l=1:size(mistakes_ag,1)                                             % It uses variable mistakes_ag to add a variable that has a value one when 
         behavioral_a.accuracy(behavioral_a.ptcp == ...                      % the ball is placed in the wrong hold.
@@ -247,7 +243,7 @@ for i=numberOfFolders:-1:1
     behavioral_b = [behavioral_b; behavioral_a ];
     clear responsetime l behavioral_a
        
-        % Checking for mistakes and error in loaded participant data 
+    %% Checking for mistakes and error in loaded participant data 
     if size(categories(all.feedbackType),1)>3                           % If there are more than three conditions then write in file 
         fileID = fopen(['C:' filesep 'Users' filesep 'dupre' filesep...
             'verzeichnis.txt'],'a');
@@ -282,8 +278,16 @@ for i=numberOfFolders:-1:1
             {'set'}) lvl];                                              % this codes adds a first column with the set number
         all_lvl = [all_lvl; c];
     end
+    % adding the feedbacktype to the stimulus
+    for z=min(behavioral_b.set):max(behavioral_b.set)
+        for y=min(behavioral_b.lvl):max(behavioral_b.lvl)
+        behavioral_b(all_lvl.set==z & all_lvl.level==y,8) = all_lvl(all_lvl.set==z & all_lvl.level==y,3);
+        end
+    end
+    clear z y
+    behavioral_b.Properties.VariableNames{'Var8'} = 'Stimulus';
 
-        % Getting level with problems and saving them in a file 
+    % Getting level with problems and saving them in a file 
 
         for j= min(a.set):max(a.set)
              b = a(a.set==j,:);                                            % this subsamples to one set the table
