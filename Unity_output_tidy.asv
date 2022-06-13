@@ -1,6 +1,5 @@
 tic
 % Author : Benjamin Dupré
-% Raw Data Prep & Wrangling for Analysis
 
 %% Defining Working Space and Participant Iteration.  
 allFolder = ['C:\Users\dupre\Dropbox\My Mac (glaroam2-185-117.wireless.' ...                                                                      
@@ -260,7 +259,7 @@ for i=numberOfFolders:-1:1
     clear fileID ans
     %%% ==============  Gets the number of observation feedtype per level.
     a  = groupcounts(all,{'set', 'levelCounter', 'feedbackType'});      % groups data into set, level and condition
-    a = a(a.GroupCount>276,:);                                          % elimine the rows within the two second overlap from the previous condition is not the new one
+    a = a(a.GroupCount>276,:);                                          % elimine the rows within the two second overlap from the previous condition inot the new one
     % Labeling each level with one feedtype by aplying it to the 
     % maximun.
     all_lvl = [];
@@ -284,6 +283,14 @@ for i=numberOfFolders:-1:1
     end
 
         % Getting level with problems and saving them in a file 
+
+
+%         conflicting= d.GroupCount((d.GroupCount ~= 12));                    % I have the sets with problems, next I will go over each level to find the problem at a particular level.
+%         f_l = unique(all_lvl(:,"set"));                                     % this test whether there is 12 counted conditions per set
+%         loop = all_lvl("set"==f_l((d.GroupCount ~= 12),:));                 % creats a vector with conflicting sets
+%         for it = loop
+%             groupcounts(all_lvl(all_lvl.set==it,:),"");
+%         end
 
         for j= min(a.set):max(a.set)
              b = a(a.set==j,:);                                            % this subsamples to one set the table

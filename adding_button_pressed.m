@@ -1,20 +1,20 @@
 % Example 
-i=11
+i=20
 all = all2(i).data;
 % Visualization of the problem. requires using A from Solution 1 in line 25
 tiledlayout(3,1)
 ax1 = nexttile;
-plot(all2(11).data.time,all2(11).data.buttonHasBeenPressed,all2(11).data.time,categorical(A(:,5)),all2(11).data.time,all2(11).data.buttonCurrentlyPressed)
+plot(all2(20).data.time,all2(20).data.buttonHasBeenPressed,all2(20).data.time,categorical(B(:,1)),all2(20).data.time,all2(20).data.buttonCurrentlyPressed)
 ax2 = nexttile;
-plot(ax2,all2(11).data.time,all2(11).data.levelCounter,'p')
+plot(ax2,all2(20).data.time,all2(20).data.levelCounter,'p')
 ax3=nexttile;
-plot(ax3,all2(11).data.time,all2(11).data.set,'b')
+plot(ax3,all2(20).data.time,all2(20).data.set,'b')
 % Second Visualization of the Problem
 tiledlayout(2,1)
 ax1 = nexttile;
-plot(all2(11).data.time,categorical(all2(11).data.levelCounter),all2(11).data.time,categorical(A(:,5)*35),all2(11).data.time,categorical(all2(11).data.buttonHasBeenPressed))
+plot(all2(20).data.time,categorical(all2(20).data.levelCounter),all2(20).data.time,categorical(A(:,5)*35),all2(20).data.time,categorical(all2(20).data.buttonHasBeenPressed))
 ax2 = nexttile;
-plot(all2(11).data.time,all2(11).data.buttonHasBeenPressed)
+plot(all2(20).data.time,all2(20).data.buttonHasBeenPressed)
 
 
 % Looking into additional variables: Explosionis Trigered -  Makes no sense
@@ -37,43 +37,51 @@ B=[];
 for set = 1:3
     for lvl=0:1:35
         meanwhile=all(all.levelCounter==lvl & all.set==set,:);
-        if height(unique(meanwhile(:,"buttonCurrentlyPressed")))>=2 && height(unique(meanwhile(meanwhile.levelCounter==lvl-1,"buttonCurrentlyPressed")))<2
+        if height(unique(meanwhile(:,"buttonCurrentlyPressed")))>=2 && height(unique(all(all.levelCounter==lvl-1 & all.set==set,"buttonCurrentlyPressed")))<2
             fprintf("Button pressed in lvl %d - set %d need to go for following change of ball position\n",lvl,set)
             A = zeros(height(meanwhile)-1,1); 
             A2= zeros(height(meanwhile)-1,1);
-            A3= zeros(height(meanwhile)-1,1);
+            A3= zeros(height(meanwhile)-1,1);            
             for r = 2:height(meanwhile)
                 if sum(A)<1                                                 % going through all observations one level at a time. 
                     A(r,1) = (meanwhile.buttonHasBeenPressed(r-1)=="TEMPLATE_IS_ACTIVE" & meanwhile.buttonHasBeenPressed(r)=='AFTER_TEMPLATE_IS_ACTIVE');       % through one i the ball changes position. 
                 else 
                     A2(r,1) = (meanwhile.buttonHasBeenPressed(r-1)=="TEMPLATE_IS_ACTIVE" & meanwhile.buttonHasBeenPressed(r)=='AFTER_TEMPLATE_IS_ACTIVE');
-                    if A2>= 1
+                    if sum(A2)>= 1       
                             A3(r,1)  = meanwhile.redBallPosition(r-1)~=meanwhile.redBallPosition(r);
+                            break
                     end
                 end
             end
-            if height(unique(meanwhile(:,"buttonCurrentlyPressed")))>=2 && height(unique(meanwhile(meanwhile.levelCounter==lvl-1,"buttonCurrentlyPressed")))>=2
-               fprintf("Previously Pressed - Normal way to Start in lvl %d - set %d \n",lvl,set)
-               A = zeros(height(meanwhile)-1,1);
-               for r = 2:height(meanwhile)                                         
-                   A(r,1) = meanwhile.redBallPosition(r-1)~=meanwhile.redBallPosition(r); % going through all observations one level at a time. 
-               end
-           else
-            fprintf("Take the second ball move or change in Button have been pressed in lvl %d - set %d \n",lvl,set)
-           end
+            A=[0;A3];
+            clear A2 A3
        else
             fprintf("Normal way to Start lvl in lvl %d - set %d \n",lvl,set)
             A = zeros(height(meanwhile)-1,1);
             for r = 2:height(meanwhile)                                                   % going through all observations one level at a time. 
                 A(r,1) = meanwhile.redBallPosition(r-1)~=meanwhile.redBallPosition(r);          % through one i the ball changes position. 
             end
+        else 
+            A(r,1) = meanwhile=all(all.levelCounter==lvl & all.set==set,:);
        end
         B= [B;A];
     end
 end
 
+indx = find(B(:,1)==1);                                                 % I use find because I need the row number (instead of inequeality which is faster)
+    ver = [array2table(indx) all(indx,'levelCounter') all(indx,'set')];     % merging row_start level_counter and set
+    
+    %sub_vect = array2table(zeros(1,max(all.levelCounter)));                % preallocating space
+    START = [];                                                            % preallocating space (doesn't work)
+    for j = min(ver.set):max(ver.set)                                          
+        for k = min(ver.levelCounter):max(ver.levelCounter)                 % for every level consider the changes ball position only
+            sub_vect = ver(ver.set==j & ver.levelCounter==k,:);             % for every level save the first change in ball position.
+            START = [START ;sub_vect(1,:)];                                 % this part puts all the starts for every set and level into one long table.
+        end
+    end
+         
 
-
+    
 %% Ubungen 
 
 
