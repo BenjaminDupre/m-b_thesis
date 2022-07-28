@@ -323,8 +323,8 @@ for i=numberOfFolders:-1:1
 
     
 end
-              
-writetable(behavioral_b,[allFolder filesep 'responsetime.csv'])
+saveFolder = 'C:\Users\dupre\Documents\GitHub\m-b_thesis\Data';              
+writetable(behavioral_b,[saveFolder filesep 'responsetime.csv'])
 % Getting rid of all instrumental variables.
 clear all parti ptcp i handrot numberOfFolders subdirs r_time B ans behavioral_b
 toc
