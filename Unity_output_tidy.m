@@ -1,4 +1,4 @@
-fmcgtic
+tic
 % Author : Benjamin Dupré
 % Raw Data Prep & Wrangling for Analysis
 
@@ -14,7 +14,7 @@ tf = ismember( {parti.name}, {'.','..','__MACOSX'});                        % Fi
 parti(tf) = [];                                                             % Filters out the parent and current directory '.' and '..'
 numberOfFolders = length(parti);                                            % Geting the number of participants and length of iteration                                          
 %all2(5).ptcp = [];                                                          % preallocating space 
-behavioral_b = [];
+all_behavioral = [];
 %%% ==============Iteration for every Participant.==============
 %all2 =cell(1,22);                                                           % preallocate for known total of participants.!!!CREATS ERROR 
 for i=numberOfFolders:-1:1
@@ -196,7 +196,7 @@ for i=numberOfFolders:-1:1
     bhv.Properties.VariableNames = {'set' 'lvl' 'start' 'end' 'diff'};      % this gives names to columns
     % bhv.stimulus = all_lvl.stimulus LEAVING STIMULUS COLUMN OUT!
     
-    bhv(bhv.diff <= 0 | bhv.diff > 8 ,:)=[];                                % removing outliers 
+    bhv(bhv.diff <= 0 | bhv.diff > 11 ,:)=[];                               % removing outliers 
     B= bhv;                                                                 % creating instrumental varaible
     r_time.data = B;
     all2(i).rtime = r_time;
@@ -204,9 +204,9 @@ for i=numberOfFolders:-1:1
 
 
     %%% ============== Adding mistakes =========================================
-    %mistakes=[];                                                            % this creates intrumental matrix
+    %mistakes=[];                                                           % this creates intrumental matrix
     mistakesf=[];                                                           % this creates goal matrix
-                                                                            
+    behavioral_b = [];                                                      % this creates the behavioral with times+mistakes                 
     
     A = zeros(size(all,1)-1,4);                                            % this preallocates space for all data
     for line=1:size(all,1)-1                                               % this indicates to go over every row
@@ -243,7 +243,7 @@ for i=numberOfFolders:-1:1
     behavioral_b = [behavioral_b; behavioral_a ];
     clear responsetime l behavioral_a
        
-    %% Checking for mistakes and error in loaded participant data 
+    %% Registering  mistakes and error in loaded participant data 
     if size(categories(all.feedbackType),1)>3                           % If there are more than three conditions then write in file 
         fileID = fopen(['C:' filesep 'Users' filesep 'dupre' filesep...
             'verzeichnis.txt'],'a');
@@ -317,16 +317,18 @@ for i=numberOfFolders:-1:1
            end
        end
 
-       
+       % Also saving al into one behavioral object 
+       all_behavioral = behavioral_b
         % Clear all and close
         clear d  b c Idx j sset r a opt fileID
+        
 
     
 end
 saveFolder = 'C:\Users\dupre\Documents\GitHub\m-b_thesis\Data';              
-writetable(behavioral_b,[saveFolder filesep 'responsetime.csv'])
+writetable(all_behavioral,[saveFolder filesep 'behavior.csv'])
 % Getting rid of all instrumental variables.
-clear all parti ptcp i handrot numberOfFolders subdirs r_time B ans behavioral_b
+clear all_behavioral 
 toc
 
 
