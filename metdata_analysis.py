@@ -10,57 +10,178 @@ import matplotlib.pyplot as plt
 '''path = "C:/Users/dupre/Dropbox/My Mac (glaroam2-185-117.wireless.gla.ac.uk)/Documents/Research MaxPlank/P1_propioception/R_tsvr_presentation/data/"
 metadat  = pd.read_csv(os.path.join(path,'meta-data.csv'),na_values=" ")'''
 notebook_path = os.path.abspath("metdata_analysis.py")
-metadat  = pd.read_csv(os.path.join(os.path.dirname(notebook_path), "Data\\meta-data.csv"),na_values=" ")
-# Getting Score test
-    # Laterality Quotient. 
-laterality = (metadat[['EHQ1',
-                 'EHQ2',
-                 'EHQ3',
-                 'EHQ4',
-                 'EHQ5',
-                 'EHQ6',
-                 'EHQ7',
-                 'EHQ8',
-                 'EHQ9',
-                 'EHQ10']]-3)*25 
-metadat["laterality"] =laterality.sum(axis=1)
-metadat.drop(22)
+metadat1  = pd.read_csv(os.path.join(os.path.dirname(notebook_path), "Data\\meta-data.csv"),na_values=" ")
+metadat  = metadat1.drop([14, 22])
+
+# Getting Score test # Laterality Quotient. 
+laterality = metadat.loc[:,'EHQ1':'EHQ10']
+stack = laterality.stack()
+stack[stack ==5] = 0
+stack[stack ==2] = -1
+stack[stack ==1] = -2
+stack[stack ==4] = 2
+stack[stack ==3] = 1
+metadat['laterality_s'] = (stack.unstack().sum(axis=1)/abs(stack.unstack()).sum(axis=1))*100
 
 # Adding a Histogram with the Age Distribution and Pie Chart With Sex 
 sigma = np.std(metadat.AGE)
 mu = np.mean(metadat.AGE)
 explode = (0.1,0)
 SEX, allvals = np.unique(metadat.SEX, return_counts=True)
+#colors
+colors = ['#26C281','#F5D76E']
 
 def func(pct, allvals):
     absolute = int(np.round(pct/100.*np.sum(allvals)))
     return "{:.1f}%\n({:d} )".format(pct, absolute)
 
-fig, (ax1, ax2) = plt.subplots(1, 2)
-fig.suptitle('Participants Data', x= 0)
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12,4))
+fig.suptitle('Participants Data', fontsize=18 ,x = 0.2, y = 1.01)
 
-ax1.pie(allvals,explode=explode, autopct=lambda pct: func(pct, allvals),
+ax1.pie(allvals,explode=explode, colors=colors,autopct=lambda pct: func(pct, allvals),
         shadow=True, startangle=90)
 ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
 ax1.legend( ['Femenine','Masculine'],
           title="Gender",
           loc="center left",
-          bbox_to_anchor=(1, 0, 0.5, 1))
+          bbox_to_anchor=(0.1, 0, 0.5, 1))
 
 #ax1.plt.setp( ['Femenine','Masculine'], size=8, weight="bold")
 
-ax1.set_title("Matplotlib bakery: A pie")
+ax1.set_title("(A) Pie Chart: Gender Composition")
 
-n, bins, patches = plt.hist(metadat.AGE, facecolor='g', alpha=0.75)
+n, bins, patches = plt.hist(metadat.AGE, facecolor='#26C281', alpha=0.7)
 plt.xlabel('Age')
 plt.ylabel('Frequency')
-plt.title('Histogram of Participants Age')
+plt.title(' (B) Histogram: Participants Age', loc='left')
 plt.text(40,6, f'$\mu={mu:.1f},\ \sigma={sigma:.1f}$')
 plt.axvline(mu, color = 'r', linestyle = 'dashed', linewidth = 2)
 plt.grid(True)
+plt.show()
+
+#########
+pre_score = metadat.loc[:,'pre_csq1':'pre_csq16'].sum(axis=1)
+post_score = metadat.loc[:,'post_csq1':'post_csq16'].sum(axis=1)
+mu = np.mean(pre_score/16)
+sigma = np.std(pre_score/16)
+mu1 = np.mean(post_score/16)
+sigma1 = np.std(post_score/16)
+
+fig, ax = plt.subplots()
+ax.hist(pre_score/16, histtype="barstacked", bins=20, facecolor='#26C281' ,alpha=0.6)
+ax.hist(post_score/16, histtype="barstacked", bins=20,facecolor='#757D75', alpha=0.6)
+ax.axvline(mu, color = '#26C281', linestyle = 'dashed', linewidth = 2)
+ax.axvline(mu1, color = '#757D75', linestyle = 'dashed', linewidth = 2)
+ax.set_title("Pre and Post Cybersicknes Questionaire")
+ax.legend( [f'Pre VR $\mu={mu:.2f},\ \sigma={sigma:.2f}$',f'Post VR $\mu={mu1:.2f},\ \sigma={sigma1:.2f}$'],
+          title="Gender",
+          loc="center left",
+          bbox_to_anchor=(0.5, 0.35, 0.5, 1))
 
 plt.show()
-'''   
+### Comparing Two Samples 
+# compare samples
+stat, p = sp.stats.ttest_rel(pre_score, post_score)
+print('Statistics=%.3f, p=%.3f' % (stat, p))
+# interpret
+alpha = 0.05
+if p > alpha:
+	print('Same distributions (fail to reject H0)')
+else:
+	print('Different distributions (reject H0)')
+
+
+####### VRF Qestionaire
+      
+
+
+Questions = 'datagloves felt unnatural to wear','difficult to remember the location of the red ball',\
+'difficulty in detectingand counting my heartbeat','easy to remember the location of the red ball',\
+'easy to remember the location of the red ball when haptic was congruent',\
+'distracted when the  haptic feedback was incongruent',\
+'did not recognize the differences in haptic feedback because I was concentrated on the task',\
+'haptic feedback I felt  did not influence my performance'\
+,'easy to remember the location of the red ball',' in control of the virtual  hands'\
+,'ball felt natural with congruent haptic feedback', 'my  performance decreased when  there was no haptic feedback'\
+,'faster when the haptic feedback was given', 'felt right target to place the red ball with haptic'\
+,'performance improved when there was no haptic feedback', ' ball I was holding felt  real when there was haptic  feedback'\
+,'easy to remember  the location of the red ball  when there was no haptic'\
+,'frustrated by the  game at times', ' easier to count my  heartbeat at the beginning of  the experiment'\
+,'task was fun at times', 'my  self-perceived heartbeat  detection was better at the end  of the experiment'\
+,'for a moment felt as if the virtual hands were  my own hands','felt natural as I move my  hands '\
+,'data gloves have increased my  sense of presence in virtual  environment'\
+,' the experiment distanced me from  my own body',' haptic feedback I received has improved my performance'\
+,'the  experiment brought me closer my own body'
+
+
+    
+    
+        
+       
+category_names = [ "does not apply at all" , "does not apply" ,
+                  "reather not applicable" , "niether nor applicable" , 
+                  "reather applies" , "applies" , "totally applies" ,]
+     
+results = { f'({x}) '+ Questions[x-1]  : list(np.bincount(metadat[f'post_VRF{x}'],minlength = 8)) for x in range(1,28) }
+
+def survey(results, category_names):
+    """
+    Parameters
+    ----------
+    results : dict
+        A mapping from question labels to a list of answers per category.
+        It is assumed all lists contain the same number of entries and that
+        it matches the length of *category_names*.
+    category_names : list of str
+        The category labels.
+    """
+    labels = list(results.keys())
+    data = np.array(list(results.values()))[:,1:8]
+    data_cum = data.cumsum(axis=1)
+    category_colors = plt.colormaps['RdYlGn'](
+        np.linspace(0.15, 0.85, data.shape[1]))
+
+    fig, ax = plt.subplots(figsize=(17, 12))
+    ax.invert_yaxis()
+    ax.xaxis.set_visible(False)
+    ax.set_xlim(0, np.sum(data, axis=1).max())
+
+    for i, (colname, color) in enumerate(zip(category_names, category_colors)):
+        widths = data[:, i]
+        starts = data_cum[:, i] - widths
+        rects = ax.barh(labels,widths, left=starts, height=0.5,
+                        label=colname, color=color)
+
+        r, g, b, _ = color
+        text_color = 'white' if r * g * b < 0.5 else 'darkgrey'
+            # format the number of decimal places and replace 0 with an empty string
+        #bar_labels = widths
+        
+        bar_labels = np.char.replace(list(map(str,widths)),'0','')  #widths[j] if widths[j] > 0 for j in enumerate(widths) else ''  
+        ax.bar_label(rects,labels=bar_labels ,label_type='center', color=text_color)
+    ax.legend(ncol=len(category_names), bbox_to_anchor=(0, 1),
+              loc='lower left', fontsize='small')
+
+    return fig, ax
+
+
+survey(results, category_names)
+plt.show()
+    
+
+    
+
+
+
+
+
+
+
+
+'''  
+ 
+:prefix[a] + ' csq16'
+
 # Geting pre-Simulator Sickness Questionnaire scores 
 # Scoring method from "Simulator Sickness Questionnaire: An Enhanced Method for Quantifying Simulator Sickness"
 pre = metadat[['pre_csq1',
@@ -86,6 +207,8 @@ pre.loc[pre['pre_csq1']==1, :] = pre.loc[pre['pre_csq1']==1,:]*9.54
 
 pre == 2, 7.58
 pre = 3, 13.92
+
+
 #TS = np.sum()
 metadat["pre"] =pre.sum(axis=1)
 
