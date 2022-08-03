@@ -170,20 +170,48 @@ survey(results, category_names)
 plt.show()
     
 
-#### Getting real amount of hearbeats for the pre and the post 
+#### Getting real amount of hearbeats for the pre and the post
+
+
+# bpm fuction for my heart rate files using heartpy
+''' Atention:  problem when file is corrupted and has commas where not required ''' 
+
+def get_heartcount(filepath):
+    hr = pd.read_csv(filepath,sep=';',decimal=",")
+    hr = hr.loc[:,'TimeElapsedArduinoBeginInMicroSec']
+    try: 
+        start = hr.index[hr==99999999] 
+        stop =  hr.index[hr==88888888]
+        hr = hr.iloc[int(start[0])+1:int(stop[0])]
+    except: 
+        print('Error in Series - Many Commas')
+        start = hr.index[hr=='99999999'] 
+        stop =  hr.index[hr=='88888888']
+        hr = hr.iloc[int(start[0])+1:int(stop[0])]
+        hr = [s.replace(',','.') for s in hr]
+    hr = np.asarray(hr)
+    hr = hr.astype(float)
+    working_data, measures = hp.process(hr, 133)
+    return measures['bpm']
+
 
 # getting all folder 
-
-   
+path = "C:\\Users\\dupre\\Dropbox\\My Mac (glaroam2-185-117.wireless.gla.ac.uk)\\Documents\\Research MaxPlank\\P1_propioception\\Data_Wrangling\\Matlab Analysis\\Data_Wrangling"
+all_path = os.listdir(path) 
+only_dir =  [f for f in os.listdir(path) if os.path.isdir(os.path.join(path,f))]
+only_dir.remove('__MACOSX')
+heart_result=[]
+for x in range(len(only_dir)):
+    file_list_path = os.path.join(path,only_dir[x])
+    only_files =  [f for f in os.listdir(file_list_path) if os.path.isfile(os.path.join(file_list_path,f))]
+    for y in range(len(only_files)):
+        filepath = os.path.join(file_list_path,only_files[y])
+        heart_result.append(get_heartcount(filepath))
+        
 #### Geting Heart beat count 
 filepath = "C:\\Users\\dupre\\Dropbox\\My Mac (glaroam2-185-117.wireless.gla.ac.uk)\\Documents\\Research MaxPlank\\P1_propioception\\Data_Wrangling\\Matlab Analysis\\Data_Wrangling\\tsvr06\\_20200908_14.36.45_411517_IntroceptiveLog.csv"
-hr = pd.read_csv(filepath,sep=';',decimal=",")
-hr = hr.loc[:,'TimeElapsedArduinoBeginInMicroSec']
-start = hr.index[hr==99999999]
-stop =  hr.index[hr==88888888]
-hr = hr.iloc[int(start[0])+1:int(stop[0])]
-hr = np.asarray(hr)
-working_data, measures = hp.process(hr, 133)
+
+
 
 
 
