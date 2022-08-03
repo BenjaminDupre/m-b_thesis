@@ -2,7 +2,8 @@
 import numpy as np  # not sure for what
 import scipy as sp
 import pandas as pd 
-import seaborn as sb
+#import seaborn as sb
+import heartpy as hp
 import os 
 import matplotlib.pyplot as plt
 
@@ -169,10 +170,20 @@ survey(results, category_names)
 plt.show()
     
 
-    
+#### Getting real amount of hearbeats for the pre and the post 
 
+# getting all folder 
 
-
+   
+#### Geting Heart beat count 
+filepath = "C:\\Users\\dupre\\Dropbox\\My Mac (glaroam2-185-117.wireless.gla.ac.uk)\\Documents\\Research MaxPlank\\P1_propioception\\Data_Wrangling\\Matlab Analysis\\Data_Wrangling\\tsvr06\\_20200908_14.36.45_411517_IntroceptiveLog.csv"
+hr = pd.read_csv(filepath,sep=';',decimal=",")
+hr = hr.loc[:,'TimeElapsedArduinoBeginInMicroSec']
+start = hr.index[hr==99999999]
+stop =  hr.index[hr==88888888]
+hr = hr.iloc[int(start[0])+1:int(stop[0])]
+hr = np.asarray(hr)
+working_data, measures = hp.process(hr, 133)
 
 
 
