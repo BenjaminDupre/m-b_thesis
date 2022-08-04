@@ -6,12 +6,13 @@ import pandas as pd
 import heartpy as hp
 import os 
 import matplotlib.pyplot as plt
+from pathlib import Path
 
 # Loading Data
 '''path = "C:/Users/dupre/Dropbox/My Mac (glaroam2-185-117.wireless.gla.ac.uk)/Documents/Research MaxPlank/P1_propioception/R_tsvr_presentation/data/"
 metadat  = pd.read_csv(os.path.join(path,'meta-data.csv'),na_values=" ")'''
 notebook_path = os.path.abspath("metdata_analysis.py")
-metadat1  = pd.read_csv(os.path.join(os.path.dirname(notebook_path), "Data\\meta-data.csv"),na_values=" ")
+metadat1  = pd.read_csv(os.path.join(os.path.dirname(notebook_path), Path("Data/meta-data.csv")),na_values=" ")
 metadat  = metadat1.drop([14, 22])
 
 # Getting Score test # Laterality Quotient. 
@@ -139,8 +140,7 @@ def survey(results, category_names):
     labels = list(results.keys())
     data = np.array(list(results.values()))[:,1:8]
     data_cum = data.cumsum(axis=1)
-    category_colors = plt.colormaps['RdYlGn'](
-        np.linspace(0.15, 0.85, data.shape[1]))
+    category_colors = plt.colormaps['RdYlGn'](np.linspace(0.15, 0.85, data.shape[1]))
 
     fig, ax = plt.subplots(figsize=(17, 12))
     ax.invert_yaxis()
