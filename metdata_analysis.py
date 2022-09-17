@@ -175,7 +175,8 @@ plt.show()
 
 # bpm fuction for my heart rate files using heartpy
 ''' Atention:  problem when file is corrupted and has commas where not required ''' 
-
+import warnings
+warnings.filterwarnings("error")
 def get_heartcount(filepath):
     hr = pd.read_csv(filepath,sep=';',decimal=",")
     hr = hr.loc[:,'TimeElapsedArduinoBeginInMicroSec']
@@ -184,14 +185,21 @@ def get_heartcount(filepath):
         stop =  hr.index[hr==88888888]
         hr = hr.iloc[int(start[0])+1:int(stop[0])]
     except: 
-        print('Error in Series - Many Commas')
+        print(f'Error in Series {x} file {y}- Many Commas \n')
         start = hr.index[hr=='99999999'] 
         stop =  hr.index[hr=='88888888']
         hr = hr.iloc[int(start[0])+1:int(stop[0])]
         hr = [s.replace(',','.') for s in hr]
     hr = np.asarray(hr)
     hr = hr.astype(float)
-    working_data, measures = hp.process(hr, 133)
+    try:
+        working_data, measures = hp.process(hr, 133)
+    except:
+        'Noisy Data'
+        if min(hr) < 0  and max(hr) < 0:
+            hr = hr*-1
+            scaled = hp.scale_sections(hr, sample_rate=133, windowsize=266)
+            working_data, measures = hp.process(scaled, 133)
     return measures['bpm']
 
 
