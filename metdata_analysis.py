@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 from pathlib import Path
 
 # Loading Data
-'''path = "C:/Users/dupre/Dropbox/My Mac (glaroam2-185-117.wireless.gla.ac.uk)/Documents/Research MaxPlank/P1_propioception/R_tsvr_presentation/data/"
+'''path = "C:/Users/49177/Dropbox/My Mac (glaroam2-185-117.wireless.gla.ac.uk)/Documents/Research MaxPlank/P1_propioception/R_tsvr_presentation/data/"
 metadat  = pd.read_csv(os.path.join(path,'meta-data.csv'),na_values=" ")'''
 notebook_path = os.path.abspath("metdata_analysis.py")
 metadat1  = pd.read_csv(os.path.join(os.path.dirname(notebook_path), Path("Data/meta-data.csv")),na_values=" ")
@@ -204,7 +204,7 @@ def get_heartcount(filepath):
 
 
 # getting all folder 
-path = "C:\\Users\\dupre\\Dropbox\\My Mac (glaroam2-185-117.wireless.gla.ac.uk)\\Documents\\Research MaxPlank\\P1_propioception\\Data_Wrangling\\Matlab Analysis\\Data_Wrangling"
+path = "C:\\Users\\49177\\Dropbox\\My Mac (glaroam2-185-117.wireless.gla.ac.uk)\\Documents\\Research MaxPlank\\P1_propioception\\Data_Wrangling\\Matlab Analysis\\Data_Wrangling"
 all_path = os.listdir(path) 
 only_dir =  [f for f in os.listdir(path) if os.path.isdir(os.path.join(path,f))]
 only_dir.remove('__MACOSX')
@@ -217,7 +217,7 @@ for x in range(len(only_dir)):
         heart_result.append(get_heartcount(filepath))
         
 #### Geting Heart beat count 
-filepath = "C:\\Users\\dupre\\Dropbox\\My Mac (glaroam2-185-117.wireless.gla.ac.uk)\\Documents\\Research MaxPlank\\P1_propioception\\Data_Wrangling\\Matlab Analysis\\Data_Wrangling\\tsvr06\\_20200908_14.36.45_411517_IntroceptiveLog.csv"
+filepath = "C:\\Users\\49177\\Dropbox\\My Mac (glaroam2-185-117.wireless.gla.ac.uk)\\Documents\\Research MaxPlank\\P1_propioception\\Data_Wrangling\\Matlab Analysis\\Data_Wrangling\\tsvr06\\_20200908_14.36.45_411517_IntroceptiveLog.csv"
 
 
 
