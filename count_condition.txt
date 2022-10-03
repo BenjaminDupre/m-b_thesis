@@ -1,0 +1,6 @@
+Problem for tsvr20 in level 34. set 0. Condition:Difference under 400
+Problem for tsvr17 in level 5. set 1. Condition:Too long period Sum 
+Problem for tsvr17 in level 11. set 1. Condition:Too long period Sum 
+Problem for tsvr17 in level 15. set 1. Condition:Difference under 400
+Problem for tsvr15 in level 0. set 1. Condition:Difference under 400
+Problem for tsvr15 in level 11. set 1. Condition:Too long period Sum 

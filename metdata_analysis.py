@@ -56,7 +56,7 @@ n, bins, patches = plt.hist(metadat.AGE, facecolor='#26C281', alpha=0.7)
 plt.xlabel('Age')
 plt.ylabel('Frequency')
 plt.title(' (B) Histogram: Participants Age', loc='left')
-plt.text(40,6, f'$\mu={mu:.1f},\ \sigma={sigma:.1f}$')
+plt.text(40,6, r'$\mu={mu:.1f},\ \sigma={sigma:.1f}$')
 plt.axvline(mu, color = 'r', linestyle = 'dashed', linewidth = 2)
 plt.grid(True)
 plt.show()
@@ -75,7 +75,7 @@ ax.hist(post_score/16, histtype="barstacked", bins=20,facecolor='#757D75', alpha
 ax.axvline(mu, color = '#26C281', linestyle = 'dashed', linewidth = 2)
 ax.axvline(mu1, color = '#757D75', linestyle = 'dashed', linewidth = 2)
 ax.set_title("Pre and Post Cybersicknes Questionaire")
-ax.legend( [f'Pre VR $\mu={mu:.2f},\ \sigma={sigma:.2f}$',f'Post VR $\mu={mu1:.2f},\ \sigma={sigma1:.2f}$'],
+ax.legend( [r'Pre VR $\mu={mu:.2f},\ \sigma={sigma:.2f}$',r'Post VR $\mu={mu1:.2f},\ \sigma={sigma1:.2f}$'],
           title="Gender",
           loc="center left",
           bbox_to_anchor=(0.5, 0.35, 0.5, 1))
@@ -140,26 +140,26 @@ def survey(results, category_names):
     labels = list(results.keys())
     data = np.array(list(results.values()))[:,1:8]
     data_cum = data.cumsum(axis=1)
-    category_colors = plt.colormaps['RdYlGn'](np.linspace(0.15, 0.85, data.shape[1]))
+    category_colorss = plt.get_cmap('coolwarm')(np.linspace(0.15, 0.85, data.shape[1])) 
 
     fig, ax = plt.subplots(figsize=(17, 12))
     ax.invert_yaxis()
     ax.xaxis.set_visible(False)
     ax.set_xlim(0, np.sum(data, axis=1).max())
 
-    for i, (colname, color) in enumerate(zip(category_names, category_colors)):
+    for i, (colname, color) in enumerate(zip(category_names, category_colorss)):
         widths = data[:, i]
         starts = data_cum[:, i] - widths
         rects = ax.barh(labels,widths, left=starts, height=0.5,
                         label=colname, color=color)
-
+        
         r, g, b, _ = color
         text_color = 'white' if r * g * b < 0.5 else 'darkgrey'
-            # format the number of decimal places and replace 0 with an empty string
+        # format the number of decimal places and replace 0 with an empty string
         #bar_labels = widths
         
-        bar_labels = np.char.replace(list(map(str,widths)),'0','')  #widths[j] if widths[j] > 0 for j in enumerate(widths) else ''  
-        ax.bar_label(rects,labels=bar_labels ,label_type='center', color=text_color)
+        crct_labels = np.char.replace(list(map(str,widths)),'0','')  #widths[j] if widths[j] > 0 for j in enumerate(widths) else ''  
+        ax.bar_label(rects, labels=crct_labels, label_type='center', color=text_color)
     ax.legend(ncol=len(category_names), bbox_to_anchor=(0, 1),
               loc='lower left', fontsize='small')
 
@@ -194,17 +194,21 @@ def get_heartcount(filepath):
     hr = hr.astype(float)
     try:
         working_data, measures = hp.process(hr, 133)
+        
     except:
         'Noisy Data'
         if min(hr) < 0  and max(hr) < 0:
             hr = hr*-1
             scaled = hp.scale_sections(hr, sample_rate=133, windowsize=266)
             working_data, measures = hp.process(scaled, 133)
+        else:
+            print("nothing found in ")
     return measures['bpm']
 
 
 # getting all folder 
-path = "C:\\Users\\49177\\Dropbox\\My Mac (glaroam2-185-117.wireless.gla.ac.uk)\\Documents\\Research MaxPlank\\P1_propioception\\Data_Wrangling\\Matlab Analysis\\Data_Wrangling"
+#path = "C:\\Users\\49177\\Dropbox\\My Mac (glaroam2-185-117.wireless.gla.ac.uk)\\Documents\\Research MaxPlank\\P1_propioception\\Data_Wrangling\\Matlab Analysis\\Data_Wrangling"
+path = "/Users/benjamin/Documents/Data_Wrangling/"
 all_path = os.listdir(path) 
 only_dir =  [f for f in os.listdir(path) if os.path.isdir(os.path.join(path,f))]
 only_dir.remove('__MACOSX')
@@ -219,6 +223,17 @@ for x in range(len(only_dir)):
 #### Geting Heart beat count 
 filepath = "C:\\Users\\49177\\Dropbox\\My Mac (glaroam2-185-117.wireless.gla.ac.uk)\\Documents\\Research MaxPlank\\P1_propioception\\Data_Wrangling\\Matlab Analysis\\Data_Wrangling\\tsvr06\\_20200908_14.36.45_411517_IntroceptiveLog.csv"
 
+#####
+##### Multivariate Analysis with behavioral VR Data 
+#####
+
+# Loading VR data 
+behavior  = pd.read_csv(os.path.join(os.path.dirname(notebook_path), Path("Data/behavior.csv")),na_values=" ")
+#metadat  = metadat1.drop([14, 22])
+
+# distribution of accuracy percentage by condition 
+
+# distribution of reponse time by condition 
 
 
 

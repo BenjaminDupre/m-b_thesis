@@ -76,11 +76,10 @@ for i=numberOfFolders:-1:1
         
         % Define Work Space by Participant For Every Set. 
         % This preallocates space
-        %mainFolder = fullfile('C:', 'Users', 'dupre', 'Dropbox', ...
-        %    'My Mac (glaroam2-185-117.wireless.gla.ac.uk)', 'Documents',...
-        %    'Research MaxPlank','P1_propioception', 'Data_Wrangling',...
-        %    'Matlab Analysis', 'Data_Wrangling', ptcp);                     % Opens Participants Folder
-        
+        mainFolder = fullfile('C:', 'Users', 'dupre', 'Dropbox', ...
+            'My Mac (glaroam2-185-117.wireless.gla.ac.uk)', 'Documents',...
+            'Research MaxPlank','P1_propioception', 'Data_Wrangling',...
+            'Matlab Analysis', 'Data_Wrangling', ptcp);                     % Opens Participants Folder
         mainFolder = fullfile(allFolder, ptcp); 
 
         subdirs = dir(mainFolder);                                          % Shows all availables 
@@ -249,7 +248,7 @@ for i=numberOfFolders:-1:1
        
     %% Registering  mistakes and error in loaded participant data 
     if size(categories(all.feedbackType),1)>3                           % If there are more than three conditions then write in file 
-        fileID = fopen(['/Users/benjamin/Documents/GitHub/m-b_thesis' filesep...
+        fileID = fopen(['C:' filesep 'Users' filesep 'dupre' filesep...
             'verzeichnis.txt'],'a');
         fprintf(fileID,['too many categories in ' ptcp ...
             ', removing excess categories \n']);
@@ -300,16 +299,16 @@ for i=numberOfFolders:-1:1
                 for r = min(b.levelCounter):max(a.levelCounter)             % this makes the checks for every level of the set
                     opt = b(b.levelCounter == r,:);
                     if height(opt)>1 & abs(diff(opt.GroupCount)) < 400
-                        fileID = fopen(['/Users/benjamin/Documents/GitHub/m-b_thesis' ...
-                            filesep 'count_condition.txt'],'a');
+                        fileID = fopen(['C:' filesep 'Users' filesep ...
+                            'dupre' filesep 'count_condition.txt'],'a');
                         fprintf(fileID,...
                             "Problem for %s in level %d. set %d. Condition:" + ...
                             "Difference under 400\n",ptcp,r,j) ;
                         fclose(fileID);
                     elseif height(opt)>1 && sum(opt.GroupCount) > ...
                             max(b.GroupCount)-0.1*max(b.GroupCount)
-                        fileID = fopen(['/Users/benjamin/Documents/GitHub/m-b_thesis' ...
-                            filesep 'count_condition.txt'],'a');
+                        fileID = fopen(['C:' filesep 'Users' filesep 'dupre' filesep...
+                            'count_condition.txt'],'a');
                         fprintf(fileID,...
                             "Problem for %s in level %d. set %d. Condition:" + ...
                             "Too long period Sum \n",ptcp,r,j) ;
@@ -321,7 +320,7 @@ for i=numberOfFolders:-1:1
            end
        end
        % Ading participant name column 
-       behavioral_b.ptcp = repmat(ptcp, height(behavioral_b), 1); 
+       behavioral_b.ptcp = ptct; 
        % Also saving al into one behavioral object 
        all_behavioral = [all_behavioral; behavioral_b] ; 
         % Clear all and close
@@ -333,7 +332,7 @@ end
 saveFolder = '/Users/benjamin/Documents/GitHub/m-b_thesis'; %'C:\Users\dupre\Documents\GitHub\m-b_thesis\Data';              
 writetable(all_behavioral,[saveFolder filesep 'behavior.csv'])
 % Getting rid of all instrumental variables.
-%clear all_behavioral 
+clear all_behavioral 
 toc
 
 
