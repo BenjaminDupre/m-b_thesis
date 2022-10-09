@@ -3,7 +3,7 @@ import numpy as np  # not sure for what
 import scipy as sp
 import pandas as pd 
 #import seaborn as sb
-import heartpy as hp
+#import heartpy as hp
 import os 
 import matplotlib.pyplot as plt
 from pathlib import Path
@@ -56,7 +56,7 @@ n, bins, patches = plt.hist(metadat.AGE, facecolor='#26C281', alpha=0.7)
 plt.xlabel('Age')
 plt.ylabel('Frequency')
 plt.title(' (B) Histogram: Participants Age', loc='left')
-plt.text(40,6, r'$\mu={mu:.1f},\ \sigma={sigma:.1f}$')
+plt.text(40,6, f"$\\mu={mu:.1f},\\ \\sigma={sigma:.1f}$")
 plt.axvline(mu, color = 'r', linestyle = 'dashed', linewidth = 2)
 plt.grid(True)
 plt.show()
@@ -75,7 +75,7 @@ ax.hist(post_score/16, histtype="barstacked", bins=20,facecolor='#757D75', alpha
 ax.axvline(mu, color = '#26C281', linestyle = 'dashed', linewidth = 2)
 ax.axvline(mu1, color = '#757D75', linestyle = 'dashed', linewidth = 2)
 ax.set_title("Pre and Post Cybersicknes Questionaire")
-ax.legend( [r'Pre VR $\mu={mu:.2f},\ \sigma={sigma:.2f}$',r'Post VR $\mu={mu1:.2f},\ \sigma={sigma1:.2f}$'],
+ax.legend( [f"Pre VR $\\mu={mu:.2f},\\ \\sigma={sigma:.2f}$",f"Post VR $\\mu={mu1:.2f},\\ \\sigma={sigma1:.2f}$"],
           title="Gender",
           loc="center left",
           bbox_to_anchor=(0.5, 0.35, 0.5, 1))
@@ -170,56 +170,58 @@ survey(results, category_names)
 plt.show()
     
 
-#### Getting real amount of hearbeats for the pre and the post
-
-
-# bpm fuction for my heart rate files using heartpy
-''' Atention:  problem when file is corrupted and has commas where not required ''' 
-import warnings
-warnings.filterwarnings("error")
-def get_heartcount(filepath):
-    hr = pd.read_csv(filepath,sep=';',decimal=",")
-    hr = hr.loc[:,'TimeElapsedArduinoBeginInMicroSec']
-    try: 
-        start = hr.index[hr==99999999] 
-        stop =  hr.index[hr==88888888]
-        hr = hr.iloc[int(start[0])+1:int(stop[0])]
-    except: 
-        print(f'Error in Series {x} file {y}- Many Commas \n')
-        start = hr.index[hr=='99999999'] 
-        stop =  hr.index[hr=='88888888']
-        hr = hr.iloc[int(start[0])+1:int(stop[0])]
-        hr = [s.replace(',','.') for s in hr]
-    hr = np.asarray(hr)
-    hr = hr.astype(float)
-    try:
-        working_data, measures = hp.process(hr, 133)
-        
-    except:
-        'Noisy Data'
-        if min(hr) < 0  and max(hr) < 0:
-            hr = hr*-1
-            scaled = hp.scale_sections(hr, sample_rate=133, windowsize=266)
-            working_data, measures = hp.process(scaled, 133)
-        else:
-            print("nothing found in ")
-    return measures['bpm']
-
-
-# getting all folder 
-#path = "C:\\Users\\49177\\Dropbox\\My Mac (glaroam2-185-117.wireless.gla.ac.uk)\\Documents\\Research MaxPlank\\P1_propioception\\Data_Wrangling\\Matlab Analysis\\Data_Wrangling"
-path = "/Users/benjamin/Documents/Data_Wrangling/"
-all_path = os.listdir(path) 
-only_dir =  [f for f in os.listdir(path) if os.path.isdir(os.path.join(path,f))]
-only_dir.remove('__MACOSX')
-heart_result=[]
-for x in range(len(only_dir)):
-    file_list_path = os.path.join(path,only_dir[x])
-    only_files =  [f for f in os.listdir(file_list_path) if os.path.isfile(os.path.join(file_list_path,f))]
-    for y in range(len(only_files)):
-        filepath = os.path.join(file_list_path,only_files[y])
-        heart_result.append(get_heartcount(filepath))
-        
+# =============================================================================
+# #### Getting real amount of hearbeats for the pre and the post
+# 
+# 
+# # bpm fuction for my heart rate files using heartpy
+# ''' Atention:  problem when file is corrupted and has commas where not required ''' 
+# import warnings
+# warnings.filterwarnings("error")
+# def get_heartcount(filepath):
+#     hr = pd.read_csv(filepath,sep=';',decimal=",")
+#     hr = hr.loc[:,'TimeElapsedArduinoBeginInMicroSec']
+#     try: 
+#         start = hr.index[hr==99999999] 
+#         stop =  hr.index[hr==88888888]
+#         hr = hr.iloc[int(start[0])+1:int(stop[0])]
+#     except: 
+#         print(f'Error in Series {x} file {y}- Many Commas \n')
+#         start = hr.index[hr=='99999999'] 
+#         stop =  hr.index[hr=='88888888']
+#         hr = hr.iloc[int(start[0])+1:int(stop[0])]
+#         hr = [s.replace(',','.') for s in hr]
+#     hr = np.asarray(hr)
+#     hr = hr.astype(float)
+#     try:
+#         working_data, measures = hp.process(hr, 133)
+#         
+#     except:
+#         'Noisy Data'
+#         if min(hr) < 0  and max(hr) < 0:
+#             hr = hr*-1
+#             scaled = hp.scale_sections(hr, sample_rate=133, windowsize=266)
+#             working_data, measures = hp.process(scaled, 133)
+#         else:
+#             print(f'Signal not counted in {only_dir[x]} file {only_files[y]}')
+#     return measures['bpm']
+# 
+# 
+# # getting all folder 
+# #path = "C:\\Users\\49177\\Dropbox\\My Mac (glaroam2-185-117.wireless.gla.ac.uk)\\Documents\\Research MaxPlank\\P1_propioception\\Data_Wrangling\\Matlab Analysis\\Data_Wrangling"
+# path = "/Users/benjamin/Documents/Data_Wrangling/"
+# all_path = os.listdir(path) 
+# only_dir =  [f for f in os.listdir(path) if os.path.isdir(os.path.join(path,f))]
+# only_dir.remove('__MACOSX')
+# heart_result=[]
+# for x in range(len(only_dir)):
+#     file_list_path = os.path.join(path,only_dir[x])
+#     only_files =  [f for f in os.listdir(file_list_path) if os.path.isfile(os.path.join(file_list_path,f))]
+#     for y in range(len(only_files)):
+#         filepath = os.path.join(file_list_path,only_files[y])
+#         heart_result.append(get_heartcount(filepath))
+#         
+# =============================================================================
 #### Geting Heart beat count 
 filepath = "C:\\Users\\49177\\Dropbox\\My Mac (glaroam2-185-117.wireless.gla.ac.uk)\\Documents\\Research MaxPlank\\P1_propioception\\Data_Wrangling\\Matlab Analysis\\Data_Wrangling\\tsvr06\\_20200908_14.36.45_411517_IntroceptiveLog.csv"
 
@@ -228,13 +230,55 @@ filepath = "C:\\Users\\49177\\Dropbox\\My Mac (glaroam2-185-117.wireless.gla.ac.
 #####
 
 # Loading VR data 
-behavior  = pd.read_csv(os.path.join(os.path.dirname(notebook_path), Path("Data/behavior.csv")),na_values=" ")
-#metadat  = metadat1.drop([14, 22])
+behaviour  = pd.read_csv(os.path.join(os.path.dirname(notebook_path), Path("Data/behavior.csv")),na_values=" ")
+behaviour["Stimulus"].value_counts()
+behaviour["set"].value_counts()
+# Removing failed trails 
+behaviour_clean = behaviour.drop(behaviour[behaviour.set==0].index)
+behaviour_clean = behaviour.drop(behaviour[behaviour.Stimulus==0].index)
+
+# descriptive overall view on conditions 
+behaviour_clean.groupby("Stimulus").mean(numeric_only=True)
+behaviour_clean["Stimulus"].value_counts()
+
+#ANOVA oneway
+F, p = sp.stats.f_oneway(behaviour_clean[behaviour_clean.Stimulus==1],
+                      behaviour_clean[behaviour_clean.Stimulus==1],
+                      behaviour_clean[behaviour_clean.Stimulus==1])
+# Box Plot 
+#Create a boxplot
+behaviour_clean.boxplot('diff', by='Stimulus', figsize=(12, 8))
+
+ctrl = behaviour_clean['weight'][data.group == 'ctrl']
+
+grps = pd.unique(data.group.values)
+d_data = {grp:data['weight'][data.group == grp] for grp in grps}
+
+k = len(pd.unique(data.group))  # number of conditions
+N = len(data.values)  # conditions times participants
+n = data.groupby('group').size()[0] #Participants in each condition
 
 # distribution of accuracy percentage by condition 
+plt.style.use('default')
+
+a = behaviour_clean[behaviour_clean.Stimulus==1]
+b = behaviour_clean[behaviour_clean.Stimulus==2]
+c = behaviour_clean[behaviour_clean.Stimulus==3]
+
+
+fig, ax = plt.subplots()
+plt.hist(a['diff'],
+            histtype="stepfilled", bins=50, alpha=0.5, density=True)
+plt.hist(b['diff'],
+            histtype="stepfilled", bins=50, alpha=0.5, density=True)
+plt.hist(c['diff'],
+            histtype="stepfilled", bins=50, alpha=0.5, density=True)
+ax.set_title("'bmh' style sheet")
+
+plt.show()
 
 # distribution of reponse time by condition 
-
+a = behaviour_clean[behaviour_clean.Stimulus==1]
 
 
 
