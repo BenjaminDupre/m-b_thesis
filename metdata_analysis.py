@@ -7,6 +7,7 @@ import pandas as pd
 import os 
 import matplotlib.pyplot as plt
 from pathlib import Path
+import re
 
 # Loading Data
 '''path = "C:/Users/49177/Dropbox/My Mac (glaroam2-185-117.wireless.gla.ac.uk)/Documents/Research MaxPlank/P1_propioception/R_tsvr_presentation/data/"
@@ -240,11 +241,11 @@ behaviour_clean = behaviour.drop(behaviour[behaviour.Stimulus==0].index)
 # descriptive overall view on conditions 
 behaviour_clean.groupby("Stimulus").mean(numeric_only=True)
 behaviour_clean["Stimulus"].value_counts()
-
+'''
 #ANOVA oneway
-F, p = sp.stats.f_oneway(behaviour_clean[behaviour_clean.Stimulus==1],
-                      behaviour_clean[behaviour_clean.Stimulus==1],
-                      behaviour_clean[behaviour_clean.Stimulus==1])
+#F, p = sp.stats.f_oneway(behaviour_clean[behaviour_clean.Stimulus==1],
+#                      behaviour_clean[behaviour_clean.Stimulus==1],
+#                      behaviour_clean[behaviour_clean.Stimulus==1])
 # Box Plot 
 #Create a boxplot
 behaviour_clean.boxplot('diff', by='Stimulus', figsize=(12, 8))
@@ -280,6 +281,8 @@ plt.show()
 # distribution of reponse time by condition 
 a = behaviour_clean[behaviour_clean.Stimulus==1]
 
+trying to show a grpah with the time difference.
+'''
 
 
 
@@ -382,4 +385,13 @@ sb.pairplot(metadat[['post','pre','laterality']])
 
 '''
  
-
+''' Answering Zeynep questions '''
+smaller_behaviour= behaviour_clean.loc[:,["ptcp","accuracy"]].groupby('ptcp' , as_index = False).sum()
+metadat["PARTICIPANT ID"] = metadat["PARTICIPANT ID"].str.lower() 
+metadat["PARTICIPANT ID"] = [s.replace('_', '') for s in metadat["PARTICIPANT ID"]]
+metadat = metadat.rename(columns={"PARTICIPANT ID":"ptcp"})
+metadat_behaviour = pd.merge(metadat,
+         smaller_behaviour,
+         on="ptcp",
+         how='left')
+pozoso = metadat_behaviour.loc[:,["post_VRF2","accuracy"]].groupby(["post_VRF2"]).mean()
