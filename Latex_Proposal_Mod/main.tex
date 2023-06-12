@@ -1,0 +1,80 @@
+\documentclass[12pt,oneside,openright]{report}
+%Document Variables
+\newcommand{\topic}{Effect of passive haptic stimuli during an immersive virtual reality task.}
+\newcommand{\kind}{Master}
+\newcommand{\supervisor}{Michael,Gaebler --- gaebler@cbs.mpg.de --- \href{https://www.cbs.mpg.de/person/gaebler/371395}{Web Page}.
+
+}
+\newcommand{\skills}{Passive Haptic Feedback, Inmersive Virtual Reality, Touch Perception}
+
+\usepackage[utf8]{inputenc}
+\usepackage[scaled]{helvet}
+\renewcommand\familydefault{\sfdefault} 
+\usepackage[T1]{fontenc}
+\usepackage{fancyhdr,xcolor}
+
+\usepackage{xcolor}
+\usepackage{biblatex}
+\usepackage[colorlinks=true,linkcolor=black,anchorcolor=black,citecolor=black,filecolor=black,menucolor=black,runcolor=black,urlcolor=black]{hyperref}\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{
+  a4paper,
+  left=20mm,
+  right=20mm,
+  top=4.5cm,
+  headheight=4cm,
+  bottom=4.5cm,
+  footskip=3cm
+}
+
+\renewcommand*{\bibfont}{\footnotesize}
+\addbibresource{references.bib}
+\newcommand{\changefont}{%
+    \fontsize{18}{16}\selectfont
+}
+\definecolor{boxcl}{HTML}{666666}
+\definecolor{tubred}{HTML}{003366}
+
+
+\let\oldheadrule\headrule% Copy \headrule into \oldheadrule
+\renewcommand{\headrule}{\color{tubred}\oldheadrule}% Add colour to \headrule
+\renewcommand{\headrulewidth}{1.5pt}
+\fancyfoot{}
+\fancyhead[HL]{\parbox{0.80\textwidth}{{\changefont \textbf{\kind{}’s Thesis} \topic{}}}}
+\fancyhead[HR]{\includegraphics[width=0.38\textwidth]{hu_siegel-kombi_rgb.png}}
+%\fancyfoot[R]{\colorbox{boxcl}{\parbox[b][][r]{0.55\textwidth}{\textcolor{white}{\textbf{Contact:} \supervisor}}}}
+\pagestyle{fancy}
+\begin{document}
+
+\section*{1. Writen Request:}
+I, Benjamin Dupré, kindly request the esteemed members of the board of Mind and Brain to consider appointing Dr. Michael Geabler as a supervisor for my M.Sc. thesis. Dr. Geabler is a highly esteemed staff member of the Department of Neurology at the Max Planck Institute for Human Cognitive and Brain Sciences, where he has served as a Group leader since 2018. His expertise and experience in the field make him an ideal candidate to provide invaluable guidance for my research. I respectfully request your favorable consideration of this request.
+
+\vspace*{0,5cm}
+
+{\colorbox{boxcl}{\parbox[b][][r]{0.85\textwidth}{\textcolor{white}{\textbf{Supervisor Information:} \supervisor}}}}
+
+\paragraph{\textbf{Keywords:}}\skills{}
+
+
+\section*{2. Problem \& Significance}
+
+Behavioral and mechanistic studies of perception tend focus on the Brain \cite{10.7554/eLife.64812}, leaving understudied the effects of bodily signals for perception adn cognition. Touch is an important sense that relyies information from the whole body, helps determine body-ownership and nevertheless compare to other senses has also been understudied. 
+
+We know that Touch is central to the development of multisensory expirience\cite{BREMNER2017227} and 
+
+Inmersive Virtual Reality (IVR) offers the rear oportunity to understand better how is it that Touch is central to the multyesensory expirience in valid and ecological environment. IN this study also  technology offers the posibility of exploiting the fact that at the moment inmersive virtual reality can mediate expirience with higher visual resolution than the lower haptic gloves. 
+
+This thesis wants to determine how much does Haptic stimuli affect the performance in a motor-memory task and inmersivness expirience reported by the participants. By doing this contribute to our understanding of the Sense of Touch in the overall feeling of embodiedment and the inmersivness of the expirience. 
+
+\section*{Thesis Topic \& Goal}
+
+There is a great deal we dont know about Touch. Its beleive to be a multisesorial perception. Many researches postulate that touch play a coordinating role among other 
+Engeneers are evaluating different Haptic Gloves alternatives.
+test\cite{hendrickson2016serverless}
+
+\paragraph{\textbf{References}}
+\printbibliography[heading=none]
+
+
+
+\end{document}

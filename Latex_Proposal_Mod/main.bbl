@@ -1,0 +1,167 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{BREMNER2017227}{article}{}
+      \name{author}{2}{}{%
+        {{hash=d1b16db6f7c0f3798c7722a1102976a2}{%
+           family={Bremner},
+           familyi={B\bibinitperiod},
+           given={A.J.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=ef53687dfd2ff46c0aabb127fd768e38}{%
+           family={Spence},
+           familyi={S\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=76b2376c3f81ef0860904d8d5ec2f0ad}{%
+           family={Benson},
+           familyi={B\bibinitperiod},
+           given={Janette\bibnamedelima B.},
+           giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {JAI}%
+      }
+      \strng{namehash}{8af7ca99c8d6c8413f93a96441320b52}
+      \strng{fullhash}{8af7ca99c8d6c8413f93a96441320b52}
+      \strng{bibnamehash}{8af7ca99c8d6c8413f93a96441320b52}
+      \strng{authorbibnamehash}{8af7ca99c8d6c8413f93a96441320b52}
+      \strng{authornamehash}{8af7ca99c8d6c8413f93a96441320b52}
+      \strng{authorfullhash}{8af7ca99c8d6c8413f93a96441320b52}
+      \strng{editorbibnamehash}{76b2376c3f81ef0860904d8d5ec2f0ad}
+      \strng{editornamehash}{76b2376c3f81ef0860904d8d5ec2f0ad}
+      \strng{editorfullhash}{76b2376c3f81ef0860904d8d5ec2f0ad}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Touch is the first of our senses to develop, providing us with the sensory scaffold on which we come to perceive our own bodies and our sense of self. Touch also provides us with direct access to the external world of physical objects, via haptic exploration. Furthermore, a recent area of interest in tactile research across studies of developing children and adults is its social function, mediating interpersonal bonding. Although there are a range of demonstrations of early competence with touch, particularly in the domain of haptics, the review presented here indicates that many of the tactile perceptual skills that we take for granted as adults (e.g., perceiving touches in the external world as well as on the body) take some time to develop in the first months of postnatal life, likely as a result of an extended process of connection with other sense modalities which provide new kinds of information from birth (e.g., vision and audition). Here, we argue that because touch is of such fundamental importance across a wide range of social and cognitive domains, it should be placed much more centrally in the study of early perceptual development than it currently is.}
+      \field{issn}{0065-2407}
+      \field{series}{Advances in Child Development and Behavior}
+      \field{title}{Chapter Seven - The Development of Tactile Perception}
+      \field{volume}{52}
+      \field{year}{2017}
+      \field{pages}{227\bibrangedash 268}
+      \range{pages}{42}
+      \verb{doi}
+      \verb https://doi.org/10.1016/bs.acdb.2016.12.002
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0065240716300477
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0065240716300477
+      \endverb
+      \keyw{Touch,Perceptual development,Infancy,Body representation,Affective touch,Multisensory processes,Multisensory development,Proprioception,Haptics,Object perception,Spatial perception,Self,Visual development,Tactile development}
+    \endentry
+    \entry{10.7554/eLife.64812}{article}{}
+      \name{author}{6}{}{%
+        {{hash=52669433bab1cfa0204cbaf0ed61b485}{%
+           family={Hofmann},
+           familyi={H\bibinitperiod},
+           given={Simon\bibnamedelima M},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=58f264448396164014fef8fe17c60219}{%
+           family={Klotzsche},
+           familyi={K\bibinitperiod},
+           given={Felix},
+           giveni={F\bibinitperiod}}}%
+        {{hash=eb2c0d259ac04e8841edca70b39960dc}{%
+           family={Mariola},
+           familyi={M\bibinitperiod},
+           given={Alberto},
+           giveni={A\bibinitperiod}}}%
+        {{hash=9e40a1bc2913bdee081db8d4767086b7}{%
+           family={Nikulin},
+           familyi={N\bibinitperiod},
+           given={Vadim},
+           giveni={V\bibinitperiod}}}%
+        {{hash=c613692fc550ace0a952f7e3556e3ae8}{%
+           family={Villringer},
+           familyi={V\bibinitperiod},
+           given={Arno},
+           giveni={A\bibinitperiod}}}%
+        {{hash=f00128c3ab6c8d147c00d96e93f2c331}{%
+           family={Gaebler},
+           familyi={G\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \name{editor}{3}{}{%
+        {{hash=e20f2e91b7f71a97427127690d92f1ff}{%
+           family={Shackman},
+           familyi={S\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+        {{hash=db996b539609e1b250389085e4df36d9}{%
+           family={Baker},
+           familyi={B\bibinitperiod},
+           given={Chris\bibnamedelima I},
+           giveni={C\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+        {{hash=1d36e0a6f9881988be2a17e18cffdfa7}{%
+           family={König},
+           familyi={K\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {eLife Sciences Publications, Ltd}%
+      }
+      \strng{namehash}{9dd0bd7dd67b4b6b9cdce6138d3726a0}
+      \strng{fullhash}{14f4a6523595468326e068e57f800770}
+      \strng{bibnamehash}{9dd0bd7dd67b4b6b9cdce6138d3726a0}
+      \strng{authorbibnamehash}{9dd0bd7dd67b4b6b9cdce6138d3726a0}
+      \strng{authornamehash}{9dd0bd7dd67b4b6b9cdce6138d3726a0}
+      \strng{authorfullhash}{14f4a6523595468326e068e57f800770}
+      \strng{editorbibnamehash}{e0ae8f61343ad330a4ee822242280a8a}
+      \strng{editornamehash}{e0ae8f61343ad330a4ee822242280a8a}
+      \strng{editorfullhash}{e0ae8f61343ad330a4ee822242280a8a}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Immersive virtual reality (VR) enables naturalistic neuroscientific studies while maintaining experimental control, but dynamic and interactive stimuli pose methodological challenges. We here probed the link between emotional arousal, a fundamental property of affective experience, and parieto-occipital alpha power under naturalistic stimulation: 37 young healthy adults completed an immersive VR experience, which included rollercoaster rides, while their EEG was recorded. They then continuously rated their subjective emotional arousal while viewing a replay of their experience. The association between emotional arousal and parieto-occipital alpha power was tested and confirmed by (1) decomposing the continuous EEG signal while maximizing the comodulation between alpha power and arousal ratings and by (2) decoding periods of high and low arousal with discriminative common spatial patterns and a long short-term memory recurrent neural network. We successfully combine EEG and a naturalistic immersive VR experience to extend previous findings on the neurophysiology of emotional arousal towards real-world neuroscience.}
+      \field{issn}{2050-084X}
+      \field{journaltitle}{eLife}
+      \field{month}{10}
+      \field{title}{Decoding subjective emotional arousal from EEG during an immersive virtual reality experience}
+      \field{volume}{10}
+      \field{year}{2021}
+      \field{pages}{e64812}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.7554/eLife.64812
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.7554/eLife.64812
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.7554/eLife.64812
+      \endverb
+      \keyw{machine learning,affective computing,deep learning,ecological validity,naturalistic stimuli,computational affective neuroscience}
+    \endentry
+  \enddatalist
+  \missing{hendrickson2016serverless}
+\endrefsection
+\endinput
+
