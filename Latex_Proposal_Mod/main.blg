@@ -1,18 +1,17 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'main.blg'
-[142] biber-MSWIN64:340> INFO - === 
-[200] Biber.pm:419> INFO - Reading 'main.bcf'
-[344] Biber.pm:979> INFO - Found 3 citekeys in bib section 0
-[361] Biber.pm:4419> INFO - Processing section 0
-[375] Biber.pm:4610> INFO - Looking for bibtex file 'references.bib' for section 0
-[471] bibtex.pm:1713> INFO - LaTeX decoding ...
-[582] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
-[663] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[663] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[663] Biber.pm:4239> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[663] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[671] bbl.pm:660> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[674] bbl.pm:763> INFO - Output to main.bbl
-[675] Biber.pm:131> WARN - legacy month field 'oct' in entry '10.7554/eLife.64812' is not an integer - this will probably not sort properly.
-[675] Biber.pm:131> WARN - I didn't find a database entry for 'hendrickson2016serverless' (section 0)
-[675] Biber.pm:133> INFO - WARNINGS: 2
+[144] biber-MSWIN64:340> INFO - === 
+[192] Biber.pm:419> INFO - Reading 'main.bcf'
+[337] Biber.pm:979> INFO - Found 8 citekeys in bib section 0
+[355] Biber.pm:4419> INFO - Processing section 0
+[369] Biber.pm:4610> INFO - Looking for bibtex file 'references.bib' for section 0
+[459] bibtex.pm:1713> INFO - LaTeX decoding ...
+[572] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
+[699] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[699] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[699] Biber.pm:4239> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[699] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[719] bbl.pm:660> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[729] bbl.pm:763> INFO - Output to main.bbl
+[729] Biber.pm:131> WARN - legacy month field 'oct' in entry 'Hofmann2021' is not an integer - this will probably not sort properly.
+[729] Biber.pm:133> INFO - WARNINGS: 1

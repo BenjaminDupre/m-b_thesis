@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1686397062 "main.bcf" "main.bbl" "main" 1686404575 0
-  "./references.bib" 1686396705 50324 23d70da84db7290d7157fa07447179a8 ""
-  "main.bcf" 1686404575 107924 b0bb4a3f2d408eafbfa240dfa163b5fc "pdflatex"
+["biber main"] 1686573704 "main.bcf" "main.bbl" "main" 1686658541 0
+  "./references.bib" 1686573703 54574 231dbde74ca2fb2ea07d4d69d9d541a7 ""
+  "main.bcf" 1686658540 108228 22e1d713b96eadc83b76b8ec29a447ed "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1686404573 "c:/Users/bdupr/Documents/GitHub/m-b_thesis/Latex_Proposal_Mod/main.tex" "main.pdf" "main" 1686404575 0
+["pdflatex"] 1686658538 "c:/Users/bdupr/Documents/GitHub/m-b_thesis/Latex_Proposal_Mod/main.tex" "main.pdf" "main" 1686658541 0
   "C:/Users/bdupr/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1686392305 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/bdupr/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ectt1000.pk" 1686396722 20028 05984652da3d5ef98b91666f46e07827 ""
   "C:/Users/bdupr/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1686066142 23178959 70e5a0fa353c181c2d3a87db11593e0b ""
@@ -28,6 +28,8 @@
   "C:/Users/bdupr/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmsy10.tfm" 1136768653 1124 6c73e740cf17375f03eec0ee63599741 ""
   "C:/Users/bdupr/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmsy6.tfm" 1136768653 1116 933a60c408fc0a863a92debe84b2d294 ""
   "C:/Users/bdupr/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmsy8.tfm" 1136768653 1120 8b7d695260f3cff42e636090a8002094 ""
+  "C:/Users/bdupr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1247596667 36741 0ee9e374ec3e30da87cdfb0ea3575226 ""
+  "C:/Users/bdupr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1247596667 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "C:/Users/bdupr/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb" 1136853348 35941 adef23a721dd8354a4a2bf4434f1c484 ""
   "C:/Users/bdupr/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb" 1136853348 44648 23115b2a545ebfe2c526c3ca99db8b95 ""
   "C:/Users/bdupr/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb" 1136853348 48169 065450055814ce4dfc30f7922d24ab30 ""
@@ -105,13 +107,13 @@
   "C:/Users/bdupr/AppData/Local/Programs/MiKTeX/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1657800696 9714 ba3194bd52c8499b3f1e3eb91d409670 ""
   "C:/Users/bdupr/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388494052 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/bdupr/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656236890 56148 51a9a8571c07b9921892ae11063ae853 ""
-  "c:/Users/bdupr/Documents/GitHub/m-b_thesis/Latex_Proposal_Mod/main.tex" 1686404573 3978 4718ca5af55a8dd6f90524d9b237f1f3 ""
+  "c:/Users/bdupr/Documents/GitHub/m-b_thesis/Latex_Proposal_Mod/main.tex" 1686574191 11165 8e575552fa268941fdf61e820def1871 ""
   "hu_siegel-kombi_rgb.png" 1686389851 72324 c3dfb2c62e3edf3c885587578ef5812c ""
-  "main.aux" 1686404575 1264 2a08fb2eabedaf49e3bb59ac868f4006 "pdflatex"
-  "main.bbl" 1686397065 8799 f38543c00cc079cd12f6390b78974842 "biber main"
-  "main.out" 1686404575 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.run.xml" 1686404575 2305 52095dfad395b381e9a32937e764a41c "pdflatex"
-  "main.tex" 1686404573 3978 4718ca5af55a8dd6f90524d9b237f1f3 ""
+  "main.aux" 1686658540 1935 7432a66d338bd29e11887d2c1f0d127e "pdflatex"
+  "main.bbl" 1686573707 23426 cf465f417baa81a3b8830a2d16f6d4aa "biber main"
+  "main.out" 1686658540 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.run.xml" 1686658540 2305 52095dfad395b381e9a32937e764a41c "pdflatex"
+  "main.tex" 1686574191 11165 8e575552fa268941fdf61e820def1871 ""
   (generated)
   "main.aux"
   "main.bcf"
