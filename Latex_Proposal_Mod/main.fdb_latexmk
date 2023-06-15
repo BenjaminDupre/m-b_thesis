@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1686573704 "main.bcf" "main.bbl" "main" 1686658541 0
+["biber main"] 0 "main.bcf" "main.bbl" "main" 1686817835 -1
   "./references.bib" 1686573703 54574 231dbde74ca2fb2ea07d4d69d9d541a7 ""
-  "main.bcf" 1686658540 108228 22e1d713b96eadc83b76b8ec29a447ed "pdflatex"
+  "main.bcf" 1686817834 108228 22e1d713b96eadc83b76b8ec29a447ed "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1686658538 "c:/Users/bdupr/Documents/GitHub/m-b_thesis/Latex_Proposal_Mod/main.tex" "main.pdf" "main" 1686658541 0
+["pdflatex"] 1686817833 "c:/Users/bdupr/Documents/GitHub/m-b_thesis/Latex_Proposal_Mod/main.tex" "main.pdf" "main" 1686817835 0
   "C:/Users/bdupr/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1686392305 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/bdupr/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ectt1000.pk" 1686396722 20028 05984652da3d5ef98b91666f46e07827 ""
   "C:/Users/bdupr/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1686066142 23178959 70e5a0fa353c181c2d3a87db11593e0b ""
@@ -107,13 +107,14 @@
   "C:/Users/bdupr/AppData/Local/Programs/MiKTeX/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1657800696 9714 ba3194bd52c8499b3f1e3eb91d409670 ""
   "C:/Users/bdupr/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388494052 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/bdupr/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656236890 56148 51a9a8571c07b9921892ae11063ae853 ""
-  "c:/Users/bdupr/Documents/GitHub/m-b_thesis/Latex_Proposal_Mod/main.tex" 1686574191 11165 8e575552fa268941fdf61e820def1871 ""
+  "c:/Users/bdupr/Documents/GitHub/m-b_thesis/Latex_Proposal_Mod/main.tex" 1686817832 11245 69f12bd7098c329348df108d2a78e1b1 ""
+  "firma.png" 1686813198 74214 d359e6629059d7f5132bdade2a13ba1e ""
   "hu_siegel-kombi_rgb.png" 1686389851 72324 c3dfb2c62e3edf3c885587578ef5812c ""
-  "main.aux" 1686658540 1935 7432a66d338bd29e11887d2c1f0d127e "pdflatex"
+  "main.aux" 1686817834 1935 7432a66d338bd29e11887d2c1f0d127e "pdflatex"
   "main.bbl" 1686573707 23426 cf465f417baa81a3b8830a2d16f6d4aa "biber main"
-  "main.out" 1686658540 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.run.xml" 1686658540 2305 52095dfad395b381e9a32937e764a41c "pdflatex"
-  "main.tex" 1686574191 11165 8e575552fa268941fdf61e820def1871 ""
+  "main.out" 1686817834 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.run.xml" 1686817834 2305 52095dfad395b381e9a32937e764a41c "pdflatex"
+  "main.tex" 1686817832 11245 69f12bd7098c329348df108d2a78e1b1 ""
   (generated)
   "main.aux"
   "main.bcf"
