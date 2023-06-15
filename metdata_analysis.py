@@ -169,7 +169,12 @@ def survey(results, category_names):
 
 survey(results, category_names)
 plt.show()
-    
+## DEEPDIVE into Quationaire Data 
+
+item_score = results = {f'({x}) ' + Questions[x-1]: np.mean(metadat[f'post_VRF{x}']) for x in range(1, 28)}
+
+
+
 
 # =============================================================================
 # #### Getting real amount of hearbeats for the pre and the post
