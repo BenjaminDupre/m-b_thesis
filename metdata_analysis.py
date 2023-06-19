@@ -140,6 +140,8 @@ results = {
         'counts': list(np.bincount(metadat[f'post_VRF{x}'], minlength=8)),
         'mean': round(np.mean(metadat[f'post_VRF{x}']),2),
         'stand dev': round(np.std(metadat[f'post_VRF{x}']),2)
+        'median': round(np.median(metadat[f'post_VRF{x}']),2)
+
     }
     for x in range(1, 28)
 }
@@ -155,7 +157,7 @@ def survey(results, category_names):
         The category labels.
     """
     labels = [
-    f"{key} (\u03BC: {results[key]['mean']}, \u03C3:{results[key]['stand dev']})"
+    f"{key} (\u03BC: {results[key]['mean']}, \u03C3:{results[key]['stand dev']}, meidan:{results[key]['median']} )"
     for key in results.keys()
 ]
     #data = np.array(list(results[key]['counts']))[:,1:8]
