@@ -95,26 +95,36 @@ else:
 
 
 ####### VRF Qestionaire
-      
+# Get the absolute path of the notebook file
+notebook_path = os.path.abspath("metdata_analysis.py")
 
+# Construct the path to the meta-data.csv file using os.path.join()
+data_directory = os.path.join(os.path.dirname(notebook_path), "Data")
+csv_file_path = os.path.join(data_directory, "meta-data.csv")
 
+# Load the CSV file into a DataFrame
+metadat1 = pd.read_csv(csv_file_path, na_values=" ")
+
+# Drop rows with indices 14 and 22 from the DataFrame
+metadat = metadat1.drop([14, 22])
+#  
+# The order of appearance in the list is relevant for the graph now its in desorder 
 Questions = 'datagloves felt unnatural to wear','difficult to remember the location of the red ball',\
-'difficulty in detectingand counting my heartbeat','easy to remember the location of the red ball',\
-'easy to remember the location of the red ball when haptic was congruent',\
-'distracted when the  haptic feedback was incongruent',\
+'difficulty in detecting and counting my pulse','easy to remember the location of the red ball when Haptic feedback was congruent',\
 'did not recognize the differences in haptic feedback because I was concentrated on the task',\
-'haptic feedback I felt  did not influence my performance'\
-,'easy to remember the location of the red ball',' in control of the virtual  hands'\
-,'ball felt natural with congruent haptic feedback', 'my  performance decreased when  there was no haptic feedback'\
+'distracted when the  haptic feedback was incongruent',\
+'the Haptic Feedback had no influence in my results',\
+'easy to remember the location of the red ball',' felt in control of the virtual hands'\
+,'ball felt natural to place with congruent haptic feedback', 'my  performance decreased when  there was no haptic feedback'\
 ,'faster when the haptic feedback was given', 'felt right target to place the red ball with haptic'\
 ,'performance improved when there was no haptic feedback', ' ball I was holding felt  real when there was haptic  feedback'\
 ,'easy to remember  the location of the red ball  when there was no haptic'\
 ,'frustrated by the  game at times', ' easier to count my  heartbeat at the beginning of  the experiment'\
 ,'task was fun at times', 'my  self-perceived heartbeat  detection was better at the end  of the experiment'\
-,'for a moment felt as if the virtual hands were  my own hands','felt natural as I move my  hands '\
-,'data gloves have increased my  sense of presence in virtual  environment'\
+,'for a moment felt as if the virtual hands were  my own hands','It felt natural as I moved my hands toward the templates',\
+'I lost track of time because I was so focused on completing the task','data gloves have increased my  sense of presence in virtual  environment'\
 ,' the experiment distanced me from  my own body',' haptic feedback I received has improved my performance'\
-,'the  experiment brought me closer my own body'
+,'the  experiment brought me closer to my own body'
 
 
     
@@ -125,8 +135,14 @@ category_names = [ "does not apply at all" , "does not apply" ,
                   "reather not applicable" , "niether nor applicable" , 
                   "reather applies" , "applies" , "totally applies" ,]
      
-results = { f'({x}) '+ Questions[x-1]  : list(np.bincount(metadat[f'post_VRF{x}'],minlength = 8)) for x in range(1,28) }
-
+results = {
+    f'({x}) ' + Questions[x-1]: {
+        'counts': list(np.bincount(metadat[f'post_VRF{x}'], minlength=8)),
+        'mean': round(np.mean(metadat[f'post_VRF{x}']),2),
+        'stand dev': round(np.std(metadat[f'post_VRF{x}']),2)
+    }
+    for x in range(1, 28)
+}
 def survey(results, category_names):
     """
     Parameters
@@ -138,29 +154,34 @@ def survey(results, category_names):
     category_names : list of str
         The category labels.
     """
-    labels = list(results.keys())
-    data = np.array(list(results.values()))[:,1:8]
+    labels = [
+    f"{key} (\u03BC: {results[key]['mean']}, \u03C3:{results[key]['stand dev']})"
+    for key in results.keys()
+]
+    #data = np.array(list(results[key]['counts']))[:,1:8]
+    data = np.array([result['counts'] + [0] * (8 - len(result['counts'])) for result in results.values()])[:,1:8]
     data_cum = data.cumsum(axis=1)
-    category_colorss = plt.get_cmap('coolwarm')(np.linspace(0.15, 0.85, data.shape[1])) 
+    category_colors = plt.colormaps['RdYlGn'](
+        np.linspace(0.15, 0.85, data.shape[1]))
 
     fig, ax = plt.subplots(figsize=(17, 12))
     ax.invert_yaxis()
     ax.xaxis.set_visible(False)
     ax.set_xlim(0, np.sum(data, axis=1).max())
 
-    for i, (colname, color) in enumerate(zip(category_names, category_colorss)):
+    for i, (colname, color) in enumerate(zip(category_names, category_colors)):
         widths = data[:, i]
         starts = data_cum[:, i] - widths
         rects = ax.barh(labels,widths, left=starts, height=0.5,
                         label=colname, color=color)
-        
+
         r, g, b, _ = color
         text_color = 'white' if r * g * b < 0.5 else 'darkgrey'
-        # format the number of decimal places and replace 0 with an empty string
+            # format the number of decimal places and replace 0 with an empty string
         #bar_labels = widths
         
-        crct_labels = np.char.replace(list(map(str,widths)),'0','')  #widths[j] if widths[j] > 0 for j in enumerate(widths) else ''  
-        ax.bar_label(rects, labels=crct_labels, label_type='center', color=text_color)
+        bar_labels = np.char.replace(list(map(str,widths)),'0','')  #widths[j] if widths[j] > 0 for j in enumerate(widths) else ''  
+        ax.bar_label(rects,labels=bar_labels ,label_type='center', color=text_color)
     ax.legend(ncol=len(category_names), bbox_to_anchor=(0, 1),
               loc='lower left', fontsize='small')
 
@@ -169,11 +190,6 @@ def survey(results, category_names):
 
 survey(results, category_names)
 plt.show()
-## DEEPDIVE into Quationaire Data 
-
-item_score = results = {f'({x}) ' + Questions[x-1]: np.mean(metadat[f'post_VRF{x}']) for x in range(1, 28)}
-
-
 
 
 # =============================================================================
@@ -246,6 +262,7 @@ behaviour_clean = behaviour.drop(behaviour[behaviour.Stimulus==0].index)
 # descriptive overall view on conditions 
 behaviour_clean.groupby("Stimulus").mean(numeric_only=True)
 behaviour_clean["Stimulus"].value_counts()
+
 '''
 #ANOVA oneway
 #F, p = sp.stats.f_oneway(behaviour_clean[behaviour_clean.Stimulus==1],
