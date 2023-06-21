@@ -1,0 +1,459 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{BREMNER2017227}{article}{}
+      \name{author}{2}{}{%
+        {{hash=d1b16db6f7c0f3798c7722a1102976a2}{%
+           family={Bremner},
+           familyi={B\bibinitperiod},
+           given={A.J.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=ef53687dfd2ff46c0aabb127fd768e38}{%
+           family={Spence},
+           familyi={S\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=76b2376c3f81ef0860904d8d5ec2f0ad}{%
+           family={Benson},
+           familyi={B\bibinitperiod},
+           given={Janette\bibnamedelima B.},
+           giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {JAI}%
+      }
+      \strng{namehash}{8af7ca99c8d6c8413f93a96441320b52}
+      \strng{fullhash}{8af7ca99c8d6c8413f93a96441320b52}
+      \strng{bibnamehash}{8af7ca99c8d6c8413f93a96441320b52}
+      \strng{authorbibnamehash}{8af7ca99c8d6c8413f93a96441320b52}
+      \strng{authornamehash}{8af7ca99c8d6c8413f93a96441320b52}
+      \strng{authorfullhash}{8af7ca99c8d6c8413f93a96441320b52}
+      \strng{editorbibnamehash}{76b2376c3f81ef0860904d8d5ec2f0ad}
+      \strng{editornamehash}{76b2376c3f81ef0860904d8d5ec2f0ad}
+      \strng{editorfullhash}{76b2376c3f81ef0860904d8d5ec2f0ad}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Touch is the first of our senses to develop, providing us with the sensory scaffold on which we come to perceive our own bodies and our sense of self. Touch also provides us with direct access to the external world of physical objects, via haptic exploration. Furthermore, a recent area of interest in tactile research across studies of developing children and adults is its social function, mediating interpersonal bonding. Although there are a range of demonstrations of early competence with touch, particularly in the domain of haptics, the review presented here indicates that many of the tactile perceptual skills that we take for granted as adults (e.g., perceiving touches in the external world as well as on the body) take some time to develop in the first months of postnatal life, likely as a result of an extended process of connection with other sense modalities which provide new kinds of information from birth (e.g., vision and audition). Here, we argue that because touch is of such fundamental importance across a wide range of social and cognitive domains, it should be placed much more centrally in the study of early perceptual development than it currently is.}
+      \field{issn}{0065-2407}
+      \field{series}{Advances in Child Development and Behavior}
+      \field{title}{Chapter Seven - The Development of Tactile Perception}
+      \field{volume}{52}
+      \field{year}{2017}
+      \field{pages}{227\bibrangedash 268}
+      \range{pages}{42}
+      \verb{doi}
+      \verb https://doi.org/10.1016/bs.acdb.2016.12.002
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0065240716300477
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0065240716300477
+      \endverb
+      \keyw{Touch,Perceptual development,Infancy,Body representation,Affective touch,Multisensory processes,Multisensory development,Proprioception,Haptics,Object perception,Spatial perception,Self,Visual development,Tactile development}
+    \endentry
+    \entry{Cole2016}{book}{}
+      \name{author}{1}{}{%
+        {{hash=df6271c37cc1507724223376e46fe70a}{%
+           family={Cole},
+           familyi={C\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{df6271c37cc1507724223376e46fe70a}
+      \strng{fullhash}{df6271c37cc1507724223376e46fe70a}
+      \strng{bibnamehash}{df6271c37cc1507724223376e46fe70a}
+      \strng{authorbibnamehash}{df6271c37cc1507724223376e46fe70a}
+      \strng{authornamehash}{df6271c37cc1507724223376e46fe70a}
+      \strng{authorfullhash}{df6271c37cc1507724223376e46fe70a}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{Ian Waterman lost touch and movement/position sense (proprioception) below the neck over 40 years ago, though pain and temperature perception and his peripheral movement nerves were unaffected. Without proprioceptive feedback he was completely unable to move and felt both disembodied and frightened. Then, slowly, he taught himself to dress, eat, and walk by thinking about each movement and with visual supervision. Through his experiences we can better understand proprioception. The narrative moves between biography and the scientific research he has been involved in. He has been married three times and built up successful careers in disability access audit, using his impairment to his advantage, and in rare turkey breeding and journalism. The neuroscience has led to data on movement without feedback, the pleasantness of touch, gesture, pain, and orientation of the body in space. This account shows how the science was actually done but also reveals Ian’s journey from passive subject to informed critic of science and scientists. His unique response to such a rare condition has also led to a BBC documentary, theatrical portrayals, and a weightless flight with NASA. As a young man Ian sought triumph over his impairment; now, nearly 65, he has more mature reflections on living with such an extraordinary loss, the limits it has imposed, and the opportunities it has enabled. He gives his views on scientists and on others he has met including Oliver Sacks and Peter Brook. In an Afterword those from science, the arts, and philosophy give an appreciation of his contribution.}}
+      \field{isbn}{9780198778875}
+      \field{month}{06}
+      \field{title}{{Losing Touch: A man without his body}}
+      \field{year}{2016}
+      \verb{doi}
+      \verb 10.1093/acprof:oso/9780198778875.001.0001
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1093/acprof:oso/9780198778875.001.0001
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1093/acprof:oso/9780198778875.001.0001
+      \endverb
+    \endentry
+    \entry{Field2014}{book}{}
+      \name{author}{1}{}{%
+        {{hash=8d814b91e110902aa6a9928dac87cfb1}{%
+           family={Field},
+           familyi={F\bibinitperiod},
+           given={Tiffany},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {The MIT Press}%
+      }
+      \strng{namehash}{8d814b91e110902aa6a9928dac87cfb1}
+      \strng{fullhash}{8d814b91e110902aa6a9928dac87cfb1}
+      \strng{bibnamehash}{8d814b91e110902aa6a9928dac87cfb1}
+      \strng{authorbibnamehash}{8d814b91e110902aa6a9928dac87cfb1}
+      \strng{authornamehash}{8d814b91e110902aa6a9928dac87cfb1}
+      \strng{authorfullhash}{8d814b91e110902aa6a9928dac87cfb1}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{Why we need a daily dose of touch: an investigation of the effects of touch on our physical and mental well-being. Although the therapeutic benefits of touch have become increasingly clear, American society, claims Tiffany Field, is dangerously touch-deprived. Many schools have “no touch” policies; the isolating effects of Internet-driven work and life can leave us hungry for tactile experience. In this book Field explains why we may need a daily dose of touch.The first sensory input in life comes from the sense of touch while a baby is still in the womb, and touch continues to be the primary means of learning about the world throughout infancy and well into childhood. Touch is critical, too, for adults' physical and mental health. Field describes studies showing that touch therapy can benefit everyone, from premature infants to children with asthma to patients with conditions that range from cancer to eating disorders.This second edition of Touch, revised and updated with the latest research, reports on new studies that show the role of touch in early development, in communication (including the reading of others' emotions), in personal relationships, and even in sports. It describes the physiological and biological effects of touch, including areas of the brain affected by touch, and the effects of massage therapy on prematurity, attentiveness, depression, pain, and immune functions. Touch has been shown to have positive effects on growth, brain waves, breathing, and heart rate, and to decrease stress and anxiety. As Field makes clear, we enforce our society's touch taboo at our peril.}}
+      \field{isbn}{9780262320641}
+      \field{month}{10}
+      \field{title}{{Touch}}
+      \field{year}{2014}
+      \verb{doi}
+      \verb 10.7551/mitpress/9959.001.0001
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.7551/mitpress/9959.001.0001
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.7551/mitpress/9959.001.0001
+      \endverb
+    \endentry
+    \entry{Grund643}{article}{}
+      \name{author}{8}{}{%
+        {{hash=dcce115c5a597841e7c5c1efe6898253}{%
+           family={Grund},
+           familyi={G\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=e0e4e6d68105ce17f5231ea2aa2c13b9}{%
+           family={Al},
+           familyi={A\bibinitperiod},
+           given={Esra},
+           giveni={E\bibinitperiod}}}%
+        {{hash=d7a9d179c6af5c3d76048f467b476a6d}{%
+           family={Pabst},
+           familyi={P\bibinitperiod},
+           given={Marc},
+           giveni={M\bibinitperiod}}}%
+        {{hash=98b4add179ff81d8f8dea9d14a8636c4}{%
+           family={Dabbagh},
+           familyi={D\bibinitperiod},
+           given={Alice},
+           giveni={A\bibinitperiod}}}%
+        {{hash=8aa162b0f5ae01aac0722eda598ada06}{%
+           family={Stephani},
+           familyi={S\bibinitperiod},
+           given={Tilman},
+           giveni={T\bibinitperiod}}}%
+        {{hash=6874257943662ad54667cea72faa0e9a}{%
+           family={Nierhaus},
+           familyi={N\bibinitperiod},
+           given={Till},
+           giveni={T\bibinitperiod}}}%
+        {{hash=f00128c3ab6c8d147c00d96e93f2c331}{%
+           family={Gaebler},
+           familyi={G\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=c613692fc550ace0a952f7e3556e3ae8}{%
+           family={Villringer},
+           familyi={V\bibinitperiod},
+           given={Arno},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Society for Neuroscience}%
+      }
+      \strng{namehash}{d237e1398168711e9c7c5d2869ba64c1}
+      \strng{fullhash}{1a693d2d4b1675904fc64341c71250fb}
+      \strng{bibnamehash}{d237e1398168711e9c7c5d2869ba64c1}
+      \strng{authorbibnamehash}{d237e1398168711e9c7c5d2869ba64c1}
+      \strng{authornamehash}{d237e1398168711e9c7c5d2869ba64c1}
+      \strng{authorfullhash}{1a693d2d4b1675904fc64341c71250fb}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0270-6474}
+      \field{journaltitle}{Journal of Neuroscience}
+      \field{number}{4}
+      \field{title}{Respiration, Heartbeat, and Conscious Tactile Perception}
+      \field{volume}{42}
+      \field{year}{2022}
+      \field{pages}{643\bibrangedash 656}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1523/JNEUROSCI.0592-21.2021
+      \endverb
+      \verb{eprint}
+      \verb https://www.jneurosci.org/content/42/4/643.full.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.jneurosci.org/content/42/4/643
+      \endverb
+      \verb{url}
+      \verb https://www.jneurosci.org/content/42/4/643
+      \endverb
+    \endentry
+    \entry{Healy2003HandbookOP}{books}{}
+      \name{author}{2}{}{%
+        {{hash=76b1a1a5f3663c2326709118360d1d66}{%
+           family={Healy},
+           familyi={H\bibinitperiod},
+           given={Alice\bibnamedelima F.},
+           giveni={A\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=6b6571f4b0bdcb21891d5703c4709f86}{%
+           family={Proctor},
+           familyi={P\bibinitperiod},
+           given={Robert\bibnamedelima W.},
+           giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{f5c0e022e7ac17d47bec4848cdb1053f}
+      \strng{fullhash}{f5c0e022e7ac17d47bec4848cdb1053f}
+      \strng{bibnamehash}{f5c0e022e7ac17d47bec4848cdb1053f}
+      \strng{authorbibnamehash}{f5c0e022e7ac17d47bec4848cdb1053f}
+      \strng{authornamehash}{f5c0e022e7ac17d47bec4848cdb1053f}
+      \strng{authorfullhash}{f5c0e022e7ac17d47bec4848cdb1053f}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Handbook of Psychology, volume 4, Experimental Psychology}
+      \field{volume}{4}
+      \field{year}{2003}
+      \field{pages}{147\bibrangedash 176}
+      \range{pages}{30}
+    \endentry
+    \entry{Hofmann2021}{article}{}
+      \name{author}{6}{}{%
+        {{hash=52669433bab1cfa0204cbaf0ed61b485}{%
+           family={Hofmann},
+           familyi={H\bibinitperiod},
+           given={Simon\bibnamedelima M},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=58f264448396164014fef8fe17c60219}{%
+           family={Klotzsche},
+           familyi={K\bibinitperiod},
+           given={Felix},
+           giveni={F\bibinitperiod}}}%
+        {{hash=eb2c0d259ac04e8841edca70b39960dc}{%
+           family={Mariola},
+           familyi={M\bibinitperiod},
+           given={Alberto},
+           giveni={A\bibinitperiod}}}%
+        {{hash=9e40a1bc2913bdee081db8d4767086b7}{%
+           family={Nikulin},
+           familyi={N\bibinitperiod},
+           given={Vadim},
+           giveni={V\bibinitperiod}}}%
+        {{hash=c613692fc550ace0a952f7e3556e3ae8}{%
+           family={Villringer},
+           familyi={V\bibinitperiod},
+           given={Arno},
+           giveni={A\bibinitperiod}}}%
+        {{hash=f00128c3ab6c8d147c00d96e93f2c331}{%
+           family={Gaebler},
+           familyi={G\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \name{editor}{3}{}{%
+        {{hash=e20f2e91b7f71a97427127690d92f1ff}{%
+           family={Shackman},
+           familyi={S\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+        {{hash=db996b539609e1b250389085e4df36d9}{%
+           family={Baker},
+           familyi={B\bibinitperiod},
+           given={Chris\bibnamedelima I},
+           giveni={C\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+        {{hash=1d36e0a6f9881988be2a17e18cffdfa7}{%
+           family={König},
+           familyi={K\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {eLife Sciences Publications, Ltd}%
+      }
+      \strng{namehash}{9dd0bd7dd67b4b6b9cdce6138d3726a0}
+      \strng{fullhash}{14f4a6523595468326e068e57f800770}
+      \strng{bibnamehash}{9dd0bd7dd67b4b6b9cdce6138d3726a0}
+      \strng{authorbibnamehash}{9dd0bd7dd67b4b6b9cdce6138d3726a0}
+      \strng{authornamehash}{9dd0bd7dd67b4b6b9cdce6138d3726a0}
+      \strng{authorfullhash}{14f4a6523595468326e068e57f800770}
+      \strng{editorbibnamehash}{e0ae8f61343ad330a4ee822242280a8a}
+      \strng{editornamehash}{e0ae8f61343ad330a4ee822242280a8a}
+      \strng{editorfullhash}{e0ae8f61343ad330a4ee822242280a8a}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Immersive virtual reality (VR) enables naturalistic neuroscientific studies while maintaining experimental control, but dynamic and interactive stimuli pose methodological challenges. We here probed the link between emotional arousal, a fundamental property of affective experience, and parieto-occipital alpha power under naturalistic stimulation: 37 young healthy adults completed an immersive VR experience, which included rollercoaster rides, while their EEG was recorded. They then continuously rated their subjective emotional arousal while viewing a replay of their experience. The association between emotional arousal and parieto-occipital alpha power was tested and confirmed by (1) decomposing the continuous EEG signal while maximizing the comodulation between alpha power and arousal ratings and by (2) decoding periods of high and low arousal with discriminative common spatial patterns and a long short-term memory recurrent neural network. We successfully combine EEG and a naturalistic immersive VR experience to extend previous findings on the neurophysiology of emotional arousal towards real-world neuroscience.}
+      \field{issn}{2050-084X}
+      \field{journaltitle}{eLife}
+      \field{month}{10}
+      \field{title}{Decoding subjective emotional arousal from EEG during an immersive virtual reality experience}
+      \field{volume}{10}
+      \field{year}{2021}
+      \field{pages}{e64812}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.7554/eLife.64812
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.7554/eLife.64812
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.7554/eLife.64812
+      \endverb
+      \keyw{machine learning,affective computing,deep learning,ecological validity,naturalistic stimuli,computational affective neuroscience}
+    \endentry
+    \entry{SSQ93}{article}{}
+      \name{author}{4}{}{%
+        {{hash=5dcad4ef764078ecfb91f9057a6d7940}{%
+           family={Kennedy},
+           familyi={K\bibinitperiod},
+           given={Robert\bibnamedelima S},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=9ad5670a7bb98cf6574d797e16250b5b}{%
+           family={Lane},
+           familyi={L\bibinitperiod},
+           given={Norman\bibnamedelima E},
+           giveni={N\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=e4ce2e282ca0b122a7dab0f88fd2f3ef}{%
+           family={Berbaum},
+           familyi={B\bibinitperiod},
+           given={Kevin\bibnamedelima S},
+           giveni={K\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=f1da689a1cbed527b54968ce72d78938}{%
+           family={Lilienthal},
+           familyi={L\bibinitperiod},
+           given={Michael\bibnamedelima G},
+           giveni={M\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Taylor & Francis}%
+      }
+      \strng{namehash}{62a1957921ecd18bed35eac13b4b7273}
+      \strng{fullhash}{8c8355f4b46f93b6d81b04b94b3ee313}
+      \strng{bibnamehash}{62a1957921ecd18bed35eac13b4b7273}
+      \strng{authorbibnamehash}{62a1957921ecd18bed35eac13b4b7273}
+      \strng{authornamehash}{62a1957921ecd18bed35eac13b4b7273}
+      \strng{authorfullhash}{8c8355f4b46f93b6d81b04b94b3ee313}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The International Journal of Aviation Psychology}
+      \field{number}{3}
+      \field{title}{{Simulator Sickness Questionnaire: An Enhanced Method for Quantifying Simulator Sickness}}
+      \field{volume}{3}
+      \field{year}{1993}
+      \field{pages}{203\bibrangedash 220}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1207/s15327108ijap0303\_3
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1207/s15327108ijap0303_3
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1207/s15327108ijap0303_3
+      \endverb
+    \endentry
+    \entry{Klotzsche2023}{article}{}
+      \name{author}{6}{}{%
+        {{hash=58f264448396164014fef8fe17c60219}{%
+           family={Klotzsche},
+           familyi={K\bibinitperiod},
+           given={Felix},
+           giveni={F\bibinitperiod}}}%
+        {{hash=f00128c3ab6c8d147c00d96e93f2c331}{%
+           family={Gaebler},
+           familyi={G\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=c613692fc550ace0a952f7e3556e3ae8}{%
+           family={Villringer},
+           familyi={V\bibinitperiod},
+           given={Arno},
+           giveni={A\bibinitperiod}}}%
+        {{hash=ae8629988b2b7b8ffb0717c610f9bff7}{%
+           family={Sommer},
+           familyi={S\bibinitperiod},
+           given={Werner},
+           giveni={W\bibinitperiod}}}%
+        {{hash=9e40a1bc2913bdee081db8d4767086b7}{%
+           family={Nikulin},
+           familyi={N\bibinitperiod},
+           given={Vadim},
+           giveni={V\bibinitperiod}}}%
+        {{hash=5da9b7cf581eed12754fd722455ea767}{%
+           family={Ohl},
+           familyi={O\bibinitperiod},
+           given={Sven},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cold Spring Harbor Laboratory}%
+      }
+      \strng{namehash}{61ea547803f2bb9d63670a1dc6173b04}
+      \strng{fullhash}{76a3ac0e91eb57752942e3336aa5a97f}
+      \strng{bibnamehash}{61ea547803f2bb9d63670a1dc6173b04}
+      \strng{authorbibnamehash}{61ea547803f2bb9d63670a1dc6173b04}
+      \strng{authornamehash}{61ea547803f2bb9d63670a1dc6173b04}
+      \strng{authorfullhash}{76a3ac0e91eb57752942e3336aa5a97f}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{bioRxiv}
+      \field{title}{Visual short-term memory related EEG components in a virtual reality setup}
+      \field{year}{2023}
+      \verb{doi}
+      \verb 10.1101/2023.01.23.525140
+      \endverb
+      \verb{eprint}
+      \verb https://www.biorxiv.org/content/early/2023/01/23/2023.01.23.525140.full.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.biorxiv.org/content/early/2023/01/23/2023.01.23.525140
+      \endverb
+      \verb{url}
+      \verb https://www.biorxiv.org/content/early/2023/01/23/2023.01.23.525140
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
