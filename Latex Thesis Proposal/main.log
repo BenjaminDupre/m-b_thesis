@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.6)  22 JUN 2023 09:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.6)  23 JUN 2023 13:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -612,7 +612,7 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 9.49997pt on input line 104.
 File: hu_siegel-kombi_rgb.png Graphic file (type png)
 <use hu_siegel-kombi_rgb.png>
-Package pdftex.def Info: hu_siegel-kombi_rgb.png  used on input line 111.
+Package pdftex.def Info: hu_siegel-kombi_rgb.png  used on input line 105.
 (pdftex.def)             Requested size: 183.80716pt x 101.91356pt.
 
 Package fancyhdr Warning: \headheight is too small (113.81102pt): 
@@ -622,11 +622,24 @@ Package fancyhdr Warning: \headheight is too small (113.81102pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.53091pt}.
 
 [3]
-<firma.png, id=48, 528.47438pt x 323.70938pt>
+<firma.png, id=47, 528.47438pt x 323.70938pt>
 File: firma.png Graphic file (type png)
 <use firma.png>
 Package pdftex.def Info: firma.png  used on input line 125.
 (pdftex.def)             Requested size: 113.81102pt x 69.70976pt.
+File: hu_siegel-kombi_rgb.png Graphic file (type png)
+<use hu_siegel-kombi_rgb.png>
+Package pdftex.def Info: hu_siegel-kombi_rgb.png  used on input line 126.
+(pdftex.def)             Requested size: 183.80716pt x 101.91356pt.
+
+
+Package fancyhdr Warning: \headheight is too small (113.81102pt): 
+(fancyhdr)                Make it at least 115.34193pt, for example:
+(fancyhdr)                \setlength{\headheight}{115.34193pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.53091pt}.
+
+[4]
 File: hu_siegel-kombi_rgb.png Graphic file (type png)
 <use hu_siegel-kombi_rgb.png>
 Package pdftex.def Info: hu_siegel-kombi_rgb.png  used on input line 129.
@@ -639,7 +652,7 @@ Package fancyhdr Warning: \headheight is too small (113.81102pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.53091pt}.
 
-[4 <./firma.png>]
+[5 <./firma.png>]
 LaTeX Font Info:    Font shape `T1/phv/m/sc' will be
 (Font)              scaled to size 9.49997pt on input line 130.
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 130.
@@ -670,7 +683,7 @@ Package fancyhdr Warning: \headheight is too small (113.81102pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.53091pt}.
 
-[5] (main.aux)
+[6] (main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -678,17 +691,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 17175 strings out of 476331
- 304126 string characters out of 5787766
+ 17176 strings out of 476331
+ 304132 string characters out of 5787766
  1864660 words of memory out of 5000000
  37402 multiletter control sequences out of 15000+600000
  553938 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,15n,68p,1786b,1347s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\bdupr\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk><C:/Users/bdupr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/bdupr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/bdupr/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/bdupr/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/bdupr/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (5 pages, 211472 bytes).
+Output written on main.pdf (6 pages, 212659 bytes).
 PDF statistics:
- 168 PDF objects out of 1000 (max. 8388607)
- 25 named destinations out of 1000 (max. 500000)
+ 172 PDF objects out of 1000 (max. 8388607)
+ 26 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
