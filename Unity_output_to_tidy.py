@@ -6,10 +6,8 @@ ACCES_TOKEN = 'sl.BgsW-iMmoGvliSYK-WjPhheeYNPKwjxgiNmdMuQA6G1HUuysD3YSStMG4qJDMs
 dbx = dropbox.Dropbox(ACCES_TOKEN)
 
 # Specify the path to the file you want to access
-#folder_path = ""#'/backups/My Mac (glaroam2-185-117.wireless.gla.ac.uk)/Documents/Research MaxPlank/P1_propioception/Data_Wrangling/Matlab Analysis/Data_Wrangling'
 
 FOLDER_PATH='/My Mac (glaroam2-185-117.wireless.gla.ac.uk)/Documents/Research MaxPlank/P1_propioception/Data_Wrangling/Matlab Analysis/Data_Wrangling'
-#response = dbx.files_list_folder(folder_path)
 
 try:
     response = dbx.files_list_folder(FOLDER_PATH)
