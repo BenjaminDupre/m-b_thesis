@@ -1,8 +1,10 @@
 
 import dropbox
+import pandas as pd
+import io
 
 # Set up the Dropbox API client
-ACCES_TOKEN = 'sl.BhCAwKe_oYAIwj13pA4sky3V_ydOuzO-OOX1ZZ05K68fc3HzcdnEB22_-E8IKmMRVOMEQ7fIvBiKhE6yq_Ta96_UU6JRYMgGADa-fg7UBP2Cu3a34Ef2f8RWK8w1psyl7bVjzJ_SC3-C'
+ACCES_TOKEN = 'sl.BhAGIUhiU_B75wAN7UDWPH4QPQ07elacPi8I9oQiGk2b41S9dhnizTeVmA1j30sTJcPDTyokD_eoFV5VnlZiA5hHpzGr2qX7qBEqUT2aObe9bCpwkA3cwUE7U6JVJplsKRUKT2TzJGJI'
 dbx = dropbox.Dropbox(ACCES_TOKEN)
 
 # Specify the path to the file you want to access
@@ -25,15 +27,30 @@ def get_partc_fold(fld_path):
                 folder_path = entry.path_display
                 list_folders.append(folder_path)
                 print("Folder path:", folder_path)
-                return list_folders
+        return list_folders
+                        
     except dropbox.exceptions.HttpError as err:
         print(f"Error listing folder: {err}")
+        
 
 '''creat function to get three folders from path'''
 
 #response=dbx.files_list_folder(list_folders[1])
 
 #response.entries
-get_partc_fold(FOLDER_PATH)
-get_partc_fold(list_folders[2])
-get_partc_fold(list_folders[3])
+list_folders = get_partc_fold(FOLDER_PATH)
+list_subfolders= get_partc_fold(list_folders[1])
+
+def read_csv_from_dropbox(path):
+    """
+    read csv files
+    """
+    path= path + "/everything.csv"
+    _, response = dbx.files_download(path)    
+    csv_data = response.content    
+    # Read the CSV data into a Pandas DataFrame
+    df = pd.read_csv(io.StringIO(csv_data.decode('utf-8')))   
+    # Optionally, return the DataFrame or perform additional processing
+    return df
+
+df = read_csv_from_dropbox(list_subfolders[0])
