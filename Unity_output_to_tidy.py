@@ -37,7 +37,7 @@ def read_ptcp_sets_from_dropbox(list_sets):
     """
     read csv files
     """
-    df_sets=[]
+    
     column_names = ['time', 'Milliseconds', 'levelCounter', 'correctCounter',
                 'leftHandPosition', 'leftHandRotation', 'rightHandPosition',
                 'rightHandRotation', 'redBallPosition', 'redBallRotation',
