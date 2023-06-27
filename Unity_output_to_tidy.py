@@ -4,7 +4,7 @@ import pandas as pd
 import io
 
 # Set up the Dropbox API client
-ACCES_TOKEN = 'sl.BhAGIUhiU_B75wAN7UDWPH4QPQ07elacPi8I9oQiGk2b41S9dhnizTeVmA1j30sTJcPDTyokD_eoFV5VnlZiA5hHpzGr2qX7qBEqUT2aObe9bCpwkA3cwUE7U6JVJplsKRUKT2TzJGJI'
+ACCES_TOKEN = 'sl.BhElYgYBYOiToDl6ez_umLpLlxPARiwMHN5nqOHBiuUfVxpHB9TAglXrP_bs5K5o4vNRUi8KW15iTHDOiYIVwXxGapITJwvoSW1scsTbtWlKzqP3XztarAe7M7Z2nY2RwIWfjObfgRvP'
 dbx = dropbox.Dropbox(ACCES_TOKEN)
 
 # Specify the path to the file you want to access
@@ -31,15 +31,10 @@ def get_partc_fold(fld_path):
                         
     except dropbox.exceptions.HttpError as err:
         print(f"Error listing folder: {err}")
-        
 
-'''creat function to get three folders from path'''
 
-#response=dbx.files_list_folder(list_folders[1])
+"""FUNCIONES"""
 
-#response.entries
-list_folders = get_partc_fold(FOLDER_PATH)
-list_subfolders= get_partc_fold(list_folders[1])
 
 def read_csv_from_dropbox(path):
     """
@@ -49,8 +44,16 @@ def read_csv_from_dropbox(path):
     _, response = dbx.files_download(path)    
     csv_data = response.content    
     # Read the CSV data into a Pandas DataFrame
-    df = pd.read_csv(io.StringIO(csv_data.decode('utf-8')))   
+     
+    df = pd.read_csv(io.StringIO(csv_data.decode('utf-8')),
+                      header=0, skiprows=133)   # There is some curruption in the files, so we skip first second 
     # Optionally, return the DataFrame or perform additional processing
     return df
 
+
+
+
+# Excecution of Functions. 
+list_folders = get_partc_fold(FOLDER_PATH)
+list_subfolders= get_partc_fold(list_folders[1])
 df = read_csv_from_dropbox(list_subfolders[0])
