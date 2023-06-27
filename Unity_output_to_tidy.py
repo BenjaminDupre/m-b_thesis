@@ -73,8 +73,8 @@ def read_ptcp_sets_from_dropbox(list_sets):
 
         accumulated_data.extend(df)  # Accumulate the data
     
-    # Concatenate all DataFrames in df_sets into one big DataFrame
-    combined_df = pd.concat(df_sets, ignore_index=True)
+    # Create a single DataFrame directly from the accumulated data
+    combined_df = pd.DataFrame(accumulated_data)
 
     # Convert 'ECG' column decimal separators from commas to decimal points
     combined_df['ECG'] = combined_df['ECG'].str.replace(',', '.').astype('float32')
