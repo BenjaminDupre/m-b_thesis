@@ -4,9 +4,8 @@ import pandas as pd
 import io
 
 # Set up the Dropbox API client
-
-# Constants
-ACCESS_TOKEN = 'sl.BhJy-0WNKzGdm2lLmgtcs5uvCMp_YP8TGl14fMi4lSBOJXuogOl6vz_lraPVXjy6VPuvL1bBaU6CPBOJgxwfIduZc1bNW9IVov0E4BHGCIuVnsrf2IaVf4DoKiLJnRwlcIeY9j7lfZmI'
+ACCES_TOKEN = 'sl.BhE9Z28Px03DlMr5EmEByZvYkBN58aRUNdg0VACf0SjoVcmYCIP-hoMUGKo9VwVgBD_Yj6hX7Uoy5FTS4pFzGUmbIZGi8rCbBB5PtxnhtONwSrEYmSeuWiG6Dbr9XzsZXb_qFhywBH7U'
+dbx = dropbox.Dropbox(ACCES_TOKEN)
 
 dbx = dropbox.Dropbox(ACCESS_TOKEN)
 
@@ -55,7 +54,7 @@ def read_ptcp_sets_from_dropbox(list_sets):
                 'isCalibrationBlocked', 'grabbingState', 'buttonHasBeenPressed',
                 'buttonCurrentlyPressed', 'headPosition', 'headRotation',
                 'isExplosionTriggered', 'ECG']
-    column_types = ['string','integer', 'integer', 'integer',
+    column_types = ['string', 'float64', 'float64', 'float64',
                 'string', 'string', 'string', 'string', 'string',
                 'string', 'boolean', 'boolean', 'category',
                 'boolean', 'boolean', 'string', 'string',
@@ -93,12 +92,13 @@ def read_ptcp_sets_from_dropbox(list_sets):
     # Return the DataFrame or perform additional processing
     return combined_df
 
-
-
+# Excecution of Functions. 
+list_fold = get_partc_fold(FOLDER_PATH)
+list_subfolders= get_partc_fold(list_fold[1])
+combined_dfs = read_ptcp_sets_from_dropbox(list_subfolders)
 
 
 ########################### Excecution of Functions. 
 list_fold,list_names = get_partc_fold(FOLDER_PATH)
 list_ptcp_fold, list_ptcp_names = get_partc_fold(list_fold[1])
 combined_dfs = read_ptcp_sets_from_dropbox(list_ptcp_fold)
-
