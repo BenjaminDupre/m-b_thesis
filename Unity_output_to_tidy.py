@@ -20,8 +20,7 @@ import io
 # Set up the Dropbox API client
 
 # Constants
-ACCESS_TOKEN = 'sl.BhdxpSU3F17M7OHqDeI8RB0BNKLyg43eX8_MUEO7uHbGgzw8vfkCM0cIWhgyEdzCBrTPQzonFCtcFSwh2zTwZMLFKUk70PccfAHzqXpArIkMa5muUrZsJLlVgPXI7tWNlPQZHsfMmbZo'
-
+ACCESS_TOKEN = 'sl.BhlQbLIsxTfh2SAOAbRnMboR5m-KscFSWRjtN4h9ucU5y_84ekGXTX01buk2s7PBw61hGD1jLOkDarPhFcYClIfRE0csn15LVl7tru9djfUyYM59D65e1oa_p8DbuHGQZqzhJ4gxH7vN'
 dbx = dropbox.Dropbox(ACCESS_TOKEN)
 
 # FUNCIONES
@@ -58,23 +57,23 @@ def read_ptcp_sets_from_dropbox(path_sets, ptcp_names):
     """
 
     column_names = ['time', 'Milliseconds', 'levelCounter', 'correctCounter',
-                'leftHandPosition', 'leftHandRotation', 'rightHandPosition',
-                'rightHandRotation', 'redBallPosition', 'redBallRotation',
-                'leftHandGrab', 'rightHandGrab', 'feedbackType',
-                'leftHandVibration', 'rightHandVibration', 'correctBallPosition',
-                'lastTemplateBallPosition', 'areCalibratingGhostHandsActive',
-                'areGrabbingGhostHandsActive', 'calibrationState',
-                'isCalibrationBlocked', 'grabbingState', 'buttonHasBeenPressed',
-                'buttonCurrentlyPressed', 'headPosition', 'headRotation',
-                'isExplosionTriggered', 'ECG']
-    column_types = ['string','float32', 'float32', 'float32',
-                'string', 'string', 'string', 'string', 'string',
-                'string', 'boolean', 'boolean', 'category',
-                'boolean', 'boolean', 'string', 'string',
-                'boolean', 'boolean', 'boolean', 'string',
-                'boolean', 'string', 'boolean', 'boolean',
-                'string', 'string', 'object']
-    
+                    'leftHandPosition', 'leftHandRotation', 'rightHandPosition',
+                    'rightHandRotation', 'redBallPosition', 'redBallRotation',
+                    'leftHandGrab', 'rightHandGrab', 'feedbackType',
+                    'leftHandVibration', 'rightHandVibration', 'correctBallPosition',
+                    'lastTemplateBallPosition', 'areCalibratingGhostHandsActive',
+                    'areGrabbingGhostHandsActive', 'calibrationState',
+                    'isCalibrationBlocked', 'grabbingState', 'buttonHasBeenPressed',
+                    'buttonCurrentlyPressed', 'headPosition', 'headRotation',
+                    'isExplosionTriggered', 'ECG']
+    column_types = ['string', 'float32', 'float32', 'float32',
+                    'string', 'string', 'string', 'string', 'string',
+                    'string', 'boolean', 'boolean', 'category',
+                    'boolean', 'boolean', 'string', 'string',
+                    'boolean', 'boolean', 'boolean', 'string',
+                    'boolean', 'string', 'boolean', 'boolean',
+                    'string', 'string', 'object']
+
     accumulated_data = []  # Accumulate individual CSV data
 
     for i, folder in enumerate(path_sets):
@@ -108,6 +107,21 @@ def read_ptcp_sets_from_dropbox(path_sets, ptcp_names):
     return combined_df
 
 
+def main():
+    # FIXED: Specify the path to the file you want to access
+    path = '/My Mac (glaroam2-185-117.wireless.gla.ac.uk)/Documents/Research MaxPlank/P1_propioception/Data_Wrangling/Matlab Analysis/Data_Wrangling'
+
+    # 1.Get participant folders and names
+    folder_path, folder_names = get_fold(path)
+    # 2.Get Sets folders and names for ptcpt
+    g_ptcp_path, g_ptcp_names = get_fold(folder_path[1])
+
+    # 3.Read participant datasets from Dropbox into DF.
+    ptcp_df = read_ptcp_sets_from_dropbox(g_ptcp_path,g_ptcp_names)
+
+    return g_ptcp_path, g_ptcp_names, ptcp_df
+
+########################### Excecution of Main Function ##
 
 
 if __name__ == '__main__':
