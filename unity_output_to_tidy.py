@@ -28,13 +28,14 @@ dbx = dropbox.Dropbox(ACCESS_TOKEN)
 # FUNCIONES
 # Geting names and folder paths.
 
+folder_names = []
 
 def get_fold(fld_path):
     """
     Load folders within the given path and remove __MACOSX.
     """
     folder_paths = []
-    folder_names = []
+    global folder_names 
     try:
         response = dbx.files_list_folder(fld_path)
         # Iterate over the entries in the root directory
@@ -57,7 +58,7 @@ def read_ptcp_sets_from_dropbox(path_sets, ptcp_names):
     """
     read csv files
     """
-
+    global folder_names
     column_names = ['time', 'Milliseconds', 'levelCounter', 'correctCounter',
                     'leftHandPosition', 'leftHandRotation', 'rightHandPosition',
                     'rightHandRotation', 'redBallPosition', 'redBallRotation',
@@ -81,9 +82,7 @@ def read_ptcp_sets_from_dropbox(path_sets, ptcp_names):
     for i, folder in enumerate(path_sets):
         pathy = folder + "/everything.csv"
         _, response = dbx.files_download(pathy)
-
         csv_data = response.content
-
         # Read the CSV data into a Pandas DataFrame
         df_list = pd.read_csv(io.StringIO(csv_data.decode('utf-8')),
                          # There is some curruption in the files, so we skip first second
@@ -95,7 +94,7 @@ def read_ptcp_sets_from_dropbox(path_sets, ptcp_names):
         # Add 'trail_set' column with iteration number and 'ptcp' column
         for record in df_list:
             record['trial_set'] = i + 1
-            record['ptcp'] = ptcp_names[1]
+            record['ptcp'] = folder_names[1]
 
         accumulated_data.extend(df_list)  # Accumulate the data
 
