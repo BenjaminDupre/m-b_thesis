@@ -1,5 +1,5 @@
 '''
-Unity_output_to_tidy.py
+unity_output_to_tidy.py
 
 version 1.1
 last updated: July 2023
@@ -13,14 +13,16 @@ Description:
 Loading text from Cloud Dropbox Service 
 and Loading into a ready to analyse pandas dataframe 
 '''
+import io
 import dropbox
 import pandas as pd
-import io
+
 
 # Set up the Dropbox API client
 
 # Constants
-ACCESS_TOKEN = 'sl.BhlQbLIsxTfh2SAOAbRnMboR5m-KscFSWRjtN4h9ucU5y_84ekGXTX01buk2s7PBw61hGD1jLOkDarPhFcYClIfRE0csn15LVl7tru9djfUyYM59D65e1oa_p8DbuHGQZqzhJ4gxH7vN'
+ACCESS_TOKEN = 'sl.Bhl__nDYdob0URht5N609CMkbfyoVCICAFM47rFC7EVb-'\
+'EO9YgSFnMj37BZ4_sONKPmfllhN3YaN37g3EQcDQ3wYASgy0EmnKtvvukq16rwfp6NQIGmw_bLAO_W19lrKk0f385vd_Sd1'
 dbx = dropbox.Dropbox(ACCESS_TOKEN)
 
 # FUNCIONES
@@ -83,17 +85,19 @@ def read_ptcp_sets_from_dropbox(path_sets, ptcp_names):
         csv_data = response.content
 
         # Read the CSV data into a Pandas DataFrame
-        df = pd.read_csv(io.StringIO(csv_data.decode('utf-8')),
+        df_list = pd.read_csv(io.StringIO(csv_data.decode('utf-8')),
                          # There is some curruption in the files, so we skip first second
                          skiprows=133, delimiter=';',
-                         names=column_names, dtype=dict(zip(column_names, column_types))).to_dict('records')
+                         names=column_names, \
+                            dtype=dict(zip(column_names, \
+                                            column_types))).to_dict('records')
 
         # Add 'trail_set' column with iteration number and 'ptcp' column
-        for record in df:
-            record['trial_set'] = (i + 1)
+        for record in df_list:
+            record['trial_set'] = i + 1
             record['ptcp'] = ptcp_names[1]
 
-        accumulated_data.extend(df)  # Accumulate the data
+        accumulated_data.extend(df_list)  # Accumulate the data
 
         # Create a single DataFrame directly from the accumulated data
         combined_df = pd.DataFrame(accumulated_data)
@@ -108,8 +112,13 @@ def read_ptcp_sets_from_dropbox(path_sets, ptcp_names):
 
 
 def main():
+    """
+    Main Function
+
+    """
     # FIXED: Specify the path to the file you want to access
-    path = '/My Mac (glaroam2-185-117.wireless.gla.ac.uk)/Documents/Research MaxPlank/P1_propioception/Data_Wrangling/Matlab Analysis/Data_Wrangling'
+    path = '/My Mac (glaroam2-185-117.wireless.gla.ac.uk)/Documents/Research MaxPlank/' \
+    'P1_propioception/Data_Wrangling/Matlab Analysis/Data_Wrangling'
 
     # 1.Get participant folders and names
     folder_path, folder_names = get_fold(path)
@@ -133,4 +142,6 @@ if __name__ == '__main__':
     # Print the unique feedbackType values
     for index, feedback_types in unique_feedback_types.items():
         ptcp, set_val, level_counter = index
-        print(f"ptcp: {ptcp}, trial_set: {set_val}, levelCounter: {level_counter} - Unique feedbackType values: {feedback_types}")
+        print(f"ptcp: {ptcp}, \
+               trial_set: {set_val}, \
+                 levelCounter: {level_counter} - Unique feedbackType values: {feedback_types}")
