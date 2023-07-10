@@ -16,13 +16,14 @@ and Loading into a ready to analyse pandas dataframe
 import io
 import dropbox
 import pandas as pd
+import numpy as np
 
 
 # Set up the Dropbox API client
 
 # Constants
-ACCESS_TOKEN = 'sl.Bhl__nDYdob0URht5N609CMkbfyoVCICAFM47rFC7EVb-'\
-'EO9YgSFnMj37BZ4_sONKPmfllhN3YaN37g3EQcDQ3wYASgy0EmnKtvvukq16rwfp6NQIGmw_bLAO_W19lrKk0f385vd_Sd1'
+ACCESS_TOKEN = 'sl.Bh5QQ3X4EJGBF1YxhhHWK1vRMoQHWKd2GkUQ8LuSGm9IVJ6Svh'\
+    '3WPCbOtNUp74C8Y20V9h38e9DLbYubTw6d51k8_cL4H8vCkWf1dBTBmW19sZqBuwTVXcZU2FstfMTXA-DqEOvWl9oK'
 dbx = dropbox.Dropbox(ACCESS_TOKEN)
 
 # FUNCIONES
@@ -32,10 +33,16 @@ folder_names = []
 
 def get_fold(fld_path):
     """
-    Load folders within the given path and remove __MACOSX.
+    retrieves folder paths and 
+    names from a given path in
+    the Dropbox service. It iterates 
+    over the entries in the specified folder,
+    identifies subfolders, and stores their
+    paths and names in the folder_paths
+    and folder_names lists.
     """
     folder_paths = []
-    global folder_names 
+    #global folder_names 
     try:
         response = dbx.files_list_folder(fld_path)
         # Iterate over the entries in the root directory
@@ -144,3 +151,34 @@ if __name__ == '__main__':
         print(f"ptcp: {ptcp}, \
                trial_set: {set_val}, \
                  levelCounter: {level_counter} - Unique feedbackType values: {feedback_types}")
+
+
+##### test to get only one stimuli 
+# Remove duplicate feedback types based on the specified conditions
+#import pandas as pd
+
+# Assuming you already have the DataFrame 'f_ptcp_df' containing the data
+
+# Group the data and extract unique feedbackType values per participant, set, and levelCounter
+unique_feedback_types = f_ptcp_df.groupby(['ptcp', 'trial_set', 'levelCounter'])['feedbackType'].unique()
+
+# Remove duplicate feedback types based on the specified conditions
+for index, feedback_types in unique_feedback_types.items():
+    ptcp, set_val, level_counter = index
+    if level_counter != 0:
+        previous_level_counter = level_counter - 1
+        previous_feedback_types = unique_feedback_types.get((ptcp, set_val, previous_level_counter))
+        if previous_feedback_types is not None and feedback_types.size>=2:
+            # Remove feedback types that are also present in the previous level
+            feedback_types = [ft for ft in feedback_types if ft not in previous_feedback_types]           
+    elif level_counter == 0 and feedback_types.size>=2:
+        feedback_types = feedback_types[np.where(feedback_types != 'none')]
+
+    
+
+    unique_feedback_types[index] = feedback_types
+
+# Print the unique feedbackType values after removing duplicates
+for index, feedback_types in unique_feedback_types.items():
+    ptcp, set_val, level_counter = index
+    print(f"ptcp: {ptcp}, trial_set: {set_val}, levelCounter: {level_counter} - Unique feedbackType values: {feedback_types}")
