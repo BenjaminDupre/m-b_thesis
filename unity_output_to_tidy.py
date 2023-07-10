@@ -165,6 +165,7 @@ unique_feedback_types = f_ptcp_df.groupby(['ptcp', 'trial_set', 'levelCounter'])
 # Remove duplicate feedback types based on the specified conditions
 for index, feedback_types in unique_feedback_types.items():
     ptcp, set_val, level_counter = index
+    feedback_types = feedback_types[np.isin(feedback_types, ['incongruent', 'none', 'congruent'])]
     if level_counter != 0:
         previous_level_counter = level_counter - 1
         previous_feedback_types = unique_feedback_types.get((ptcp, set_val, previous_level_counter))
@@ -173,8 +174,6 @@ for index, feedback_types in unique_feedback_types.items():
             feedback_types = [ft for ft in feedback_types if ft not in previous_feedback_types]           
     elif level_counter == 0 and feedback_types.size>=2:
         feedback_types = feedback_types[np.where(feedback_types != 'none')]
-
-    
 
     unique_feedback_types[index] = feedback_types
 
