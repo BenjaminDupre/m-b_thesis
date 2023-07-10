@@ -182,3 +182,4 @@ for index, feedback_types in unique_feedback_types.items():
 for index, feedback_types in unique_feedback_types.items():
     ptcp, set_val, level_counter = index
     print(f"ptcp: {ptcp}, trial_set: {set_val}, levelCounter: {level_counter} - Unique feedbackType values: {feedback_types}")
+ 
