@@ -155,33 +155,6 @@ if __name__ == '__main__':
 
 ##### test to get only one stimuli 
 # Remove duplicate feedback types based on the specified conditions
-import pandas as pd
-
-# Assuming you already have the DataFrame 'f_ptcp_df' containing the data
-
-# Group the data and extract unique feedbackType values per participant, set, and levelCounter
-unique_feedback_types = f_ptcp_df.groupby(['ptcp', 'trial_set', 'levelCounter'])['feedbackType'].unique()
-
-# Remove duplicate feedback types based on the specified conditions
-for index, feedback_types in unique_feedback_types.items():
-    ptcp, set_val, level_counter = index
-    if level_counter != 0:
-        previous_level_counter = level_counter - 1
-        previous_feedback_types = unique_feedback_types.get((ptcp, set_val, previous_level_counter))
-        if previous_feedback_types is not None:
-            # Remove feedback types that are also present in the previous level
-            feedback_types = [ft for ft in feedback_types if ft not in previous_feedback_types]
-
-    unique_feedback_types[index] = feedback_types
-
-# Print the unique feedbackType values after removing duplicates
-for index, feedback_types in unique_feedback_types.items():
-    ptcp, set_val, level_counter = index
-    print(f"ptcp: {ptcp}, trial_set: {set_val}, levelCounter: {level_counter} - Unique feedbackType values: {feedback_types}")
-
-
-##### test to get only one stimuli 
-# Remove duplicate feedback types based on the specified conditions
 #import pandas as pd
 
 # Assuming you already have the DataFrame 'f_ptcp_df' containing the data
