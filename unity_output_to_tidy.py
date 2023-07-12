@@ -22,8 +22,13 @@ import numpy as np
 # Set up the Dropbox API client
 
 # Constants
+<<<<<<< HEAD
 ACCESS_TOKEN = 'sl.Bhl__nDYdob0URht5N609CMkbfyoVCICAFM47rFC7EVb-'\
 'EO9YgSFnMj37BZ4_sONKPmfllhN3YaN37g3EQcDQ3wYASgy0EmnKtvvukq16rwfp6NQIGmw_bLAO_W19lrKk0f385vd_Sd1'
+=======
+ACCESS_TOKEN = 'sl.BiCpkcp61v5CzfPijatM_u8806UjuSMgw642HJX5cociAsdyVG5afGCvYM8-'\
+    'RpCm53XSycUwUvwzsFejjGQXPmp_ZKkK0cZmXWveuj3PKbPjTDsekBhfQzCxixqyo7eJGaMPu9NkmUTe'
+>>>>>>> 977fa07 (added change)
 dbx = dropbox.Dropbox(ACCESS_TOKEN)
 
 # FUNCIONES
@@ -155,16 +160,20 @@ if __name__ == '__main__':
 
 ##### test to get only one stimuli 
 # Remove duplicate feedback types based on the specified conditions
+<<<<<<< HEAD
 #import pandas as pd
+=======
+>>>>>>> 977fa07 (added change)
 
-# Assuming you already have the DataFrame 'f_ptcp_df' containing the data
 
 # Group the data and extract unique feedbackType values per participant, set, and levelCounter
 unique_feedback_types = f_ptcp_df.groupby(['ptcp', 'trial_set', 'levelCounter'])['feedbackType'].unique()
 
+
 # Remove duplicate feedback types based on the specified conditions
 for index, feedback_types in unique_feedback_types.items():
     ptcp, set_val, level_counter = index
+<<<<<<< HEAD
     feedback_types = feedback_types[np.isin(feedback_types, ['incongruent', 'none', 'congruent'])]
     if level_counter != 0:
         previous_level_counter = level_counter - 1
@@ -174,6 +183,18 @@ for index, feedback_types in unique_feedback_types.items():
             feedback_types = [ft for ft in feedback_types if ft not in previous_feedback_types]           
     elif level_counter == 0 and feedback_types.size>=2:
         feedback_types = feedback_types[np.where(feedback_types != 'none')]
+=======
+    if level_counter != 0 and feedback_types.size > 1:
+        previous_level_counter = level_counter - 1
+        previous_feedback_types = unique_feedback_types.get((ptcp, set_val, previous_level_counter))
+        if previous_feedback_types is not None and previous_feedback_types.size > 0:
+            if np.isscalar(previous_feedback_types):
+                last_element = previous_feedback_types
+            else:
+                last_element = list(previous_feedback_types)[-1]
+            if feedback_types[0] == last_element:
+                feedback_types = feedback_types[1:]
+>>>>>>> 977fa07 (added change)
 
     unique_feedback_types[index] = feedback_types
 
