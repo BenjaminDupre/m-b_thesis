@@ -23,8 +23,8 @@ import numpy as np
 
 # Constants
 
-ACCESS_TOKEN = 'sl.Bhl__nDYdob0URht5N609CMkbfyoVCICAFM47rFC7EVb-'\
-'EO9YgSFnMj37BZ4_sONKPmfllhN3YaN37g3EQcDQ3wYASgy0EmnKtvvukq16rwfp6NQIGmw_bLAO_W19lrKk0f385vd_Sd1'
+ACCESS_TOKEN = 'sl.BiC19BGF4lqEh0PILgF2R9ki0O6mSePyddb4SDLCRYX2WiXUJ0AvqfmIjHH_'\
+    'qbirCvPcF0yV_xvvJeMQt18pFJN5ARnVS16D2qiz0PW0YIlz1l3Fh-vKNy6fvQbmcqXJAicdEzVj-OYF'
 
 dbx = dropbox.Dropbox(ACCESS_TOKEN)
 
@@ -158,9 +158,6 @@ if __name__ == '__main__':
 ##### test to get only one stimuli 
 # Remove duplicate feedback types based on the specified conditions
 
-#import pandas as pd
-
-
 # Group the data and extract unique feedbackType values per participant, set, and levelCounter
 unique_feedback_types = f_ptcp_df.groupby(['ptcp', 'trial_set', 'levelCounter'])['feedbackType'].unique()
 
@@ -175,9 +172,11 @@ for index, feedback_types in unique_feedback_types.items():
         if previous_feedback_types is not None and previous_feedback_types.size > 0:
             if np.isscalar(previous_feedback_types):
                 last_element = previous_feedback_types
+            elif previous_feedback_types.size > 0:
+                last_element = np.asarray(previous_feedback_types)[-1]
             else:
-                last_element = list(previous_feedback_types)[-1]
-            if feedback_types[0] == last_element:
+                last_element = None
+            if last_element is not None and feedback_types[0] == last_element:
                 feedback_types = feedback_types[1:]
 
     unique_feedback_types[index] = feedback_types
