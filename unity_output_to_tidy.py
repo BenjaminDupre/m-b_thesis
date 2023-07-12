@@ -160,7 +160,7 @@ if __name__ == '__main__':
 
 # Group the data and extract unique feedbackType values per participant, set, and levelCounter
 unique_feedback_types = f_ptcp_df.groupby(['ptcp', 'trial_set', 'levelCounter'])['feedbackType'].unique()
-
+count=0
 
 # Remove duplicate feedback types based on the specified conditions
 for index, feedback_types in unique_feedback_types.items():
@@ -169,15 +169,16 @@ for index, feedback_types in unique_feedback_types.items():
     if level_counter != 0 and feedback_types.size > 1:
         previous_level_counter = level_counter - 1
         previous_feedback_types = unique_feedback_types.get((ptcp, set_val, previous_level_counter))
-        if previous_feedback_types is not None and previous_feedback_types.size > 0:
-            if np.isscalar(previous_feedback_types):
+        if previous_feedback_types is not None :
+            if previous_feedback_types.size==1:
                 last_element = previous_feedback_types
-            elif previous_feedback_types.size > 0:
+            elif previous_feedback_types.size > 1:
                 last_element = np.asarray(previous_feedback_types)[-1]
             else:
                 last_element = None
-            if last_element is not None and feedback_types[0] == last_element:
-                feedback_types = feedback_types[1:]
+                count = +1 
+        if last_element is not None and feedback_types[0] == last_element :
+            feedback_types = feedback_types[1:]
 
     unique_feedback_types[index] = feedback_types
 
