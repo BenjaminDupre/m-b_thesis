@@ -1,15 +1,16 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.6)  15 JUN 2023 10:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.20)  20 JUL 2023 16:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/bdupr/Documents/GitHub/m-b_thesis/Latex_Proposal_Mod/main.tex
-(c:/Users/bdupr/Documents/GitHub/m-b_thesis/Latex_Proposal_Mod/main.tex
-LaTeX2e <2022-11-01> patch level 1
-L3 programming layer <2023-03-30> (C:\Users\bdupr\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
-Document Class: report 2022/07/02 v1.4n Standard LaTeX document class
+**c:/Users/bdupr/Documents/GitHub/m-b_thesis/Latex_Supervisor_Proposal_Mod/main.tex
+(c:/Users/bdupr/Documents/GitHub/m-b_thesis/Latex_Supervisor_Proposal_Mod/main.tex
+LaTeX2e <2023-06-01> patch level 1
+L3 programming layer <2023-06-30>
+(C:\Users\bdupr\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
+Document Class: report 2023/05/17 v1.4n Standard LaTeX document class
 (C:\Users\bdupr\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
-File: size12.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
+File: size12.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count185
 \c@chapter=\count186
@@ -25,13 +26,13 @@ File: size12.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
 \bibindent=\dimen140
 ) (C:\Users\bdupr\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
-\inpenc@prehook=\toks16
-\inpenc@posthook=\toks17
+\inpenc@prehook=\toks17
+\inpenc@posthook=\toks18
 ) (C:\Users\bdupr\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\helvet.sty
 Package: helvet 2020/03/25 PSNFSS-v9.3 (WaS) 
  (C:\Users\bdupr\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
-\KV@toks@=\toks18
+\KV@toks@=\toks19
 )) (C:\Users\bdupr\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 LaTeX Font Info:    Trying to load font information for T1+phv on input line 112.
@@ -305,14 +306,14 @@ File: biblatex.cfg
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Document encoding is UTF8 ....
  (C:\Users\bdupr\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
-Package: expl3 2023-03-30 L3 programming layer (loader) 
+Package: expl3 2023-06-30 L3 programming layer (loader) 
  (C:\Users\bdupr\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
-File: l3backend-pdftex.def 2023-03-30 L3 backend support: PDF output (pdfTeX)
+File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count387
 \l__pdf_internal_box=\box51
 ))
 Package biblatex Info: ... and expl3
-(biblatex)             2023-03-30 L3 programming layer (loader) 
+(biblatex)             2023-06-30 L3 programming layer (loader) 
 (biblatex)             is new enough (at least 2020/04/06),
 (biblatex)             setting 'casechanger=expl3'.
  (C:\Users\bdupr\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-case-expl3.sty (C:\Users\bdupr\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xparse.sty
@@ -320,7 +321,7 @@ Package: xparse 2023-02-02 L3 Experimental document command parser
 )
 Package: blx-case-expl3 2023/03/05 v3.19 expl3 case changing code for biblatex
 )) (C:\Users\bdupr\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
-Package: hyperref 2023-02-07 v7.00v Hypertext links for LaTeX
+Package: hyperref 2023-07-08 v7.01b Hypertext links for LaTeX
  (C:\Users\bdupr\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 ) (C:\Users\bdupr\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.sty
@@ -332,7 +333,7 @@ Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 ) (C:\Users\bdupr\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 ) (C:\Users\bdupr\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
-Package: nameref 2022-05-17 v2.50 Cross-referencing by name of section
+Package: nameref 2023-08-07 v2.53 Cross-referencing by name of section
  (C:\Users\bdupr\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (C:\Users\bdupr\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty
@@ -344,30 +345,28 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 \Hy@linkcounter=\count389
 \Hy@pagecounter=\count390
  (C:\Users\bdupr\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
-File: pd1enc.def 2023-02-07 v7.00v Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2023-07-08 v7.01b Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 ) (C:\Users\bdupr\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
-) (C:\Users\bdupr\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.sty
-Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
 \Hy@SavedSpaceFactor=\count391
  (C:\Users\bdupr\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
-File: puenc.def 2023-02-07 v7.00v Hyperref: PDF Unicode definition (HO)
+File: puenc.def 2023-07-08 v7.01b Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 4060.
-Package hyperref Info: Hyper figures OFF on input line 4177.
-Package hyperref Info: Link nesting OFF on input line 4182.
-Package hyperref Info: Hyper index ON on input line 4185.
-Package hyperref Info: Plain pages OFF on input line 4192.
-Package hyperref Info: Backreferencing OFF on input line 4197.
+Package hyperref Info: Option `colorlinks' set `true' on input line 4050.
+Package hyperref Info: Hyper figures OFF on input line 4167.
+Package hyperref Info: Link nesting OFF on input line 4172.
+Package hyperref Info: Hyper index ON on input line 4175.
+Package hyperref Info: Plain pages OFF on input line 4182.
+Package hyperref Info: Backreferencing OFF on input line 4187.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4425.
+Package hyperref Info: Bookmarks ON on input line 4434.
 \c@Hy@tempcnt=\count392
-LaTeX Info: Redefining \url on input line 4763.
+LaTeX Info: Redefining \url on input line 4772.
 \XeTeXLinkMargin=\dimen142
  (C:\Users\bdupr\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -377,13 +376,13 @@ Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 \Fld@menulength=\count393
 \Field@Width=\dimen143
 \Fld@charsize=\dimen144
-Package hyperref Info: Hyper figures OFF on input line 6042.
-Package hyperref Info: Link nesting OFF on input line 6047.
-Package hyperref Info: Hyper index ON on input line 6050.
-Package hyperref Info: backreferencing OFF on input line 6057.
-Package hyperref Info: Link coloring ON on input line 6060.
-Package hyperref Info: Link coloring with OCG OFF on input line 6067.
-Package hyperref Info: PDF/A mode OFF on input line 6072.
+Package hyperref Info: Hyper figures OFF on input line 6051.
+Package hyperref Info: Link nesting OFF on input line 6056.
+Package hyperref Info: Hyper index ON on input line 6059.
+Package hyperref Info: backreferencing OFF on input line 6066.
+Package hyperref Info: Link coloring ON on input line 6069.
+Package hyperref Info: Link coloring with OCG OFF on input line 6076.
+Package hyperref Info: PDF/A mode OFF on input line 6081.
  (C:\Users\bdupr\AppData\Local\Programs\MiKTeX\tex/latex/base\atbegshi-ltx.sty
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
@@ -394,7 +393,7 @@ package with kernel methods
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
  (C:\Users\bdupr\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
-File: hpdftex.def 2023-02-07 v7.00v Hyperref driver for pdfTeX
+File: hpdftex.def 2023-07-08 v7.01b Hyperref driver for pdfTeX
  (C:\Users\bdupr\AppData\Local\Programs\MiKTeX\tex/latex/base\atveryend-ltx.sty
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
 with kernel methods
@@ -438,7 +437,7 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layoutheight=\dimen152
 \Gm@layouthoffset=\dimen153
 \Gm@layoutvoffset=\dimen154
-\Gm@dimlist=\toks19
+\Gm@dimlist=\toks20
  (C:\Users\bdupr\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
 \@quotelevel=\count402
 \@quotereset=\count403
@@ -470,12 +469,12 @@ LaTeX Font Info:    ... okay on input line 47.
 \scratchbox=\box52
 \nofMPsegments=\count405
 \nofMParguments=\count406
-\everyMPshowfont=\toks20
+\everyMPshowfont=\toks21
 \MPscratchCnt=\count407
 \MPscratchDim=\dimen156
 \MPnumerator=\count408
 \makeMPintoPDFobject=\count409
-\everyMPtoPDFconversion=\toks21
+\everyMPtoPDFconversion=\toks22
 ) (C:\Users\bdupr\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -544,22 +543,20 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 16.41594pt on input line 49.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 16.41594pt on input line 49.
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 11.39996pt on input line 54.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 17.09995pt on input line 70.
+(Font)              scaled to size 17.09995pt on input line 65.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 17.09995pt on input line 70.
+(Font)              scaled to size 17.09995pt on input line 65.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 70.
+(Font)              <12> on input line 65.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 70.
+(Font)              <8> on input line 65.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 70.
-<hu_siegel-kombi_rgb.png, id=11, 367.1316pt x 203.5605pt>
+(Font)              <6> on input line 65.
+<hu_siegel-kombi_rgb.png, id=10, 367.1316pt x 203.5605pt>
 File: hu_siegel-kombi_rgb.png Graphic file (type png)
 <use hu_siegel-kombi_rgb.png>
-Package pdftex.def Info: hu_siegel-kombi_rgb.png  used on input line 70.
+Package pdftex.def Info: hu_siegel-kombi_rgb.png  used on input line 65.
 (pdftex.def)             Requested size: 183.80716pt x 101.91356pt.
 
 Package fancyhdr Warning: \headheight is too small (113.81102pt): 
@@ -572,9 +569,11 @@ Package fancyhdr Warning: \headheight is too small (113.81102pt):
 
  <./hu_siegel-kombi_rgb.png>]
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 13.67995pt on input line 80.
+(Font)              scaled to size 13.67995pt on input line 70.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 13.67995pt on input line 80.
+(Font)              scaled to size 13.67995pt on input line 70.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 11.39996pt on input line 77.
 File: hu_siegel-kombi_rgb.png Graphic file (type png)
 <use hu_siegel-kombi_rgb.png>
 Package pdftex.def Info: hu_siegel-kombi_rgb.png  used on input line 87.
@@ -590,7 +589,7 @@ Package fancyhdr Warning: \headheight is too small (113.81102pt):
 [2]
 File: hu_siegel-kombi_rgb.png Graphic file (type png)
 <use hu_siegel-kombi_rgb.png>
-Package pdftex.def Info: hu_siegel-kombi_rgb.png  used on input line 102.
+Package pdftex.def Info: hu_siegel-kombi_rgb.png  used on input line 92.
 (pdftex.def)             Requested size: 183.80716pt x 101.91356pt.
 
 
@@ -601,14 +600,14 @@ Package fancyhdr Warning: \headheight is too small (113.81102pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.53091pt}.
 
 [3]
-<firma.png, id=45, 528.47438pt x 323.70938pt>
+<firma.png, id=42, 528.47438pt x 323.70938pt>
 File: firma.png Graphic file (type png)
 <use firma.png>
-Package pdftex.def Info: firma.png  used on input line 113.
+Package pdftex.def Info: firma.png  used on input line 103.
 (pdftex.def)             Requested size: 113.81102pt x 69.70976pt.
 File: hu_siegel-kombi_rgb.png Graphic file (type png)
 <use hu_siegel-kombi_rgb.png>
-Package pdftex.def Info: hu_siegel-kombi_rgb.png  used on input line 117.
+Package pdftex.def Info: hu_siegel-kombi_rgb.png  used on input line 107.
 (pdftex.def)             Requested size: 183.80716pt x 101.91356pt.
 
 
@@ -620,31 +619,31 @@ Package fancyhdr Warning: \headheight is too small (113.81102pt):
 
 [4 <./firma.png>]
 LaTeX Font Info:    Font shape `T1/phv/m/sc' will be
-(Font)              scaled to size 9.49997pt on input line 118.
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 118.
+(Font)              scaled to size 9.49997pt on input line 108.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 108.
  (C:\Users\bdupr\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
-File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
+File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 118.
+(Font)              <7> on input line 108.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 118.
+(Font)              <5> on input line 108.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 118.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 108.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 9.49997pt on input line 118.
+(Font)              scaled to size 9.49997pt on input line 108.
 
-Overfull \hbox (10.61816pt too wide) in paragraph at lines 118--118
+Overfull \hbox (10.61816pt too wide) in paragraph at lines 108--108
 []\T1/phv/m/n/10 Jonathan Cole. \T1/phv/m/sl/10 Los-ing Touch: A man with-out his body\T1/phv/m/n/10 . Ox-ford Uni-ver-sity Press, June 2016. \T1/phv/m/sc/10 isbn\T1/phv/m/n/10 : 9780198778875.
  []
 
 
 Package biblatex Warning: No driver for 'books'.
-(biblatex)                Using fallback driver on input line 118.
+(biblatex)                Using fallback driver on input line 108.
 
 File: hu_siegel-kombi_rgb.png Graphic file (type png)
 <use hu_siegel-kombi_rgb.png>
-Package pdftex.def Info: hu_siegel-kombi_rgb.png  used on input line 122.
+Package pdftex.def Info: hu_siegel-kombi_rgb.png  used on input line 112.
 (pdftex.def)             Requested size: 183.80716pt x 101.91356pt.
 
 Package fancyhdr Warning: \headheight is too small (113.81102pt): 
@@ -654,6 +653,10 @@ Package fancyhdr Warning: \headheight is too small (113.81102pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.53091pt}.
 
 [5] (main.aux)
+ ***********
+LaTeX2e <2023-06-01> patch level 1
+L3 programming layer <2023-06-30>
+ ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -661,17 +664,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 17165 strings out of 476331
- 303989 string characters out of 5787766
- 1865660 words of memory out of 5000000
- 37398 multiletter control sequences out of 15000+600000
- 546582 words of font info for 62 fonts, out of 8000000 for 9000
+ 17048 strings out of 475550
+ 299186 string characters out of 5762533
+ 1932238 words of memory out of 5000000
+ 38075 multiletter control sequences out of 15000+600000
+ 592364 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,15n,68p,1781b,1363s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 66i,16n,81p,1792b,1363s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\bdupr\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk><C:/Users/bdupr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/bdupr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/bdupr/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/bdupr/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/bdupr/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (5 pages, 209690 bytes).
+Output written on main.pdf (5 pages, 207650 bytes).
 PDF statistics:
- 163 PDF objects out of 1000 (max. 8388607)
- 21 named destinations out of 1000 (max. 500000)
+ 160 PDF objects out of 1000 (max. 8388607)
+ 19 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
