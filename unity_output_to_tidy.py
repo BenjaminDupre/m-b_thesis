@@ -23,8 +23,7 @@ import numpy as np
 
 # Constants
 
-ACCESS_TOKEN = 'sl.BiC19BGF4lqEh0PILgF2R9ki0O6mSePyddb4SDLCRYX2WiXUJ0AvqfmIjHH_'\
-    'qbirCvPcF0yV_xvvJeMQt18pFJN5ARnVS16D2qiz0PW0YIlz1l3Fh-vKNy6fvQbmcqXJAicdEzVj-OYF'
+ACCESS_TOKEN = 'sl.BidNwfjq-jxpIbgCQHhg524ZnBmB_kJ57tY6Y6iBJ3JOohuIEeaetC_M5V6Q22h7NtqU8pLHLnRIPGrO5eID6pShPDQKmTgoMOmRoGmgrRLX4YuVXDTF8202u7MbX9_XZIu62hoiDHZ1'
 
 dbx = dropbox.Dropbox(ACCESS_TOKEN)
 
