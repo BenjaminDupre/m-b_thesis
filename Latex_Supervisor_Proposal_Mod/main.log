@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.20)  20 JUL 2023 16:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.20)  20 JUL 2023 16:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -553,7 +553,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 65.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 65.
-<hu_siegel-kombi_rgb.png, id=10, 367.1316pt x 203.5605pt>
+<hu_siegel-kombi_rgb.png, id=11, 367.1316pt x 203.5605pt>
 File: hu_siegel-kombi_rgb.png Graphic file (type png)
 <use hu_siegel-kombi_rgb.png>
 Package pdftex.def Info: hu_siegel-kombi_rgb.png  used on input line 65.
@@ -600,7 +600,7 @@ Package fancyhdr Warning: \headheight is too small (113.81102pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.53091pt}.
 
 [3]
-<firma.png, id=42, 528.47438pt x 323.70938pt>
+<firma.png, id=44, 528.47438pt x 323.70938pt>
 File: firma.png Graphic file (type png)
 <use firma.png>
 Package pdftex.def Info: firma.png  used on input line 103.
@@ -664,17 +664,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 17048 strings out of 475550
- 299186 string characters out of 5762533
+ 17057 strings out of 475550
+ 299508 string characters out of 5762533
  1932238 words of memory out of 5000000
- 38075 multiletter control sequences out of 15000+600000
+ 38083 multiletter control sequences out of 15000+600000
  592364 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 66i,16n,81p,1792b,1363s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 66i,16n,81p,2024b,1363s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\bdupr\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk><C:/Users/bdupr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/bdupr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/bdupr/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/bdupr/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/bdupr/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (5 pages, 207650 bytes).
+Output written on main.pdf (5 pages, 208903 bytes).
 PDF statistics:
- 160 PDF objects out of 1000 (max. 8388607)
- 19 named destinations out of 1000 (max. 500000)
+ 164 PDF objects out of 1000 (max. 8388607)
+ 20 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
