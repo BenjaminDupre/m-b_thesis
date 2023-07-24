@@ -19,6 +19,85 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{esra}{article}{}
+      \name{author}{9}{}{%
+        {{hash=e0e4e6d68105ce17f5231ea2aa2c13b9}{%
+           family={Al},
+           familyi={A\bibinitperiod},
+           given={Esra},
+           giveni={E\bibinitperiod}}}%
+        {{hash=e97d0b96be32efd95b4fa3e43c348f21}{%
+           family={Iliopoulos},
+           familyi={I\bibinitperiod},
+           given={Fivos},
+           giveni={F\bibinitperiod}}}%
+        {{hash=bb5f0880b85a02fd146c5265cfa857fc}{%
+           family={Forschack},
+           familyi={F\bibinitperiod},
+           given={Norman},
+           giveni={N\bibinitperiod}}}%
+        {{hash=6874257943662ad54667cea72faa0e9a}{%
+           family={Nierhaus},
+           familyi={N\bibinitperiod},
+           given={Till},
+           giveni={T\bibinitperiod}}}%
+        {{hash=dcce115c5a597841e7c5c1efe6898253}{%
+           family={Grund},
+           familyi={G\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=bc834131021c6fd6864253df26ee6262}{%
+           family={Motyka},
+           familyi={M\bibinitperiod},
+           given={Paweł},
+           giveni={P\bibinitperiod}}}%
+        {{hash=f00128c3ab6c8d147c00d96e93f2c331}{%
+           family={Gaebler},
+           familyi={G\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=e67afc85e1b6e1a4d269959999eb0b8e}{%
+           family={Nikulin},
+           familyi={N\bibinitperiod},
+           given={Vadim\bibnamedelima V.},
+           giveni={V\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=c613692fc550ace0a952f7e3556e3ae8}{%
+           family={Villringer},
+           familyi={V\bibinitperiod},
+           given={Arno},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{edd53d91ec92ff59d71667052862e95a}
+      \strng{fullhash}{ca61260c92b1a90672b355640825064a}
+      \strng{bibnamehash}{edd53d91ec92ff59d71667052862e95a}
+      \strng{authorbibnamehash}{edd53d91ec92ff59d71667052862e95a}
+      \strng{authornamehash}{edd53d91ec92ff59d71667052862e95a}
+      \strng{authorfullhash}{ca61260c92b1a90672b355640825064a}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Even though humans are mostly not aware of their heartbeats, several heartbeat-related effects have been reported to influence conscious perception. It is not clear whether these effects are distinct or related phenomena, or whether they are early sensory effects or late decisional processes. Combining electroencephalography and electrocardiography, along with signal detection theory analyses, we identify two distinct heartbeat-related influences on conscious perception differentially related to early vs. late somatosensory processing. First, an effect on early sensory processing was found for the heartbeat-evoked potential (HEP), a marker of cardiac interoception. The amplitude of the prestimulus HEP negatively correlated with localization and detection of somatosensory stimuli, reflecting a more conservative detection bias (criterion). Importantly, higher HEP amplitudes were followed by decreases in early (P50) as well as late (N140, P300) somatosensory-evoked potential (SEP) amplitudes. Second, stimulus timing along the cardiac cycle also affected perception. During systole, stimuli were detected and correctly localized less frequently, relating to a shift in perceptual sensitivity. This perceptual attenuation was accompanied by the suppression of only late SEP components (P300) and was stronger for individuals with a more stable heart rate. Both heart-related effects were independent of alpha oscillations’ influence on somatosensory processing. We explain cardiac cycle timing effects in a predictive coding account and suggest that HEP-related effects might reflect spontaneous shifts between interoception and exteroception or modulations of general attentional resources. Thus, our results provide a general conceptual framework to explain how internal signals can be integrated into our conscious perception of the world.}
+      \field{journaltitle}{Proceedings of the National Academy of Sciences}
+      \field{number}{19}
+      \field{title}{Heart–brain interactions shape somatosensory perception and evoked potentials}
+      \field{volume}{117}
+      \field{year}{2020}
+      \field{pages}{10575\bibrangedash 10584}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1073/pnas.1915629117
+      \endverb
+      \verb{eprint}
+      \verb https://www.pnas.org/doi/pdf/10.1073/pnas.1915629117
+      \endverb
+      \verb{urlraw}
+      \verb https://www.pnas.org/doi/abs/10.1073/pnas.1915629117
+      \endverb
+      \verb{url}
+      \verb https://www.pnas.org/doi/abs/10.1073/pnas.1915629117
+      \endverb
+    \endentry
     \entry{BREMNER2017227}{article}{}
       \name{author}{2}{}{%
         {{hash=d1b16db6f7c0f3798c7722a1102976a2}{%
@@ -452,6 +531,71 @@
       \verb{url}
       \verb https://www.biorxiv.org/content/early/2023/01/23/2023.01.23.525140
       \endverb
+    \endentry
+    \entry{motyka}{article}{}
+      \name{author}{6}{}{%
+        {{hash=bc834131021c6fd6864253df26ee6262}{%
+           family={Motyka},
+           familyi={M\bibinitperiod},
+           given={Paweł},
+           giveni={P\bibinitperiod}}}%
+        {{hash=dcce115c5a597841e7c5c1efe6898253}{%
+           family={Grund},
+           familyi={G\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=bb5f0880b85a02fd146c5265cfa857fc}{%
+           family={Forschack},
+           familyi={F\bibinitperiod},
+           given={Norman},
+           giveni={N\bibinitperiod}}}%
+        {{hash=e0e4e6d68105ce17f5231ea2aa2c13b9}{%
+           family={Al},
+           familyi={A\bibinitperiod},
+           given={Esra},
+           giveni={E\bibinitperiod}}}%
+        {{hash=c613692fc550ace0a952f7e3556e3ae8}{%
+           family={Villringer},
+           familyi={V\bibinitperiod},
+           given={Arno},
+           giveni={A\bibinitperiod}}}%
+        {{hash=f00128c3ab6c8d147c00d96e93f2c331}{%
+           family={Gaebler},
+           familyi={G\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{857de2f3a85e9e3e11a2875c12d66cd2}
+      \strng{fullhash}{44ec7eb65b6d33bb4db60e7249bb458c}
+      \strng{bibnamehash}{857de2f3a85e9e3e11a2875c12d66cd2}
+      \strng{authorbibnamehash}{857de2f3a85e9e3e11a2875c12d66cd2}
+      \strng{authornamehash}{857de2f3a85e9e3e11a2875c12d66cd2}
+      \strng{authorfullhash}{44ec7eb65b6d33bb4db60e7249bb458c}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Abstract Fluctuations in the heart's activity can modulate the access of external stimuli to consciousness. The link between perceptual awareness and cardiac signals has been investigated mainly in the visual and auditory domain. Here, we investigated whether the phase of the cardiac cycle and the prestimulus heart rate influence conscious somatosensory perception. We also tested how conscious detection of somatosensory stimuli affects the heart rate. Electrocardiograms (ECG) of 33 healthy volunteers were recorded while applying near-threshold electrical pulses at a fixed intensity to the left index finger. Conscious detection was not uniformly distributed across the cardiac cycle but significantly higher in diastole than in systole. We found no evidence that the heart rate before a stimulus influenced its detection, but hits (correctly detected somatosensory stimuli) led to a more pronounced cardiac deceleration than misses. Our findings demonstrate interactions between cardiac activity and conscious somatosensory perception, which highlights the importance of internal bodily states for sensory processing beyond the auditory and visual domain.}
+      \field{journaltitle}{Psychophysiology}
+      \field{number}{10}
+      \field{title}{Interactions between cardiac activity and conscious somatosensory perception}
+      \field{volume}{56}
+      \field{year}{2019}
+      \field{pages}{e13424}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb https://doi.org/10.1111/psyp.13424
+      \endverb
+      \verb{eprint}
+      \verb https://onlinelibrary.wiley.com/doi/pdf/10.1111/psyp.13424
+      \endverb
+      \verb{urlraw}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1111/psyp.13424
+      \endverb
+      \verb{url}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1111/psyp.13424
+      \endverb
+      \keyw{cardiac cycle,heart rate,interoception,perceptual awareness,somatosensory perception}
     \endentry
     \entry{SALTAFOSSI2023108642}{article}{}
       \name{author}{5}{}{%

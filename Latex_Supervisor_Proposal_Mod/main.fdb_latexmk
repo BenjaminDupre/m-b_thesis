@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1689863880 "main.bcf" "main.bbl" "main" 1689863887 0
-  "./references.bib" 1689863858 56992 6f0c8d5ecb906471a585e01f4bd023b4 ""
-  "main.bcf" 1689863886 108303 d3829e71c8e3b40c2cda40e47bd7ec2b "pdflatex"
+["biber main"] 1690201100 "main.bcf" "main.bbl" "main" 1690201109 0
+  "./references.bib" 1690201099 61259 bf1a2a3861dac4811d8be06629e35529 ""
+  "main.bcf" 1690201109 108498 43fd094b040ae5d8bb8890a142391346 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1689863885 "c:/Users/bdupr/Documents/GitHub/m-b_thesis/Latex_Supervisor_Proposal_Mod/main.tex" "main.pdf" "main" 1689863887 0
+["pdflatex"] 1690201107 "c:/Users/bdupr/Documents/GitHub/m-b_thesis/Latex_Supervisor_Proposal_Mod/main.tex" "main.pdf" "main" 1690201109 0
   "C:/Users/bdupr/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1689861145 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/bdupr/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ectt1000.pk" 1689861150 20028 b1de3e3a3b44c2ee2aa3a69f30ec3236 ""
   "C:/Users/bdupr/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1689861080 24118912 3cddeb4294a4b61bae394bc4e1c0e705 ""
@@ -106,14 +106,13 @@
   "C:/Users/bdupr/AppData/Local/Programs/MiKTeX/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1657800696 9714 ba3194bd52c8499b3f1e3eb91d409670 ""
   "C:/Users/bdupr/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388494052 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/bdupr/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656236890 56148 51a9a8571c07b9921892ae11063ae853 ""
-  "c:/Users/bdupr/Documents/GitHub/m-b_thesis/Latex_Supervisor_Proposal_Mod/main.tex" 1689863870 10634 4f3dce61666cbff7bc33ea60bf952195 ""
-  "firma.png" 1687420334 74214 d359e6629059d7f5132bdade2a13ba1e ""
+  "c:/Users/bdupr/Documents/GitHub/m-b_thesis/Latex_Supervisor_Proposal_Mod/main.tex" 1690201050 11776 17fab6f81663a34a646b62975178a145 ""
   "hu_siegel-kombi_rgb.png" 1687420334 72324 c3dfb2c62e3edf3c885587578ef5812c ""
-  "main.aux" 1689863886 1990 f103a401521de54ea66842c523b2cd93 "pdflatex"
-  "main.bbl" 1689863883 27604 f39b37ce357961850584aae0000237a4 "biber main"
-  "main.out" 1689863886 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.run.xml" 1689863886 2305 52095dfad395b381e9a32937e764a41c "pdflatex"
-  "main.tex" 1689863870 10634 4f3dce61666cbff7bc33ea60bf952195 ""
+  "main.aux" 1690201109 2301 fc16c8f356d42d9ace4d295e0161add8 "pdflatex"
+  "main.bbl" 1690201103 36273 127ff41abd6939404235297e1d3127cc "biber main"
+  "main.out" 1690201108 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.run.xml" 1690201109 2305 52095dfad395b381e9a32937e764a41c "pdflatex"
+  "main.tex" 1690201050 11776 17fab6f81663a34a646b62975178a145 ""
   (generated)
   "main.aux"
   "main.bcf"
