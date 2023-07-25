@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.20)  24 JUL 2023 14:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.20)  25 JUL 2023 13:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -568,11 +568,15 @@ Package fancyhdr Warning: \headheight is too small (113.81102pt):
 [1{C:/Users/bdupr/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/bdupr/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
 
  <./hu_siegel-kombi_rgb.png>]
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 13.67995pt on input line 83.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 11.39996pt on input line 87.
+(Font)              scaled to size 13.67995pt on input line 83.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 11.39996pt on input line 90.
 File: hu_siegel-kombi_rgb.png Graphic file (type png)
 <use hu_siegel-kombi_rgb.png>
-Package pdftex.def Info: hu_siegel-kombi_rgb.png  used on input line 96.
+Package pdftex.def Info: hu_siegel-kombi_rgb.png  used on input line 91.
 (pdftex.def)             Requested size: 183.80716pt x 101.91356pt.
 
 
@@ -585,7 +589,7 @@ Package fancyhdr Warning: \headheight is too small (113.81102pt):
 [2]
 File: hu_siegel-kombi_rgb.png Graphic file (type png)
 <use hu_siegel-kombi_rgb.png>
-Package pdftex.def Info: hu_siegel-kombi_rgb.png  used on input line 112.
+Package pdftex.def Info: hu_siegel-kombi_rgb.png  used on input line 108.
 (pdftex.def)             Requested size: 183.80716pt x 101.91356pt.
 
 
@@ -596,14 +600,11 @@ Package fancyhdr Warning: \headheight is too small (113.81102pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.53091pt}.
 
 [3]
-Overfull \hbox (1.89429pt too wide) in paragraph at lines 112--113
-[]\T1/phv/m/n/12 PRE/POST-Cybersickness Ques-tion-naire: The ver-sion ap-plied in this study is a shorter
- []
-
 File: hu_siegel-kombi_rgb.png Graphic file (type png)
 <use hu_siegel-kombi_rgb.png>
-Package pdftex.def Info: hu_siegel-kombi_rgb.png  used on input line 118.
+Package pdftex.def Info: hu_siegel-kombi_rgb.png  used on input line 131.
 (pdftex.def)             Requested size: 183.80716pt x 101.91356pt.
+
 
 Package fancyhdr Warning: \headheight is too small (113.81102pt): 
 (fancyhdr)                Make it at least 115.34193pt, for example:
@@ -612,32 +613,45 @@ Package fancyhdr Warning: \headheight is too small (113.81102pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.53091pt}.
 
 [4]
+File: hu_siegel-kombi_rgb.png Graphic file (type png)
+<use hu_siegel-kombi_rgb.png>
+Package pdftex.def Info: hu_siegel-kombi_rgb.png  used on input line 140.
+(pdftex.def)             Requested size: 183.80716pt x 101.91356pt.
+
+
+Package fancyhdr Warning: \headheight is too small (113.81102pt): 
+(fancyhdr)                Make it at least 115.34193pt, for example:
+(fancyhdr)                \setlength{\headheight}{115.34193pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.53091pt}.
+
+[5]
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 119.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 141.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 9.49997pt on input line 119.
+(Font)              scaled to size 9.49997pt on input line 141.
 LaTeX Font Info:    Font shape `T1/phv/m/sc' will be
-(Font)              scaled to size 9.49997pt on input line 119.
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 119.
+(Font)              scaled to size 9.49997pt on input line 141.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 141.
  (C:\Users\bdupr\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 119.
+(Font)              <7> on input line 141.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 119.
+(Font)              <5> on input line 141.
 
-Overfull \hbox (15.90009pt too wide) in paragraph at lines 119--119
+Overfull \hbox (15.90009pt too wide) in paragraph at lines 141--141
 []\T1/phv/m/n/10 Jonathan Cole. \T1/phv/m/sl/10 Los-ing Touch: A man with-out his body\T1/phv/m/n/10 . Ox-ford Uni-ver-sity Press, June 2016. \T1/phv/m/sc/10 isbn\T1/phv/m/n/10 : 9780198778875.
  []
 
 
 Package biblatex Warning: No driver for 'books'.
-(biblatex)                Using fallback driver on input line 119.
+(biblatex)                Using fallback driver on input line 141.
 
 File: hu_siegel-kombi_rgb.png Graphic file (type png)
 <use hu_siegel-kombi_rgb.png>
-Package pdftex.def Info: hu_siegel-kombi_rgb.png  used on input line 120.
+Package pdftex.def Info: hu_siegel-kombi_rgb.png  used on input line 142.
 (pdftex.def)             Requested size: 183.80716pt x 101.91356pt.
 
 Package fancyhdr Warning: \headheight is too small (113.81102pt): 
@@ -646,7 +660,7 @@ Package fancyhdr Warning: \headheight is too small (113.81102pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.53091pt}.
 
-[5] (main.aux)
+[6] (main.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-30>
@@ -658,17 +672,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 17056 strings out of 475550
- 299640 string characters out of 5762533
+ 17070 strings out of 475550
+ 299788 string characters out of 5762533
  1936238 words of memory out of 5000000
- 38081 multiletter control sequences out of 15000+600000
- 587898 words of font info for 63 fonts, out of 8000000 for 9000
+ 38083 multiletter control sequences out of 15000+600000
+ 592364 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 66i,15n,81p,2024b,1353s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 66i,15n,81p,2024b,1355s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\bdupr\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk><C:/Users/bdupr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/bdupr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/bdupr/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/bdupr/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/bdupr/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (5 pages, 145486 bytes).
+Output written on main.pdf (6 pages, 149645 bytes).
 PDF statistics:
- 177 PDF objects out of 1000 (max. 8388607)
- 22 named destinations out of 1000 (max. 500000)
+ 193 PDF objects out of 1000 (max. 8388607)
+ 33 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

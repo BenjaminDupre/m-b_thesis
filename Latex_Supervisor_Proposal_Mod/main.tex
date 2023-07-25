@@ -78,40 +78,62 @@ Through an investigation of passive haptic touch's influence on immersion, behav
 
 \section*{3. Methods}
 
+The experimental design methods and materials used in this study are developed based on the NRO-228 Study-DB: 02188.07 - TSVR Akbal/Villringer. While I did not contribute to the experimental design phase, my involvement encompassed the study implementation, data collection and anylysis.  However, not all the material gathered in the original study will be utilized for this master's thesis. The heartbeat count task will be excluded to maintain focus on the specific goals of this thesis. Furthermore, the hypothesis and analysis presented in this thesis are distinct and tailored to this research project.
+
+\subsection*{3.1 Participants}
+
 There were a total of 23 participans who performed both of the full tasks. Nonetheless, 2 of them did not filled all questionaires therefore we had to leave them out and continue to performe the analysis with 21 participants. The call for participants was answer considerably more by women (17) than men (5). The age accorss the sample was consistenly around 25 years old, all but for one exception ($\mu=25.1 , \sigma=6.3$).
 
-\section*{4. Materials}
-The experimental design methods and materials used in this study are developed based on the NRO-228 Study-DB: 02188.07 - TSVR Akbal/Villringer. However, not all the material gathered in the original study will be utilized for this master's thesis. The heartbeat count task will be excluded to maintain focus on the specific goals of this thesis.
+\subsection*{3.2 Materials}
+
+
+\subsubsection*{3.2.1 Electrocardiogram:} Heart rate data is collected using an Arduino Uno and a SparkFun Single Lead Heart Rate Monitor - AD8232. The collected data is collected through a USB 2.0 and integrated into the Unity log file at a frequency of 133 Hz.
+\subsubsection*{3.2.2 Head Mounted Display \& Lighthouse:} HTC Vive head-mounted display (HMD) with  two lighthouses.The headset specificiations include a Dual AMOLED 3.6" diagonal, 	1080 x 1200 pixels per eye (2160 x 1200 pixels combined), 90 Hz refresh and a 110 degrees field of view.  The lighthouse are 2 SteamVR Tracking, G-sensor, gyroscope, proximity. Both connected using  USB 2.0. We did not use the controllers, the hands were tracked using the leap motion sensor. 
+\subsubsection*{3.2.3 Leap Motion Controller:}  The field of view is 150x120 degrees with a variable range of roughly 80 cm (arms length), with a weight of 32 grams placed on the HMD. The device has two 640x240 infrared cameras with a frame rate of 120 fps. 
+\subsubsection*{3.2.4 Data-gloves:}  These gloves feature magnetic sensors and are connected to Unity using a microUSB connection. The gloves offer haptic feedback through 10 vibrotactile actuators, which provide a wide range of tactile sensations with 1,024 levels of intensity. They also incorporate complete finger tracking with six 9-axis Inertial Measurement Units (IMUs). These IMUs enable precise tracking of finger movements, allowing for accurate gesture recognition and enhanced interaction in virtual environments.
+
+\subsection*{3.3 Experimental Procedure:}
+
+After being debriefed and receiving information about the experiment, participants completed the following tasks:
 
 \begin{enumerate}
-    \item[4.1] \textbf{Experimental Process:} Upon receiving information about the experiment, participants completed the following tasks:
-    \begin{enumerate}
-        \item[(i)] Edinburgh Handedness Questionnaire,
-        \item[(ii)] PRE-Cybersickness Questionnaire
-    \end{enumerate}
+\item[(i)] Edinburgh Handedness Questionnaire
+\item[(ii)] PRE-Cybersickness Questionnaire
+\end{enumerate}
 
-    Following the completion of the first set of Questionnaires the participant were brought to another room were after sitting, the IVR equipment is placed on them. This was a head-mounted display (HMD) and data gloves and the ECG device. Participants performed a short training round and started with a heartbeat count task and IVR memory-motor task.
+Following the completion of the first set of questionnaires, the participants were taken to another room where the IVR (Immersive Virtual Reality) equipment was set up. This equipment included a head-mounted display (HMD), data gloves, and an ECG (Electrocardiogram) device. Participants underwent a short training session before proceeding with the heartbeat count task and the IVR memory-motor task.
 
-    \begin{enumerate}
-      \item[(iii)] Heart Beat Count Task (HCT) for one minute. (Not considered in this thesis.)
-      \item[(iv)] IVR motor-memory Task: Within this environment, participants were positioned in front of a virtual table and given sufficient time to acclimate to the virtual surroundings. A sketch of a puzzle, which they needed to memorize, was displayed in front of the virtual room. During the memorization phase, participants kept their virtual hands open with palms facing up. Subsequently, the sketch disappeared from their visual field. A red ball was then introduced from the top, appearing in either one of the hands. Participants observed a template on the table, which was an identical representation of the initial sketch they had memorized. Their task was to place the ball in the correct location on the template as quickly as possible. Throughout 108 trials, three different conditions (relevant haptic stimuli, irrelevant haptic stimuli, and no haptic stimuli) were randomly presented an equal number of times (36 times each). The trials appeared rapidly, one after the other. The start of each trial was marked by placing the ball in a hand, and the end of the trial was marked by the moment the ball reached the designated location on the template. 
-    \end{enumerate}
-
-The final step of the experiment involved two questionnaires aimed at extracting information on several relevant fields for the goal of this thesis.
 \begin{enumerate}
-\item[(v)] Virtual Reality Subjective Evaluation Questionnaire
-\item[(vi)] POST-Cybersickness Questionnaire
+\item[(iii)] PRE-Heart Beat Count Task (HCT) for one minute. (This task is not considered in this thesis.)
+\item[(iv)] IVR Memory-Motor Task: In this environment, participants were positioned in front of a virtual table and given sufficient time to acclimate to the virtual surroundings. A sketch of a puzzle was displayed in front of the virtual room, which they needed to memorize. During the memorization phase, participants kept their virtual hands open with palms facing up. Subsequently, the sketch disappeared from their visual field, and a red ball was introduced from the top, appearing in either one of the hands. Participants observed a template on the table, which was an identical representation of the initial sketch they had memorized. Their task was to place the ball in the correct location on the template as quickly as possible. Throughout 108 trials, three different conditions (relevant haptic stimuli, irrelevant haptic stimuli, and no haptic stimuli) were randomly presented an equal number of times (36 times each). The trials appeared rapidly, one after the other. The start of each trial was marked by placing the ball in a hand, and the end of the trial was marked by the moment the ball reached the designated location on the template.
+\item[(v)] POST-Heart Beat Count Task (HCT) for one minute. (This task is not considered in this thesis.)
 \end{enumerate}
-     
-    \item[4.2] \textbf{Immersive Virtual Reality Equipment:} The VR experience was presented and tracked using an HTC Vive head-mounted display (HMD), two lighthouses, a Leap Motion sensor, and Haptic Data Gloves. Movement data was collected from the data gloves, Leap Motion device, and the HMD. The data gloves utilized a magnetic tracking sensor for the fingertips, although this data was not considered for the movement analysis. Only the wrist movements, tracked by the Leap Motion device, were taken into account. All movements were recorded in a Euclidean coordinate system (X, Y, Z). The original calibrating point was set at (0, 0, 0), providing a total of nine streaming sources of data (e.g., Headset X, Headset Y, Headset Z, and so on). Rotational data was not included in the analysis.
-    \item[4.3] \textbf{Electrocardiogram Equipment:} Heart rate data was collected using an Arduino Uno and a SparkFun Single Lead Heart Rate Monitor - AD8232. The collected data was integrated into the Unity log file at a frequency of 133 Hz.
 
-\item[4.4] \textbf{Questionnaires Material:}
-  \begin{enumerate}
-    \item[(i)] Virtual Reality Subjective Evaluation Questionnaire: This self-made questionnaire consists of 26 items oriented towards capturing whether the experience felt real for the participant or not. It explores the level of engagement, hand movement, task difficulty, and other controlling factors. 
-    \item[(ii)] PRE/POST-Cybersickness Questionnaire: The version applied in this study is a shorter adaptation of the simulator sickness questionnaire (SSQ) \cite{SSQ93}. The modified version provides straightforward computer or manual scoring, increased power to identify problem simulators, and improved diagnostic capability. It is administered before and after the IVR experiment.
+The final step of the experiment involved two questionnaires aimed at extracting information on several relevant fields for the goal of this thesis:
+
+\begin{enumerate}
+\item[(vi)] Virtual Reality Subjective Evaluation Questionnaire
+\item[(vii)] POST-Cybersickness Questionnaire
 \end{enumerate}
-  \end{enumerate}
+
+\subsection*{3.4 Measurements}
+
+\subsubsection*{3.4.1 Immersive Virtual Reality:}
+
+    The VR experience was presented and tracked using an HTC Vive head-mounted display (HMD), two lighthouses, a Leap Motion sensor, and Haptic Data Gloves. Movement data was collected from the data gloves, Leap Motion device, and the HMD. The data gloves utilized a magnetic tracking sensor for the fingertips, although this data was not considered for the movement analysis. Only the wrist movements, tracked by the Leap Motion device, were taken into account. All movements were recorded in a Euclidean coordinate system (X, Y, Z). The original calibrating point was set at (0, 0, 0), providing a total of nine streaming sources of data (e.g., Headset X, Headset Y, Headset Z, and so on). Rotational data was not included in the analysis.
+
+    Additinoally, there are flags built into the game that signal if a Button was press, if the ball is place in the hold and when then trial started. 
+
+\subsubsection*{3.4.2 Electrocardiogram:} 
+
+Heart rate data was collected using a USB cable and into Unity Engine. This information is coupled with all other Unity information at 133 Hz as well.
+
+\subsubsection*{3.4.3 Questionnaires:}
+
+\begin{enumerate}
+  \item[(i)] Virtual Reality Subjective Evaluation Questionnaire: This self-made questionnaire consists of 26 items oriented towards capturing whether the experience felt real for the participant or not. It explores the level of engagement, hand movement, task difficulty, and other controlling factors. On a likert scale from one to seven and concist of  
+  \item[(ii)] PRE/POST-Cybersickness Questionnaire: The version applied in this study is a shorter adaptation of the simulator sickness questionnaire (SSQ) \cite{SSQ93}.Its a likert scale from one to four, with labels going from "not present", "somewhat", "clearly" and "very strongly". Additionally, 16 items based on symptoms. Some examples are "fatigue", "general disconfort" among others
+\end{enumerate}
 
 
 \pagebreak
