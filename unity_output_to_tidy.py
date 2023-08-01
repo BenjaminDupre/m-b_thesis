@@ -23,7 +23,7 @@ import numpy as np
 
 # Constants
 
-ACCESS_TOKEN = 'sl.BidNwfjq-jxpIbgCQHhg524ZnBmB_kJ57tY6Y6iBJ3JOohuIEeaetC_M5V6Q22h7NtqU8pLHLnRIPGrO5eID6pShPDQKmTgoMOmRoGmgrRLX4YuVXDTF8202u7MbX9_XZIu62hoiDHZ1'
+ACCESS_TOKEN = 'sl.BjSkfqwHIv3v_OAnklSzl4b5AmkOjuNyzKAczmgFNIn_37eGVrymy0fp7UjtFhhaMIoPm-HHz8ncJHh6oX6_vfBjVvXOqK1GGo4HGvCc_OaNNzHmuBKqL4CH3p7cR53mb2ogcD5H6-r8akfsiI88ejY'
 
 dbx = dropbox.Dropbox(ACCESS_TOKEN)
 
@@ -172,16 +172,39 @@ if __name__ == '__main__':
 
 ##### test to get only one stimuli 
 # Remove duplicate feedback types based on the specified conditions
+# Group the data and extract unique feedbackType values per participant, set, and levelCounter
+unique_feedback_types = f_ptcp_df.groupby(['ptcp', 'trial_set', 'levelCounter'])['feedbackType'].unique()
+count=0
 
-'''
+# Remove duplicate feedback types based on the specified conditions
+for index, feedback_types in unique_feedback_types.items():
+    ptcp, set_val, level_counter = index
+    feedback_types = feedback_types[np.isin(feedback_types, ['incongruent', 'none', 'congruent'])]
+    if level_counter != 0 and feedback_types.size > 1:
+        previous_level_counter = level_counter - 1
+        previous_feedback_types = unique_feedback_types.get((ptcp, set_val, previous_level_counter))
+        if previous_feedback_types is not None :
+            if previous_feedback_types.size==1:
+                last_element = previous_feedback_types
+            elif previous_feedback_types.size > 1:
+                last_element = np.asarray(previous_feedback_types)[-1]
+            else:
+                last_element = None
+                count = +1 
+        if last_element is not None and feedback_types[0] == last_element :
+            feedback_types = feedback_types[1:]
 
-# Print the unique feedbackType values after removing duplicates
+    unique_feedback_types[index] = feedback_types
+
+
+
 for index, feedback_types in unique_feedback_types.items():
     ptcp, set_val, level_counter = index
     print(f"ptcp: {ptcp}, trial_set: {set_val}, levelCounter: {level_counter} - Unique feedbackType values: {feedback_types}")
 
 
 
+'''
 ########################### Testing Results.##
     # Group the data and extract unique feedbackType values per ptcp, set, and levelCounter
     unique_feedback_types = f_ptcp_df.groupby(
