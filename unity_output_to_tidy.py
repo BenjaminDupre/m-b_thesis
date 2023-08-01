@@ -146,7 +146,9 @@ def get_one_feedback_per_trail(dataf):
 def main():
     """
     Main Function
-
+    all function-modules one after 
+    another required for the processing 
+    of raw data for analysis 
     """
     # FIXED: Specify the path to the file you want to access
     path = '/My Mac (glaroam2-185-117.wireless.gla.ac.uk)/Documents/Research MaxPlank/' \
