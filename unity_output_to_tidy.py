@@ -193,7 +193,8 @@ for index, feedback_types in unique_feedback_types.items():
                 count = +1 
         if last_element is not None and feedback_types[0] == last_element :
             feedback_types = feedback_types[1:]
-
+    elif level_counter == 0 and feedback_types.size >1:
+        feedback_types = feedback_types[feedback_types != 'none']
     unique_feedback_types[index] = feedback_types
 
 
