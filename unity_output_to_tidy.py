@@ -23,7 +23,7 @@ import numpy as np
 
 # Constants
 
-ACCESS_TOKEN = 'sl.BjSkfqwHIv3v_OAnklSzl4b5AmkOjuNyzKAczmgFNIn_37eGVrymy0fp7UjtFhhaMIoPm-HHz8ncJHh6oX6_vfBjVvXOqK1GGo4HGvCc_OaNNzHmuBKqL4CH3p7cR53mb2ogcD5H6-r8akfsiI88ejY'
+ACCESS_TOKEN = 'sl.BjeFQ3gOHQUXX_7tA7HaYD-f7SzOg_pgpiy6xz-aR2gMUxrtpvoJQMWiYlbSpKWF48Xrx42a-RDSf8sOu11jjhvrdv2DpbblcM0_4w4-u83UWkQFmQFPa_SkPUaxgDGL2fq1xmUyZ7KWrOEwyrSNOMk'
 
 dbx = dropbox.Dropbox(ACCESS_TOKEN)
 
@@ -166,11 +166,9 @@ def main():
 
 ########################### Excecution of Main Function ##
 
-
 if __name__ == '__main__':
     f_ptcp_path, f_ptcp_names, f_ptcp_df = main()
     
-
 
 ##### test to get only one stimuli 
 # Remove duplicate feedback types based on the specified conditions
