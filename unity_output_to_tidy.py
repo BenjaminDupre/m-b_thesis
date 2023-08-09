@@ -23,7 +23,7 @@ import numpy as np
 
 # Constants
 
-ACCESS_TOKEN = 'sl.BjeFQ3gOHQUXX_7tA7HaYD-f7SzOg_pgpiy6xz-aR2gMUxrtpvoJQMWiYlbSpKWF48Xrx42a-RDSf8sOu11jjhvrdv2DpbblcM0_4w4-u83UWkQFmQFPa_SkPUaxgDGL2fq1xmUyZ7KWrOEwyrSNOMk'
+ACCESS_TOKEN = 'sl.BjrgR3KHK4o5DhtX1e-R0S_YmfSb_o2JwbQTWyCBSB0tzh4cMI2ZJ-TkGHqMo2OzWUSGXcp0aNglEwcDylo5md8qbuU0SVtAl7Ohj7nTDsrjX5JDXb-zoZQO6vEJWnEKwAZ1cBQW6eMKVHwgMmTiruM'
 
 dbx = dropbox.Dropbox(ACCESS_TOKEN)
 
@@ -166,6 +166,7 @@ def main():
 
 ########################### Excecution of Main Function ##
 
+
 if __name__ == '__main__':
     f_ptcp_path, f_ptcp_names, f_ptcp_df = main()
     
@@ -202,6 +203,67 @@ for index, feedback_types in unique_feedback_types.items():
 for index, feedback_types in unique_feedback_types.items():
     ptcp, set_val, level_counter = index
     print(f"ptcp: {ptcp}, trial_set: {set_val}, levelCounter: {level_counter} - Unique feedbackType values: {feedback_types}")
+
+###### Test to Get the start and end of the trails. 
+
+def find_ball_position_changes(data):
+    B = pd.DataFrame()
+    for set_val in range(1, 4):
+        for lvl in range(0, 36):
+            meanwhile = data[(data['levelCounter'] == lvl) & (data['trial_set'] == set_val)]
+
+            if meanwhile['buttonCurrentlyPressed'].nunique() >= 2 and data[(data['levelCounter'] == lvl - 1) & (data['trial_set'] == set_val)]['buttonCurrentlyPressed'].nunique() < 2:
+                print(f"Button pressed in lvl {lvl} - set {set_val}. Need to go for following change of ball position.")
+                A = np.zeros(len(meanwhile))
+                A2 = np.zeros(len(meanwhile))
+                A3 = np.zeros(len(meanwhile))
+                for r in range(1, len(meanwhile)):
+                    if sum(A) < 1:
+                        A[r] = (meanwhile.iloc[r - 1]['buttonHasBeenPressed'] == "TEMPLATE_IS_ACTIVE") & (meanwhile.iloc[r]['buttonHasBeenPressed'] == 'AFTER_TEMPLATE_IS_ACTIVE')
+                    else:
+                        A2[r] = (meanwhile.iloc[r - 1]['buttonHasBeenPressed'] == "TEMPLATE_IS_ACTIVE") & (meanwhile.iloc[r]['buttonHasBeenPressed'] == 'AFTER_TEMPLATE_IS_ACTIVE')
+                        if sum(A2) >= 1:
+                            A3[r] = meanwhile.iloc[r - 1]['redBallPosition'] != meanwhile.iloc[r]['redBallPosition']
+                            break
+                A = np.concatenate(([0], A3))
+                A2 = np.zeros(0)
+                A3 = np.zeros(0)
+            else:
+                print(f"Normal way to Start lvl in lvl {lvl} - set {set_val}")
+                A = np.zeros(len(meanwhile))
+                for r in range(1, len(meanwhile)):
+                    A[r] = meanwhile.iloc[r - 1]['redBallPosition'] != meanwhile.iloc[r]['redBallPosition']
+
+            B = pd.concat([B, pd.DataFrame(A)], ignore_index=True)
+
+    # Find the rows where the ball position changes (A == 1)
+    indx = np.where(B.to_numpy()[:, 0] == 1)[0]
+
+    # Create a dataframe 'ver' merging row_start, levelCounter, and set
+    #ver = pd.DataFrame({'row_start': indx, 'levelCounter': data.iloc[indx]['levelCounter'], 'trial_set': data.iloc[indx]['trial_set']})
+    ver = pd.DataFrame({'row_start': indx, 'levelCounter': data.iloc[indx]['levelCounter'].astype(int), 'trial_set': data.iloc[indx]['trial_set'].astype(int)})
+
+    # Merge level, set, and start into one dataframe 'START'
+    START = pd.DataFrame()
+    for j in range(data['trial_set'].min(), data['trial_set'].max() + 1):
+        for k in range(ver['levelCounter'].min(), ver['levelCounter'].max()):
+            sub_vect = ver[(ver['trial_set'] == j) & (ver['levelCounter'] == k)]
+            if len(sub_vect) < 1:
+                sub_vect = pd.DataFrame([["no start", k, j]], columns=['row_start', 'levelCounter', 'trial_set'])
+            START = pd.concat([START, sub_vect.head(1)])
+
+    # Reset index for the final START dataframe
+    START.reset_index(drop=True, inplace=True)
+
+    # Cleaning up variables
+    del A, A2, A3, B, indx, ver, sub_vect
+
+    # Now you have the 'START' dataframe containing the start positions for each level and set
+    return START
+
+# Replace 'all_data' with your actual DataFrame containing the data
+#all_data =    Replace this line with your actual data
+result = find_ball_position_changes(f_ptcp_df)
 
 
 
