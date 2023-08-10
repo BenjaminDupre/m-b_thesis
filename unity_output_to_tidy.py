@@ -23,7 +23,7 @@ import numpy as np
 
 # Constants
 
-ACCESS_TOKEN = 'sl.Bjw4vpVn-bmpPKIWYIYoCsw04n-Uhj7Ot_5-y_u5NecJIjV91hj46HeQP7PS0Eu2RdjqKyxL4sFUZK6Sh4jcxT6KRUsLNGKVrKxIl3hiy09KBlmddIvefLBvMBbAN1gZKYesmoII5Xr_aI_bZmEfx4Y'
+ACCESS_TOKEN = 'sl.Bj2ZI5qk1rtnWEKjzeiBY_GN3Q4DdZAsyaNa8VzkHgo9M-g3UteSzWldUHk34gqYg9Y4QKdA2kgFTqs7VuVJSzLb1ks8g6nttIbcw8VotCC4G316V37s3FDKtpdY9LTqkfzP4XET61_7dAeZvKJ4N9E'
 
 dbx = dropbox.Dropbox(ACCESS_TOKEN)
 
@@ -177,7 +177,7 @@ def find_ball_position_changes(data):
     # Merge level, set, and start into one dataframe 'START'
     START = pd.DataFrame()
     for j in range(data['trial_set'].min(), data['trial_set'].max() + 1):
-        for k in range(ver['levelCounter'].min(), ver['levelCounter'].max()):
+        for k in range(ver['levelCounter'].min(), ver['levelCounter'].max()+1):
             sub_vect = ver[(ver['trial_set'] == j) & (ver['levelCounter'] == k)]
             if len(sub_vect) < 1:
                 sub_vect = pd.DataFrame([["no start", k, j]], columns=['row_start', 'levelCounter', 'trial_set'])
@@ -207,7 +207,7 @@ def main():
     ptcp_df = read_ptcp_sets_from_dropbox(g_ptcp_path,g_ptcp_names)
 
     # 4. Find Starts 
-    starts = find_ball_position_changes(f_ptcp_df)
+    starts = find_ball_position_changes(ptcp_df)
 
     return g_ptcp_path, g_ptcp_names, ptcp_df, starts
 
@@ -215,7 +215,7 @@ def main():
 
 
 if __name__ == '__main__':
-    f_ptcp_path, f_ptcp_names, f_ptcp_df = main()
+    f_ptcp_path, f_ptcp_names, f_ptcp_df,starts = main()
     
 
 ##### test to get only one stimuli 
