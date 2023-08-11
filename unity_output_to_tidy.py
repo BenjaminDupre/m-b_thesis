@@ -23,7 +23,7 @@ import numpy as np
 
 # Constants
 
-ACCESS_TOKEN = 'sl.Bj2ZI5qk1rtnWEKjzeiBY_GN3Q4DdZAsyaNa8VzkHgo9M-g3UteSzWldUHk34gqYg9Y4QKdA2kgFTqs7VuVJSzLb1ks8g6nttIbcw8VotCC4G316V37s3FDKtpdY9LTqkfzP4XET61_7dAeZvKJ4N9E'
+ACCESS_TOKEN = 'sl.Bj5rXQwTmTymlp1jBR6NI3tJDZzQWkvEJizra4sL7fmB9rZD0fQQoPuNaJAXmFBZuy0CYbCRKbKyG5TYwgv7L7XdGzB9iGGvGB9b3wnByyeI5r_EGnAM_y4kGk737xjUdS4aHf80cRiZlWP4GmfK15I'
 
 dbx = dropbox.Dropbox(ACCESS_TOKEN)
 
@@ -169,6 +169,7 @@ def find_ball_position_changes(data):
                 A = np.zeros(len(meanwhile))
                 for r in range(1, len(meanwhile)):
                     A[r] = meanwhile.iloc[r - 1]['redBallPosition'] != meanwhile.iloc[r]['redBallPosition']
+
             B = pd.concat([B, pd.DataFrame(A)], ignore_index=True)
     # Find the rows where the ball position changes (A == 1)
     indx = np.where(B.to_numpy()[:, 0] == 1)[0]
@@ -186,6 +187,17 @@ def find_ball_position_changes(data):
     START.reset_index(drop=True, inplace=True)
     # Now you have the 'START' dataframe containing the start positions for each level and set
     return START
+
+def creating_close_trial(data):
+    # Creating Close Index 
+    num_rows = data.shape[0]
+    C = np.zeros((num_rows - 1, 1))
+    for r in range(num_rows - 1):
+        C[r, 0] = data['levelCounter'].iloc[r + 1] != data['levelCounter'].iloc[r]
+    # Assuming 'indx' is a numpy array of indices
+    indx = np.where(A[:, 0] == 1)[0]
+    ver = pd.concat([pd.DataFrame(indx, columns=['index']), data.iloc[indx]['levelCounter'], data.iloc[indx]['set']], axis=1)
+
 
 def main():
     """
