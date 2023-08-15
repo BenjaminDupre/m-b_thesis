@@ -23,7 +23,7 @@ import numpy as np
 
 # Constants
 
-ACCESS_TOKEN = 'sl.Bj5rXQwTmTymlp1jBR6NI3tJDZzQWkvEJizra4sL7fmB9rZD0fQQoPuNaJAXmFBZuy0CYbCRKbKyG5TYwgv7L7XdGzB9iGGvGB9b3wnByyeI5r_EGnAM_y4kGk737xjUdS4aHf80cRiZlWP4GmfK15I'
+ACCESS_TOKEN = 'sl.BkKVPHTfBvbL6fsYtXaGi4bpirOhzFMViyzu9hI3TMlbWbCQewI-aSekRtpYPMRU9HESLzhd5ekaYmJDSMyECFByQ36mXH0mGTEBzlUxo03XKtk0QL-F7Z4BFlcTZo3IVmH97-UGF0qggCmdl-_rSIQ'
 
 dbx = dropbox.Dropbox(ACCESS_TOKEN)
 
@@ -195,16 +195,23 @@ def creating_close_trial(data):
     for r in range(num_rows - 1):
         C[r, 0] = data['levelCounter'].iloc[r + 1] != data['levelCounter'].iloc[r]
     # Assuming 'indx' is a numpy array of indices
-    indx = np.where(A[:, 0] == 1)[0]
-    ver = pd.concat([pd.DataFrame(indx, columns=['index']), data.iloc[indx]['levelCounter'], data.iloc[indx]['set']], axis=1)
+    indx = np.where(C[:, 0] == 1)[0]
+    levelCounter_values = f_ptcp_df.iloc[indx]['levelCounter']
+    trial_set_values = f_ptcp_df.iloc[indx]['trial_set']
+
+    # Creating a new DataFrame to store the extracted values
+    close_df = pd.DataFrame({
+        'indx': indx,
+        'levelCounter': levelCounter_values,
+        'trial_set': trial_set_values
+    })
+    return close_df 
 
 
 def main():
     """
-    Main Function
-    all function-modules one after 
-    another required for the processing 
-    of raw data for analysis 
+    Main Data Refinement Pipeline
+    This function coordinates a sequence of modules to efficiently convert raw data into an analysis-ready format 
     """
     # FIXED: Specify the path to the file you want to access
     path = '/My Mac (glaroam2-185-117.wireless.gla.ac.uk)/Documents/Research MaxPlank/' \
@@ -218,16 +225,19 @@ def main():
     # 3.Read participant datasets from Dropbox into DF.
     ptcp_df = read_ptcp_sets_from_dropbox(g_ptcp_path,g_ptcp_names)
 
-    # 4. Find Starts 
-    starts = find_ball_position_changes(ptcp_df)
+    # 4. Find Trials Starts  (when ball changes first position)
+    start_df = find_ball_position_changes(ptcp_df)
+    # 5. Find Trials Closure (when level counter changes)
+    close_df = creating_close_trial(ptcp_df) 
 
-    return g_ptcp_path, g_ptcp_names, ptcp_df, starts
+
+    return g_ptcp_path, g_ptcp_names, ptcp_df, start_df , close_df
 
 ########################### Excecution of Main Function ##
 
 
 if __name__ == '__main__':
-    f_ptcp_path, f_ptcp_names, f_ptcp_df,starts = main()
+    f_ptcp_path, f_ptcp_names, f_ptcp_df,start_df, close_df = main()
     
 
 ##### test to get only one stimuli 
