@@ -85,9 +85,15 @@ def find_ball_position_changes(data):
                     #    if sum(A2) >= 1:
                     #        A3[r] = meanwhile.iloc[r - 1]['redBallPosition'] != meanwhile.iloc[r]['redBallPosition']
                     #        break
-                A = np.concatenate(([0], A3))
-                A2 = np.zeros(0)
-                A3 = np.zeros(0)
+                #A = np.concatenate(([0], A3))
+                #A2 = np.zeros(0)
+                #A3 = np.zeros(0)
+                '''
+                Line 291305 first change in ball position. 
+                Line 291755 strart the true value for button has been press
+                Line 291809 stops the true value for button has been press 
+                Line 291809 stops the level 
+                '''
             else:
                 print(f"Normal way to Start lvl in lvl {lvl} - set {set_val}")
                 A = np.zeros(len(meanwhile))
