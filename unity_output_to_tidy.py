@@ -23,7 +23,7 @@ import numpy as np
 
 # Constants
 
-ACCESS_TOKEN = 'sl.BkQM49nGBF7sMMAOmeAutadgDt7w8Y9Brmwg9y-C8qfuDT5A0OXw6F6Eic7IxfjBE6sc62WbUVeepvwnH1r9e7NYAVEGf6fDCwrBLloWZhvA-Sv3sSOzl59E-QPM6T2ly7tekEJKZt4XadZ_VZwL538'
+ACCESS_TOKEN = 'sl.BkQ39hqT-iduJVtL9HmfBtMkysY-gmkRiXzxd51d_r-Yx7eJs6fG3Eoc7Bt0OvXWRmiEQmo0XqZzW_CnGBSBNrKkfI53KqFM8RJCB4YxZYiC4vaFi2UlfDdu2KkJSw00UK2FLD8wC_n_iPASkGZUsJE'
 
 dbx = dropbox.Dropbox(ACCESS_TOKEN)
 
@@ -154,13 +154,12 @@ def find_ball_position_changes(data):
                 A2 = np.zeros(len(meanwhile))
                 A3 = np.zeros(len(meanwhile))
                 for r in range(1, len(meanwhile)):
-                    if sum(A) < 1:
                         A[r] = (meanwhile.iloc[r - 1]['buttonHasBeenPressed'] == "TEMPLATE_IS_ACTIVE") & (meanwhile.iloc[r]['buttonHasBeenPressed'] == 'AFTER_TEMPLATE_IS_ACTIVE')
-                    else:
-                        A2[r] = (meanwhile.iloc[r - 1]['buttonHasBeenPressed'] == "TEMPLATE_IS_ACTIVE") & (meanwhile.iloc[r]['buttonHasBeenPressed'] == 'AFTER_TEMPLATE_IS_ACTIVE')
-                        if sum(A2) >= 1:
-                            A3[r] = meanwhile.iloc[r - 1]['redBallPosition'] != meanwhile.iloc[r]['redBallPosition']
-                            break
+                    #else:
+                    #    A2[r] = (meanwhile.iloc[r - 1]['buttonHasBeenPressed'] == "TEMPLATE_IS_ACTIVE") & #(meanwhile.iloc[r]['buttonHasBeenPressed'] == 'AFTER_TEMPLATE_IS_ACTIVE')
+                    #    if sum(A2) >= 1:
+                    #        A3[r] = meanwhile.iloc[r - 1]['redBallPosition'] != meanwhile.iloc[r]['redBallPosition']
+                    #        break
                 A = np.concatenate(([0], A3))
                 A2 = np.zeros(0)
                 A3 = np.zeros(0)

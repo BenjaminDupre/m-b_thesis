@@ -1,3 +1,4 @@
+import pandas as pd
 def find_ball_position_changes(data):
     B = pd.DataFrame()
     for set_val in range(1, 4):
@@ -55,7 +56,7 @@ for set_val in range(1, 4):
             start_index = vr_start.iloc[0]  # Get the first index value from the series
             close_index = vr_close.iloc[0]  # Get the first index value from the series
             
-            if start_index < close_index:
+            if pd.notna(start_index) and pd.notna(close_index):
                 a = f_ptcp_df.iloc[start_index:close_index, :]
                 # Perform your analysis or processing on 'a' here
                 edit_df.append(a)
@@ -63,3 +64,8 @@ for set_val in range(1, 4):
                 print("Warning: Invalid indices - start_index >= close_index")
         else:
             print("Warning: Empty indices for set_val =", set_val, "and lvl =", lvl)
+        
+###########################################
+# Correct the press button. Condition. 
+
+
