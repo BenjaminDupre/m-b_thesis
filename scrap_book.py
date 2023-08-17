@@ -41,3 +41,25 @@ def find_ball_position_changes(data):
     START.reset_index(drop=True, inplace=True)
     # Now you have the 'START' dataframe containing the start positions for each level and set
     return START
+
+
+###########################################
+# getting the almost ready file
+edit_df=[]
+for set_val in range(1, 4):
+    for lvl in range(0, 36):
+        vr_start = start_df[(start_df['trial_set'] == set_val) & (start_df['levelCounter'] == lvl)]['row_start']
+        vr_close = close_df[(close_df['trial_set'] == set_val) & (close_df['levelCounter'] == lvl)]['indx']
+        
+        if not vr_start.empty and not vr_close.empty:
+            start_index = vr_start.iloc[0]  # Get the first index value from the series
+            close_index = vr_close.iloc[0]  # Get the first index value from the series
+            
+            if start_index < close_index:
+                a = f_ptcp_df.iloc[start_index:close_index, :]
+                # Perform your analysis or processing on 'a' here
+                edit_df.append(a)
+            else:
+                print("Warning: Invalid indices - start_index >= close_index")
+        else:
+            print("Warning: Empty indices for set_val =", set_val, "and lvl =", lvl)
