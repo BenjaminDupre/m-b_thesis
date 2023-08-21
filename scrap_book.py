@@ -45,25 +45,29 @@ def find_ball_position_changes(data):
 
 
 ###########################################
-# getting the almost ready file
-edit_df=[]
+# Initialize edit_df as an empty DataFrame
+edit_df = pd.DataFrame()
+
 for set_val in range(1, 4):
     for lvl in range(0, 36):
         vr_start = start_df[(start_df['trial_set'] == set_val) & (start_df['levelCounter'] == lvl)]['row_start']
         vr_close = close_df[(close_df['trial_set'] == set_val) & (close_df['levelCounter'] == lvl)]['indx']
         
         if not vr_start.empty and not vr_close.empty:
-            start_index = vr_start.iloc[0]  # Get the first index value from the series
-            close_index = vr_close.iloc[0]  # Get the first index value from the series
+            start_index = vr_start.iloc[0]
+            close_index = vr_close.iloc[0]
             
-            if pd.notna(start_index) and pd.notna(close_index):
+            if isinstance(start_index, int) or isinstance(close_index, int):
                 a = f_ptcp_df.iloc[start_index:close_index, :]
                 # Perform your analysis or processing on 'a' here
-                edit_df.append(a)
+                edit_df = pd.concat([edit_df, a], ignore_index=True)  # Concatenate 'a' to edit_df
             else:
-                print("Warning: Invalid indices - start_index >= close_index")
+                print("Warning: Invalid indices - start_index and close_index must be integers")
+                continue
         else:
             print("Warning: Empty indices for set_val =", set_val, "and lvl =", lvl)
+
+
         
 ###########################################
 # Correct the press button. Condition. 
