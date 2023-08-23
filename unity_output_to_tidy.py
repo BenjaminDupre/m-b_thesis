@@ -194,16 +194,17 @@ def creating_close_trial(data):
     for r in range(num_rows - 1):
         C[r, 0] = data['levelCounter'].iloc[r + 1] != data['levelCounter'].iloc[r]
     # Assuming 'indx' is a numpy array of indices
-    indx = np.where(C[:, 0] == 1)[0]
+    row_close = np.where(C[:, 0] == 1)[0]
     levelCounter_values = data.iloc[indx]['levelCounter']
     trial_set_values = data.iloc[indx]['trial_set']
 
     # Creating a new DataFrame to store the extracted values
     close_df = pd.DataFrame({
-        'indx': indx,
+        'row_close': row_close,
         'levelCounter': levelCounter_values,
         'trial_set': trial_set_values
     })
+    close_df.reset_index(drop=True, inplace=True)
     return close_df 
 
 
