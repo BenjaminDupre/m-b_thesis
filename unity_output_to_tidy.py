@@ -195,8 +195,8 @@ def creating_close_trial(data):
         C[r, 0] = data['levelCounter'].iloc[r + 1] != data['levelCounter'].iloc[r]
     # Assuming 'indx' is a numpy array of indices
     row_close = np.where(C[:, 0] == 1)[0]
-    levelCounter_values = data.iloc[indx]['levelCounter']
-    trial_set_values = data.iloc[indx]['trial_set']
+    levelCounter_values = data.iloc[row_close]['levelCounter']
+    trial_set_values = data.iloc[row_close]['trial_set']
 
     # Creating a new DataFrame to store the extracted values
     close_df = pd.DataFrame({
@@ -229,6 +229,8 @@ def main():
     start_df = find_ball_position_changes(ptcp_df)
     # 5. Find Trials Closure (when level counter changes)
     close_df = creating_close_trial(ptcp_df) 
+    # 6.  Meging Start and Close. 
+    merged_df = pd.merge(close_df, start_df, on=['levelCounter', 'trial_set'], how='left')
 
     return g_ptcp_path, g_ptcp_names, ptcp_df, start_df , close_df
 
