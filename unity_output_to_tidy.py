@@ -238,7 +238,7 @@ def main():
 
 
 if __name__ == '__main__':
-    f_ptcp_path, f_ptcp_names, f_ptcp_df,start_df, close_df = main()
+    f_ptcp_path, f_ptcp_names, f_ptcp_df,start_df, close_df, merged_df = main()
     
 
 
