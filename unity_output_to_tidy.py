@@ -23,7 +23,7 @@ import numpy as np
 
 # Constants
 
-ACCESS_TOKEN = 'sl.BkpDaepS0bU3PC1mIsB5XhwT71R0LspnhtQ30n-QoXHTwlvg8bk60_tuYY5_NE5e2uIWohqTjDpUph32f1iVjt0jOObvImBIostTNdOOO_VtzvvlugQQCLKrJWqgyzXoYqdVJqe70YE-ubXCYuTF2Ts'
+ACCESS_TOKEN = 'sl.Bky2c0pxJS55-2iDyRTriq8_JS_BTk0hz0R2XjQwH0j_tGfuI56h_objIKxaOsLcLHU-Ib7uUKaRADZitRQJxtzfA_rRNeZtRCqHGtcdemvUwtdZ4vQzXGIUNnwV_AoD70Ck59SFcYEIY3zqV6mVx_0'
 
 dbx = dropbox.Dropbox(ACCESS_TOKEN)
 
@@ -232,7 +232,7 @@ def main():
     # 6.  Meging Start and Close. 
     merged_df = pd.merge(close_df, start_df, on=['levelCounter', 'trial_set'], how='left')
 
-    return g_ptcp_path, g_ptcp_names, ptcp_df, start_df , close_df
+    return g_ptcp_path, g_ptcp_names, ptcp_df, start_df , close_df, merged_df
 
 ########################### Excecution of Main Function ##
 
@@ -240,6 +240,7 @@ def main():
 if __name__ == '__main__':
     f_ptcp_path, f_ptcp_names, f_ptcp_df,start_df, close_df = main()
     
+
 
 ##### test to get only one stimuli 
 # Remove duplicate feedback types based on the specified conditions
