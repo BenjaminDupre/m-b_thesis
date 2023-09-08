@@ -1,6 +1,6 @@
 # **Mind and Brain Thesis** 
 
-**Warning**: Here there is no raw Data. It has been already processed by using `Unity_output_tidy.m` in Matlab. The results are contain in Data folder.
+**Warning**: Here there is no raw Data. It has been already processed by using `Unity_output_tidy.m` in Matlab. The results are contain in Data folder.(currently I am taking matlabfile into Python with some improvments)
 
 ## **List of Folders and Files:**
 - Data: contains two files which are the results of `Unity_output_tidy.m`. One with the meta-data of the study a second one with the data to run the analysis.  
