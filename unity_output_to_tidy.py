@@ -147,7 +147,7 @@ def find_ball_position_changes(data):
     B = pd.DataFrame()
     for set_val in range(1, 4):
         for lvl in range(0, 36):
-            meanwhile = data[(data['levelCounter'] == lvl) & (data['trial_set'] == set_val)]
+            meanwhile = data[(data['levelCounter'] == lvl) & (data['trial_set'] == set_val)] # TO CHANGE (button pressed just skip)
             if meanwhile['buttonCurrentlyPressed'].nunique() >= 2 and data[(data['levelCounter'] == lvl - 1) & (data['trial_set'] == set_val)]['buttonCurrentlyPressed'].nunique() < 2:
                 print(f"Button pressed in lvl {lvl} - set {set_val}. Need to go for following change of ball position.")
                 A = np.zeros(len(meanwhile))
