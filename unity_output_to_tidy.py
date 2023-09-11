@@ -280,14 +280,6 @@ for index, feedback_types in unique_feedback_types.items():
 
 ###### Test to Get the start and end of the trails. 
 
-
-
-# Replace 'all_data' with your actual DataFrame containing the data
-#all_data =    Replace this line with your actual data
-result = find_ball_position_changes(f_ptcp_df)
-
-
-
 '''
 ########################### Testing Results.##
     # Group the data and extract unique feedbackType values per ptcp, set, and levelCounter
