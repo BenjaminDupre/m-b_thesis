@@ -23,7 +23,7 @@ import numpy as np
 
 # Constants
 
-ACCESS_TOKEN = 'sl.Bky2c0pxJS55-2iDyRTriq8_JS_BTk0hz0R2XjQwH0j_tGfuI56h_objIKxaOsLcLHU-Ib7uUKaRADZitRQJxtzfA_rRNeZtRCqHGtcdemvUwtdZ4vQzXGIUNnwV_AoD70Ck59SFcYEIY3zqV6mVx_0'
+ACCESS_TOKEN = 'sl.Bl03CwZeycvCyqWNyg7DjTgnY9qeMzGxHfxc2OHOHP0J_DYV4lG9w--hfz8bO-1Q7erBYU8yoFGjXk5KMyK0uApXu2qdb0Ybthu51RAOJYJdt0NkgpEv5xlJKdX90CUxqTXpwBa6AY8Z5MdtisnSpbk'
 
 dbx = dropbox.Dropbox(ACCESS_TOKEN)
 
@@ -180,7 +180,7 @@ def find_ball_position_changes(data):
         for k in range(ver['levelCounter'].min(), ver['levelCounter'].max()+1):
             sub_vect = ver[(ver['trial_set'] == j) & (ver['levelCounter'] == k)]
             if len(sub_vect) < 1:
-                sub_vect = pd.DataFrame([["no start", k, j]], columns=['row_start', 'levelCounter', 'trial_set'])
+                sub_vect = pd.DataFrame([[99, k, j]], columns=['row_start', 'levelCounter', 'trial_set'])
             START = pd.concat([START, sub_vect.head(1)])
     # Reset index for the final START dataframe
     START.reset_index(drop=True, inplace=True)
@@ -217,28 +217,31 @@ def main():
     path = '/My Mac (glaroam2-185-117.wireless.gla.ac.uk)/Documents/Research MaxPlank/' \
     'P1_propioception/Data_Wrangling/Matlab Analysis/Data_Wrangling'
 
-    # 1.Get participant folders and names
+    # 1.Get all participant folders and names
     folder_path, folder_names = get_fold(path)
-    # 2.Get Sets folders and names for ptcpt
+    # 2.Get specific set folders and for ptcpt
     g_ptcp_path, g_ptcp_names = get_fold(folder_path[1])
-
     # 3.Read participant datasets from Dropbox into DF.
     ptcp_df = read_ptcp_sets_from_dropbox(g_ptcp_path,g_ptcp_names)
-
+    # 4. Procces stimulus type ("Congruent", "Incongruent", "None")
+    unique_feedback_types = get_one_feedback_per_trail(ptcp_df)
     # 4. Find Trials Starts  (when ball changes first position)
     start_df = find_ball_position_changes(ptcp_df)
     # 5. Find Trials Closure (when level counter changes)
     close_df = creating_close_trial(ptcp_df) 
-    # 6.  Meging Start and Close. 
+    # 6.  Merging Start and Close. 
     merged_df = pd.merge(close_df, start_df, on=['levelCounter', 'trial_set'], how='left')
-
-    return g_ptcp_path, g_ptcp_names, ptcp_df, start_df , close_df, merged_df
+    # 7.  Merging Feedbacktype 
+    # 8. Creating time (seconds) and 
+    merged_df["time_secs"] = (merged_df["row_close"] - pd.to_numeric(merged_df["row_start"]))/ 133
+    merged_df["ptcp"] = folder_names[1] # needs to be equal to folders path - change when looping
+    return g_ptcp_path, g_ptcp_names , ptcp_df, merged_df, unique_feedback_types
 
 ########################### Excecution of Main Function ##
 
 
 if __name__ == '__main__':
-    f_ptcp_path, f_ptcp_names, f_ptcp_df,start_df, close_df, merged_df = main()
+    f_ptcp_path, f_ptcp_names, f_ptcp_df, merged_df, unique_feedback_types = main()
     
 
 

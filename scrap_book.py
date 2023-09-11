@@ -121,3 +121,30 @@ def find_ball_position_changes(data):
     START.reset_index(drop=True, inplace=True)
     # Now you have the 'START' dataframe containing the start positions for each level and set
     return START
+
+### second try to unique feedbacktype
+def get_one_feedback_per_trail(dataf):
+    # Group the data and extract unique feedbackType values per participant, set, and levelCounter
+    unique_feedback_types = dataf.groupby(['ptcp', 'trial_set', 'levelCounter'])['feedbackType'].unique()
+    count=0
+
+    # Remove duplicate feedback types based on the specified conditions
+    for index, feedback_types in unique_feedback_types.items():
+        ptcp, set_val, level_counter = index
+        feedback_types = feedback_types[np.isin(feedback_types, ['incongruent', 'none', 'congruent'])]
+        if level_counter != 0 and feedback_types.size > 1:
+            previous_level_counter = level_counter - 1
+            previous_feedback_types = unique_feedback_types.get((ptcp, set_val, previous_level_counter))
+            if previous_feedback_types is not None :
+                if previous_feedback_types.size==1:
+                    last_element = previous_feedback_types
+                elif previous_feedback_types.size > 1:
+                    last_element = np.asarray(previous_feedback_types)[-1]
+                else:
+                    last_element = None
+                    count = +1 
+            if last_element is not None and feedback_types[0] == last_element :
+                feedback_types = feedback_types[1:]
+
+        unique_feedback_types[index] = feedback_types
+    return unique_feedback_types 
