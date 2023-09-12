@@ -141,7 +141,9 @@ def get_one_feedback_per_trail(dataf):
                 feedback_types = feedback_types[1:]
 
         unique_feedback_types[index] = feedback_types
-    return unique_feedback_types 
+        feedback_df = pd.DataFrame({'unique_feedbackTypes': unique_feedback_types})
+
+    return feedback_df 
 
 def find_ball_position_changes(data):
     B = pd.DataFrame()
