@@ -233,7 +233,7 @@ def main():
     # 3.Read participant datasets from Dropbox into DF.
     ptcp_df = read_ptcp_sets_from_dropbox(g_ptcp_path,g_ptcp_names)
     # 4. Procces stimulus type ("Congruent", "Incongruent", "None")
-    unique_feedback_types = get_one_feedback_per_trail(ptcp_df)
+    feedback_df = get_one_feedback_per_trail(ptcp_df)
     # 4. Find Trials Starts  (when ball changes first position)
     start_df = find_ball_position_changes(ptcp_df)
     # 5. Find Trials Closure (when level counter changes)
@@ -244,7 +244,7 @@ def main():
     # 8. Creating time (seconds) and 
     merged_df["time_secs"] = (merged_df["row_close"] - pd.to_numeric(merged_df["row_start"]))/ 133
     merged_df["ptcp"] = folder_names[1] # needs to be equal to folders path - change when looping
-    return g_ptcp_path, g_ptcp_names , ptcp_df, merged_df, unique_feedback_types
+    return g_ptcp_path, g_ptcp_names , ptcp_df, merged_df, feedback_df
 
 ########################### Excecution of Main Function ##
 
@@ -252,6 +252,7 @@ def main():
 if __name__ == '__main__':
     f_ptcp_path, f_ptcp_names, f_ptcp_df, merged_df, unique_feedback_types = main()
     
+
 
 
 ##### test to get only one stimuli 
