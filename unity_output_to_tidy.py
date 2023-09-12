@@ -23,7 +23,7 @@ import numpy as np
 
 # Constants
 
-ACCESS_TOKEN = 'sl.Bl03CwZeycvCyqWNyg7DjTgnY9qeMzGxHfxc2OHOHP0J_DYV4lG9w--hfz8bO-1Q7erBYU8yoFGjXk5KMyK0uApXu2qdb0Ybthu51RAOJYJdt0NkgpEv5xlJKdX90CUxqTXpwBa6AY8Z5MdtisnSpbk'
+ACCESS_TOKEN = 'sl.Bl5flrO9azMsq6ic95EW_6i_GJUuJTl-dQVNAOFPS_iJQ_nw6GOsnKr_ZCPjJnmZauKoTGehkTbImS96osSishunG4EOYH301m1gSxZQdDHQYfyBJQMF4-AILRBUaIgL0mqzum_J8IENztSbGnz0GNA'
 
 dbx = dropbox.Dropbox(ACCESS_TOKEN)
 
@@ -145,11 +145,14 @@ def get_one_feedback_per_trail(dataf):
 
 def find_ball_position_changes(data):
     B = pd.DataFrame()
+    log_file = open("log_button.txt","w")
     for set_val in range(1, 4):
         for lvl in range(0, 36):
             meanwhile = data[(data['levelCounter'] == lvl) & (data['trial_set'] == set_val)] # TO CHANGE (button pressed just skip)
             if meanwhile['buttonCurrentlyPressed'].nunique() >= 2 and data[(data['levelCounter'] == lvl - 1) & (data['trial_set'] == set_val)]['buttonCurrentlyPressed'].nunique() < 2:
-                print(f"Button pressed in lvl {lvl} - set {set_val}. Need to go for following change of ball position.")
+                n= f"Button pressed in lvl {lvl} - set {set_val}. Need to go for following change of ball position."
+                log_file.write(n + '\n')
+                print(n)
                 A = np.zeros(len(meanwhile))
                 A2 = np.zeros(len(meanwhile))
                 A3 = np.zeros(len(meanwhile))
@@ -164,16 +167,20 @@ def find_ball_position_changes(data):
                 A2 = np.zeros(0)
                 A3 = np.zeros(0)
             else:
-                print(f"Normal way to Start lvl in lvl {lvl} - set {set_val}")
+                n = f"Normal way to Start lvl in lvl {lvl} - set {set_val}"
+                log_file.write(n + '\n')
+                print(n)
                 A = np.zeros(len(meanwhile))
                 for r in range(1, len(meanwhile)):
                     A[r] = meanwhile.iloc[r - 1]['redBallPosition'] != meanwhile.iloc[r]['redBallPosition']
-
             B = pd.concat([B, pd.DataFrame(A)], ignore_index=True)
+    log_file.close()
+
     # Find the rows where the ball position changes (A == 1)
     indx = np.where(B.to_numpy()[:, 0] == 1)[0]
     # Create a dataframe 'ver' merging row_start, levelCounter, and set
     ver = pd.DataFrame({'row_start': indx, 'levelCounter': data.iloc[indx]['levelCounter'].astype(int), 'trial_set': data.iloc[indx]['trial_set'].astype(int)})
+
     # Merge level, set, and start into one dataframe 'START'
     START = pd.DataFrame()
     for j in range(data['trial_set'].min(), data['trial_set'].max() + 1):
