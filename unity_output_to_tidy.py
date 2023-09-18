@@ -23,7 +23,7 @@ import numpy as np
 
 # Constants
 
-ACCESS_TOKEN = 'sl.Bl5flrO9azMsq6ic95EW_6i_GJUuJTl-dQVNAOFPS_iJQ_nw6GOsnKr_ZCPjJnmZauKoTGehkTbImS96osSishunG4EOYH301m1gSxZQdDHQYfyBJQMF4-AILRBUaIgL0mqzum_J8IENztSbGnz0GNA'
+ACCESS_TOKEN = 'sl.BmS3zsTsNVdIbMqKhGjTst7d9lHVEaOsBFdye9-1weOEjLVTrwZADgI4eb90YrI2pFuv9DGMO1IGAkLtniUc2CRTpqsclbLsIBIeTuKaZ-6Mipy4V6pecNb09zpcbKVwzmD7hmJRshvKqnbr112W5rE'
 
 dbx = dropbox.Dropbox(ACCESS_TOKEN)
 
@@ -189,7 +189,7 @@ def find_ball_position_changes(data):
         for k in range(ver['levelCounter'].min(), ver['levelCounter'].max()+1):
             sub_vect = ver[(ver['trial_set'] == j) & (ver['levelCounter'] == k)]
             if len(sub_vect) < 1:
-                sub_vect = pd.DataFrame([[99, k, j]], columns=['row_start', 'levelCounter', 'trial_set'])
+                sub_vect = pd.DataFrame([[99, k, j]], columns=['row_start', 'levelCounter', 'trial_set']) ### this is to capture when there is a press button or bug
             START = pd.concat([START, sub_vect.head(1)])
     # Reset index for the final START dataframe
     START.reset_index(drop=True, inplace=True)
@@ -250,7 +250,7 @@ def main():
 
 
 if __name__ == '__main__':
-    f_ptcp_path, f_ptcp_names, f_ptcp_df, merged_df, unique_feedback_types = main()
+    f_ptcp_path, f_ptcp_names, f_ptcp_df, merged_df, feedback_df = main()
     
 
 
