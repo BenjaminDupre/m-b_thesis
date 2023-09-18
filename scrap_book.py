@@ -125,6 +125,24 @@ def find_ball_position_changes(data):
 ### second try to unique feedbacktype
 def get_one_feedback_per_trail(dataf):
     # Group the data and extract unique feedbackType values per participant, set, and levelCounter
+    crazy_unique_feedback_types = dataf.groupby(['ptcp', 'trial_set', 'levelCounter'])['feedbackType'].unique().reset_index()
+    count=0
+
+    # Split the values in the 'feedbackType' column
+    split_feedback = crazy_unique_feedback_types['feedbackType'].apply(pd.Series)
+
+    # Rename the columns
+    split_feedback.columns = [f'{i + 1}st_term' for i in range(split_feedback.shape[1])]
+
+    # Concatenate the split columns with the original DataFrame
+    result_df = pd.concat([crazy_unique_feedback_types.drop(columns=['feedbackType']), split_feedback], axis=1)
+
+    return result_df 
+
+----
+
+def get_one_feedback_per_trail(dataf):
+    # Group the data and extract unique feedbackType values per participant, set, and levelCounter
     unique_feedback_types = dataf.groupby(['ptcp', 'trial_set', 'levelCounter'])['feedbackType'].unique()
     count=0
 
@@ -145,6 +163,12 @@ def get_one_feedback_per_trail(dataf):
                     count = +1 
             if last_element is not None and feedback_types[0] == last_element :
                 feedback_types = feedback_types[1:]
-
+        elif level_counter == 0  and feedback_types.size > 1:
+            feedback_types = feedback_types[feedback_types != 'none']
         unique_feedback_types[index] = feedback_types
-    return unique_feedback_types 
+        feedback_df = pd.DataFrame({'unique_feedbackTypes': unique_feedback_types})
+
+    return feedback_df 
+
+
+

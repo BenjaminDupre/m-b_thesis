@@ -23,7 +23,7 @@ import numpy as np
 
 # Constants
 
-ACCESS_TOKEN = 'sl.BmS3zsTsNVdIbMqKhGjTst7d9lHVEaOsBFdye9-1weOEjLVTrwZADgI4eb90YrI2pFuv9DGMO1IGAkLtniUc2CRTpqsclbLsIBIeTuKaZ-6Mipy4V6pecNb09zpcbKVwzmD7hmJRshvKqnbr112W5rE'
+ACCESS_TOKEN = 'sl.BmRBaJQj3eZa6ACEN4A_F3s7NO9Lo7NQMn25XbMWQBPwTZhUaVMoxSqcwuxIw0bRyNy0FzdERnfm2UbDJqzX5AmEvHel1hr3t0vR-VBA8JLJfwiM9euiSOeGSFTRB67cdppda7fGbkxK2kY322ahg_o'
 
 dbx = dropbox.Dropbox(ACCESS_TOKEN)
 
@@ -139,7 +139,8 @@ def get_one_feedback_per_trail(dataf):
                     count = +1 
             if last_element is not None and feedback_types[0] == last_element :
                 feedback_types = feedback_types[1:]
-
+        elif level_counter == 0  and feedback_types.size > 1:
+            feedback_types = feedback_types[feedback_types != 'none']
         unique_feedback_types[index] = feedback_types
         feedback_df = pd.DataFrame({'unique_feedbackTypes': unique_feedback_types})
 
@@ -243,7 +244,10 @@ def main():
     # 7.  Merging Feedbacktype 
     # 8. Creating time (seconds) and 
     merged_df["time_secs"] = (merged_df["row_close"] - pd.to_numeric(merged_df["row_start"]))/ 133
+    #9. Merge Feedbacktype
+    merged_df= pd.merge(merged_df, feedback_df, on=['ptcp','levelCounter', 'trial_set'], how='left')
     merged_df["ptcp"] = folder_names[1] # needs to be equal to folders path - change when looping
+    
     return g_ptcp_path, g_ptcp_names , ptcp_df, merged_df, feedback_df
 
 ########################### Excecution of Main Function ##
@@ -252,8 +256,9 @@ def main():
 if __name__ == '__main__':
     f_ptcp_path, f_ptcp_names, f_ptcp_df, merged_df, feedback_df = main()
     
+### NEXT TO ADD CORRECT NUMBER AND ADD MORE ITERATIONS: 
 
-
+'''
 
 ##### test to get only one stimuli 
 # Remove duplicate feedback types based on the specified conditions
@@ -290,7 +295,7 @@ for index, feedback_types in unique_feedback_types.items():
 
 ###### Test to Get the start and end of the trails. 
 
-'''
+
 ########################### Testing Results.##
     # Group the data and extract unique feedbackType values per ptcp, set, and levelCounter
     unique_feedback_types = f_ptcp_df.groupby(
@@ -301,5 +306,15 @@ for index, feedback_types in unique_feedback_types.items():
         print(f"ptcp: {ptcp}, \
                trial_set: {set_val}, \
                  levelCounter: {level_counter} - Unique feedbackType values: {feedback_types}")
-'''
+
  
+# Split the values in the 'feedbackType' column
+split_feedback = crazy_unique_feedback_types['feedbackType'].apply(pd.Series)
+
+# Rename the columns
+split_feedback.columns = [f'{i + 1}st_term' for i in range(split_feedback.shape[1])]
+
+# Concatenate the split columns with the original DataFrame
+result_df = pd.concat([crazy_unique_feedback_types.drop(columns=['feedbackType']), split_feedback], axis=1)
+'''
+
