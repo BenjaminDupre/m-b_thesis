@@ -23,7 +23,7 @@ import numpy as np
 
 # Constants
 
-ACCESS_TOKEN = 'sl.BmVTgr9jNE59Lmxxbqh6k5qe4d7W4llR0PH9DEhfh4y8r2juN8RmPn64P6tOmt1AwQ0DbV4SH5uFROY23--So8iOS2OyYTTgBS9F4nR2disDgQCr4rfTAC1SVv18IxZbqpX0mMFrtvOQimvl17hr9Z8'
+ACCESS_TOKEN = 'sl.BmWzuSiKMD7PIS4mL1E7bxHRhO1ttjqyWJsorDSHOOwdH0u4W2eN_Dxx3N1NWg0UYxVR6JGkiXScgrz5M_Lqp0GF-4f4DuKi4WaMYMFFH2SWYemNXXU0-lg7Ht00BMs451F-Kytx4C1Sh0mMkqA99ho'
 
 dbx = dropbox.Dropbox(ACCESS_TOKEN)
 
@@ -216,7 +216,20 @@ def creating_close_trial(data):
     })
     close_df.reset_index(drop=True, inplace=True)
     return close_df 
+import pandas as pd
 
+def get_correct(data):
+    A = pd.DataFrame(columns=['Set Number', 'Level Counter', 'correctCounter', 'Change Flag'])
+
+    for line in range(data.shape[0] - 1):
+        if data['correctCounter'][line + 1] != data['correctCounter'][line]:
+            A.loc[line, 'Change Flag'] = line  # Use the line number as the flag value
+            A.loc[line, 'Set Number'] = data['trial_set'][line]
+            A.loc[line, 'Level Counter'] = data['levelCounter'][line]
+            A.loc[line, 'correctCounter'] = data['correctCounter'][line]
+    # Optionally, you can reset the index if needed
+    correct_df = A.reset_index(drop=True)
+    return correct_df
 
 def main():
     """
@@ -239,6 +252,8 @@ def main():
     start_df = find_ball_position_changes(ptcp_df)
     # 5. Find Trials Closure (when level counter changes)
     close_df = creating_close_trial(ptcp_df) 
+    # 6. Creat Correct Number 
+    correct_df = get_correct(ptcp_df)
     # 6.  Merging Start and Close. 
     merged_df = pd.merge(close_df, start_df, on=['levelCounter', 'trial_set'], how='left')
     # 7.  Merging Feedbacktype 
@@ -249,13 +264,13 @@ def main():
     # 10. Merge Feedbacktype
     merged_df= pd.merge(merged_df, feedback_df, on=['ptcp','levelCounter', 'trial_set'], how='left')
     
-    return g_ptcp_path, g_ptcp_names , ptcp_df, merged_df, feedback_df
+    return g_ptcp_path, g_ptcp_names , ptcp_df, merged_df, feedback_df, correct_df
 
 ########################### Excecution of Main Function ##
 
 
 if __name__ == '__main__':
-    f_ptcp_path, f_ptcp_names, f_ptcp_df, merged_df, feedback_df = main()
+    f_ptcp_path, f_ptcp_names, f_ptcp_df, merged_df, feedback_df,correct_df = main()
     
 ### NEXT TO ADD CORRECT NUMBER AND ADD MORE ITERATIONS: 
 
