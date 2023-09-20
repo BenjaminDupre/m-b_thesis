@@ -23,7 +23,7 @@ import numpy as np
 
 # Constants
 
-ACCESS_TOKEN = 'sl.BmZ05oS3ukeXvOqng8Jn5eHV-XVKNRccsBw7IjrhpKV49cr8DjK8V508AEPcc3ccuCDHH1ZMRyHDBDib4W1Nbu_F3UWdktAhFTOw4OJEUdqWqevzlFAJ9Rv9D-EAlpPl3T-XQ45ODzKAwSnV0g_jUDM'
+ACCESS_TOKEN = 'sl.BmRBaJQj3eZa6ACEN4A_F3s7NO9Lo7NQMn25XbMWQBPwTZhUaVMoxSqcwuxIw0bRyNy0FzdERnfm2UbDJqzX5AmEvHel1hr3t0vR-VBA8JLJfwiM9euiSOeGSFTRB67cdppda7fGbkxK2kY322ahg_o'
 
 dbx = dropbox.Dropbox(ACCESS_TOKEN)
 
@@ -215,7 +215,20 @@ def creating_close_trial(data):
     })
     close_df.reset_index(drop=True, inplace=True)
     return close_df 
+import pandas as pd
 
+def get_correct(data):
+    A = pd.DataFrame(columns=['Set Number', 'Level Counter', 'correctCounter', 'Change Flag'])
+
+    for line in range(data.shape[0] - 1):
+        if data['correctCounter'][line + 1] != data['correctCounter'][line]:
+            A.loc[line, 'Change Flag'] = line  # Use the line number as the flag value
+            A.loc[line, 'Set Number'] = data['trial_set'][line]
+            A.loc[line, 'Level Counter'] = data['levelCounter'][line]
+            A.loc[line, 'correctCounter'] = data['correctCounter'][line]
+    # Optionally, you can reset the index if needed
+    correct_df = A.reset_index(drop=True)
+    return correct_df
 
 def main():
     """
@@ -238,25 +251,26 @@ def main():
     start_df = find_ball_position_changes(ptcp_df)
     # 6. Find Trials Closure (when level counter changes)
     close_df = creating_close_trial(ptcp_df) 
-    # 7.  Merging Start and Close. 
+    # 6.  Merging Start and Close. 
     merged_df = pd.merge(close_df, start_df, on=['levelCounter', 'trial_set'], how='left')
     # 8.  Merging Feedbacktype 
     # 9. Creating time (seconds) and 
     merged_df["time_secs"] = (merged_df["row_close"] - pd.to_numeric(merged_df["row_start"]))/ 133
-    #10. Merge Feedbacktype
-    #merged_df= pd.merge(merged_df, feedback_df, on=['levelCounter', 'trial_set'], how='left')
-    #11. Add Participant Name
+    #9. Merge Feedbacktype
+    merged_df= pd.merge(merged_df, feedback_df, on=['ptcp','levelCounter', 'trial_set'], how='left')
     merged_df["ptcp"] = folder_names[1] # needs to be equal to folders path - change when looping
     
-    return g_ptcp_path, g_ptcp_names , ptcp_df, merged_df, feedback_df
+    return g_ptcp_path, g_ptcp_names , ptcp_df, merged_df, feedback_df, correct_df
 
 ########################### Excecution of Main Function ##
 
 
 if __name__ == '__main__':
-    f_ptcp_path, f_ptcp_names, f_ptcp_df, merged_df, feedback_df = main()
+    f_ptcp_path, f_ptcp_names, f_ptcp_df, merged_df, feedback_df,correct_df = main()
     
 ### NEXT TO ADD CORRECT NUMBER AND ADD MORE ITERATIONS: 
+
+
 
 '''
 
