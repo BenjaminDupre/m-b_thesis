@@ -23,7 +23,7 @@ import numpy as np
 
 # Constants
 
-ACCESS_TOKEN = 'sl.BmRBaJQj3eZa6ACEN4A_F3s7NO9Lo7NQMn25XbMWQBPwTZhUaVMoxSqcwuxIw0bRyNy0FzdERnfm2UbDJqzX5AmEvHel1hr3t0vR-VBA8JLJfwiM9euiSOeGSFTRB67cdppda7fGbkxK2kY322ahg_o'
+ACCESS_TOKEN = 'sl.BmZ05oS3ukeXvOqng8Jn5eHV-XVKNRccsBw7IjrhpKV49cr8DjK8V508AEPcc3ccuCDHH1ZMRyHDBDib4W1Nbu_F3UWdktAhFTOw4OJEUdqWqevzlFAJ9Rv9D-EAlpPl3T-XQ45ODzKAwSnV0g_jUDM'
 
 dbx = dropbox.Dropbox(ACCESS_TOKEN)
 
@@ -120,7 +120,6 @@ def read_ptcp_sets_from_dropbox(path_sets, ptcp_names):
 def get_one_feedback_per_trail(dataf):
     # Group the data and extract unique feedbackType values per participant, set, and levelCounter
     unique_feedback_types = dataf.groupby(['ptcp', 'trial_set', 'levelCounter'])['feedbackType'].unique()
-    count=0
 
     # Remove duplicate feedback types based on the specified conditions
     for index, feedback_types in unique_feedback_types.items():
@@ -142,7 +141,7 @@ def get_one_feedback_per_trail(dataf):
         elif level_counter == 0  and feedback_types.size > 1:
             feedback_types = feedback_types[feedback_types != 'none']
         unique_feedback_types[index] = feedback_types
-        feedback_df = pd.DataFrame({'unique_feedbackTypes': unique_feedback_types})
+        feedback_df=unique_feedback_types.reset_index(drop=True) 
 
     return feedback_df 
 
@@ -235,17 +234,18 @@ def main():
     ptcp_df = read_ptcp_sets_from_dropbox(g_ptcp_path,g_ptcp_names)
     # 4. Procces stimulus type ("Congruent", "Incongruent", "None")
     feedback_df = get_one_feedback_per_trail(ptcp_df)
-    # 4. Find Trials Starts  (when ball changes first position)
+    # 5. Find Trials Starts  (when ball changes first position)
     start_df = find_ball_position_changes(ptcp_df)
-    # 5. Find Trials Closure (when level counter changes)
+    # 6. Find Trials Closure (when level counter changes)
     close_df = creating_close_trial(ptcp_df) 
-    # 6.  Merging Start and Close. 
+    # 7.  Merging Start and Close. 
     merged_df = pd.merge(close_df, start_df, on=['levelCounter', 'trial_set'], how='left')
-    # 7.  Merging Feedbacktype 
-    # 8. Creating time (seconds) and 
+    # 8.  Merging Feedbacktype 
+    # 9. Creating time (seconds) and 
     merged_df["time_secs"] = (merged_df["row_close"] - pd.to_numeric(merged_df["row_start"]))/ 133
-    #9. Merge Feedbacktype
-    merged_df= pd.merge(merged_df, feedback_df, on=['ptcp','levelCounter', 'trial_set'], how='left')
+    #10. Merge Feedbacktype
+    #merged_df= pd.merge(merged_df, feedback_df, on=['levelCounter', 'trial_set'], how='left')
+    #11. Add Participant Name
     merged_df["ptcp"] = folder_names[1] # needs to be equal to folders path - change when looping
     
     return g_ptcp_path, g_ptcp_names , ptcp_df, merged_df, feedback_df
