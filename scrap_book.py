@@ -1,38 +1,32 @@
-import pandas as pd
-'''
-def get_correct(data):
-    A = pd.DataFrame(columns=['Set Number', 'Level Counter', 'correctCounter', 'Change Flag'])
+def get_one_feedback_per_trail(dataf):
+    # Group the data and extract unique feedbackType values per participant, set, and levelCounter
+    unique_feedback_types = dataf.groupby(['ptcp', 'trial_set', 'levelCounter'])['feedbackType'].unique()
 
-    for line in range(data.shape[0] - 1):
-        if data['correctCounter'][line + 1] != data['correctCounter'][line]:
-            A.loc[line, 'Change Flag'] = line  # Use the line number as the flag value
-            A.loc[line, 'Set Number'] = data['trial_set'][line]
-            A.loc[line, 'Level Counter'] = data['levelCounter'][line]
-            A.loc[line, 'correctCounter'] = data['correctCounter'][line]
+    # Remove duplicate feedback types based on the specified conditions
+    for index, feedback_types in unique_feedback_types.items():
+        ptcp, set_val, level_counter = index
+        feedback_types = feedback_types[np.isin(feedback_types, ['incongruent', 'none', 'congruent'])]
+        if level_counter != 0 and feedback_types.size > 1:
+            previous_level_counter = level_counter - 1
+            previous_feedback_types = unique_feedback_types.get((ptcp, set_val, previous_level_counter))
+            if previous_feedback_types is not None :
+                if previous_feedback_types.size==1:
+                    last_element = previous_feedback_types
+                elif previous_feedback_types.size > 1:
+                    last_element = np.asarray(previous_feedback_types)[-1]
+                else:
+                    last_element = None
+            if last_element is not None and feedback_types[0] == last_element :
+                feedback_types = feedback_types[1:]
+        elif level_counter == 0  and feedback_types.size > 1:
+            feedback_types = feedback_types[feedback_types != 'none']
+        unique_feedback_types[index] = feedback_types
+        feedback_df=unique_feedback_types.reset_index() 
 
-    # Optionally, you can reset the index if needed
-    correct_df = A.reset_index(drop=True)
-    return correct_df
-'''
+    return feedback_df
 
-##------------------------ second try 
+get_one_feedback_per_trail(f_ptcp_df)
+feedback_df
+yogurt= feedback_df.index.names 
+print(yogurt)
 
-A = f_ptcp_df[['trial_set', 'levelCounter', 'correctCounter']]
-
-# Initialize a list to store unique DataFrames
-unique_dfs = []
-
-for index, row in A.iterrows():
-    trial_set = row['trial_set']
-    level_counter = row['levelCounter']
-    correctCounter = row['correctCounter']
-
-    # Create a DataFrame for the current unique values
-    unique_df = pd.DataFrame({'trial_set': [trial_set], 'levelCounter': [level_counter], 'correctCounter': [correctCounter]})
-
-    # Check if the unique DataFrame is not already in the list
-    if not any(df.equals(unique_df) for df in unique_dfs):
-        unique_dfs.append(unique_df)
-
-# Concatenate all unique DataFrames into one DataFrame
-unique_values_df = pd.concat(unique_dfs, ignore_index=True)

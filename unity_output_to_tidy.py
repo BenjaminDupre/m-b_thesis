@@ -23,7 +23,7 @@ import numpy as np
 
 # Constants
 
-ACCESS_TOKEN = 'sl.BmRBaJQj3eZa6ACEN4A_F3s7NO9Lo7NQMn25XbMWQBPwTZhUaVMoxSqcwuxIw0bRyNy0FzdERnfm2UbDJqzX5AmEvHel1hr3t0vR-VBA8JLJfwiM9euiSOeGSFTRB67cdppda7fGbkxK2kY322ahg_o'
+ACCESS_TOKEN = 'sl.BmfPcd-F4FomPcu-2RMhxAtVzXVl5nD-38a5y8-lDqZq6P9VkDJMluJLTmG-lRs8cycbmrECqJn1UVsPWFB5-LNetfqf5MnKd-c30ewTaixEjXPKqWkjpwVbcVS4p1UKz9ulDnEpT1fjW9KsfdG_eCg'
 
 dbx = dropbox.Dropbox(ACCESS_TOKEN)
 
@@ -135,15 +135,15 @@ def get_one_feedback_per_trail(dataf):
                     last_element = np.asarray(previous_feedback_types)[-1]
                 else:
                     last_element = None
-                    count = +1 
             if last_element is not None and feedback_types[0] == last_element :
                 feedback_types = feedback_types[1:]
         elif level_counter == 0  and feedback_types.size > 1:
             feedback_types = feedback_types[feedback_types != 'none']
         unique_feedback_types[index] = feedback_types
-        feedback_df=unique_feedback_types.reset_index(drop=True) 
+        feedback_df=unique_feedback_types.reset_index()
+        feedback_df= pd.DataFrame(feedback_df) 
 
-    return feedback_df 
+    return  feedback_df
 
 def find_ball_position_changes(data):
     B = pd.DataFrame()
@@ -257,16 +257,16 @@ def main():
     # 9. Creating time (seconds) and 
     merged_df["time_secs"] = (merged_df["row_close"] - pd.to_numeric(merged_df["row_start"]))/ 133
     #9. Merge Feedbacktype
-    merged_df= pd.merge(merged_df, feedback_df, on=['ptcp','levelCounter', 'trial_set'], how='left')
+    #merged_df= pd.merge(merged_df, feedback_df, on=['ptcp','levelCounter', 'trial_set'], how='left')
     merged_df["ptcp"] = folder_names[1] # needs to be equal to folders path - change when looping
     
-    return g_ptcp_path, g_ptcp_names , ptcp_df, merged_df, feedback_df, correct_df
+    return g_ptcp_path, g_ptcp_names , ptcp_df, merged_df, feedback_df
 
 ########################### Excecution of Main Function ##
 
 
 if __name__ == '__main__':
-    f_ptcp_path, f_ptcp_names, f_ptcp_df, merged_df, feedback_df,correct_df = main()
+    f_ptcp_path, f_ptcp_names, f_ptcp_df, merged_df, feedback_df = main()
     
 ### NEXT TO ADD CORRECT NUMBER AND ADD MORE ITERATIONS: 
 
