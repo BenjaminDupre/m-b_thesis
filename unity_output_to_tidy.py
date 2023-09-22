@@ -23,7 +23,7 @@ import numpy as np
 
 # Constants
 
-ACCESS_TOKEN = 'sl.BmfPcd-F4FomPcu-2RMhxAtVzXVl5nD-38a5y8-lDqZq6P9VkDJMluJLTmG-lRs8cycbmrECqJn1UVsPWFB5-LNetfqf5MnKd-c30ewTaixEjXPKqWkjpwVbcVS4p1UKz9ulDnEpT1fjW9KsfdG_eCg'
+ACCESS_TOKEN = 'sl.Bmg2kOX4OCgkFINoqipNC5c-dhZCyJNfV9W9xCJAO6cBh64pqGGIX77mIkBw33xEqRQ0V42LYt4WpXzT8QTsyya2VJF0q0LCCgM4I9usCDeY1KT-ScVeSm0zg10_DHPgsgBSBMDJXyGW-_QxIvdNIfU'
 
 dbx = dropbox.Dropbox(ACCESS_TOKEN)
 
@@ -211,9 +211,9 @@ def get_one_feedback_per_trail(dataf,close_df):
         elif level_counter == 0  and feedback_types.size > 1:
             feedback_types = feedback_types[feedback_types != 'none']
         # WARNING: Last resource condition. Not to pro but effective 
-        if  feedback_types.size > 1:
+        elif  feedback_types.size > 1:
             row_n = close_df[(close_df['levelCounter'] == level_counter) & (close_df['trial_set'] == set_val)]['row_close']
-            feedback_types = f_ptcp_df[f_ptcp_df['index'] == row_n]['feedbackType']   
+            feedback_types = dataf[dataf['index'] == row_n]['feedbackType']   
         unique_feedback_types[index] = feedback_types
     feedback_df=unique_feedback_types.reset_index()
     feedback_df= pd.DataFrame(feedback_df) 
@@ -249,7 +249,7 @@ def main():
     g_ptcp_path, g_ptcp_names = get_fold(folder_path[1])
     # 3.Read participant datasets from Dropbox into DF.
     ptcp_df = read_ptcp_sets_from_dropbox(g_ptcp_path,g_ptcp_names)
-    # 5. Find Trials Starts  (when ball changes first position)
+    # 4. Find Trials Starts  (when ball changes first position)
     start_df = find_ball_position_changes(ptcp_df)
     # 6. Find Trials Closure (when level counter changes)
     close_df = creating_close_trial(ptcp_df) 
@@ -257,7 +257,6 @@ def main():
     feedback_df = get_one_feedback_per_trail(ptcp_df,close_df)
     # 6.  Merging Start and Close. 
     merged_df = pd.merge(close_df, start_df, on=['levelCounter', 'trial_set'], how='left')
-    # 8.  Merging Feedbacktype 
     # 9. Creating time (seconds) and 
     merged_df["time_secs"] = (merged_df["row_close"] - pd.to_numeric(merged_df["row_start"]))/ 133
     #10. Addin participants label 
@@ -270,7 +269,7 @@ def main():
 
 
 if __name__ == '__main__':
-    f_ptcp_path, f_ptcp_names, f_ptcp_df, merged_df, feedback_df = main()
+    f_ptcp_path, f_ptcp_names, f_ptcp_df, merged_df_bugrun, feedback_df = main()
 
 merged_df_bugrun.to_csv('clean_merged.csv')    
 ### NEXT TO ADD CORRECT NUMBER AND ADD MORE ITERATIONS: 
