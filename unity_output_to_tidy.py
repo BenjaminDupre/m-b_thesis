@@ -23,7 +23,7 @@ import numpy as np
 
 # Constants
 
-ACCESS_TOKEN = 'sl.Bmg2kOX4OCgkFINoqipNC5c-dhZCyJNfV9W9xCJAO6cBh64pqGGIX77mIkBw33xEqRQ0V42LYt4WpXzT8QTsyya2VJF0q0LCCgM4I9usCDeY1KT-ScVeSm0zg10_DHPgsgBSBMDJXyGW-_QxIvdNIfU'
+ACCESS_TOKEN = 'sl.BmsnVU3Xo4XYw_yva1uYS_ZoXfCPrNa_NYziB3GnSGAq_KUcTW55gjhmu6CLO6RAOFI1SC_uluNi800V6XE15baKmsAdmASlhhm4_alAE_WszT8NaNV4XApP8NC7mp2hX2NvxdZOUaL6uCO5B-37_ZE'
 
 dbx = dropbox.Dropbox(ACCESS_TOKEN)
 
@@ -196,6 +196,7 @@ def get_one_feedback_per_trail(dataf,close_df):
     for index, feedback_types in unique_feedback_types.items():
         ptcp, set_val, level_counter = index
         feedback_types = feedback_types[np.isin(feedback_types, ['incongruent', 'none', 'congruent'])]
+        #print(f'Going Through Level {level_counter} and Set {set_val}')
         if level_counter != 0 and feedback_types.size > 1:
             previous_level_counter = level_counter - 1
             previous_feedback_types = unique_feedback_types.get((ptcp, set_val, previous_level_counter))
@@ -210,25 +211,28 @@ def get_one_feedback_per_trail(dataf,close_df):
                 feedback_types = feedback_types[1:]
         elif level_counter == 0  and feedback_types.size > 1:
             feedback_types = feedback_types[feedback_types != 'none']
-        # WARNING: Last resource condition. Not to pro but effective 
-        elif  feedback_types.size > 1:
+        # WARNING: Last resource condition. Not too Pro but effective 
+        if  feedback_types.size > 1:
+            print(f'WAS TRIGGERED LAST CASE FEEDBACKTYPE in level {level_counter} and set {set_val}')
             row_n = close_df[(close_df['levelCounter'] == level_counter) & (close_df['trial_set'] == set_val)]['row_close']
-            feedback_types = dataf[dataf['index'] == row_n]['feedbackType']   
+            #row_n = close_df[(close_df['levelCounter'] == level_counter) & (close_df['trial_set'] == set_val)]['row_close']
+            feedback_types = np.asarray(dataf.loc[row_n]['feedbackType'])
+            #feedback_types = dataf[dataf['index'] == row_n]['feedbackType']   
         unique_feedback_types[index] = feedback_types
     feedback_df=unique_feedback_types.reset_index()
     feedback_df= pd.DataFrame(feedback_df) 
 
     return  feedback_df
 
-
 def get_correct(data):
-    A = pd.DataFrame(columns=['Set Number', 'Level Counter', 'correctCounter', 'Change Flag'])
+    A = pd.DataFrame(columns=['trial_set', 'levelCounter', 'correctCounter', 'ptcp', 'Change Flag'])
 
     for line in range(data.shape[0] - 1):
         if data['correctCounter'][line + 1] != data['correctCounter'][line]:
             A.loc[line, 'Change Flag'] = line  # Use the line number as the flag value
-            A.loc[line, 'Set Number'] = data['trial_set'][line]
-            A.loc[line, 'Level Counter'] = data['levelCounter'][line]
+            A.loc[line, 'ptcp'] = data['ptcp'][line]
+            A.loc[line, 'trial_set'] = data['trial_set'][line]
+            A.loc[line, 'levelCounter'] = data['levelCounter'][line]
             A.loc[line, 'correctCounter'] = data['correctCounter'][line]
     # Optionally, you can reset the index if needed
     correct_df = A.reset_index(drop=True)
@@ -245,36 +249,40 @@ def main():
 
     # 1.Get all participant folders and names
     folder_path, folder_names = get_fold(path)
-    # 2.Get specific set folders and for ptcpt
+    # 2.Get specific set subfolders for ptcpt
     g_ptcp_path, g_ptcp_names = get_fold(folder_path[1])
     # 3.Read participant datasets from Dropbox into DF.
     ptcp_df = read_ptcp_sets_from_dropbox(g_ptcp_path,g_ptcp_names)
     # 4. Find Trials Starts  (when ball changes first position)
     start_df = find_ball_position_changes(ptcp_df)
-    # 6. Find Trials Closure (when level counter changes)
+    # 5. Find Trials Closure (when level counter changes)
     close_df = creating_close_trial(ptcp_df) 
-    # 4. Procces stimulus type ("Congruent", "Incongruent", "None")
+    # 6. Procces stimulus type ("Congruent", "Incongruent", "None")
     feedback_df = get_one_feedback_per_trail(ptcp_df,close_df)
-    # 6.  Merging Start and Close. 
+    #8 . Creating Correct DF 
+    correct_df=get_correct(f_ptcp_df)
+    # 7.  Merging Start and Close. 
     merged_df = pd.merge(close_df, start_df, on=['levelCounter', 'trial_set'], how='left')
-    # 9. Creating time (seconds) and 
+    # 8. Creating time (seconds) and 
     merged_df["time_secs"] = (merged_df["row_close"] - pd.to_numeric(merged_df["row_start"]))/ 133
-    #10. Addin participants label 
+    #9. Addin participants label 
     merged_df["ptcp"] = folder_names[1] # needs to be equal to folders path - change when looping
-    #11. Merge Feedbacktype
-    merged_df_bugrun= pd.merge(merged_df, feedback_df, on=['ptcp','levelCounter', 'trial_set'], how='left')
-    return g_ptcp_path, g_ptcp_names , ptcp_df, merged_df, feedback_df
+    #10. Merge Feedbacktype
+    merged_df= pd.merge(merged_df, feedback_df, on=['ptcp','levelCounter', 'trial_set'], how='left')
+    #11. Merge Correct
+    merged_df=pd.merge(merged_df, correct_df, on=['ptcp','levelCounter', 'trial_set'], how='left')
 
+    return g_ptcp_path, g_ptcp_names , ptcp_df, merged_df
 ########################### Excecution of Main Function ##
 
 
 if __name__ == '__main__':
-    f_ptcp_path, f_ptcp_names, f_ptcp_df, merged_df_bugrun, feedback_df = main()
+    f_ptcp_path, f_ptcp_names, f_ptcp_df, merged_df = main()
 
-merged_df_bugrun.to_csv('clean_merged.csv')    
+#merged_df_bugrun.to_csv('clean_merged.csv')    
 ### NEXT TO ADD CORRECT NUMBER AND ADD MORE ITERATIONS: 
 
-
+merged_df.to_csv('lolita.csv')
 
 '''
 

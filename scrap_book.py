@@ -26,6 +26,7 @@ def get_one_feedback_per_trail(dataf,close_df):
     for index, feedback_types in unique_feedback_types.items():
         ptcp, set_val, level_counter = index
         feedback_types = feedback_types[np.isin(feedback_types, ['incongruent', 'none', 'congruent'])]
+        #print(f'Going Through Level {level_counter} and Set {set_val}')
         if level_counter != 0 and feedback_types.size > 1:
             previous_level_counter = level_counter - 1
             previous_feedback_types = unique_feedback_types.get((ptcp, set_val, previous_level_counter))
@@ -41,9 +42,12 @@ def get_one_feedback_per_trail(dataf,close_df):
         elif level_counter == 0  and feedback_types.size > 1:
             feedback_types = feedback_types[feedback_types != 'none']
         # WARNING: Last resource condition. Not too Pro but effective 
-        elif  feedback_types.size > 1:
+        if  feedback_types.size > 1:
+            print(f'WAS TRIGGERED LAST CASE FEEDBACKTYPE in level {level_counter} and set {set_val}')
             row_n = close_df[(close_df['levelCounter'] == level_counter) & (close_df['trial_set'] == set_val)]['row_close']
-            feedback_types = dataf[dataf['index'] == row_n]['feedbackType']   
+            #row_n = close_df[(close_df['levelCounter'] == level_counter) & (close_df['trial_set'] == set_val)]['row_close']
+            feedback_types = np.asarray(dataf.loc[row_n]['feedbackType'])
+            #feedback_types = dataf[dataf['index'] == row_n]['feedbackType']   
         unique_feedback_types[index] = feedback_types
     feedback_df=unique_feedback_types.reset_index()
     feedback_df= pd.DataFrame(feedback_df) 
@@ -52,5 +56,8 @@ def get_one_feedback_per_trail(dataf,close_df):
 
 close_df = creating_close_trial(f_ptcp_df)
 payasadaoe = get_one_feedback_per_trail(f_ptcp_df,close_df)
+unique_feedback_types.to_csv('delete_after_read.csv')
 payasadaoe.to_csv('clean_merged.csv')
 
+#---------------------------------------------------------
+# using correct counter 
