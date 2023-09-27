@@ -23,7 +23,7 @@ import numpy as np
 
 # Constants
 
-ACCESS_TOKEN = 'sl.Bm3t4TUBMb4tANaGjXl8oqL0SwZKsbmO1lz0N3uOIwwxkv6nYKUVW1-SK1PIIrYPs2U0PJQQoXZEfUXsjpCdB6ju-XsdD7g-WHI6ttxCMcQDBwdOW3ZUcEQq4ma9VBgWim8C5RILOviRRJ-SYwxWyJQ'
+ACCESS_TOKEN = 'sl.Bm2RVICOfL4Hn6hY_UO_sYVd7DUo-LoTfDigD3ZwQc6WORr1MWSwCccY-2AFY2thSLhzt12mUE0uDh471CRxDSpjGuB_ND-BWbKL-bRqmzUseQqpuy178_XirsB_l1DDLnkRE2K-0OgsLtt7imhDAj0'
 
 dbx = dropbox.Dropbox(ACCESS_TOKEN)
 
@@ -67,7 +67,7 @@ def get_fold(fld_path):
 # Getting data_sets for on participant.
 
 
-def read_ptcp_sets_from_dropbox(path_sets,ptcp_names):
+def read_ptcp_sets_from_dropbox(path_sets,ptcp_names,p):
     """
     read csv files
     """
@@ -84,10 +84,10 @@ def read_ptcp_sets_from_dropbox(path_sets,ptcp_names):
                     'isExplosionTriggered', 'ECG']
     column_types = ['string', 'float32', 'float32', 'float32',
                     'string', 'string', 'string', 'string', 'string',
-                    'string', 'boolean', 'boolean', 'category',
-                    'boolean', 'boolean', 'string', 'string',
-                    'boolean', 'boolean', 'boolean', 'string',
-                    'boolean', 'string', 'boolean', 'boolean',
+                    'string', 'object', 'object', 'category',
+                    'object', 'object', 'string', 'string',
+                    'object', 'object', 'object', 'string',
+                    'object', 'string', 'object', 'object',
                     'string', 'string', 'object']
 
     accumulated_data = []  # Accumulate individual CSV data
@@ -100,7 +100,7 @@ def read_ptcp_sets_from_dropbox(path_sets,ptcp_names):
         # Read the CSV data into a Pandas DataFrame
         df_list = pd.read_csv(io.StringIO(csv_data.decode('utf-8')),
                          # There is some curruption in the files, so we skip first second
-                         skiprows=133, delimiter=';',
+                         skiprows=266, delimiter=';',
                          names=column_names, \
                             dtype=dict(zip(column_names, \
                                             column_types))).to_dict('records')
@@ -124,18 +124,20 @@ def read_ptcp_sets_from_dropbox(path_sets,ptcp_names):
     return combined_df
 
 def find_ball_position_changes(data):
+    min_trial_set = int(data['trial_set'].min())
+    max_trial_set = int(data['trial_set'].max())
+    min_levelCounter = int(data['levelCounter'].min())
+    max_levelCounter = int(data['levelCounter'].max())
     B = pd.DataFrame()
-    log_file = open("log_button.txt","w")
-    for set_val in range(1, 4):
-        for lvl in range(0, 36):
+    for set_val in range(min_trial_set, max_trial_set + 1):
+        for lvl in range(min_levelCounter, max_levelCounter + 1):
             meanwhile = data[(data['levelCounter'] == lvl) & (data['trial_set'] == set_val)] # TO CHANGE (button pressed just skip)
-            if meanwhile['buttonCurrentlyPressed'].nunique() >= 2 and data[(data['levelCounter'] == lvl - 1) & (data['trial_set'] == set_val)]['buttonCurrentlyPressed'].nunique() < 2:
-                n= f"Button pressed in lvl {lvl} - set {set_val}. Need to go for following change of ball position."
-                log_file.write(n + '\n')
+            if meanwhile['buttonCurrentlyPressed'].nunique() >= 2 and data[(data['levelCounter'] == lvl - 1) & (data['trial_set'] == set_val)]['buttonCurrentlyPressed'].nunique() < 2: #previous level has not a button pressed
+                n= f"Button pressed in lvl {lvl} - set {set_val}. Need to go for following change of ball position. No button pressed before"
                 print(n)
                 A = np.zeros(len(meanwhile))
-                A2 = np.zeros(len(meanwhile))
-                A3 = np.zeros(len(meanwhile))
+                #A2 = np.zeros(len(meanwhile))
+                #A3 = np.zeros(len(meanwhile))
                 for r in range(1, len(meanwhile)):
                         A[r] = (meanwhile.iloc[r - 1]['buttonHasBeenPressed'] == "TEMPLATE_IS_ACTIVE") & (meanwhile.iloc[r]['buttonHasBeenPressed'] == 'AFTER_TEMPLATE_IS_ACTIVE')
                     #else:
@@ -143,20 +145,22 @@ def find_ball_position_changes(data):
                     #    if sum(A2) >= 1:
                     #        A3[r] = meanwhile.iloc[r - 1]['redBallPosition'] != meanwhile.iloc[r]['redBallPosition']
                     #        break
-                A = np.concatenate(([0], A3))
-                A2 = np.zeros(0)
-                A3 = np.zeros(0)
+                #A = np.concatenate(([0], A3))
+                #A2 = np.zeros(0)
+                #A3 = np.zeros(0)
             else:
                 n = f"Normal way to Start lvl in lvl {lvl} - set {set_val}"
-                log_file.write(n + '\n')
                 print(n)
                 A = np.zeros(len(meanwhile))
                 for r in range(1, len(meanwhile)):
                     A[r] = meanwhile.iloc[r - 1]['redBallPosition'] != meanwhile.iloc[r]['redBallPosition']
             B = pd.concat([B, pd.DataFrame(A)], ignore_index=True)
-    log_file.close()
 
-    # Find the rows where the ball position changes (A == 1)
+    # Check if the size of B is correct 
+    if len(B) > len(data):
+    # Keep only rows up to and including the last row of data
+        B = B.iloc[:len(data)]
+    # Find the rows where the ball position changes (B == 1)
     indx = np.where(B.to_numpy()[:, 0] == 1)[0]
     # Create a dataframe 'ver' merging row_start, levelCounter, and set
     ver = pd.DataFrame({'row_start': indx, 'levelCounter': data.iloc[indx]['levelCounter'].astype(int), 'trial_set': data.iloc[indx]['trial_set'].astype(int)})
@@ -255,13 +259,13 @@ def main():
 
     base=pd.DataFrame()
 
-    for p in range(0,1):
+    for p in range(0,3):
         # 1.Get all participant folders and names
         folder_path, folder_names = get_fold(path)
         # 2.Get specific set subfolders for ptcpt
         g_ptcp_path, g_ptcp_names = get_fold(folder_path[p])
         # 3.Read participant datasets from Dropbox into DF.
-        ptcp_df = read_ptcp_sets_from_dropbox(g_ptcp_path,g_ptcp_names)
+        ptcp_df = read_ptcp_sets_from_dropbox(g_ptcp_path,g_ptcp_names,p)
         # 4. Find Trials Starts  (when ball changes first position)
         start_df = find_ball_position_changes(ptcp_df)
         # 5. Find Trials Closure (when level counter changes)
