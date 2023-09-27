@@ -23,7 +23,7 @@ import numpy as np
 
 # Constants
 
-ACCESS_TOKEN = 'sl.BmsnVU3Xo4XYw_yva1uYS_ZoXfCPrNa_NYziB3GnSGAq_KUcTW55gjhmu6CLO6RAOFI1SC_uluNi800V6XE15baKmsAdmASlhhm4_alAE_WszT8NaNV4XApP8NC7mp2hX2NvxdZOUaL6uCO5B-37_ZE'
+ACCESS_TOKEN = 'sl.Bm3t4TUBMb4tANaGjXl8oqL0SwZKsbmO1lz0N3uOIwwxkv6nYKUVW1-SK1PIIrYPs2U0PJQQoXZEfUXsjpCdB6ju-XsdD7g-WHI6ttxCMcQDBwdOW3ZUcEQq4ma9VBgWim8C5RILOviRRJ-SYwxWyJQ'
 
 dbx = dropbox.Dropbox(ACCESS_TOKEN)
 
@@ -44,6 +44,7 @@ def get_fold(fld_path):
     """
     folder_paths = []
     #global folder_names 
+
     try:
         response = dbx.files_list_folder(fld_path)
         # Iterate over the entries in the root directory
@@ -55,18 +56,22 @@ def get_fold(fld_path):
                 folder_paths.append(folder_path)
                 folder_names.append(folder_name)
                 # print("Folder path:", folder_path)
-        return folder_paths, folder_names
+            # Filterin for __MACOSX  dta.    
+            filtered_folders_path = [folder for folder in folder_paths if '__MACOSX' not in folder]
+            fitered_folders_names = [folder for folder in folder_names if '__MACOSX' not in folder]
+        return filtered_folders_path,fitered_folders_names        
+
     except dropbox.exceptions.HttpError as err:
         print(f"Error listing folder: {err}")
 
 # Getting data_sets for on participant.
 
 
-def read_ptcp_sets_from_dropbox(path_sets, ptcp_names):
+def read_ptcp_sets_from_dropbox(path_sets,ptcp_names):
     """
     read csv files
     """
-    global folder_names
+    #global ptcp_names
     column_names = ['time', 'Milliseconds', 'levelCounter', 'correctCounter',
                     'leftHandPosition', 'leftHandRotation', 'rightHandPosition',
                     'rightHandRotation', 'redBallPosition', 'redBallRotation',
@@ -86,6 +91,7 @@ def read_ptcp_sets_from_dropbox(path_sets, ptcp_names):
                     'string', 'string', 'object']
 
     accumulated_data = []  # Accumulate individual CSV data
+    combined_df = None  # Define combined_df outside the loop
 
     for i, folder in enumerate(path_sets):
         pathy = folder + "/everything.csv"
@@ -102,7 +108,7 @@ def read_ptcp_sets_from_dropbox(path_sets, ptcp_names):
         # Add 'trail_set' column with iteration number and 'ptcp' column
         for record in df_list:
             record['trial_set'] = i + 1
-            record['ptcp'] = folder_names[1]
+            record['ptcp'] = ptcp_names[p]
 
         accumulated_data.extend(df_list)  # Accumulate the data
 
@@ -247,42 +253,47 @@ def main():
     path = '/My Mac (glaroam2-185-117.wireless.gla.ac.uk)/Documents/Research MaxPlank/' \
     'P1_propioception/Data_Wrangling/Matlab Analysis/Data_Wrangling'
 
-    # 1.Get all participant folders and names
-    folder_path, folder_names = get_fold(path)
-    # 2.Get specific set subfolders for ptcpt
-    g_ptcp_path, g_ptcp_names = get_fold(folder_path[1])
-    # 3.Read participant datasets from Dropbox into DF.
-    ptcp_df = read_ptcp_sets_from_dropbox(g_ptcp_path,g_ptcp_names)
-    # 4. Find Trials Starts  (when ball changes first position)
-    start_df = find_ball_position_changes(ptcp_df)
-    # 5. Find Trials Closure (when level counter changes)
-    close_df = creating_close_trial(ptcp_df) 
-    # 6. Procces stimulus type ("Congruent", "Incongruent", "None")
-    feedback_df = get_one_feedback_per_trail(ptcp_df,close_df)
-    #8 . Creating Correct DF 
-    correct_df=get_correct(f_ptcp_df)
-    # 7.  Merging Start and Close. 
-    merged_df = pd.merge(close_df, start_df, on=['levelCounter', 'trial_set'], how='left')
-    # 8. Creating time (seconds) and 
-    merged_df["time_secs"] = (merged_df["row_close"] - pd.to_numeric(merged_df["row_start"]))/ 133
-    #9. Addin participants label 
-    merged_df["ptcp"] = folder_names[1] # needs to be equal to folders path - change when looping
-    #10. Merge Feedbacktype
-    merged_df= pd.merge(merged_df, feedback_df, on=['ptcp','levelCounter', 'trial_set'], how='left')
-    #11. Merge Correct
-    merged_df=pd.merge(merged_df, correct_df, on=['ptcp','levelCounter', 'trial_set'], how='left')
+    base=pd.DataFrame()
 
-    return g_ptcp_path, g_ptcp_names , ptcp_df, merged_df
+    for p in range(0,1):
+        # 1.Get all participant folders and names
+        folder_path, folder_names = get_fold(path)
+        # 2.Get specific set subfolders for ptcpt
+        g_ptcp_path, g_ptcp_names = get_fold(folder_path[p])
+        # 3.Read participant datasets from Dropbox into DF.
+        ptcp_df = read_ptcp_sets_from_dropbox(g_ptcp_path,g_ptcp_names)
+        # 4. Find Trials Starts  (when ball changes first position)
+        start_df = find_ball_position_changes(ptcp_df)
+        # 5. Find Trials Closure (when level counter changes)
+        close_df = creating_close_trial(ptcp_df) 
+        # 6. Procces stimulus type ("Congruent", "Incongruent", "None")
+        feedback_df = get_one_feedback_per_trail(ptcp_df,close_df)
+        # 7 . Creating Correct DF 
+        correct_df=get_correct(ptcp_df)
+        # 8.  Merging Start and Close. 
+        merged_df = pd.merge(close_df, start_df, on=['levelCounter', 'trial_set'], how='left')
+        # 9. Creating time (seconds) and 
+        merged_df["time_secs"] = (merged_df["row_close"] - pd.to_numeric(merged_df["row_start"]))/ 133
+        # 10. Addin participants label 
+        merged_df["ptcp"] = folder_names[p] # needs to be equal to folders path - change when looping
+        # 11. Merge Feedbacktype
+        merged_df= pd.merge(merged_df, feedback_df, on=['ptcp','levelCounter', 'trial_set'], how='left')
+        # 12. Merge Correct
+        merged_df=pd.merge(merged_df, correct_df, on=['ptcp','levelCounter', 'trial_set'], how='left')
+        base=pd.concat([merged_df,base],ignore_index=True)
+    
+    return  base
 ########################### Excecution of Main Function ##
 
 
 if __name__ == '__main__':
-    f_ptcp_path, f_ptcp_names, f_ptcp_df, merged_df = main()
+    merged_df = main()
 
 #merged_df_bugrun.to_csv('clean_merged.csv')    
 ### NEXT TO ADD CORRECT NUMBER AND ADD MORE ITERATIONS: 
 
-merged_df.to_csv('lolita.csv')
+merged_df.to_csv('database.csv')
+
 
 '''
 
