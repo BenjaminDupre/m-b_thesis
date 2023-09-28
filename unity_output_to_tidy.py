@@ -23,7 +23,7 @@ import numpy as np
 
 # Constants
 
-ACCESS_TOKEN = 'sl.Bm2RVICOfL4Hn6hY_UO_sYVd7DUo-LoTfDigD3ZwQc6WORr1MWSwCccY-2AFY2thSLhzt12mUE0uDh471CRxDSpjGuB_ND-BWbKL-bRqmzUseQqpuy178_XirsB_l1DDLnkRE2K-0OgsLtt7imhDAj0'
+ACCESS_TOKEN = 'sl.Bm55Z7a-vjYkmFsJNT-JjL4jzVzOu3wN3bYIgdvsolwrK7hXAhO1Y6-D2bzLZEVlVCXHmOdTRpaGJk3-T0tp8TGjr5FV5FFW6vb8lIlOnAr99U2H0MeBEYPEuzsoI1jSWLVxCA8hlfyKMV_r3ac31-Y'
 
 dbx = dropbox.Dropbox(ACCESS_TOKEN)
 
@@ -259,7 +259,7 @@ def main():
 
     base=pd.DataFrame()
 
-    for p in range(0,3):
+    for p in range(0,22):
         # 1.Get all participant folders and names
         folder_path, folder_names = get_fold(path)
         # 2.Get specific set subfolders for ptcpt
