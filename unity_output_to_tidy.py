@@ -24,20 +24,13 @@ import sys
 
 # Constants
 
-ACCESS_TOKEN = 'sl.Bm55Z7a-vjYkmFsJNT-JjL4jzVzOu3wN3bYIgdvsolwrK7hXAhO1Y6-D2bzLZEVlVCXHmOdTRpaGJk3-T0tp8TGjr5FV5FFW6vb8lIlOnAr99U2H0MeBEYPEuzsoI1jSWLVxCA8hlfyKMV_r3ac31-Y'
+ACCESS_TOKEN = 'sl.Bm8h0j_o7tg7ROmGRhHSqitKuevHzcrY-7zMIU3AfTlFxOzlZFPF_QhiYcLP55KkhiSimwM_3fxM4SE11MkJYDNfG6NnntcqRG3hUn-4dbWnP1UAXH4_lrhBkCrIdVzU1BoRHEbpXQvgOZ9SZjUE-T8'
 
 dbx = dropbox.Dropbox(ACCESS_TOKEN)
 
 # FUNCIONES
 # Geting names and folder paths.
-
 folder_names = []
-# Creating log file
-log_file_path = 'log.txt'
-
-# Define a function to redirect output to a file
-def redirect_output_to_file(file_path):
-    sys.stdout = open(file_path, 'a')
 
 # Custom logging function
 def log(message):
@@ -271,8 +264,10 @@ def main():
     'P1_propioception/Data_Wrangling/Matlab Analysis/Data_Wrangling'
 
     base=pd.DataFrame()
-
+    log_file_path = 'log.txt' # assigning path to logfile. 
+    open(log_file_path, 'w').close()
     for p in range(0,22):
+
         log(f'Going thorugh participant {p} :)')
         # 1.Get all participant folders and names
         folder_path, folder_names = get_fold(path)
@@ -312,64 +307,6 @@ if __name__ == '__main__':
 
 merged_df.to_csv('database.csv')
 
-
-'''
-
-##### test to get only one stimuli 
-# Remove duplicate feedback types based on the specified conditions
-# Group the data and extract unique feedbackType values per participant, set, and levelCounter
-unique_feedback_types = f_ptcp_df.groupby(['ptcp', 'trial_set', 'levelCounter'])['feedbackType'].unique()
-count=0
-
-# Remove duplicate feedback types based on the specified conditions
-for index, feedback_types in unique_feedback_types.items():
-    ptcp, set_val, level_counter = index
-    feedback_types = feedback_types[np.isin(feedback_types, ['incongruent', 'none', 'congruent'])]
-    if level_counter != 0 and feedback_types.size > 1:
-        previous_level_counter = level_counter - 1
-        previous_feedback_types = unique_feedback_types.get((ptcp, set_val, previous_level_counter))
-        if previous_feedback_types is not None :
-            if previous_feedback_types.size==1:
-                last_element = previous_feedback_types
-            elif previous_feedback_types.size > 1:
-                last_element = np.asarray(previous_feedback_types)[-1]
-            else:
-                last_element = None
-                count = +1 
-        if last_element is not None and feedback_types[0] == last_element :
-            feedback_types = feedback_types[1:]
-    elif level_counter == 0 and feedback_types.size >1:
-        feedback_types = feedback_types[feedback_types != 'none']
-    unique_feedback_types[index] = feedback_types
-
-
-
-for index, feedback_types in unique_feedback_types.items():
-    ptcp, set_val, level_counter = index
-    print(f"ptcp: {ptcp}, trial_set: {set_val}, levelCounter: {level_counter} - Unique feedbackType values: {feedback_types}")
-
-###### Test to Get the start and end of the trails. 
-
-
-########################### Testing Results.##
-    # Group the data and extract unique feedbackType values per ptcp, set, and levelCounter
-    unique_feedback_types = f_ptcp_df.groupby(
-    ['ptcp', 'trial_set', 'levelCounter'])['feedbackType'].unique()
-    # Print the unique feedbackType values
-    for index, feedback_types in unique_feedback_types.items():
-        ptcp, set_val, level_counter = index
-        print(f"ptcp: {ptcp}, \
-               trial_set: {set_val}, \
-                 levelCounter: {level_counter} - Unique feedbackType values: {feedback_types}")
-
- 
-# Split the values in the 'feedbackType' column
-split_feedback = crazy_unique_feedback_types['feedbackType'].apply(pd.Series)
-
-# Rename the columns
-split_feedback.columns = [f'{i + 1}st_term' for i in range(split_feedback.shape[1])]
-
-# Concatenate the split columns with the original DataFrame
-result_df = pd.concat([crazy_unique_feedback_types.drop(columns=['feedbackType']), split_feedback], axis=1)
-'''
+# To stop redirecting output and revert to the console, you can do this:
+sys.stdout = sys.__stdout__
 
