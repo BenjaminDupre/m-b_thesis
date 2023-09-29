@@ -17,6 +17,7 @@ import io
 import dropbox
 import pandas as pd
 import numpy as np
+import sys
 
 
 # Set up the Dropbox API client
@@ -31,6 +32,21 @@ dbx = dropbox.Dropbox(ACCESS_TOKEN)
 # Geting names and folder paths.
 
 folder_names = []
+# Creating log file
+log_file_path = 'log.txt'
+
+# Define a function to redirect output to a file
+def redirect_output_to_file(file_path):
+    sys.stdout = open(file_path, 'a')
+
+# Custom logging function
+def log(message):
+    # Print to console or GUI
+    print(message)
+    
+    # Write to log file
+    with open(log_file_path, 'a') as log_file:
+        log_file.write(message + '\n')
 
 def get_fold(fld_path):
     """
@@ -62,7 +78,7 @@ def get_fold(fld_path):
         return filtered_folders_path,fitered_folders_names        
 
     except dropbox.exceptions.HttpError as err:
-        print(f"Error listing folder: {err}")
+        log(f"Error listing folder: {err}")
 
 # Getting data_sets for on participant.
 
@@ -118,8 +134,7 @@ def read_ptcp_sets_from_dropbox(path_sets,ptcp_names,p):
         # Convert 'ECG' column decimal separators from commas to decimal points
         combined_df['ECG'] = combined_df['ECG'].str.replace(
             ',', '.').astype('float32')
-        combined_df['time'] = pd.to_datetime(
-            combined_df['time'], format='%Y-%m-%d %H:%M:%S.%f')
+        combined_df['time'] = pd.to_datetime(combined_df['time'], format='%Y-%m-%d %H:%M:%S.%f', errors='coerce')
     # Return the DataFrame or perform additional processing
     return combined_df
 
@@ -134,7 +149,7 @@ def find_ball_position_changes(data):
             meanwhile = data[(data['levelCounter'] == lvl) & (data['trial_set'] == set_val)] # TO CHANGE (button pressed just skip)
             if meanwhile['buttonCurrentlyPressed'].nunique() >= 2 and data[(data['levelCounter'] == lvl - 1) & (data['trial_set'] == set_val)]['buttonCurrentlyPressed'].nunique() < 2: #previous level has not a button pressed
                 n= f"Button pressed in lvl {lvl} - set {set_val}. Need to go for following change of ball position. No button pressed before"
-                print(n)
+                log(n)
                 A = np.zeros(len(meanwhile))
                 #A2 = np.zeros(len(meanwhile))
                 #A3 = np.zeros(len(meanwhile))
@@ -150,7 +165,7 @@ def find_ball_position_changes(data):
                 #A3 = np.zeros(0)
             else:
                 n = f"Normal way to Start lvl in lvl {lvl} - set {set_val}"
-                print(n)
+                log(n)
                 A = np.zeros(len(meanwhile))
                 for r in range(1, len(meanwhile)):
                     A[r] = meanwhile.iloc[r - 1]['redBallPosition'] != meanwhile.iloc[r]['redBallPosition']
@@ -223,11 +238,9 @@ def get_one_feedback_per_trail(dataf,close_df):
             feedback_types = feedback_types[feedback_types != 'none']
         # WARNING: Last resource condition. Not too Pro but effective 
         if  feedback_types.size > 1:
-            print(f'WAS TRIGGERED LAST CASE FEEDBACKTYPE in level {level_counter} and set {set_val}')
+            log(f'WAS TRIGGERED LAST CASE FEEDBACKTYPE in level {level_counter} and set {set_val}')
             row_n = close_df[(close_df['levelCounter'] == level_counter) & (close_df['trial_set'] == set_val)]['row_close']
-            #row_n = close_df[(close_df['levelCounter'] == level_counter) & (close_df['trial_set'] == set_val)]['row_close']
             feedback_types = np.asarray(dataf.loc[row_n]['feedbackType'])
-            #feedback_types = dataf[dataf['index'] == row_n]['feedbackType']   
         unique_feedback_types[index] = feedback_types
     feedback_df=unique_feedback_types.reset_index()
     feedback_df= pd.DataFrame(feedback_df) 
@@ -260,6 +273,7 @@ def main():
     base=pd.DataFrame()
 
     for p in range(0,22):
+        log(f'Going thorugh participant {p} :)')
         # 1.Get all participant folders and names
         folder_path, folder_names = get_fold(path)
         # 2.Get specific set subfolders for ptcpt
