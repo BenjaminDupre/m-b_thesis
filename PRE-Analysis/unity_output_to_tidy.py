@@ -31,6 +31,7 @@ dbx = dropbox.Dropbox(ACCESS_TOKEN)
 # FUNCIONES
 # Geting names and folder paths.
 folder_names = []
+log_file_path = 'log.txt' # assigning path to logfile. 
 
 # Custom logging function
 def log(message):
@@ -171,7 +172,7 @@ def find_ball_position_changes(data):
     # Find the rows where the ball position changes (B == 1)
     indx = np.where(B.to_numpy()[:, 0] == 1)[0]
     # Create a dataframe 'ver' merging row_start, levelCounter, and set
-    ver = pd.DataFrame({'row_start': indx, 'time_start': data.iloc[indx]['time'].astype({'date': 'datetime64[ns]'}),
+    ver = pd.DataFrame({'row_start': indx, 'time_start': data.iloc[indx]['time'],
                         'levelCounter':  data.iloc[indx]['levelCounter'].astype(int), 'trial_set': data.iloc[indx]['trial_set'].astype(int)})
 
     # Merge level, set, and start into one dataframe 'START'
@@ -267,7 +268,6 @@ def main():
     'P1_propioception/Data_Wrangling/Matlab Analysis/Data_Wrangling'
 
     base=pd.DataFrame()
-    log_file_path = 'log.txt' # assigning path to logfile. 
     open(log_file_path, 'w').close()
     for p in range(0,1):
 
@@ -312,4 +312,4 @@ merged_df.to_csv('database.csv')
 
 # To stop redirecting output and revert to the console, you can do this:
 sys.stdout = sys.__stdout__
-
+ 
