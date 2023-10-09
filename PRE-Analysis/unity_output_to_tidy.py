@@ -24,7 +24,7 @@ import sys
 
 # Constants
 
-ACCESS_TOKEN = 'sl.Bm8h0j_o7tg7ROmGRhHSqitKuevHzcrY-7zMIU3AfTlFxOzlZFPF_QhiYcLP55KkhiSimwM_3fxM4SE11MkJYDNfG6NnntcqRG3hUn-4dbWnP1UAXH4_lrhBkCrIdVzU1BoRHEbpXQvgOZ9SZjUE-T8'
+ACCESS_TOKEN = 'sl.BnluQ_6_jDeYyQsDWdk8Smc4L9Z4nw6ARiJW917L40XeEpSmKK6S1v4FWkJm6Pc57l2rtAjYM6M7tkgVmUv1cTVlD_lR6CILpUju0rqwcYr6CDEOpxd2x3vORyP7QNPRv_KrIFBixWm3ha0crQBdCQY'
 
 dbx = dropbox.Dropbox(ACCESS_TOKEN)
 
@@ -171,7 +171,8 @@ def find_ball_position_changes(data):
     # Find the rows where the ball position changes (B == 1)
     indx = np.where(B.to_numpy()[:, 0] == 1)[0]
     # Create a dataframe 'ver' merging row_start, levelCounter, and set
-    ver = pd.DataFrame({'row_start': indx, 'levelCounter': data.iloc[indx]['levelCounter'].astype(int), 'trial_set': data.iloc[indx]['trial_set'].astype(int)})
+    ver = pd.DataFrame({'row_start': indx, 'time_start': data.iloc[indx]['time'].astype({'date': 'datetime64[ns]'}),
+                        'levelCounter':  data.iloc[indx]['levelCounter'].astype(int), 'trial_set': data.iloc[indx]['trial_set'].astype(int)})
 
     # Merge level, set, and start into one dataframe 'START'
     START = pd.DataFrame()
@@ -179,7 +180,7 @@ def find_ball_position_changes(data):
         for k in range(ver['levelCounter'].min(), ver['levelCounter'].max()+1):
             sub_vect = ver[(ver['trial_set'] == j) & (ver['levelCounter'] == k)]
             if len(sub_vect) < 1:
-                sub_vect = pd.DataFrame([[99, k, j]], columns=['row_start', 'levelCounter', 'trial_set']) ### this is to capture when there is a press button or bug
+                sub_vect = pd.DataFrame([[99, k, j]], columns=['time','row_start', 'levelCounter', 'trial_set']) ### this is to capture when there is a press button or bug
             START = pd.concat([START, sub_vect.head(1)])
     # Reset index for the final START dataframe
     START.reset_index(drop=True, inplace=True)
@@ -196,12 +197,14 @@ def creating_close_trial(data):
     row_close = np.where(C[:, 0] == 1)[0]
     levelCounter_values = data.iloc[row_close]['levelCounter']
     trial_set_values = data.iloc[row_close]['trial_set']
+    time_close = data.iloc[row_close]['time']
 
     # Creating a new DataFrame to store the extracted values
     close_df = pd.DataFrame({
         'row_close': row_close,
         'levelCounter': levelCounter_values,
-        'trial_set': trial_set_values
+        'trial_set': trial_set_values,
+        'time_close': time_close
     })
     close_df.reset_index(drop=True, inplace=True)
     return close_df 
@@ -266,7 +269,7 @@ def main():
     base=pd.DataFrame()
     log_file_path = 'log.txt' # assigning path to logfile. 
     open(log_file_path, 'w').close()
-    for p in range(0,22):
+    for p in range(0,1):
 
         log(f'Going thorugh participant {p} :)')
         # 1.Get all participant folders and names
