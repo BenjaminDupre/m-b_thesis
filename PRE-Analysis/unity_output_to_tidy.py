@@ -181,7 +181,7 @@ def find_ball_position_changes(data):
         for k in range(ver['levelCounter'].min(), ver['levelCounter'].max()+1):
             sub_vect = ver[(ver['trial_set'] == j) & (ver['levelCounter'] == k)]
             if len(sub_vect) < 1:
-                sub_vect = pd.DataFrame([[99, k, j]], columns=['time','row_start', 'levelCounter', 'trial_set']) ### this is to capture when there is a press button or bug
+                sub_vect = pd.DataFrame([[None, 99, k, j]], columns=['row_start', 'time', 'levelCounter', 'trial_set']) ### this is to capture when there is a press button or bug
             START = pd.concat([START, sub_vect.head(1)])
     # Reset index for the final START dataframe
     START.reset_index(drop=True, inplace=True)
