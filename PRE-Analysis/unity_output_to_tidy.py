@@ -24,7 +24,7 @@ import sys
 
 # Constants
 
-ACCESS_TOKEN = 'sl.BnluQ_6_jDeYyQsDWdk8Smc4L9Z4nw6ARiJW917L40XeEpSmKK6S1v4FWkJm6Pc57l2rtAjYM6M7tkgVmUv1cTVlD_lR6CILpUju0rqwcYr6CDEOpxd2x3vORyP7QNPRv_KrIFBixWm3ha0crQBdCQY'
+ACCESS_TOKEN = 'sl.Bnov9jAf_kk0pjQfMXlVzlwZWibgXOqm9xrRejI1nllSgiKTr7hsTsXHegiGV_ZSu5YjMaOJq6PQKN8o9Io7X4rpSvDehrm5mBBevTIB4BOmz5XxreQJap7ysaYEPbIqaSjb1viC9JA0mX8LTjHaknc'
 
 dbx = dropbox.Dropbox(ACCESS_TOKEN)
 
@@ -289,8 +289,7 @@ def main():
         # 8.  Merging Start and Close. 
         merged_df = pd.merge(close_df, start_df, on=['levelCounter', 'trial_set'], how='left')
         # 9. Creating time (seconds) and 
-        merged_df["time_secs"] = (merged_df["row_close"] - pd.to_numeric(merged_df["row_start"]))/ 133
-        # 10. Addin participants label 
+        merged_df["time_ms"] = (merged_df["time_close"] - merged_df["time_start"]).dt.total_seconds() * 1000        # 10. Addin participants label 
         merged_df["ptcp"] = folder_names[p] # needs to be equal to folders path - change when looping
         # 11. Merge Feedbacktype
         merged_df= pd.merge(merged_df, feedback_df, on=['ptcp','levelCounter', 'trial_set'], how='left')
@@ -313,3 +312,4 @@ merged_df.to_csv('database.csv')
 # To stop redirecting output and revert to the console, you can do this:
 sys.stdout = sys.__stdout__
  
+#merged_df["Time_close"] - merged_df(["Time_start"])
