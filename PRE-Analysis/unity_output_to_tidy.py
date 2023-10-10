@@ -24,7 +24,7 @@ import sys
 
 # Constants
 
-ACCESS_TOKEN = 'sl.Bnov9jAf_kk0pjQfMXlVzlwZWibgXOqm9xrRejI1nllSgiKTr7hsTsXHegiGV_ZSu5YjMaOJq6PQKN8o9Io7X4rpSvDehrm5mBBevTIB4BOmz5XxreQJap7ysaYEPbIqaSjb1viC9JA0mX8LTjHaknc'
+ACCESS_TOKEN = 'sl.Bnq-yyhimQqxe-H-mmGyGe4YnWjFGEUDAEzRXCFoeOc9BI9o8Q7rQ3t07YV9bPefftxiJ8RntO2-V1l6ANGPHBVv_NLWvL3DERbVUEOF5X7-3LD12dLY-kKK4l_U10TW1mQUAkgesKxVOdqGR_CGxp4'
 
 dbx = dropbox.Dropbox(ACCESS_TOKEN)
 
@@ -269,7 +269,7 @@ def main():
 
     base=pd.DataFrame()
     open(log_file_path, 'w').close()
-    for p in range(0,1):
+    for p in range(0,23):
 
         log(f'Going thorugh participant {p} :)')
         # 1.Get all participant folders and names
