@@ -61,3 +61,147 @@ payasadaoe.to_csv('clean_merged.csv')
 
 #---------------------------------------------------------
 # using correct counter 
+# Referencing code from Rolf Ulrich and Chatgpt adaptation. 
+import numpy as np
+import matplotlib.pyplot as plt
+
+def race_model(X, Y, Z, P, Plot):
+    # X, Y, Z are arrays with RTs for conditions Cx, Cy, Cz, respectively.
+    # P is an array which contains the probabilities for computing percentiles.
+    # If Plot is True, a plot of the result is generated.
+    
+    # Check for ties and get maximum t value
+    Ux, Rx, Cx = ties(X)
+    Uy, Ry, Cy = ties(Y)
+    Uz, Rz, Cz = ties(Z)
+    tmax = int(np.ceil(max(max(X), max(Y), max(Z))))
+    T = np.arange(1, tmax + 1)
+    
+    # Get function values of G
+    Gx = CDF(Ux, Rx, Cx, tmax)
+    Gy = CDF(Uy, Ry, Cy, tmax)
+    Gz = CDF(Uz, Rz, Cz, tmax)
+    
+    # Compute B = Gx plus Gy
+    B = [Gx[t] + Gy[t] for t in range(tmax)]
+    
+    # Check whether requested percentiles can be computed
+    OKx = check(Ux[0], P[0], Gx)
+    if not OKx:
+        print('Not enough X values to compute requested percentiles')
+        return [None, None, None, None]
+    
+    OKy = check(Uy[0], P[0], Gy)
+    if not OKy:
+        print('Not enough Y values to compute requested percentiles')
+        return [None, None, None, None]
+    
+    OKz = check(Uz[0], P[0], Gz)
+    if not OKz:
+        print('Not enough Z values to compute requested percentiles')
+        return [None, None, None, None]
+    
+    # Determine percentiles
+    Xp = get_percentile(P, Gx, tmax)
+    Yp = get_percentile(P, Gy, tmax)
+    Zp = get_percentile(P, Gz, tmax)
+    Bp = get_percentile(P, B, tmax)
+    
+    # Generate a plot if requested
+    if Plot:
+        plt.plot(Xp, P, 'o-', label='G_x(t)')
+        plt.plot(Yp, P, 'o-', label='G_y(t)')
+        plt.plot(Zp, P, 'o-', label='G_z(t)')
+        plt.plot(Bp, P, 'o-', label='G_x(t)+G_y(t)')
+        plt.axis([min(Ux + Uy + Uz) - 10, tmax + 10, -0.03, 1.03])
+        plt.grid()
+        plt.title('Test of the Race Model Inequality', fontsize=16)
+        plt.xlabel('Time t (ms)', fontsize=14)
+        plt.ylabel('Probability', fontsize=14)
+        plt.legend(loc=4)
+        plt.show()
+    
+    return Xp, Yp, Zp, Bp
+
+def check(U1, P1, G):
+    for t in range(U1 - 2, U1 + 3):
+        if G[t] > P1 and G[t - 1] == 0:
+            return False
+    return True
+
+def get_percentile(P, G, tmax):
+    Tp = []
+    for p in P:
+        cc = 100
+        c = 0
+        for t in range(tmax):
+            if abs(G[t] - p) < cc:
+                c = t
+                cc = abs(G[t] - p)
+        
+        if p > G[c]:
+            Tp.append(c + (p - G[c]) / (G[c + 1] - G[c]))
+        else:
+            Tp.append(c + (p - G[c]) / (G[c] - G[c - 1]))
+    return Tp
+
+def ties(W):
+    # Count the number k of unique values and store these values in U.
+    W = sorted(W)
+    n = len(W)
+    k = 1
+    U = [W[0]]
+    
+    for i in range(1, n):
+        if W[i] != W[i - 1]:
+            k += 1
+            U.append(W[i])
+    
+    # Determine the number of replications R
+    R = [0] * k
+    
+    for i in range(k):
+        for j in range(n):
+            if U[i] == W[j]:
+                R[i] += 1
+    
+    # Determine the cumulative frequency
+    C = [0] * k
+    C[0] = R[0]
+    
+    for i in range(1, k):
+        C[i] = C[i - 1] + R[i]
+    
+    return U, R, C
+
+def CDF(U, R, C, maximum):
+    G = [0] * maximum
+    k = len(U)
+    n = C[k - 1]
+    
+    for i in range(k):
+        U[i] = round(U[i])
+    
+    for t in range(U[0]):
+        G[t] = 0
+    
+    for t in range(U[0], U[1]):
+        G[t] = (R[0] / 2 + (R[0] + R[1]) / 2 * (t - U[0]) / (U[1] - U[0])) / n
+    
+    for i in range(1, k - 1):
+        for t in range(U[i], U[i + 1]):
+            G[t] = (C[i - 1] + R[i] / 2 + (R[i] + R[i + 1]) / 2 * (t - U[i]) / (U[i + 1] - U[i])) / n
+    
+    for t in range(U[k - 1], maximum):
+        G[t] = 1
+    
+    return G
+
+# Example usage:
+X = [10, 15, 20, 25]
+Y = [12, 16, 18, 24]
+Z = [9, 14, 21, 27]
+P = [0.5, 0.7]
+Plot = True
+
+Xp, Yp, Zp, Bp = race_model(X, Y, Z, P, Plot)
