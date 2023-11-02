@@ -11,7 +11,8 @@
 \usepackage{geometry}
 
 \usepackage{xcolor}
-\usepackage[style=authoryear]{biblatex} 
+\usepackage[style=authoryear,backend=biber]{biblatex}
+\addbibresource{bibliog.bib}
 \usepackage[colorlinks=true,linkcolor=black,anchorcolor=black,citecolor=black,filecolor=black,menucolor=black,runcolor=black,urlcolor=black]{hyperref}\usepackage{graphicx}
 \geometry{
   a4paper,
@@ -24,7 +25,7 @@
 }
 
 \renewcommand*{\bibfont}{\footnotesize}
-\addbibresource{bibliog.bib}
+
 \newcommand{\changefont}{
     \fontsize{18}{16}\selectfont
 }
@@ -67,20 +68,25 @@
     {Berlin, den \today \par}
 \end{titlepage}
 
-
 \section*{Introduction}
 \subsection*{Problem \& Significance}
-explain brain mechanism that predict body changes related to systole
 
-It has been discovered that specific brain mechanisms are responsible for predicting interoceptive bodily changes related to systole, which subsequently dampen the perception of concurrent exteroceptive stimuli within the same time frame \parencite{esra_p,Grund643, motyka}. A parallel phenomenon has been observed in the context of multisensory integration \parencite{SALTAFOSSI2023108642}. This study delves into the influence of the cardiac phase on multisensory integration—a cognitive process facilitating the nonlinear fusion of sensory input to mitigate environmental uncertainty \parencite{SALTAFOSSI2023108642}. Notably, this research not only replicates prior findings but also introduces a multisensory dimension to these mechanisms, thereby making the findings more relevant to everyday life and human perception. However, fully gauging the extent to which this phenomenon holds sway in everyday human psychology poses a complex challenge, as it requires a delicate balance between comprehensiveness and the lucidity of the results.
+After a long run, you may have experienced a sensation of time slowing down immediately after stopping \parencite{Edwards2017TimePP}. Could heart rhythm be a factor in this altered perception? 
 
-Furtheremore, the more the modulation between heart cycle and perceptual modulation is establish, the more research ventures into theoretical explanations. One of them being an interoceptive predictive coding process account. For example, using a Markov desicion process (MDP), which is a probailistic generative model, that uses the current cardiac cycle, an visual stimuli it shows that the current observed phenomena could be explained with this computational modell \parencite{Allen2022} Such models is important because they provide the framework to probe or disprobe empirical reasearch that account for psychiatric diseases using Copmutational Phenotyping for example. Nonetheless there are risks to make somewhata quick jump from obervations to a generalized theory that account to psycholgical and human behavioral phenomena. I tool that could allowed for a smooth transition between psichophysics findings and psychological phenomena is Immersive Virtual Reality (IVR)
+It has been discovered that specific brain mechanisms responsible for predicting signals from within the body (interoceptive body changes related to heart systole) play a role in diminishing the perception of external body signals, such as passive touch stimuli \parencite{esra_p, Grund643, motyka}. This phenomenon has been well-established in the context of touch and, more recently, in a multisensory experiment.
 
-IVR has proven to be a powerful tool for investigating cognitive processes as it enables researchers to assess behaviors and mental states in complex yet highly controlled scenarios. Traditionally, IVR has relied primarily on visual displays and head-hands movement tracking to create mediated experiences. However, the utilization of VR head-mounted displays in combination with ECG and haptic devices presents new challenges, in practical, technical and in terms of how it agrees with existing literature \cite*{Klotzsche2023}.
+The multisensory integration experiment conducted by Saltafossi found that \parencite{SALTAFOSSI2023108642}. This study examines the influence of the cardiac phase on multisensory integration, a cognitive process that facilitates the nonlinear fusion of sensory input to reduce environmental uncertainty.
 
-Virtual Reality can help us reverse engineer the process. Starting from what we know are wrong assumptions trying to elucidate if the described mechanisms are triggered. To do this we first need to validate the experimental set up by replicating the multisensory findings this far.
+Notably, this research replicates the previously mentioned findings and introduces a multisensory dimension to these mechanisms. This makes the findings more relevant to everyday life and human perception. However, accurately assessing the extent to which this phenomenon influences everyday, like how we feel after running, is very hard. It requires a delicate balance between obtaining clear psychophysical results and integrating them with other cognitive functions.
 
-Bringing closer experiments closer to ecological validity is relevant because it help us distinguish between what is relevant for the observed behaviour and cognition in the real world.  It often refers to the relation between real-world phenomena and the investigation of these phenomena \parencite{schmuckler2001ecological}. Otherwise we run the risk of not really having clear hor is it that translate from body-brain phenomena into our human psychology.
+Furthermore, the more the modulation between the heart cycle and perceptual modulation is established, the more research delves into theoretical explanations. One such explanation is an interoceptive predictive coding process. For example, using a Markov decision process (MDP), which is a probabilistic generative model that uses the current cardiac cycle and visual stimuli, it shows that the observed phenomena could be explained with this computational model \parencite{Allen2022}. Such models are important because they provide a framework to test or disprove empirical research that accounts for psychiatric diseases using computational phenotyping, for example. Nevertheless, there are risks associated with making a hasty leap from observations to a generalized theory that accounts for psychological and human behavioral phenomena. A tool that can facilitate a smooth transition between psychophysics findings and psychological phenomena is Immersive Virtual Reality (IVR).
+
+IVR has proven to be a powerful tool for investigating cognitive processes as it enables researchers to assess behaviors and mental states in complex yet highly controlled scenarios. Traditionally, IVR has relied primarily on visual displays and head-hand movement tracking to create mediated experiences. However, the utilization of VR head-mounted displays in combination with ECG and haptic devices presents new challenges, both in practical and technical terms, and in terms of how it aligns with existing literature \parencite{Klotzsche2023}.
+
+Virtual Reality can help us reverse-engineer the process, starting from what we know are incorrect assumptions and attempting to elucidate if the described mechanisms are triggered. To do this, we first need to validate the experimental setup by replicating the multisensory findings obtained thus far.
+
+Bringing experiments closer to ecological validity is relevant because it helps us distinguish what is relevant for observed behavior and cognition in the real world. It often refers to the relationship between real-world phenomena and the investigation of these phenomena \parencite{schmuckler2001ecological}. Otherwise, we run the risk of not truly understanding how body-brain phenomena translate into our human psychology.
+
 
 \subsection*{Thesis Topic \& Goal}
 

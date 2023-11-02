@@ -1,15 +1,15 @@
 [0] Config.pm:307> INFO - This is Biber 2.17
 [0] Config.pm:310> INFO - Logfile is 'main.blg'
-[71] biber:340> INFO - === Do Okt 26, 2023, 17:10:32
-[81] Biber.pm:418> INFO - Reading 'main.bcf'
-[132] Biber.pm:972> INFO - Found 8 citekeys in bib section 0
-[142] Biber.pm:4383> INFO - Processing section 0
-[152] Biber.pm:4574> INFO - Looking for bibtex file 'bibliog.bib' for section 0
-[154] bibtex.pm:1713> INFO - LaTeX decoding ...
-[166] bibtex.pm:1518> INFO - Found BibTeX data source 'bibliog.bib'
-[266] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[266] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[266] Biber.pm:4203> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
-[267] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
-[277] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[289] bbl.pm:757> INFO - Output to main.bbl
+[75] biber:340> INFO - === Di Okt 31, 2023, 11:22:34
+[87] Biber.pm:418> INFO - Reading 'main.bcf'
+[159] Biber.pm:972> INFO - Found 9 citekeys in bib section 0
+[172] Biber.pm:4383> INFO - Processing section 0
+[183] Biber.pm:4574> INFO - Looking for bibtex file 'bibliog.bib' for section 0
+[184] bibtex.pm:1713> INFO - LaTeX decoding ...
+[198] bibtex.pm:1518> INFO - Found BibTeX data source 'bibliog.bib'
+[316] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[316] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[316] Biber.pm:4203> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[317] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[328] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[339] bbl.pm:757> INFO - Output to main.bbl

@@ -170,6 +170,52 @@
       \verb https://doi.org/10.1371/journal.pcbi.1010490
       \endverb
     \endentry
+    \entry{Edwards2017TimePP}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=4180b3d2f1a0b9fe0e542255912767a5}{%
+           family={Edwards},
+           familyi={E\bibinitperiod},
+           given={Andrew\bibnamedelima Mark},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4180b3d2f1a0b9fe0e542255912767a5}{%
+           family={Edwards},
+           familyi={E\bibinitperiod},
+           given={Andrew\bibnamedelima Mark},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2771e26f2e3f0ce545176cdf2c993fe6}{%
+           family={McCormick},
+           familyi={M\bibinitperiod},
+           given={Alister},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{403e449c444b79191499bc865fec0ede}
+      \strng{fullhash}{403e449c444b79191499bc865fec0ede}
+      \strng{bibnamehash}{403e449c444b79191499bc865fec0ede}
+      \strng{authorbibnamehash}{403e449c444b79191499bc865fec0ede}
+      \strng{authornamehash}{403e449c444b79191499bc865fec0ede}
+      \strng{authorfullhash}{403e449c444b79191499bc865fec0ede}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physiology \& Behavior}
+      \field{title}{Time perception, pacing and exercise intensity: maximal exercise distorts the perception of time}
+      \field{volume}{180}
+      \field{year}{2017}
+      \field{pages}{98\bibrangedash 102}
+      \range{pages}{5}
+      \verb{urlraw}
+      \verb https://api.semanticscholar.org/CorpusID:207378196
+      \endverb
+      \verb{url}
+      \verb https://api.semanticscholar.org/CorpusID:207378196
+      \endverb
+    \endentry
     \entry{Grund643}{article}{}
       \name{author}{8}{}{%
         {{un=0,uniquepart=base,hash=dcce115c5a597841e7c5c1efe6898253}{%
