@@ -20,7 +20,7 @@
 \refsection{0}
   \datalist[entry]{nyt/global//global/global}
     \entry{esra_p}{article}{}
-      \name{author}{9}{}{%
+      \name{author}{9}{ul=3}{%
         {{un=0,uniquepart=base,hash=e0e4e6d68105ce17f5231ea2aa2c13b9}{%
            family={Al},
            familyi={A\bibinitperiod},
@@ -76,11 +76,11 @@
            giveni={A\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{edd53d91ec92ff59d71667052862e95a}
+      \strng{namehash}{89c4950ec17e2577ff714dc7def4aa69}
       \strng{fullhash}{ca61260c92b1a90672b355640825064a}
-      \strng{bibnamehash}{edd53d91ec92ff59d71667052862e95a}
-      \strng{authorbibnamehash}{edd53d91ec92ff59d71667052862e95a}
-      \strng{authornamehash}{edd53d91ec92ff59d71667052862e95a}
+      \strng{bibnamehash}{89c4950ec17e2577ff714dc7def4aa69}
+      \strng{authorbibnamehash}{89c4950ec17e2577ff714dc7def4aa69}
+      \strng{authornamehash}{89c4950ec17e2577ff714dc7def4aa69}
       \strng{authorfullhash}{ca61260c92b1a90672b355640825064a}
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
@@ -108,6 +108,64 @@
       \verb{url}
       \verb https://www.pnas.org/doi/abs/10.1073/pnas.1915629117
       \endverb
+    \endentry
+    \entry{AL2021118247}{article}{}
+      \name{author}{4}{ul=3}{%
+        {{un=0,uniquepart=base,hash=e0e4e6d68105ce17f5231ea2aa2c13b9}{%
+           family={Al},
+           familyi={A\bibinitperiod},
+           given={Esra},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e97d0b96be32efd95b4fa3e43c348f21}{%
+           family={Iliopoulos},
+           familyi={I\bibinitperiod},
+           given={Fivos},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e67afc85e1b6e1a4d269959999eb0b8e}{%
+           family={Nikulin},
+           familyi={N\bibinitperiod},
+           given={Vadim\bibnamedelima V.},
+           giveni={V\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c613692fc550ace0a952f7e3556e3ae8}{%
+           family={Villringer},
+           familyi={V\bibinitperiod},
+           given={Arno},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9b0c92f95593eff539b5c29b7474f7b5}
+      \strng{fullhash}{863dafe70679c3015550783eb07bd746}
+      \strng{bibnamehash}{9b0c92f95593eff539b5c29b7474f7b5}
+      \strng{authorbibnamehash}{9b0c92f95593eff539b5c29b7474f7b5}
+      \strng{authornamehash}{9b0c92f95593eff539b5c29b7474f7b5}
+      \strng{authorfullhash}{863dafe70679c3015550783eb07bd746}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Our perception of the external world is influenced by internal bodily signals. For example, we recently showed that timing of stimulation along the cardiac cycle and spontaneous fluctuations of heartbeat-evoked potential (HEP) amplitudes influence somatosensory perception and the associated neural processing (Al et al., 2020). While cardiac phase affected detection sensitivity and late components of the somatosensory-evoked potentials (SEPs), HEP amplitudes affected detection criterion and both early and late SEP components. In a new EEG study, we investigate whether these results are replicable in a modified paradigm, which includes two succeeding temporal intervals. In one of the intervals, subjects received a weak electrical finger stimulation and reported first whether they detected any stimulation and then allocated the stimulus to one of the two intervals. Our results confirm the previously reported cardiac cycle and prestimulus HEP effects on somatosensory perception and evoked potentials. In addition, we obtained two new findings. Source analyses in this and our original study show that the increased likelihood of conscious perception goes along with HEP fluctuations in parietal and posterior cingulate regions, known to play important roles in interoceptive processes. Furthermore, HEP amplitudes were shown to decrease when subjects engaged in the somatosensory task compared to a resting state condition. Our findings are consistent with the view that HEP amplitudes are a marker of interoceptive (versus exteroceptive) attention and provide a neural underpinning for this view.}
+      \field{issn}{1053-8119}
+      \field{journaltitle}{NeuroImage}
+      \field{title}{Heartbeat and somatosensory perception}
+      \field{volume}{238}
+      \field{year}{2021}
+      \field{pages}{118247}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.neuroimage.2021.118247
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S1053811921005243
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S1053811921005243
+      \endverb
+      \keyw{Somatosensory processing,Perceptual awareness,Electrophysiology,Interoception}
     \endentry
     \entry{Allen2022}{article}{}
       \name{author}{4}{}{%
@@ -303,7 +361,7 @@
       \verb https://www.jneurosci.org/content/42/4/643
       \endverb
     \endentry
-    \entry{Healy2003HandbookOP}{books}{}
+    \entry{Healy2003HandbookOP}{article}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=76b1a1a5f3663c2326709118360d1d66}{%
            family={Healy},
@@ -478,6 +536,65 @@
       \verb https://onlinelibrary.wiley.com/doi/abs/10.1111/psyp.13424
       \endverb
       \keyw{cardiac cycle,heart rate,interoception,perceptual awareness,somatosensory perception}
+    \endentry
+    \entry{Park2014}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=6d6cab37676c227ad30b8ba1ad16ca48}{%
+           family={Park},
+           familyi={P\bibinitperiod},
+           given={Hyeong-Dong},
+           giveni={H\bibinithyphendelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e6f6d253cf02f61d4d627b11f4718b01}{%
+           family={Correia},
+           familyi={C\bibinitperiod},
+           given={Stéphanie},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b6351941bff4a7abe9aaccda429ce8cd}{%
+           family={Ducorps},
+           familyi={D\bibinitperiod},
+           given={Antoine},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9d0ec128f4414c4ed5467bd461926c06}{%
+           family={Tallon-Baudry},
+           familyi={T\bibinithyphendelim B\bibinitperiod},
+           given={Catherine},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b064ebfefb305f7c3842c39db0327902}
+      \strng{fullhash}{cb1442ae542e00645eb75d2c3568ae50}
+      \strng{bibnamehash}{b064ebfefb305f7c3842c39db0327902}
+      \strng{authorbibnamehash}{b064ebfefb305f7c3842c39db0327902}
+      \strng{authornamehash}{b064ebfefb305f7c3842c39db0327902}
+      \strng{authorfullhash}{cb1442ae542e00645eb75d2c3568ae50}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Here, using magnetoencephalography, the authors show that in humans, neural events locked to heartbeats before stimulus onset predict the detection of a faint visual grating in the posterior right inferior parietal lobule and ventral anterior cingulate cortex, two regions with multiple functional correlates that belong to the same resting-state network.}
+      \field{issn}{1546-1726}
+      \field{journaltitle}{Nature Neuroscience}
+      \field{month}{4}
+      \field{number}{4}
+      \field{title}{Spontaneous fluctuations in neural responses to heartbeats predict visual detection}
+      \field{volume}{17}
+      \field{year}{2014}
+      \field{pages}{612\bibrangedash 618}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1038/nn.3671
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1038/nn.3671
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1038/nn.3671
+      \endverb
     \endentry
     \entry{SALTAFOSSI2023108642}{article}{}
       \name{author}{5}{}{%
