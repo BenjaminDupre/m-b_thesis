@@ -228,50 +228,48 @@
       \verb https://doi.org/10.1371/journal.pcbi.1010490
       \endverb
     \endentry
-    \entry{Edwards2017TimePP}{article}{}
+    \entry{GalvezPol2018ActiveSI}{article}{}
       \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=4180b3d2f1a0b9fe0e542255912767a5}{%
-           family={Edwards},
-           familyi={E\bibinitperiod},
-           given={Andrew\bibnamedelima Mark},
-           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=4180b3d2f1a0b9fe0e542255912767a5}{%
-           family={Edwards},
-           familyi={E\bibinitperiod},
-           given={Andrew\bibnamedelima Mark},
-           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=2771e26f2e3f0ce545176cdf2c993fe6}{%
-           family={McCormick},
-           familyi={M\bibinitperiod},
-           given={Alister},
+        {{un=0,uniquepart=base,hash=0f9d2f5d2930275902961f11a0e7e61b}{%
+           family={Galvez-Pol},
+           familyi={G\bibinithyphendelim P\bibinitperiod},
+           given={Alejandro},
            giveni={A\bibinitperiod},
            givenun=0}}%
+        {{un=0,uniquepart=base,hash=a5a3e4cd8ab04b75d7002fdee6d872b1}{%
+           family={McConnell},
+           familyi={M\bibinitperiod},
+           given={Ruth},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5cd82d647750aa16bc5de00a06e1db79}{%
+           family={Kilner},
+           familyi={K\bibinitperiod},
+           given={James\bibnamedelima M},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
       }
-      \strng{namehash}{403e449c444b79191499bc865fec0ede}
-      \strng{fullhash}{403e449c444b79191499bc865fec0ede}
-      \strng{bibnamehash}{403e449c444b79191499bc865fec0ede}
-      \strng{authorbibnamehash}{403e449c444b79191499bc865fec0ede}
-      \strng{authornamehash}{403e449c444b79191499bc865fec0ede}
-      \strng{authorfullhash}{403e449c444b79191499bc865fec0ede}
-      \field{sortinit}{E}
-      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \strng{namehash}{220cdcb4f6236dc21c59131a35751ff1}
+      \strng{fullhash}{220cdcb4f6236dc21c59131a35751ff1}
+      \strng{bibnamehash}{220cdcb4f6236dc21c59131a35751ff1}
+      \strng{authorbibnamehash}{220cdcb4f6236dc21c59131a35751ff1}
+      \strng{authornamehash}{220cdcb4f6236dc21c59131a35751ff1}
+      \strng{authorfullhash}{220cdcb4f6236dc21c59131a35751ff1}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Physiology \& Behavior}
-      \field{title}{Time perception, pacing and exercise intensity: maximal exercise distorts the perception of time}
-      \field{volume}{180}
-      \field{year}{2017}
-      \field{pages}{98\bibrangedash 102}
-      \range{pages}{5}
+      \field{journaltitle}{Cognition}
+      \field{title}{Active sampling in visual search is coupled to the cardiac cycle}
+      \field{volume}{196}
+      \field{year}{2018}
       \verb{urlraw}
-      \verb https://api.semanticscholar.org/CorpusID:207378196
+      \verb https://api.semanticscholar.org/CorpusID:91565050
       \endverb
       \verb{url}
-      \verb https://api.semanticscholar.org/CorpusID:207378196
+      \verb https://api.semanticscholar.org/CorpusID:91565050
       \endverb
     \endentry
     \entry{Grund643}{article}{}
@@ -462,6 +460,54 @@
       \endverb
       \verb{url}
       \verb https://www.biorxiv.org/content/early/2023/01/23/2023.01.23.525140
+      \endverb
+    \endentry
+    \entry{TimsECG}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=4a75057e5e9c07b5a94ff29470178143}{%
+           family={Möller},
+           familyi={M\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b6c5bc2eaadbb5a71b3077a96dafe37e}{%
+           family={Georgie},
+           familyi={G\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1740ab9301bb0addbf60890d24be217c}{%
+           family={Voss},
+           familyi={V\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ad43e10f3cda5c79ab52d907e9e0c37d}{%
+           family={Kaltwasser},
+           familyi={K\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{02375a04fa7d5f1ba6f17333ecf40d6e}
+      \strng{fullhash}{869272c5238d94c2cff74505db18ce89}
+      \strng{bibnamehash}{02375a04fa7d5f1ba6f17333ecf40d6e}
+      \strng{authorbibnamehash}{02375a04fa7d5f1ba6f17333ecf40d6e}
+      \strng{authornamehash}{02375a04fa7d5f1ba6f17333ecf40d6e}
+      \strng{authorfullhash}{869272c5238d94c2cff74505db18ce89}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2022 IEEE Signal Processing in Medicine and Biology Symposium (SPMB)}
+      \field{title}{An Arduino Based Heartbeat Detection Device (ArdMob-ECG) for Real-Time ECG Analysis}
+      \field{year}{2022}
+      \field{pages}{1\bibrangedash 3}
+      \range{pages}{3}
+      \verb{doi}
+      \verb 10.1109/SPMB55497.2022.10014819
       \endverb
     \endentry
     \entry{motyka}{article}{}
