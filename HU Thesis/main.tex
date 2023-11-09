@@ -104,6 +104,14 @@ Through an investigation of passive haptic touch's influence on immersion, behav
 
 \section*{Methods}
     \subsection*{Participants}
+    From an original pool of 23 participants that presneted to do the task we finish we 20 participats. Two of them did not fill all questionnaires and a third one was above the age limit  so we had to exclude them from the analysis, leaving us with 20 participants. The call for participants was answered considerably more by women (15) than men (5). The age across the sample was consistently around 25 years old, with the exception of one participant ($\mu=25.1 , \sigma=6.3$).
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=12cm]{/home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/participants.png}
+        \caption{Participants Composition}
+        \label{fig:mesh1}
+    \end{figure}
+    
     \subsection*{Materials}
     \subsubsection*{3.2.1 Electrocardiogram (ECG):}
 Heart rate data is collected using an Arduino Uno and a SparkFun Single Lead Heart Rate Monitor - AD8232. The collected data is transferred through a USB 2.0 connection and integrated into the Unity log file at a frequency of 133 Hz. Based on live ECG device \parencite{TimsECG}.
@@ -137,10 +145,28 @@ After the IVR part the participants filled a again the cybersicknesss quiestiona
     \item[(vi)] Virtual Reality Subjective Evaluation Questionnaire
     \item[(vii)] POST-Cybersickness Questionnaire
 \end{enumerate}
-    \subsection*{Mesurments}
+    \subsection*{Mesurements}
+    \subsubsection*{Immersive Virtual Reality (VR):}
+
+The VR experience was presented and tracked using an HTC Vive head-mounted display (HMD), two lighthouses, a Leap Motion sensor, and Haptic Data Gloves. Movement data from the data gloves, Leap Motion device, and the HMD was collected. For movement analysis, only the wrist movements tracked by the Leap Motion device were considered, excluding the fingertips' magnetic tracking sensor data. All movements were recorded in a Euclidean coordinate system (X, Y, Z) with the original calibrating point set at (0, 0, 0). This provided a total of nine streaming sources of data (e.g., Headset X, Headset Y, Headset Z, and so on). Notably, rotational data was not included in the analysis.
+
+Additionally, in the game output data, there are flags that signal if a button was pressed, if the ball is placed in the holder, and when the trial started.
+
+\subsubsection*{Electrocardiogram (ECG):}
+
+Heart rate data was collected using a USB cable and integrated into Unity Engine. This information was coupled with all other Unity data at a frequency of 133 Hz.
+
+\subsubsection*{Questionnaires:}
+
+\begin{enumerate}
+\item[(i)] Virtual Reality Subjective Evaluation Questionnaire: This self-made questionnaire consists of 26 items oriented towards capturing whether the VR experience felt real for the participant or not. It explores the level of engagement, hand movement, task difficulty, and other controlling factors. The questionnaire uses a Likert scale ranging from one to seven.
+\item[(ii)] PRE/POST-Cybersickness Questionnaire: The version applied in this study is a shorter adaptation of the simulator sickness questionnaire (SSQ) \parencite*{avpsy}. It employs a Likert scale ranging from one to four, with labels going from "not present," "somewhat," "clearly," and "very strongly." The questionnaire includes 16 items based on symptoms, such as "fatigue" and "general discomfort," among others.
+\end{enumerate}
     \subsection*{Data Analysis}
 \section*{Results}
     \subsection*{(i) Assesing the impact of the haptic globe in reported inmersion}
+
+    
     \subsection*{(ii) Touch stimuli influence the response time}
 \section*{Discussion}
 

@@ -392,6 +392,65 @@
       \field{pages}{147\bibrangedash 176}
       \range{pages}{30}
     \endentry
+    \entry{avpsy}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=5dcad4ef764078ecfb91f9057a6d7940}{%
+           family={Kennedy},
+           familyi={K\bibinitperiod},
+           given={Robert\bibnamedelima S},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9ad5670a7bb98cf6574d797e16250b5b}{%
+           family={Lane},
+           familyi={L\bibinitperiod},
+           given={Norman\bibnamedelima E},
+           giveni={N\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e4ce2e282ca0b122a7dab0f88fd2f3ef}{%
+           family={Berbaum},
+           familyi={B\bibinitperiod},
+           given={Kevin\bibnamedelima S},
+           giveni={K\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f1da689a1cbed527b54968ce72d78938}{%
+           family={Lilienthal},
+           familyi={L\bibinitperiod},
+           given={Michael\bibnamedelima G},
+           giveni={M\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Taylor & Francis}%
+      }
+      \strng{namehash}{62a1957921ecd18bed35eac13b4b7273}
+      \strng{fullhash}{8c8355f4b46f93b6d81b04b94b3ee313}
+      \strng{bibnamehash}{62a1957921ecd18bed35eac13b4b7273}
+      \strng{authorbibnamehash}{62a1957921ecd18bed35eac13b4b7273}
+      \strng{authornamehash}{62a1957921ecd18bed35eac13b4b7273}
+      \strng{authorfullhash}{8c8355f4b46f93b6d81b04b94b3ee313}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The International Journal of Aviation Psychology}
+      \field{number}{3}
+      \field{title}{{Simulator Sickness Questionnaire: An Enhanced Method for Quantifying Simulator Sickness}}
+      \field{volume}{3}
+      \field{year}{1993}
+      \field{pages}{203\bibrangedash 220}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1207/s15327108ijap0303\_3
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1207/s15327108ijap0303_3
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1207/s15327108ijap0303_3
+      \endverb
+    \endentry
     \entry{Klotzsche2023}{article}{}
       \name{author}{6}{}{%
         {{un=0,uniquepart=base,hash=58f264448396164014fef8fe17c60219}{%
