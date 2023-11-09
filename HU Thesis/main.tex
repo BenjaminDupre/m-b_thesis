@@ -9,7 +9,10 @@
 
 \usepackage{graphicx} % Add the graphicx package for including images
 \usepackage{geometry}
-
+\usepackage{amsmath} % Add this line to your LaTeX preamble to use \text
+\usepackage{afterpage}
+\usepackage{caption}
+\usepackage{float}
 \usepackage{xcolor}
 \usepackage[style=authoryear,backend=biber]{biblatex}
 \addbibresource{bibliog.bib}
@@ -163,8 +166,23 @@ Heart rate data was collected using a USB cable and integrated into Unity Engine
 \item[(ii)] PRE/POST-Cybersickness Questionnaire: The version applied in this study is a shorter adaptation of the simulator sickness questionnaire (SSQ) \parencite*{avpsy}. It employs a Likert scale ranging from one to four, with labels going from "not present," "somewhat," "clearly," and "very strongly." The questionnaire includes 16 items based on symptoms, such as "fatigue" and "general discomfort," among others.
 \end{enumerate}
     \subsection*{Data Analysis}
-\section*{Results}
-    \subsection*{(i) Assesing the impact of the haptic globe in reported inmersion}
+    \section*{Results}
+    \subsection*{(i) Assessing the Impact of the Haptic Globe on Reported Immersion}
+    
+    Nineteen respondents answered 27 questions, rating them on a scale from 1 (Does Not Apply) to 7 (Totally Applies). The key findings from the questionnaire are as follows:
+    
+    \begin{enumerate}
+        \item In question number 24, the perceived increase in immersion due to the haptic globes was high ($\text{Mdn} = 6$, $\mu = 6$, $\sigma = 0.76$). Furthermore, the task was considered enjoyable at least some of the time ($\text{Mdn} = 6$, $\mu = 5.4$, $\sigma = 1.04$).
+        
+        \item Question 26 revealed that haptic feedback was perceived as either not significantly improving performance or having a neutral effect ($\text{Mdn} = 3$, $\mu = 3.6$, $\sigma = 1.49$). Similarly, in question 12, the perception of haptic feedback improving response time was generally rated as neutral to not applicalbe ($\text{Mdn} = 3$, $\mu = 3.7$, $\sigma = 1.74$). In question 7, when asked about the impact on results, haptic feedback was perceived as not applicable ($\text{Mdn} = 6$, $\mu = 6$, $\sigma = 0.76$).
+    
+        \item Notably, the assertion that it was very challenging to remember the position of the red ball ($\text{Mdn} = 2$, $\mu = 2.9$, $\sigma = 1.45$) was generally disagreed upon. Conversely, in question 8, which asked about the ease of remembering the location of the red ball, responses were as expected ($\text{Mdn} = 5$, $\mu = 5.1$, $\sigma = 1.37$).
+    
+        \item The highest variance was observed in question 13 ($\text{Mdn} = 5$, $\mu = 4.2$, $\sigma = 1.79$), indicating that haptic feedback made it easier to place the ball. Similarly, question 18, which inquired about the ease of counting heartbeats at the beginning of the experiment, also showed significant variance ($\text{Mdn} = 4$, $\mu = 4$, $\sigma = 1.79$). 
+        
+    \end{enumerate}
+    
+    For more details please go to the supplement section 
 
     
     \subsection*{(ii) Touch stimuli influence the response time}
@@ -172,11 +190,20 @@ Heart rate data was collected using a USB cable and integrated into Unity Engine
 
 
 %-------- CREATING BIBLIOGRAPHY
-\pagebreak
 
 %\bibliographystyle{plain} % Choose your style
 %\bibliography{bibliog.bib}  % Use your actual .bib file name
+\pagebreak
+\section*{Supplement}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[angle=90, width=\textwidth, height=20cm, keepaspectratio]{/home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/questionaire_fig.png}
+        \caption{Results: Virtual Reality Subjective Evaluation Questionnaire}
+        \label{fig:mesh2}
+    \end{figure}
+  
 
+\pagebreak
 \paragraph{\textbf{References}}
 \printbibliography[heading=none]
 
