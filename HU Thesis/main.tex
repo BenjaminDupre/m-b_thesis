@@ -166,7 +166,17 @@ Heart rate data was collected using a USB cable and integrated into Unity Engine
 \item[(ii)] PRE/POST-Cybersickness Questionnaire: The version applied in this study is a shorter adaptation of the simulator sickness questionnaire (SSQ) \parencite*{avpsy}. It employs a Likert scale ranging from one to four, with labels going from "not present," "somewhat," "clearly," and "very strongly." The questionnaire includes 16 items based on symptoms, such as "fatigue" and "general discomfort," among others.
 \end{enumerate}
     \subsection*{Data Analysis}
-    All responses were constructed considering the time between the the moment the ball is entering the scene in the IVR expirience. All trials in which the error button was pressed were removed. Before the analyis I performed an outlier correction applying an exclusion method based standard deviations since they offer the least distortion and using a median value  
+    All repsonse times were constructed considering the time elapsed between the moment the ball is entering the scene in the trial and the moment it explodes or disapears. All trials in which the error button was pressed were removed. Before the analyis, I performed an outlier correction applying an exclusion of data points that deviated by more than 3 × 1.4826 × median absolute deviationsv(MADs) from the median, corresponding to 3 SDs if data are normally distributed\parencite{Innes2019ACA}. There were no answers removed on account of being to fast. Answers to slow were 13\% of trials removed. In the final sample there are 1826 RT (aprox. 24 per condition and participant). 
+
+
+    I NEED TO ATEND TO THIS :
+    This simple computation requires equal numbers of RTs in each condition to allow for equal quantile points.
+However, following outlier correction, the numbers of RTs are often unequal. As a solution, we used linear inter-
+polation29 to down-sample the collected RTs to a common sample size (we used 50 quantile points; the procedure
+was shown to be unbiased using Monte Carlo simulations). We computed empirical benefits for each participant
+and each condition of the 2 × 2 design.
+    
+    method based standard deviations since they offer the least distortion and using a median value  
 
 
 

@@ -392,6 +392,44 @@
       \field{pages}{147\bibrangedash 176}
       \range{pages}{30}
     \endentry
+    \entry{Innes2019ACA}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=bb75fdd98fbdec4580de7d84c767c995}{%
+           family={Innes},
+           familyi={I\bibinitperiod},
+           given={Bobby\bibnamedelima R.},
+           giveni={B\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=22ceeb8754ed885c2783168d50eae56c}{%
+           family={Otto},
+           familyi={O\bibinitperiod},
+           given={Thomas\bibnamedelima U.},
+           giveni={T\bibinitperiod\bibinitdelim U\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{eaf27dd4adab7093b3b7064de72240cf}
+      \strng{fullhash}{eaf27dd4adab7093b3b7064de72240cf}
+      \strng{bibnamehash}{eaf27dd4adab7093b3b7064de72240cf}
+      \strng{authorbibnamehash}{eaf27dd4adab7093b3b7064de72240cf}
+      \strng{authornamehash}{eaf27dd4adab7093b3b7064de72240cf}
+      \strng{authorfullhash}{eaf27dd4adab7093b3b7064de72240cf}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Scientific Reports}
+      \field{title}{A comparative analysis of response times shows that multisensory benefits and interactions are not equivalent}
+      \field{volume}{9}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://api.semanticscholar.org/CorpusID:67862549
+      \endverb
+      \verb{url}
+      \verb https://api.semanticscholar.org/CorpusID:67862549
+      \endverb
+    \endentry
     \entry{avpsy}{article}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=5dcad4ef764078ecfb91f9057a6d7940}{%

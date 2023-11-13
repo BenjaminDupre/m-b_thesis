@@ -1,16 +1,24 @@
-# **Mind and Brain Thesis** 
+# Mind and Brain Thesis
 
-**Warning**: Here there is no raw Data. It has been already processed by using `Unity_output_tidy.m` in Matlab. The results are contain in Data folder.(currently I am taking matlabfile into Python with some improvments)
+**Note:** Raw data is not provided here; it has already been processed using Python in the `Unity_output_tidy.py` file. The processed files are located in the `PRE-Analysis` folder, which also includes a `log.txt` file with comments on specific treatments for participants.
 
-## **List of Folders and Files:**
-- Data: contains two files which are the results of `Unity_output_tidy.m`. One with the meta-data of the study a second one with the data to run the analysis.  
-- Latex_Proposal_Classic: Latex project containing the supervisor solicitation (TO DELETE - Outdated )
-- Latex_Proposal_Mod: Latex project containing the supervisor solicitation to the Board of Mind and Brain
-- `Analysis.ipynb` contains all the analysis necessary for the Thesis. It uses mainly two files. (`behavior.csv` & `meta-data.csv`) contained in Data folder.
-- `count_condition.txt` & `verzeichnis.txt` are a result from running `Unity_output_tidy.m`. They contain the results to testing data. If the trail had a problem then they show in the file with a description.  
-- pdf file `Questionnaire Samples post vr-cybersickness.pdf` contains the  Post VR Experiment Questionaire used in the experiment. 
-- `one_trial_light.gif` its a gif from which i will take fotos to explain the expermient. 
-- `metdata_analysis.py` draft used to build python script  (TO BE DELETED)
+## List of Folders and Files:
+
+### Analysis
+- Contains one folder and 6 files.
+  - `figure`: Contains saved figures from the analysis.
+  - `Analysis_backup.ipynb`: Backup file for the analysis.
+  - `Analysis.ipynb`: File with the analysis for the thesis.
+  - `database.csv` and `meta-data.csv`: Results of pre-analysis data handling, including behavioral IVR experience data and meta-data from participants and questionnaires.
+
+### HU Thesis
+- Contains all files required to create the PDF document using LaTeX and the latest draft.
+
+### OLD
+- Contains outdated files used for reference.
+
+### Thesis Proposal
+- Contains the proposal for the supervisor and the thesis proposal sent to HU administration.
 
 
 
