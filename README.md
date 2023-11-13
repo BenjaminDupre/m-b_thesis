@@ -10,6 +10,7 @@
   - `Analysis_backup.ipynb`: Backup file for the analysis.
   - `Analysis.ipynb`: File with the analysis for the thesis.
   - `database.csv` and `meta-data.csv`: Results of pre-analysis data handling, including behavioral IVR experience data and meta-data from participants and questionnaires.
+  - `ydata_profiling.html` contains teh results from running ydata in the Analysis file. Its a general overview of data behavior atuomated thus saving time. 
 
 ### HU Thesis
 - Contains all files required to create the PDF document using LaTeX and the latest draft.
