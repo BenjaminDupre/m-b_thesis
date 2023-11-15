@@ -272,6 +272,73 @@
       \verb https://api.semanticscholar.org/CorpusID:91565050
       \endverb
     \endentry
+    \entry{Garfinkel2013-st}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=700c95e054106318cecb4a12ebc8545a}{%
+           family={Garfinkel},
+           familyi={G\bibinitperiod},
+           given={Sarah\bibnamedelima N},
+           giveni={S\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=aa5aaf33b4bf6399141bcac4970c9708}{%
+           family={Barrett},
+           familyi={B\bibinitperiod},
+           given={Adam\bibnamedelima B},
+           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=91bdc06bf52cb9394db9680c563cbf3f}{%
+           family={Minati},
+           familyi={M\bibinitperiod},
+           given={Ludovico},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b4a4fc5ea30c01bb92ff26770bdb0fe9}{%
+           family={Dolan},
+           familyi={D\bibinitperiod},
+           given={Raymond\bibnamedelima J},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a18faa5d293b699968705a564971492b}{%
+           family={Seth},
+           familyi={S\bibinitperiod},
+           given={Anil\bibnamedelima K},
+           giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=43af36734fd8bac612dff7786a9a36b8}{%
+           family={Critchley},
+           familyi={C\bibinitperiod},
+           given={Hugo\bibnamedelima D},
+           giveni={H\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {United States}%
+      }
+      \strng{namehash}{8d1a584a5c6cf4202c5cf6dd4c7f03dd}
+      \strng{fullhash}{5851ac0be535b04386ec34cd75cbc564}
+      \strng{bibnamehash}{8d1a584a5c6cf4202c5cf6dd4c7f03dd}
+      \strng{authorbibnamehash}{8d1a584a5c6cf4202c5cf6dd4c7f03dd}
+      \strng{authornamehash}{8d1a584a5c6cf4202c5cf6dd4c7f03dd}
+      \strng{authorfullhash}{5851ac0be535b04386ec34cd75cbc564}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Mental functions are influenced by states of physiological arousal. Afferent neural activity from arterial baroreceptors at systole conveys the strength and timing of individual heartbeats to the brain. We presented words under limited attentional resources time-locked to different phases of the cardiac cycle, to test a hypothesis that natural baroreceptor stimulation influences detection and subsequent memory of words. We show memory for words presented around systole was decreased relative to words at diastole. The deleterious memory effect of systole was greater for words detected with low confidence and amplified in individuals with low interoceptive sensitivity, as indexed using a heartbeat counting task. Our observations highlight an important cardiovascular channel through which autonomic arousal impacts a cognitive function, an effect mitigated by metacognition (perceptual confidence) and interoceptive sensitivity.}
+      \field{journaltitle}{Psychophysiology}
+      \field{month}{3}
+      \field{number}{6}
+      \field{title}{What the heart forgets: Cardiac timing influences memory for words and is modulated by metacognition and interoceptive sensitivity}
+      \field{volume}{50}
+      \field{year}{2013}
+      \field{pages}{505\bibrangedash 512}
+      \range{pages}{8}
+    \endentry
     \entry{Grund643}{article}{}
       \name{author}{8}{}{%
         {{un=0,uniquepart=base,hash=dcce115c5a597841e7c5c1efe6898253}{%
@@ -833,6 +900,109 @@
       \field{year}{2001}
       \field{pages}{419\bibrangedash 436}
       \range{pages}{18}
+    \endentry
+    \entry{Ulrich2007}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=cd232e96ac4d3e8d7096c18c860af07d}{%
+           family={Ulrich},
+           familyi={U\bibinitperiod},
+           given={Rolf},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c65a46371327e1f400d89362f8d27fa6}{%
+           family={Miller},
+           familyi={M\bibinitperiod},
+           given={Jeff},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7c8ba563e6fd5b0b13786e1ea7b7793a}{%
+           family={Schröter},
+           familyi={S\bibinitperiod},
+           given={Hannes},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{074c7ca9c020fdc1f6c475926c6447f8}
+      \strng{fullhash}{074c7ca9c020fdc1f6c475926c6447f8}
+      \strng{bibnamehash}{074c7ca9c020fdc1f6c475926c6447f8}
+      \strng{authorbibnamehash}{074c7ca9c020fdc1f6c475926c6447f8}
+      \strng{authornamehash}{074c7ca9c020fdc1f6c475926c6447f8}
+      \strng{authorfullhash}{074c7ca9c020fdc1f6c475926c6447f8}
+      \field{extraname}{1}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In divided-attention tasks, responses are faster when two target stimuli are presented, and thus one is redundant, than when only a single target stimulus is presented. Raab (1962) suggested an account of this redundanttargets effect in terms of a race model in which the response to redundant target stimuli is initiated by the faster of two separate target detection processes. Such models make a prediction about the probability distributions of reaction times that is often calledthe race model inequality, and it is often of interest to test this prediction. In this article, we describe a precise algorithm that can be used to test the race model inequality and present MATLAB routines and a Pascal program that implement this algorithm.}
+      \field{issn}{1554-3528}
+      \field{journaltitle}{Behavior Research Methods}
+      \field{month}{5}
+      \field{number}{2}
+      \field{title}{Testing the race model inequality: An algorithm and computer programs}
+      \field{volume}{39}
+      \field{year}{2007}
+      \field{pages}{291\bibrangedash 302}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.3758/BF03193160
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.3758/BF03193160
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.3758/BF03193160
+      \endverb
+    \endentry
+    \entry{Ulrich2007TestingTR}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=cd232e96ac4d3e8d7096c18c860af07d}{%
+           family={Ulrich},
+           familyi={U\bibinitperiod},
+           given={Rolf},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c65a46371327e1f400d89362f8d27fa6}{%
+           family={Miller},
+           familyi={M\bibinitperiod},
+           given={Jeff},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7c8ba563e6fd5b0b13786e1ea7b7793a}{%
+           family={Schröter},
+           familyi={S\bibinitperiod},
+           given={Hannes},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{074c7ca9c020fdc1f6c475926c6447f8}
+      \strng{fullhash}{074c7ca9c020fdc1f6c475926c6447f8}
+      \strng{bibnamehash}{074c7ca9c020fdc1f6c475926c6447f8}
+      \strng{authorbibnamehash}{074c7ca9c020fdc1f6c475926c6447f8}
+      \strng{authornamehash}{074c7ca9c020fdc1f6c475926c6447f8}
+      \strng{authorfullhash}{074c7ca9c020fdc1f6c475926c6447f8}
+      \field{extraname}{2}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Behavior Research Methods}
+      \field{title}{Testing the race model inequality: An algorithm and computer programs}
+      \field{volume}{39}
+      \field{year}{2007}
+      \field{pages}{291\bibrangedash 302}
+      \range{pages}{12}
+      \verb{urlraw}
+      \verb https://api.semanticscholar.org/CorpusID:39590632
+      \endverb
+      \verb{url}
+      \verb https://api.semanticscholar.org/CorpusID:39590632
+      \endverb
     \endentry
   \enddatalist
 \endrefsection
