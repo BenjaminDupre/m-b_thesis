@@ -626,6 +626,49 @@
       \verb https://www.biorxiv.org/content/early/2023/01/23/2023.01.23.525140
       \endverb
     \endentry
+    \entry{Lo2015-fv}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=6f809c9c0d1b5e4221c1d1fe48daf062}{%
+           family={Lo},
+           familyi={L\bibinitperiod},
+           given={Steson},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=224b6ece8e5cc3b6f35ce9827d0c9d42}{%
+           family={Andrews},
+           familyi={A\bibinitperiod},
+           given={Sally},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {Switzerland}%
+      }
+      \strng{namehash}{47fb9e483e0a1d5b6ac7e6777e6f251d}
+      \strng{fullhash}{47fb9e483e0a1d5b6ac7e6777e6f251d}
+      \strng{bibnamehash}{47fb9e483e0a1d5b6ac7e6777e6f251d}
+      \strng{authorbibnamehash}{47fb9e483e0a1d5b6ac7e6777e6f251d}
+      \strng{authornamehash}{47fb9e483e0a1d5b6ac7e6777e6f251d}
+      \strng{authorfullhash}{47fb9e483e0a1d5b6ac7e6777e6f251d}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Linear mixed-effect models (LMMs) are being increasingly widely used in psychology to analyse multi-level research designs. This feature allows LMMs to address some of the problems identified by Speelman and McGann (2013) about the use of mean data, because they do not average across individual responses. However, recent guidelines for using LMM to analyse skewed reaction time (RT) data collected in many cognitive psychological studies recommend the application of non-linear transformations to satisfy assumptions of normality. Uncritical adoption of this recommendation has important theoretical implications which can yield misleading conclusions. For example, Balota et al. (2013) showed that analyses of raw RT produced additive effects of word frequency and stimulus quality on word identification, which conflicted with the interactive effects observed in analyses of transformed RT. Generalized linear mixed-effect models (GLMM) provide a solution to this problem by satisfying normality assumptions without the need for transformation. This allows differences between individuals to be properly assessed, using the metric most appropriate to the researcher's theoretical context. We outline the major theoretical decisions involved in specifying a GLMM, and illustrate them by reanalysing Balota et al.'s datasets. We then consider the broader benefits of using GLMM to investigate individual differences.}
+      \field{journaltitle}{Front Psychol}
+      \field{month}{8}
+      \field{title}{To transform or not to transform: using generalized linear mixed models to analyse reaction time data}
+      \field{volume}{6}
+      \field{year}{2015}
+      \field{pages}{1171}
+      \range{pages}{1}
+      \keyw{RT transformations; additive factors; generalized linear mixed-effect models; interaction effects; mental chronometry}
+    \endentry
     \entry{TimsECG}{inproceedings}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=4a75057e5e9c07b5a94ff29470178143}{%
@@ -928,10 +971,8 @@
       \strng{authorbibnamehash}{074c7ca9c020fdc1f6c475926c6447f8}
       \strng{authornamehash}{074c7ca9c020fdc1f6c475926c6447f8}
       \strng{authorfullhash}{074c7ca9c020fdc1f6c475926c6447f8}
-      \field{extraname}{1}
       \field{sortinit}{U}
       \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
-      \field{extradate}{1}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{year}
       \field{labelnamesource}{author}
@@ -954,54 +995,6 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.3758/BF03193160
-      \endverb
-    \endentry
-    \entry{Ulrich2007TestingTR}{article}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=cd232e96ac4d3e8d7096c18c860af07d}{%
-           family={Ulrich},
-           familyi={U\bibinitperiod},
-           given={Rolf},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=c65a46371327e1f400d89362f8d27fa6}{%
-           family={Miller},
-           familyi={M\bibinitperiod},
-           given={Jeff},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=7c8ba563e6fd5b0b13786e1ea7b7793a}{%
-           family={Schröter},
-           familyi={S\bibinitperiod},
-           given={Hannes},
-           giveni={H\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{074c7ca9c020fdc1f6c475926c6447f8}
-      \strng{fullhash}{074c7ca9c020fdc1f6c475926c6447f8}
-      \strng{bibnamehash}{074c7ca9c020fdc1f6c475926c6447f8}
-      \strng{authorbibnamehash}{074c7ca9c020fdc1f6c475926c6447f8}
-      \strng{authornamehash}{074c7ca9c020fdc1f6c475926c6447f8}
-      \strng{authorfullhash}{074c7ca9c020fdc1f6c475926c6447f8}
-      \field{extraname}{2}
-      \field{sortinit}{U}
-      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
-      \field{extradate}{2}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Behavior Research Methods}
-      \field{title}{Testing the race model inequality: An algorithm and computer programs}
-      \field{volume}{39}
-      \field{year}{2007}
-      \field{pages}{291\bibrangedash 302}
-      \range{pages}{12}
-      \verb{urlraw}
-      \verb https://api.semanticscholar.org/CorpusID:39590632
-      \endverb
-      \verb{url}
-      \verb https://api.semanticscholar.org/CorpusID:39590632
       \endverb
     \endentry
   \enddatalist
