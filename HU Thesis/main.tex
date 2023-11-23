@@ -2,6 +2,7 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[scaled]{helvet}
+\usepackage{subcaption} % Add the subcaption package for subfigures
 
 \renewcommand\familydefault{\sfdefault} 
 \usepackage[T1]{fontenc}
@@ -21,7 +22,7 @@
   a4paper,
   left=20mm,
   right=20mm,
-  top=4.5cm,
+  top=3cm,
   headheight=4cm,
   bottom=3.5cm,
   footskip=3cm
@@ -109,6 +110,7 @@ By examining how passive haptic stimuli influence the response time in the motor
     \begin{figure}[h]
         \centering
         \includegraphics[width=12cm]{/home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/participants.png}
+        \captionsetup{justification=justified, margin={2cm,2cm}, font={small}}
         \caption{Participants Composition}
         \label{fig:mesh1}
     \end{figure}
@@ -125,29 +127,40 @@ The Leap Motion Controller has a field of view of 150x120 degrees, with a variab
 
 \subsubsection*{2.2.4 Data Gloves:}
 The data gloves used in the study are equipped with magnetic sensors and connected to Unity using a microUSB connection. These gloves provide haptic feedback through 10 vibrotactile actuators, offering a wide range of tactile sensations with 1,024 levels of intensity. The gloves also incorporate complete finger tracking using six 9-axis Inertial Measurement Units (IMUs). These IMUs enable precise tracking of finger movements, allowing for accurate gesture recognition and enhanced interaction in virtual environments.
-    \subsection*{2.3 Task}
-    After being debriefed and receiving information about the experiment, participants completed the following tasks:
+
+\subsection*{2.3 Task}
+After receiving information about the COVID rules and the experiment, participants engaged in the following:
 \begin{enumerate}
-\item[(i)] Edinburgh Handedness Questionnaire
-\item[(ii)] PRE-Cybersickness Questionnaire
+\item[(i)] Questionnaires: Before the IVR, participants completed the Edinburgh Handedness Questionnaire and the PRE-Cybersickness Questionnaire. After the IVR experience, participants filled the Virtual Reality Subjective Evaluation Questionnaire and POST-Cybersickness Questionnaire.
+
+\item[(ii)] Participants performed a heartbeat count task for one minute before and after the IVR task. This task is not considered within this thesis.
 \end{enumerate}
 
-Following the completion of the first set of questionnaires, the participants were taken to another room where the IVR (Immersive Virtual Reality) equipment was set up. This equipment included a head-mounted display (HMD), data gloves, and an ECG (Electrocardiogram) device. Participants underwent a short training session before proceeding with the heartbeat count task and the IVR memory-motor task.
+Following the completion of the initial questionnaires and HCT, participants moved to another room where the IVR (Immersive Virtual Reality) equipment was set up. This included a head-mounted display (HMD), data gloves, and an ECG (Electrocardiogram) device. Participants received a brief training session before proceeding with the heartbeat count task and the IVR memory-motor task.
 
-\begin{enumerate}
-\item[(iii)] PRE-Heart Beat Count Task (HCT) for one minute. (This task is not considered in this thesis.)
-\item[(iv)] IVR Memory-Motor Task: In this environment, participants were positioned in front of a virtual table and given sufficient time to acclimate to the virtual surroundings. A sketch of a puzzle was displayed in front of the virtual room, which they needed to memorize. During the memorization phase, participants kept their virtual hands open with palms facing up. Subsequently, the sketch disappeared from their visual field, and a red ball was introduced from the top, appearing in either one of the hands. Participants observed a template on the table, which was an identical representation of the initial sketch they had memorized. Their task was to place the ball in the correct location on the template as quickly as possible. Throughout 108 trials, three different conditions (relevant haptic stimuli, irrelevant haptic stimuli, and no haptic stimuli) were randomly presented an equal number of times (36 times each). The trials appeared rapidly, one after the other. The start of each trial was marked by placing the ball in a hand, and the end of the trial was marked by the moment the ball reached the designated location on the template.
-\item[(v)] POST-Heart Beat Count Task (HCT) for one minute. (This task is not considered in this thesis.)
-\end{enumerate}
+The IVR Memory-Motor Task comprised the following steps:
+ \begin{enumerate}
+    \item[a.] Participants stood in front of a virtual table, allowing ample time to acclimate to the virtual environment, as depicted in \ref{fig:look}.
+    
+    \item[b.] Every trial, a new calibration process starts. it requires the participants to place their palms facing up within the shadowed hands. This is also done to control for the star position of the participant. as depicted in \ref{fig:look} letter b.
 
-The final step of the experiment involved two questionnaires aimed at extracting information on several relevant fields for the goal of this thesis:
-After the IVR part the participants filled a again the cybersicknesss quiestionaire as well as for the first time an overall Subjective Evaluation Questionaire.
-\begin{enumerate}
-    \item[(vi)] Virtual Reality Subjective Evaluation Questionnaire
-    \item[(vii)] POST-Cybersickness Questionnaire
-\end{enumerate}
-    \subsection*{2.4 Mesurements}
-    \subsubsection*{2.4.1 Immersive Virtual Reality (VR):}
+    \item[c.] In figure \ref*{fig:look} a two-dimensional sketch was displayed before the participants, prompting them to memorize the red ball's position. During this phase, participants kept their virtual hands open with palms facing up.
+
+    \item[d.] The sketch disappeared from their visual field, and a red ball was introduced from the top, appearing in either one of the hands. Participants observed a template on the table, which was an identical representation of the initial sketch they had memorized. Their task was to place the ball in the correct location on the template as quickly as possible.
+
+    \begin{figure}[!ht]
+        \centering
+        \includegraphics[width=15cm]{/home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/design_ilustration.png}
+        \captionsetup{justification=justified, margin={2cm,2cm}, font={small}}
+        \caption{On the left of the image we can see the set up on a participant. a. and b. show us  in first person perspective from the tryout phase and calibration phase c. show us in first person perspective the memorization phase. d. show us in first person perspective the beggining of a trial.}
+        \label{fig:look}
+    \end{figure}
+ \end{enumerate}
+
+In 108 trials, three conditions—congruent ($V=T$), incongruent ($V \neq T$), and visual-only ($V$)—were randomly presented 36 times each, appearing rapidly in succession. The initiation of each trial was marked by placing the ball in a hand, and its conclusion was noted when the ball reached its designated location on the template (see Figure \ref{fig:look}).Additionally, as mentioned before after thte IVR test final round of questionnaires intended for repeated measures on sickness and initial assessment of the immersion experienced with the haptic glove and hands.
+
+\subsection*{2.4 Mesurements}
+\subsubsection*{2.4.1 Immersive Virtual Reality (VR):}
 
 The VR experience was presented and tracked using an HTC Vive head-mounted display (HMD), two lighthouses, a Leap Motion sensor, and Haptic Data Gloves. Movement data from the data gloves, Leap Motion device, and the HMD was collected. For movement analysis, only the wrist movements tracked by the Leap Motion device were considered, excluding the fingertips' magnetic tracking sensor data. All movements were recorded in a Euclidean coordinate system (X, Y, Z) with the original calibrating point set at (0, 0, 0). This provided a total of nine streaming sources of data (e.g., Headset X, Headset Y, Headset Z, and so on). Notably, rotational data was not included in the analysis.
 
@@ -196,22 +209,39 @@ To achieve this, I followed the methodologies outlined in \cite{Ulrich2007,Innes
 
 First I will look into the mistake rate in ball placement per condition to take care that they are not affecting the experiment. For only visual only condition ($V$) the mistake rate was 6.35\% (±0.99\%, SEM), for the visual incongruent touch condition ($V \neq T$) the mistake rate was 5.79\% (0.59\%) and for the visual congruent touch conition ($V=T$) the mistake rate was 6.91\% (1.93\%). When tested in a one way  ANOVA (feedback type) no effects were found ($ F \leq0.08$, $p\geq.91 $, ). Although the task is considerably more complex, that stimuli recognition, the mistake rates here are also substantially low therefore not analysed further. 
 
-To assess whether the experimental manipulations mimicked the diversity of RSE studies, we next tested A one-way repeated-measures ANOVA that showed a significant main effect of stimulus ($F(2,38) = 3.4$, $p\leq0.043 $,$\eta p^2 =0.15$). RT in milliseconds were faster in
+To assess whether the experimental manipulations mimicked the diversity of RSE studies, we next tested A one-way repeated-measures ANOVA. Usin the previously mention tranformations the test showed a significant main effect for stimulus ($F(2,38) = 3.4$, $p\leq0.043 $,$\eta p^2 =0.15$). The  median value for the `Congruent` condition ($V=T$)  it is the fastest (3236 ms ± 456 ms), followed by the `Incongruent` ($V \neq T$) condition (3268 ms ± 470). The slowest conditions is the one with `None` happtic stimuli ($V$) (3284 ms ± 463). Therefore, the experimental condition succesfully manipulated response times. It is important to point out that the p-value is very close to the conventional border of 0.05, thing I will comment on the discussion section.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{/home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/bar_erros_bars_stimulus_constructions.png}
+    \captionsetup{justification=justified, margin={2cm,2cm}, font={small}}
+    \caption{one-way repeated-measures ANOVA. using $RT^-1$, the test showed a significant main effect for the conditions ($F(2,38) = 3.4$, $p\leq0.043 $,$\eta p^2 =0.15$)}
+    \label{fig:mesh2}
+\end{figure}
+When testing for 
+When testing for mixed effects.
+
+
+
+
 
 
 \section*{4. Discussion}
 
+\pagebreak
 
+\newpage
 
 %-------- CREATING BIBLIOGRAPHY
 
 %\bibliographystyle{plain} % Choose your style
 %\bibliography{bibliog.bib}  % Use your actual .bib file name
-\pagebreak
+
 \section*{Supplement}
     \begin{figure}[H]
         \centering
         \includegraphics[angle=90, width=\textwidth, height=20cm, keepaspectratio]{/home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/questionaire_fig.png}
+        \captionsetup{justification=justified, margin={2cm,2cm}, font={small}}
         \caption{Results: Virtual Reality Subjective Evaluation Questionnaire}
         \label{fig:mesh2}
     \end{figure}
