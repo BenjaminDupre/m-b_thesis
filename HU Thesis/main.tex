@@ -129,34 +129,39 @@ The Leap Motion Controller has a field of view of 150x120 degrees, with a variab
 The data gloves used in the study are equipped with magnetic sensors and connected to Unity using a microUSB connection. These gloves provide haptic feedback through 10 vibrotactile actuators, offering a wide range of tactile sensations with 1,024 levels of intensity. The gloves also incorporate complete finger tracking using six 9-axis Inertial Measurement Units (IMUs). These IMUs enable precise tracking of finger movements, allowing for accurate gesture recognition and enhanced interaction in virtual environments.
 
 \subsection*{2.3 Task}
-After receiving information about the COVID rules and the experiment, participants engaged in the following:
-\begin{enumerate}
-\item[(i)] Questionnaires: Before the IVR, participants completed the Edinburgh Handedness Questionnaire and the PRE-Cybersickness Questionnaire. After the IVR experience, participants filled the Virtual Reality Subjective Evaluation Questionnaire and POST-Cybersickness Questionnaire.
 
-\item[(ii)] Participants performed a heartbeat count task for one minute before and after the IVR task. This task is not considered within this thesis.
+After receiving information about the COVID rules and the experiment, participants engaged in the following tasks:
+
+\begin{enumerate}
+\item[(i)] \textbf{Questionnaires:} Before the IVR experience, participants completed the Edinburgh Handedness Questionnaire and the PRE-Cybersickness Questionnaire. Following the IVR experience, participants filled out the Virtual Reality Subjective Evaluation Questionnaire and POST-Cybersickness Questionnaire.
+
+\item[(ii)] \textbf{Heartbeat Count Task (HCT):} Participants performed a one-minute heartbeat count task before and after the IVR task. Note that this task is not considered within this thesis.
 \end{enumerate}
 
 Following the completion of the initial questionnaires and HCT, participants moved to another room where the IVR (Immersive Virtual Reality) equipment was set up. This included a head-mounted display (HMD), data gloves, and an ECG (Electrocardiogram) device. Participants received a brief training session before proceeding with the heartbeat count task and the IVR memory-motor task.
 
 The IVR Memory-Motor Task comprised the following steps:
- \begin{enumerate}
-    \item[a.] Participants stood in front of a virtual table, allowing ample time to acclimate to the virtual environment, as depicted in \ref{fig:look}.
+\begin{enumerate}
+    \item[\textbf{a.}] Participants stood in front of a virtual table, allowing ample time to acclimate to the virtual environment, as depicted in Figure \ref{fig:look}.
     
-    \item[b.] Every trial, a new calibration process starts. it requires the participants to place their palms facing up within the shadowed hands. This is also done to control for the star position of the participant. as depicted in \ref{fig:look} letter b.
-
-    \item[c.] In figure \ref*{fig:look} a two-dimensional sketch was displayed before the participants, prompting them to memorize the red ball's position. During this phase, participants kept their virtual hands open with palms facing up.
-
-    \item[d.] The sketch disappeared from their visual field, and a red ball was introduced from the top, appearing in either one of the hands. Participants observed a template on the table, which was an identical representation of the initial sketch they had memorized. Their task was to place the ball in the correct location on the template as quickly as possible.
+    css
+    
+    \item[\textbf{b.}] Prior to each trial, a new calibration process started. Participants placed their palms facing up within the shadowed hands, ensuring the standard positioning. Refer to Figure \ref{fig:look} (b) for the calibration setup.
+    
+    \item[\textbf{c.}] Participants viewed a two-dimensional sketch (Figure \ref{fig:look} (c)) displayed in the virtual environment, prompting them to memorize the red ball's position. During this phase, participants kept their virtual hands open with palms facing up.
+    
+    \item[\textbf{d.}] The sketch disappeared, and a red ball appeared from the top, landing in either of the participant's hands. Participants then observed a template on the table, resembling the initial sketch they memorized. Their task was to place the ball in the correct location on the template as swiftly as possible.
+    
+    \end{enumerate}
 
     \begin{figure}[!ht]
         \centering
         \includegraphics[width=15cm]{/home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/design_ilustration.png}
-        \captionsetup{justification=justified, margin={2cm,2cm}, font={small}}
-        \caption{On the left of the image we can see the set up on a participant. a. and b. show us  in first person perspective from the tryout phase and calibration phase c. show us in first person perspective the memorization phase. d. show us in first person perspective the beggining of a trial.}
+        \captionsetup{justification=justified, margin={3.5cm,3.5cm}, font={small}}
+        \caption{Illustration of the IVR Memory-Motor Task: (a) represents the acclimation period during initial setup; (b) showcases the first-person perspective of the calibration phase; (c) displays the 2D sketch for memorizing ball position; (d) presents the appearance of the ball and the 3D template for ball placement, marking the beginning of each trial.}
         \label{fig:look}
-    \end{figure}
- \end{enumerate}
-
+        \end{figure}
+ 
 In 108 trials, three conditions—congruent ($V=T$), incongruent ($V \neq T$), and visual-only ($V$)—were randomly presented 36 times each, appearing rapidly in succession. The initiation of each trial was marked by placing the ball in a hand, and its conclusion was noted when the ball reached its designated location on the template (see Figure \ref{fig:look}).Additionally, as mentioned before after thte IVR test final round of questionnaires intended for repeated measures on sickness and initial assessment of the immersion experienced with the haptic glove and hands.
 
 \subsection*{2.4 Mesurements}
@@ -231,7 +236,13 @@ A mixed linear model analysis was conducted to assess the impact of feedback typ
 
 \subsubsection*{3.2.2 Redundancy Signal Effect and Multisensory Integration}
 
-
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=12cm]{/home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/CDF.png}
+    \captionsetup{justification=justified, margin={2cm,2cm}, font={small}}
+    \caption{ (a.) Displays the 10 estimated percentile points for each of the three functions of interest: Gx, Gy, Gz, considering all participants. (b.) Is a zoom in the first 200 ms. Acording to the RSE, the visual $V$ type should be under Gy, Gz at all moments. Our data shows that is not the case for the RT in the first 200 ms.}
+    \label{fig:CDF}
+\end{figure}
 
 \section*{4. Discussion}
 
