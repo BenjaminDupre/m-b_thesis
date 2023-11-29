@@ -3,7 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[scaled]{helvet}
 \usepackage{subcaption} % Add the subcaption package for subfigures
-
+\usepackage{dirtytalk} %quoting package
 \renewcommand\familydefault{\sfdefault} 
 \usepackage[T1]{fontenc}
 \usepackage{fancyhdr,xcolor}
@@ -179,7 +179,7 @@ Heart rate data was collected using a USB cable and integrated into Unity Engine
 
 \subsection*{2.5 Data Analysis}
 
-All response times were measured from the moment the ball entered the scene in the trial until the moment it "exploded". Trials where the error button was pressed were excluded from the analysis. Prior to analysis, outlier correction was performed by removing data points that deviated more than 3 × 1.4826 times the median absolute deviation (MAD) from the median, equivalent to 3 standard deviations assuming a normal distribution \parencite{Innes2019ACA}. No responses were removed due to being too fast. However, 13\% of trials were eliminated due to excessive slowness. The final sample consisted of 1826 response times (approximately 24 per condition per participant). After the removal of outliers, the response times for each condition were converted into rates (1/RT). Prioritizing normality in the error distribution over other factors, such as the scale of properties or interacting effects, was considered crucial for this proof of concept, emphasizing the essential validity of the experimental conditions. In future analyses, it would be valuable to incorporate a generalized mixed-effect model to better describe interacting effects \parencite{Lo2015-fv}.
+All response times were measured from the moment the ball entered the scene in the trial until the moment it "exploded". Trials where the error button was pressed were excluded from the analysis. Prior to analysis, outlier correction was performed by removing data points that deviated more than 3 × 1.4826 times the median absolute deviation (MAD) from the median, equivalent to 3 standard deviations assuming a normal distribution \parencite{Innes2019ACA}. No responses were removed due to being too fast. However, 13\% of trials were eliminated due to excessive slowness. The final sample consisted of 1826 response times (approximately 24 per condition per participant). After the removal of outliers, the response times for each condition were converted into rates (1/RT). Prioritizing normality in the error distribution over other factors, such as the scale of properties or interacting effects, was considered crucial for this proof of concept, emphasizing the essential validity of the experimental conditions. 
 
 To enable comparisons with Saltafossi's reference paper, our aim was to confirm the well-established redundant signal effect — indicating faster response times to bimodal stimulation compared to single stimulation — and partially construct the Race model Inequality to validate its applicability across all time periods $t$.
 
@@ -207,28 +207,29 @@ To achieve this, I followed the methodologies outlined in \cite{Ulrich2007,Innes
 \subsection*{3.2 Touch stimuli influence the response time}
 \subsubsection*{3.2.1 General Performance}
 
-First I will look into the mistake rate in ball placement per condition to take care that they are not affecting the experiment. For only visual only condition ($V$) the mistake rate was 6.35\% (±0.99\%, SEM), for the visual incongruent touch condition ($V \neq T$) the mistake rate was 5.79\% (0.59\%) and for the visual congruent touch conition ($V=T$) the mistake rate was 6.91\% (1.93\%). When tested in a one way  ANOVA (feedback type) no effects were found ($ F \leq0.08$, $p\geq.91 $, ). Although the task is considerably more complex, that stimuli recognition, the mistake rates here are also substantially low therefore not analysed further. 
+First, I examined the mistake rates in ball placement per condition to ensure they did not significantly affect the experiment. In the visual-only condition ($V$), the mistake rate was $6.35\%$ ($\pm 0.99\%$, SEM), for the visual incongruent touch condition ($V \neq T$), the mistake rate was $5.79\%$ ($\pm 0.59\%$), and for the visual congruent touch condition ($V=T$), it was $6.91\%$ ($ \pm 1.93\%$). However, a one-way ANOVA (feedback type) revealed no significant effects ($ F \leq 0.08$, $p \geq 0.91$). Although the task is notably more complex than mere stimulus recognition, these mistake rates remain notably low and were not subjected to further analysis.
 
-To assess whether the experimental manipulations mimicked the diversity of RSE studies, we next tested A one-way repeated-measures ANOVA. Usin the previously mention tranformations the test showed a significant main effect for stimulus ($F(2,38) = 3.4$, $p\leq0.043 $,$\eta p^2 =0.15$). The  median value for the `Congruent` condition ($V=T$)  it is the fastest (3236 ms ± 456 ms), followed by the `Incongruent` ($V \neq T$) condition (3268 ms ± 470). The slowest conditions is the one with `None` happtic stimuli ($V$) (3284 ms ± 463). Therefore, the experimental condition succesfully manipulated response times. Post hoc tests showed no specific pairwise differences that reached significance after correction for multiple comparisons. While there's an overall difference between conditions, the specific pairwise differences were not identified. 
-
-Looking further into the pairwise difference between conditions I runed a Generalized Linear Mixed Models (GLMM). Here I found significant results for 
-
-
-
-
-
+To assess whether the experimental manipulations mimicked the diversity of Redundancy Signal Effect (RSE)  studies, we next tested A one-way repeated-measures ANOVA. Using the previously mentioned transformations, the test demonstrated a significant main effect for stimulus ($F(2,38) = 3.4$, $p \leq 0.043$, $\eta p^2 = 0.15$). The median response time for the `Congruent` condition ($V=T$) was the fastest ($3236$ ms $\pm 456$ ms), followed by the `Incongruent` ($V \neq T$) condition ($3268$ ms $\pm 470$). The slowest condition was observed in the absence of haptic stimuli `None` ($V$) ($3284$ ms $\pm 463$). Hence, the experimental conditions effectively influenced response times as shown in figure \ref{fig:error}.
 
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=12cm]{/home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/bar_erros_bars_stimulus_constructions.png}
     \captionsetup{justification=justified, margin={2cm,2cm}, font={small}}
-    \caption{one-way repeated-measures ANOVA. using $RT^-1$, the test showed a significant main effect for the conditions ($F(2,38) = 3.4$, $p\leq0.043 $,$\eta p^2 =0.15$)}
-    \label{fig:mesh2}
+    \caption{One-way repeated-measures ANOVA using $RT^{-1}$. The test revealed a significant main effect for the conditions ($F(2,38) = 3.4$, $p \leq 0.043$, $\eta p^2 = 0.15$)}
+    \label{fig:error}
 \end{figure}
 
+However, post hoc Tukey HSD tests did not show any specific pairwise differences. While there is an overall difference between conditions, the specific pairwise differences were not identified
 
+Given the absence of identified specific pairwise differences in the post hoc analysis, I decided to conduct a more comprehensive investigation using a Generalized Linear Mixed Model (GLMM). Although this method was not used in the referenced paper, it offers numerous advantages in multilevel research designs. Particularly, as it addresses the following issue:
 
+\textit{"A linear relationship between the standard deviation of RTs and mean RT demonstrated in many previous studies of RT in binary choice tasks. This linear relationship is also evident in plots of the residuals, indicating heteroscedasticity in LMM analyses, characterized by an increasing spread in residuals for longer predicted RT"} \parencite{Lo2015-fv}.
 
+By using GLMM, rather than imposing normality and eliminating error deviation, we allow to use a distributions that matchs the properties of the mesuared RT \parencite{Lo2015-fv}. To do this, I utilized the \textit{statsmodels} statistical package in Python, the \textit{mixedlm} function. Other similar studies use the same method \parencite{RSE_FBI}.
+
+A mixed linear model analysis was conducted to assess the impact of feedback types (($V=T$), ($V \neq T$), ($V$)) on response times. The model included feedback type as a fixed effect and participant as a random effect. The model coefficient for the 'none' ($V$) feedback type ($\beta = 45.726, SE = 22.594, p = 0.043$) reached statistical significance at the conventional level ($\alpha =0.05 $) when compared to the 'congruent' ($V=T$) feedback type. This suggests a significant difference in response times between the 'none' and 'congruent' feedback types. The coefficient for 'incongruent' feedback type ($\beta = 32.975, SE = 22.686, p = 0.146$) did not reach conventional levels of significance. 
+
+\subsubsection*{3.2.2 Redundancy Signal Effect and Multisensory Integration}
 
 
 
@@ -249,7 +250,7 @@ Looking further into the pairwise difference between conditions I runed a Genera
         \includegraphics[angle=90, width=\textwidth, height=20cm, keepaspectratio]{/home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/questionaire_fig.png}
         \captionsetup{justification=justified, margin={2cm,2cm}, font={small}}
         \caption{Results: Virtual Reality Subjective Evaluation Questionnaire}
-        \label{fig:mesh2}
+        \label{fig:quest}
     \end{figure}
   
 

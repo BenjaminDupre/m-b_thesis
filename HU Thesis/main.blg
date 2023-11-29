@@ -1,0 +1,18 @@
+[0] Config.pm:307> INFO - This is Biber 2.17
+[0] Config.pm:310> INFO - Logfile is 'main.blg'
+[77] biber:340> INFO - === Mi Nov 29, 2023, 13:20:27
+[89] Biber.pm:418> INFO - Reading 'main.bcf'
+[147] Biber.pm:972> INFO - Found 18 citekeys in bib section 0
+[158] Biber.pm:4383> INFO - Processing section 0
+[168] Biber.pm:4574> INFO - Looking for bibtex file 'bibliog.bib' for section 0
+[171] bibtex.pm:1713> INFO - LaTeX decoding ...
+[202] bibtex.pm:1518> INFO - Found BibTeX data source 'bibliog.bib'
+[409] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[409] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[409] Biber.pm:4203> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[409] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[434] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[455] bbl.pm:757> INFO - Output to main.bbl
+[455] Biber.pm:130> WARN - legacy month field 'May' in entry 'Ulrich2007' is not an integer - this will probably not sort properly.
+[455] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_TshL/154047b50563e9fe3dc07153ccf06cae_12351.utf8, line 192, warning: 3 characters of junk seen at toplevel
+[456] Biber.pm:132> INFO - WARNINGS: 2

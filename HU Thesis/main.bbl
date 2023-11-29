@@ -944,6 +944,65 @@
       \field{pages}{419\bibrangedash 436}
       \range{pages}{18}
     \endentry
+    \entry{RSE_FBI}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=35a8119969b8eab1d71c3324e198d6ab}{%
+           family={Swinkels},
+           familyi={S\bibinitperiod},
+           given={Lieke\bibnamedelimb M.\bibnamedelimi J.},
+           giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ddb4a5ea8d695efbce633272a916cb1f}{%
+           family={Veling},
+           familyi={V\bibinitperiod},
+           given={Harm},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=36e7cdb060ab9503ce0a4a060535cb28}{%
+           family={Schie},
+           familyi={S\bibinitperiod},
+           given={Hein\bibnamedelima T.},
+           giveni={H\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0,
+           prefix={van},
+           prefixi={v\bibinitperiod},
+           prefixun=0}}%
+      }
+      \list{location}{1}{%
+        {Leiden, The Netherlands}%
+      }
+      \list{publisher}{1}{%
+        {Brill}%
+      }
+      \strng{namehash}{180f696d9bb51000690d38b5d555ff8a}
+      \strng{fullhash}{180f696d9bb51000690d38b5d555ff8a}
+      \strng{bibnamehash}{180f696d9bb51000690d38b5d555ff8a}
+      \strng{authorbibnamehash}{180f696d9bb51000690d38b5d555ff8a}
+      \strng{authornamehash}{180f696d9bb51000690d38b5d555ff8a}
+      \strng{authorfullhash}{180f696d9bb51000690d38b5d555ff8a}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Multisensory Research}
+      \field{number}{6}
+      \field{title}{The Redundant Signals Effect and the Full Body Illusion: not Multisensory, but Unisensory Tactile Stimuli Are Affected by the Illusion}
+      \field{volume}{34}
+      \field{year}{2021}
+      \field{pages}{553\bibrangedash 585}
+      \range{pages}{33}
+      \verb{doi}
+      \verb https://doi.org/10.1163/22134808-bja10046
+      \endverb
+      \verb{urlraw}
+      \verb https://brill.com/view/journals/msr/34/6/article-p553_1.xml
+      \endverb
+      \verb{url}
+      \verb https://brill.com/view/journals/msr/34/6/article-p553_1.xml
+      \endverb
+    \endentry
     \entry{Ulrich2007}{article}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=cd232e96ac4d3e8d7096c18c860af07d}{%
