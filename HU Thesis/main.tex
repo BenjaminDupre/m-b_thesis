@@ -75,20 +75,19 @@
 \section*{1. Introduction}
 \subsection*{1.1 Problem \& Significance}
 
-In interoceptive research, a pivotal finding reveals the impact of visceral signals on our processing of external stimuli. Specific brain mechanisms responsible for predicting signals within the body, notably changes related to heart systole, play a crucial role in diminishing our perception of external signals like touch, vision, and auditory cues \parencite{esra_p, AL2021118247, Grund643, motyka, Park2014}. While this muting effect has been well-documented in psychophysical experimental setups and individual sense modalities, the influence of cardiac phases on cognitive processes like attention and memory has been under scrutiny from the early stages of research.
+A pivotal finding in interoceptive research has revealed the impact of visceral signals on our processing of external stimuli. Lets consider this research into two groups: the psichophysical influence and the congnitive influence of the heart-cycle.  
 
-For instance, studies examining cognitive processes such as attention and memory have explored how the cardiac cycle impacts word retention. Words detected during systole were less effectively remembered compared to those detected during diastole \parencite{Garfinkel2013-st}. Recent variations in experimental setups and stimuli have moved beyond phase-locked and passive stimuli, investigating active sampling of the world. Evidence suggests that more eye movement occurs during systolic phases while more fixation happens during diastolic phases \parencite{GalvezPol2018ActiveSI}.
+The first group, describes specific brain mechanisms responsible for predicting signals within the body (heart), that play a crucial role in diminishing our perception of external signals like touch, vision, and auditory cues \parencite{esra_p, AL2021118247, Grund643, motyka, Park2014}. This muting effect has been well-documented in psychophysical experimental setups and individual sensory modalities. Recently it has expand into sensory integration. A new study has shows how the cardiac phase influences multisensory integration \parencite{SALTAFOSSI2023108642}. Using the Race Model Inequality (RMI) approach, stimuli presented during diastole, showed a a higher level of integration for Audio-Tactile and Visuo-Tactile stimuli compared to the one presented during systole. This effect was not as strong for the Audio-Visual stimuli.
 
-Furthermore, expanding into sensory integration, recent research has delved into how the cardiac phase influences multisensory integration \parencite{SALTAFOSSI2023108642}. Findings indicate that during diastole, there's a higher level of integration for Audio-Tactile and Visuo-Tactile stimuli compared to Audio-Visual stimuli when using the Race Model Inequality approach.
+The second group of studies has looked into the influence of interoceptive signals directly on cognitive processes. For example, exploring the impact of locked-cardiac phases on cognitive functions such as attention and memory. An illustrative study is the phase-locked cardiac-cycle word retention study conducted by \Cite{Garfinkel2013-st} (phase-lock stimuli refers to the stimuli that is presented during a particular cardiac cycle). On this study, it was found that words detected during systole were less effectively remembered compared to those detected during diastole \parencite{Garfinkel2013-st}. Recent variations in experimental setups, that involved presenting stimuli outside phase-locked periods, have shown that this phenomena works also for  eye seccade active sampling of the environment. It suggests that more eye movement occurs during systolic phases while more fixation happens during diastolic phases \parencite{GalvezPol2018ActiveSI}, thus showing an active perceptual role. 
 
-As the relevance of cardiac-cycle phases in sensory integration becomes more evident, research aims to develop explanations that encompass multiple observations. One such explanation involves understanding interoceptive processes through a predictive coding framework. A recent study employing a Markov decision process (MDP) using current cardiac cycle and visual stimuli suggests that this computational framework could explain observed phenomena \parencite{Allen2022}, though further testing is required.
+As the relevance of cardiac-cycle phases in sensory integration and cognitive processes becomes more evident, research aims to develop theories that encompass multiple of these observations. For exmaple, one proposed model, involves understanding interoceptive processes through a predictive coding framework. A particular computatoinal proposed model employs simulated agents and a predictive-coding computational framework to explain results observed in heart-rate variability \parencite{Allen2022}. These theoretical constructs have far-reaching implications in cognition, but must so far be constructed using heart-rate signals alone. 
 
-As research progresses into theoretical generalizations or practical applications, there's a growing need for ecological validity. To simultaneously test cognitive processes and multisensory integration, experiments need to align more closely with real-world scenarios. Improving ecological validity is crucial in understanding how body-brain phenomena translate into human psychology \parencite{schmuckler2001ecological}.
+There is a need to test these computational or theoretical generalizations of interoceptive signals. And for this, there is a need to bridge the gap between the cognitive and perceptual experimental set-ups. There is a growing need for ecological validity. more specifically, a need to simultaneously test, perceptual stimulation, multisensory integration, and cognitive outcomes. This approach would align experiments more closely with real-world scenarios, improving ecological validity and help to understand how body-brain phenomena translate into human psychology \parencite{schmuckler2001ecological}.
 
 Immersive Virtual Reality (IVR) emerges as a tool facilitating a seamless transition from psychophysics findings to psychological phenomena. IVR, known for its effectiveness in studying cognitive processes within controlled yet complex scenarios, traditionally relies on visual displays and head-hand movement tracking. However, the integration of VR head-mounted displays with ECG and haptic devices presents new challenges, both practical and technical, as well as in terms of alignment with existing literature \parencite{Klotzsche2023}.
 
-This research aims to leverage Virtual Reality to bridge the gap between psychophysics findings and everyday experiences. It seeks to validate an experimental VR setup that extends two lines of research: multisensory modulation and the influence of cardiac cycles on environmental sampling. By doing so, it aims to bring these findings closer to everyday life and enhance ecological validity. However, assessing the true impact of this phenomenon on everyday experiences, such as post-exercise sensations, poses a challenge. It necessitates a delicate balance between obtaining clear psychophysical results and integrating them with other cognitive functions.
-
+As I will detail in the following section, I expect to replicate the Redundancy Signal Effect (RSE) and Race Model Inequality (RMI) observations using IVR. This endeavor aims to validate an experimental VR setup under these conditions and extend two lines of research: multisensory integration and the influence of cardiac cycles cognition. Ultimately, this research aims to leverage Virtual Reality to bridge the gap between psychophysics findings and everyday experiences.
 
 \subsection*{1.2 Thesis Topic \& Goal}
 
@@ -157,7 +156,7 @@ The IVR Memory-Motor Task comprised the following steps:
     \begin{figure}[!ht]
         \centering
         \includegraphics[width=15cm]{/home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/design_ilustration.png}
-        \captionsetup{justification=justified, margin={3.5cm,3.5cm}, font={small}}
+        \captionsetup{justification=justified, margin={2cm,2cm}, font={small}}
         \caption{Illustration of the IVR Memory-Motor Task: (a) represents the acclimation period during initial setup; (b) showcases the first-person perspective of the calibration phase; (c) displays the 2D sketch for memorizing ball position; (d) presents the appearance of the ball and the 3D template for ball placement, marking the beginning of each trial.}
         \label{fig:look}
         \end{figure}
@@ -232,9 +231,15 @@ Given the absence of identified specific pairwise differences in the post hoc an
 
 By using GLMM, rather than imposing normality and eliminating error deviation, we allow to use a distributions that matchs the properties of the mesuared RT \parencite{Lo2015-fv}. To do this, I utilized the \textit{statsmodels} statistical package in Python, the \textit{mixedlm} function. Other similar studies use the same method \parencite{RSE_FBI}.
 
-A mixed linear model analysis was conducted to assess the impact of feedback types (($V=T$), ($V \neq T$), ($V$)) on response times. The model included feedback type as a fixed effect and participant as a random effect. The model coefficient for the 'none' ($V$) feedback type ($\beta = 45.726, SE = 22.594, p = 0.043$) reached statistical significance at the conventional level ($\alpha =0.05 $) when compared to the 'congruent' ($V=T$) feedback type. This suggests a significant difference in response times between the 'none' and 'congruent' feedback types. The coefficient for 'incongruent' feedback type ($\beta = 32.975, SE = 22.686, p = 0.146$) did not reach conventional levels of significance. 
+The following were the chareceristics of the mixed linear model analysis conducted. It aimed to assess the impact of feedback types (($V=T$), ($V \neq T$), ($V$)) on response times. The model included feedback type as a fixed effect and participant as a random effect, 'congruent' feedback type served as the reference category.
+
+The model coefficient for the 'none' ($V$) feedback type ($\beta = 45.726, SE = 22.594, p = 0.043$) reached statistical significance at the conventional level ($\alpha =0.05 $) when compared to the 'congruent' ($V=T$) feedback type. This suggests a significant difference in response times between the 'none' and 'congruent' feedback types. The coefficient for 'incongruent' feedback type ($\beta = 32.975, SE = 22.686, p = 0.146$) did not reach conventional levels of significance. 
+
+Thus, the congruent condition demonstrated significantly faster performance compared to the visual-only condition. This outcome aligns with the expected results according to the RSE. However, the findings present a mixed perspective. Despite this significant contrast, the more stringent post hoc Tukey HSD tests revealed no notable differences between pairwise conditions. Additionally, the GLMM indicated significance solely between the congruent and visual-only ($V=T$ - $V$) conditions and not between then congruent and incongruent conditions ($V=T$ - $V \neq T$). To understand if this mixed results are due to the irrelevancy of the condition 'incongruent' ()$V \neq T$) or the result of change behavior ovet time, we can llok into the CDF grapf. 
 
 \subsubsection*{3.2.2 Redundancy Signal Effect and Multisensory Integration}
+
+As mention in the methods section, the experiment does not allow for a full test of the RMI, but for a partial test of the RSE. This becuase there is not single modality for tactile sense in the experiental set-up. We already saw that the General Performance showed a partial respect the RSE. Only between the congruent and the visual-only conditions. No significant results were found between the incongruent and the visual only condition. 
 
 \begin{figure}[!ht]
     \centering
@@ -244,17 +249,56 @@ A mixed linear model analysis was conducted to assess the impact of feedback typ
     \label{fig:CDF}
 \end{figure}
 
-\section*{4. Discussion}
+In figure \ref{fig:CDF} we can see the RT distributions for all three conditions. With a second panel looking into more detail for the first 200 ms of reponse. First given the results in the first half I will test if th differences observed between Gx (CDF for visual-only condition) and Gz (CDF for Congruent condition) obtained for every participant, are significant overall for each Percentile estimation. When runnnig a paired one-sided t-test the difference  was significant for:
+
+
+\begin{table}[!ht]
+        \centering
+        \begin{tabular}{lcc}
+        \hline
+        \textbf{Percentile Estimation} & \textbf{t-value} & \textbf{p-value} \\ \hline \hline
+        0.16  & 1.88  & 0.04 \\
+        0.19  & 2.04  & 0.03 \\
+        0.2   & 2.01  & 0.03 \\
+        0.23  & 1.97  & 0.03 \\
+        0.26  & 2.06  & 0.03 \\
+        0.29  & 2.03  & 0.03 \\
+        0.3   & 2.02  & 0.03 \\
+        0.33  & 2.11  & 0.02 \\
+        0.36  & 2.08  & 0.03 \\
+        0.39  & 1.83  & 0.04 \\
+        0.4   & 1.79  & 0.04 \\
+        0.43  & 1.74  & 0.05 \\
+        \hline
+        \end{tabular}
+        \captionsetup{justification=justified, margin={2cm,2cm}, font={small}}
+        \caption{Significant differences between Gx and Gz for each percentile using the results of t-tests.}
+        \label{tab:significant-results}
+\end{table}
+    
 
 \pagebreak
+\section*{4. Discussion}
 
-\newpage
+This thesis aimed to test the feasibility of using IVR for studying heart-cycle modulation and bridging the existing gap between cognitive and psychophysical research. To achieve this goal, the thesis employed an IVR memory task wherein participants were tasked with remembering a location and immediately placing a red ball over this location in a 3D template. The study utilized a within-subject experimental design with three categories: congruent visual-tactile stimuli, incongruent visual-tactile stimuli, and visual-only stimuli. Reaction Time (RT) and Accuracy were the measured parameters.
+
+To develop the comparative approach, I followed the steps outlined in my reference studies \parencite{Innes2019ACA, SALTAFOSSI2023108642, Ulrich2007}, albeit limited by having only one simple stimulus available instead of two. The initial step involved testing the validity of stimulus construction by analyzing and modeling reaction times to uni-modal and bi-modal stimuli. My results indicated that responses to multisensory pairs ($V=T$), ($V \neq T$) were faster than those to unimodal stimuli ($V$). This observation in VR mirrors the redundant signal effect, suggesting that redundant conditions (two sensory signals) elicit quicker reaction times compared to the single sensory condition \parencite*{SALTAFOSSI2023108642}.
+
+There were, however, mixed results in significance for the incongruent case ($V \neq T$). When attempting to identify pairwise differences through a Tukey HSD test, no significant differences were found. Subsequently, running a GLMM confirmed a difference between the congruent ($V=T$) and unimodal visual cases ($V$), but not for the incongruent ($V \neq T$).
+
+\Cite{RSE_FBI} proposes a plausible explanation for the absence of a difference in the RSE between congruent and incongruent conditions. It suggests that the mere simultaneous occurrence of visual and vibrotactile stimuli might suffice to result in multisensory integration, irrespective of whether these multisensory stimuli are functionally linked at a higher level or not (e.g., touch in the hand holding the ball). An alternative explanation could be that the discrepancy observed in the incongruent case is so marginal that the statistical power of the present study might not be sufficient to detect it significantly.
+
+Regarding the power of the study, one conclusion is that, due to considerations of ecological validity, each trial in our IVR study spans a longer time frame compared to traditional psychophysics experiments (with a mean duration of 3400 ms as opposed to the typical 200 ms). This extended duration contributes to increased variance and skewness in response times (RT). Moreover, according to the literature, the influence of the cardiac cycle on stimuli ranges from 10 to 40 ms, posing a challenge when investigating its effects in IVR environments. Consequently, the statistical power of future research needs to be increased threefold, considering, for instance, involving 60 participants, especially if an additional condition related to heart cycles is to be included in the analysis.
+
+
+
 
 %-------- CREATING BIBLIOGRAPHY
 
 %\bibliographystyle{plain} % Choose your style
 %\bibliography{bibliog.bib}  % Use your actual .bib file name
 
+\newpage
 \section*{Supplement}
     \begin{figure}[H]
         \centering
@@ -263,9 +307,9 @@ A mixed linear model analysis was conducted to assess the impact of feedback typ
         \caption{Results: Virtual Reality Subjective Evaluation Questionnaire}
         \label{fig:quest}
     \end{figure}
-  
-
 \pagebreak
+
+
 \paragraph{\textbf{References}}
 \printbibliography[heading=none]
 
