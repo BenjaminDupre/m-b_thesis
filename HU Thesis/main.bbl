@@ -912,6 +912,61 @@
       \endverb
       \keyw{interoception,multisensory integration,body-brain interactions,cardiac cycle,perception}
     \endentry
+    \entry{Sandman1977-li}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=f10b50982f24b50bf184dce8906d5e76}{%
+           family={Sandman},
+           familyi={S\bibinitperiod},
+           given={C\bibnamedelima A},
+           giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=93fbba1ec66b1789537a603a3a2dfe6c}{%
+           family={McCanne},
+           familyi={M\bibinitperiod},
+           given={T\bibnamedelima R},
+           giveni={T\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=aa190d4a157588a0d7597a8637d5e133}{%
+           family={Kaiser},
+           familyi={K\bibinitperiod},
+           given={D\bibnamedelima N},
+           giveni={D\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8895c9ba93cf24f5aa45fef9a46d06cd}{%
+           family={Diamond},
+           familyi={D\bibinitperiod},
+           given={B},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {United States}%
+      }
+      \strng{namehash}{ad3e40b3ed9b07c9b66eed9a1f76a3fb}
+      \strng{fullhash}{7088b953af84bc82c7a57ff55659689c}
+      \strng{bibnamehash}{ad3e40b3ed9b07c9b66eed9a1f76a3fb}
+      \strng{authorbibnamehash}{ad3e40b3ed9b07c9b66eed9a1f76a3fb}
+      \strng{authornamehash}{ad3e40b3ed9b07c9b66eed9a1f76a3fb}
+      \strng{authorfullhash}{7088b953af84bc82c7a57ff55659689c}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Twenty-six subjects were tested with a tachistoscopic recognition task while heart rate and several other autonomic indexes were monitored. In Experiment 1, heart rate was employed as an independent variable, and stimulus presentation was contingent upon the presence of individually determined low, middle, and high heart rates. The results indicated that low heart rate facilitated performance especially for stimuli presented at the fastest exposure. In Experiment 2, stimulus presentation was dependent upon cardiac phase. The findings indicated that stimulus recognition was enhanced during the cardiac P wave, but the effect was apparent only during the fastest exposure. Multiple regression analyses of the individual subject's data during both experiments indicated that highly idiosyncratic patterns of physiological responses predicted perceptual performance. The results were interpreted as being consistent with the formulations of the Laceys and also suggested that cerebral perfusion be considered as a relevant determinant of behavior.}
+      \field{journaltitle}{J Comp Physiol Psychol}
+      \field{month}{2}
+      \field{number}{1}
+      \field{title}{Heart rate and cardiac phase influences on visual perception}
+      \field{volume}{91}
+      \field{year}{1977}
+      \field{pages}{189\bibrangedash 202}
+      \range{pages}{14}
+    \endentry
     \entry{schmuckler2001ecological}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=cbec6a652df2b7be1485282ec81464a4}{%
