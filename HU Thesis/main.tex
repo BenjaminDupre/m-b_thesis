@@ -96,7 +96,9 @@ These proposed explanations are a start. There's a need to bridge the gap not on
 
 A tool that could facilitate ecological validity is Immersive Virtual Reality (IVR). IVR, known for its effectiveness in studying cognitive processes within controlled yet complex scenarios, traditionally relies on visual displays and head-hand movement tracking. We proposed a setup using VR head-mounted displays with Electrocardiogram (ECG) and haptic devices. However, the integration of these devices presents new challenges, both practical and technical, as well as in terms of alignment with existing literature \parencite{Klotzsche2023}.
 
-As I will detail in the following section, I expect to mimic existing literature using the described set-up.  the Redundancy Signal Effect (RSE) and Race Model Inequality (RMI) observations using IVR. This endeavor aims to validate an experimental VR setup under these conditions and extend two lines of research: multisensory integration and the influence of cardiac cycles cognition. Ultimately, this research aims to leverage Virtual Reality to bridge the gap between psychophysics findings and everyday experiences.
+As I will detail in the following section, my objective is to mimic the findings from existing literature on the redundancy signal effect (RSE) and race model inequality (RMI), albeit employing IVR methods. In sensory modality testing, redundant signal effects refers too how individuals repond faster to redundant sensory signals compared to unisensory signals. One proposed explanation to the RSE model is race models inequality which suggest that evidence for each signal is accumulated separately by parallel decision units (e.g. one for audition and one for vision) and that the first unit to reach its threshold triggers a response.
+
+This endeavor aims to validate an experimental VR setup under these conditions and extend two lines of research: multisensory integration and the influence of cardiac cycles cognition. Ultimately, this research aims to leverage Virtual Reality to bridge the gap between psychophysics findings and everyday experiences.
 
 \subsection*{1.2 Research Topic \& Aim}
 
@@ -175,8 +177,12 @@ The IVR Memory-Motor Task comprised the following steps:
     
     \item[\textbf{c.}] Participants viewed a two-dimensional sketch (Figure \ref{fig:looks} (c)) displayed in the virtual environment, prompting them to memorize the red ball's position. During this phase, participants kept their virtual hands open with palms facing up.
     
-    \item[\textbf{d.}] The sketch disappeared, and a red ball appeared from the top, landing in either of the participant's hands. Participants then observed a template on the table, resembling the initial sketch they memorized. Their task was to place the ball in the correct location on the template as swiftly as possible.
+    \item[\textbf{d.}] The sketch disappeared, and a red ball appeared from the top, landing in either lef or right hand of the participants. As son as the ball visually touch the hand the vibration in the glove started. The vibration could match the visual location redball or not. For example, the ball in left hand vibrating glove in left hand (congruent condtion). Or ball in left hand vibration in right hand (incongruent condition). 
+    
+    Participants then observed a template on the table, resembling the initial sketch they memorized. Their task was to place the ball in the correct location on the template as swiftly as possible.
+
     \item[\textbf{e.}] After the ball is place in the template the ball and template dissapear. The complete process from a to d start again for 3 sets of 36 times. 
+    
 \end{enumerate}
 
 \begin{figure}[!ht]
@@ -248,7 +254,7 @@ Overall, participants reported increased immersion and enjoyment as a result of 
 
 First, I examined the mistake rates in ball placement per condition to ensure they did not significantly affect the experiment. The mistake rates were as follows: visual-only condition ($V$) - $6.35\%$ ($\pm 0.99\%$, SEM); visual incongruent touch condition ($V \neq T$) - $5.79\%$ ($\pm 0.59\%$); visual congruent touch condition ($V=T$) - $6.91\%$ ($\pm 1.93\%$). However, a one-way ANOVA (feedback type) showed no significant effects ($ F \leq 0.08$, $p \geq 0.91$). Despite the task's complexity beyond mere stimulus recognition, these mistake rates remained notably low and were not further analyzed.
 
-To investigate whether the experimental manipulations mirrored the diversity of Redundancy Signal Effect (RSE) studies, I conducted a one-way repeated-measures ANOVA. Employing the aforementioned transformations, the test revealed a significant main effect for stimulus ($F(2,38) = 3.4$, $p \leq 0.043$, $\eta p^2 = 0.15$). The median response time for the 'Congruent' condition ($V=T$) was the fastest ($3236$ ms $\pm 456$ ms), followed by the 'Incongruent' ($V \neq T$) condition ($3268$ ms $\pm 470$), while the slowest was observed in the absence of haptic stimuli 'None' ($V$) ($3284$ ms $\pm 463$). Thus, the experimental conditions significantly influenced response times, as illustrated in Figure \ref{fig:error}.
+To investigate whether the experimental manipulations mirrored the well stablished result of Redundancy Signal Effect (RSE) studies, I conducted a one-way repeated-measures ANOVA. The test revealed a significant main effect for the stimulus ($F(2,38) = 3.4$, $p \leq 0.043$, $\eta p^2 = 0.15$). The median response time for the 'Congruent' condition ($V=T$) was the fastest ($3236$ ms $\pm 456$ ms), followed by the 'Incongruent' ($V \neq T$) condition ($3268$ ms $\pm 470$), while the slowest was observed in the absence of haptic stimuli 'None' ($V$) ($3284$ ms $\pm 463$). Thus, the experimental conditions significantly influenced response times, as illustrated in Figure \ref{fig:error}.
 
 \begin{figure}[!ht]
     \centering
@@ -261,9 +267,11 @@ To investigate whether the experimental manipulations mirrored the diversity of 
 
 However, post hoc Tukey HSD tests did not reveal any specific pairwise differences. While an overall difference among conditions was observed, specific pairwise differences were not identified.
 
-Given the absence of identified specific pairwise differences in the post hoc analysis, I conducted a more comprehensive investigation using a Generalized Linear Mixed Model (GLMM). While not employed in the referenced paper, this method offers numerous advantages in multilevel research designs. It addresses the issue stated by \textcite{Lo2015-fv}: 
+Given the absence of identified specific pairwise differences in the post hoc analysis, I conducted a more comprehensive investigation using a Generalized Linear Mixed Model (GLMM). While not employed in the referenced paper, this method offers numerous advantages in multilevel research designs. It addresses the following issue stated by \textcite{Lo2015-fv}: 
 
 "A linear relationship between the standard deviation of RTs and mean RT demonstrated in many previous studies of RT in binary choice tasks. This linear relationship is also evident in plots of the residuals, indicating heteroscedasticity in LMM analyses, characterized by an increasing spread in residuals for longer predicted RT."
+
+As I will delve into further in the Discussion section, this issue suggests that the statistical power required for tasks involving longer Immersive Virtual Reality (IVR) times needs to be significantly higher compared to psychophysical experimental setups. An alternative approach, as mentioned by the author, is to utilize GLMM.
 
 By using GLMM, instead of imposing normality and eliminating error deviation, we allow the use of distributions that match the properties of the measured RT \parencite{Lo2015-fv}. I utilized the \textit{statsmodels} statistical package in Python, specifically the \textit{mixedlm} function, similar to other studies \parencite{RSE_FBI}.
 
@@ -271,75 +279,75 @@ The mixed linear model analysis aimed to assess the impact of feedback types (($
 
 The model coefficient for the 'None' ($V$) feedback type ($\beta = 45.726, SE = 22.594, p = 0.043$) reached statistical significance at the conventional level ($\alpha =0.05 $) when compared to the 'Congruent' ($V=T$) feedback type. This suggests a significant difference in response times between the 'None' and 'Congruent' feedback types. The coefficient for the 'Incongruent' feedback type ($\beta = 32.975, SE = 22.686, p = 0.146$) did not reach conventional levels of significance.
 
-Thus, the 'Congruent' condition demonstrated significantly faster performance compared to the visual-only condition. This outcome aligns with the expected results according to the RSE. However, the findings present a mixed perspective. Despite this significant contrast, the more stringent post hoc Tukey HSD tests revealed no notable differences between pairwise conditions. Additionally, the GLMM indicated significance solely between the 'Congruent' and visual-only ($V=T$ - $V$) conditions and not between the 'Congruent' and 'Incongruent' conditions ($V=T$ - $V \neq T$). To understand if this mixed results are due to the irrelevancy of the 'Incongruent' condition ($V \neq T$) or the result of changed behavior over time, we can investigate the CDF graph.
+Thus, the 'Congruent' condition demonstrated significantly faster performance compared to the visual-only condition. This outcome aligns with the expected results according to the RSE. However, the findings present a mixed perspective. Despite this significant contrast, the more stringent post hoc Tukey HSD tests revealed no notable differences between pairwise conditions. Additionally, the GLMM indicated significance solely between the 'Congruent' and visual-only ($V=T$ - $V$) conditions and not between the 'Congruent' and 'Incongruent' conditions ($V=T$ - $V \neq T$). To understand if this mixed results are due to the irrelevancy of the 'Incongruent' condition ($V \neq T$) or the result of changed behavior over time, we can investigate the looking at our CDF analysis.
 
-\subsubsection*{3.2.2 Redundancy Signal Effect and Multisensory Integration}
+\subsubsection*{3.2.2 Race Model Inequeality}
 
-As mention in the methods section, the experiment does not allow for a full test of the RMI, but for a partial test of the RSE. This becuase there is not single modality for tactile sense in the experiental set-up. We already saw that the General Performance showed a partial respect the RSE. Only between the congruent and the visual-only conditions. No significant results were found between the incongruent and the visual only condition. The same results replicated for this approach. 
+As already mentioned in the methods section, the experiment does not allow for a full test of the RMI, since originally the experiment did not consider tactile only condition. However, I will use the CDF from the model, assess the significance of their differences, and establish comparisons among the three experimental conditions. We observed that the overall performance partially adhered to the RSE, notably between the 'Congruent' and visual-only ($V=T$ ; $V$) conditions, but no significant differences emerged between the 'Congruent' and 'Incongruent' conditions ($V=T$ ; $V \neq T$). 
 
-There is at period between between the firs 80 ms were the differences between single modal answer and bimodal stimuli are signiticatn, but also not for the incongurent case ($V \neq T$). for the rest of the time cummulative distribution differences are not significant across participants. 
+To mimic the results from \Cite{SALTAFOSSI2023108642}, I conducted a series of t-tests using individual participant data for the Gx, Gy, and Gz values at each percentile level. Rather than examining areas under the curve, I focused on the raw values of Gx, Gy, and Gz. Furthermore, instead of emphasizing time bins, I opted to discuss percentile levels, given the differing time ranges compared to traditional RMI literature. 
 
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=12cm]{/home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/CDF.png}
-    \captionsetup{justification=justified, margin={2cm,2cm}, font={small}}
-    \caption{ (a.) Displays the 10 estimated percentile points for each of the three functions of interest: Gx, Gy, Gz, considering all participants. (b.) Is a zoom in the first 200 ms. Acording to the RSE, the visual $V$ type should be under Gy, Gz at all moments. Our data shows that is not the case for the RT in the first 200 ms.}
-    \label{fig:CDF}
-\end{figure}
-
-In figure \ref{fig:CDF} we can see the RT distributions for all three conditions. With a second panel looking into more detail for the first 200 ms of reponse. First given the results in the first half I will test if th differences observed between Gx (CDF for visual-only condition) and Gz (CDF for Congruent condition) obtained for every participant, are significant overall for each Percentile estimation. When runnnig a paired one-sided t-test the difference  was significant for:
-
-
+When comparing differences between Gx and Gy ($V$ ; $V \neq T$), no significant p-values were found for any percentile. The results between Gx and Gz ($V$; $V=T$) are presented in Table \ref{tab:response-time-range}. This table illustrates the results for all time frames and percentiles. Notably, significant differences emerged between Gx and Gy from percentile 16 onwards. Interestingly, for this percentile (as depicted in Figure \ref{fig:CDF}), the single modality visual ($V$) appears to be faster than the bimodal incongruent condition ($V \neq T$), suggesting a potential violation of the RSE. Conversely, subsequent results align with our expectations from the RSE. It's essential to note that when considering the distribution of all response times, the highest density is observed between 3100 and 3200 ms, encompassing over one-third of all answered trials.
+ 
 \begin{table}[!ht]
     \centering
     \begin{tabular}{ccccc}
     \hline
-    \textbf{Response Time Range (ms)} & \textbf{Difference RT (ms)} & \textbf{Percentile Estimation} & \textbf{T-value} & \textbf{p-value} \\ \hline
-    (3070, 3621) & 551 & 0.1  & 1.19 & 0.12 \\
-    (3078, 3626) & 548 & 0.13 & 1.31 & 0.1  \\
-    (3084, 3648) & 564 & 0.16 & 1.88 & 0.04* \\
-    (3086, 3687) & 600 & 0.19 & 2.04 & 0.03* \\
-    (3087, 3708) & 621 & 0.2  & 2.01 & 0.03* \\
-    (3092, 3748) & 656 & 0.23 & 1.97 & 0.03* \\
-    (3094, 3760) & 665 & 0.26 & 2.06 & 0.03* \\
-    (3098, 3766) & 668 & 0.29 & 2.03 & 0.03* \\
-    (3099, 3768) & 668 & 0.3  & 2.02 & 0.03* \\
-    (3104, 3814) & 709 & 0.33 & 2.11 & 0.02* \\
-    (3106, 3838) & 732 & 0.36 & 2.08 & 0.03* \\
-    (3111, 3846) & 735 & 0.39 & 1.83 & 0.04* \\
-    (3114, 3848) & 734 & 0.4  & 1.79 & 0.04* \\
-    (3119, 3861) & 741 & 0.43 & 1.74 & 0.05* \\
-    (3121, 3907) & 786 & 0.46 & 1.55 & 0.07  \\
-    (3123, 3969) & 846 & 0.49 & 1.36 & 0.09  \\
-    (3124, 3978) & 855 & 0.5  & 1.33 & 0.1   \\
-    (3130, 4171) & 1041 & 0.6  & 1.25 & 0.11  \\
-    (3141, 4352) & 1211 & 0.7  & 1.21 & 0.12  \\
-    (3153, 4645) & 1492 & 0.8  & 1.47 & 0.08  \\
-    (3176, 4948) & 1772 & 0.9  & 0.53 & 0.3   \\ \hline
+    \textbf{Gx Time Range (ms)} & \textbf{Gx Min Max Diff (ms)} & \textbf{Percentile Estimation} & \textbf{T-value} & \textbf{p-value} \\ \hline
+    (3070, 3621) & 551 & 10  & 1.19 & 0.12 \\
+    (3078, 3626) & 548 & 13 & 1.31 & 0.1  \\
+    (3084, 3648) & 564 & 16 & 1.88 & 0.04* \\
+    (3086, 3687) & 600 & 19 & 2.04 & 0.03* \\
+    (3087, 3708) & 621 & 20  & 2.01 & 0.03* \\
+    (3092, 3748) & 656 & 23 & 1.97 & 0.03* \\
+    (3094, 3760) & 665 & 26 & 2.06 & 0.03* \\
+    (3098, 3766) & 668 & 29 & 2.03 & 0.03* \\
+    (3099, 3768) & 668 & 30  & 2.02 & 0.03* \\
+    (3104, 3814) & 709 & 33 & 2.11 & 0.02* \\
+    (3106, 3838) & 732 & 36 & 2.08 & 0.03* \\
+    (3111, 3846) & 735 & 39 & 1.83 & 0.04* \\
+    (3114, 3848) & 734 & 40  & 1.79 & 0.04* \\
+    (3119, 3861) & 741 & 43 & 1.74 & 0.05* \\
+    (3121, 3907) & 786 & 46 & 1.55 & 0.07  \\
+    (3123, 3969) & 846 & 49 & 1.36 & 0.09  \\
+    (3124, 3978) & 855 & 50  & 1.33 & 0.1   \\
+    (3130, 4171) & 1041 & 60  & 1.25 & 0.11  \\
+    (3141, 4352) & 1211 & 70  & 1.21 & 0.12  \\
+    (3153, 4645) & 1492 & 80  & 1.47 & 0.08  \\
+    (3176, 4948) & 1772 & 90 & 0.53 & 0.3   \\ \hline
     \end{tabular}
     \captionsetup{justification=justified, margin={2cm,2cm}, font={small}}
-    \caption{Response Time Range (ms), Difference RT (ms), Percentile Estimation, T-value, and p-value for each Percentile using the results of t-tests. * indicates significant p-values.}
+    \caption{T-test results between Gx \& and Gz conditions. Response Time Range (ms), Difference RT (ms), Percentile Estimation, T-value, and p-value for each Percentile using the results of t-tests. * indicates significant p-values.}
     \label{tab:response-time-range}
 \end{table}
 
 
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=15cm]{/home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/CDF.png}
+    \captionsetup{justification=justified, margin={2cm,2cm}, font={small}}
+    \caption{ (a.) Displays the 10 estimated percentile points for each of the three functions of interest: Gx, Gy, Gz, considering all participants. (b.) Is a zoom in the first 100 ms. Acording to the RSE, the visual $V$ type should be under Gy, Gz at all moments. Our data shows that is not the case for the RT in the first 200 ms.}
+    \label{fig:CDF}
+\end{figure}
 
 
-
-    
-
-\pagebreak
 \section*{4. Discussion}
 
 This thesis aimed to test the feasibility of using IVR for studying heart-cycle modulation and bridging the existing gap between cognitive and psychophysical research. To achieve this goal, the thesis employed an IVR memory task wherein participants were tasked with remembering a location and immediately placing a red ball over this location in a 3D template. The study utilized a within-subject experimental design with three categories: congruent visual-tactile stimuli, incongruent visual-tactile stimuli, and visual-only stimuli. Reaction Time (RT) and Accuracy were the measured parameters.
 
-To build the comparison, I followed the steps outlined in my reference studies \parencite{Innes2019ACA, SALTAFOSSI2023108642, Ulrich2007}. Again is important to mention that there is only one single modality stimuli ($V$), thus limits the RMI comparisons. The initial step involved testing the validity of stimulus construction by analyzing and modeling reaction times to uni-modal and bi-modal stimuli. My results indicated that responses to multisensory pairs ($V=T$), ($V \neq T$) were faster than those to unimodal stimuli ($V$). This observation in VR mirrors the redundant signal effect, suggesting that redundant conditions (two sensory signals) elicit quicker reaction times compared to the single sensory condition \parencite*{SALTAFOSSI2023108642}.
+To build the comparison, I followed the steps outlined in my reference study \parencite{Innes2019ACA, SALTAFOSSI2023108642, Ulrich2007}. Again, it is important to mention that there is only one single modality stimuli ($V$) and this limits posibilities of the RMI comparisons. 
 
-There were, however, mixed results in significance for the incongruent case ($V \neq T$). When attempting to identify pairwise differences through a Tukey HSD test, no significant differences were found. Subsequently, running a GLMM confirmed a difference between the congruent ($V=T$) and unimodal visual cases ($V$), but not for the incongruent ($V \neq T$).
+The initial step involved testing the validity of stimulus construction by analyzing and modeling reaction times to uni-modal and bi-modal stimuli. Results were mixed. Overall there was a significat difference between the conditions.  When attempting to identify pairwise differences through a Tukey HSD test, no significant differences were found. Alternatively, when running a GLMM a siginifican difference between visual only ($V$) and  visual-touch congruent ($V=T$) conditions was found. There were no singnificant differences betwen the incongruent ($V \neq T$) and the visual only ($V$) conditions. This results confirmed the well observed RSE in  virtual reality during a ball positioning task and raises questions over the incongruent condition. 
 
-\Cite{RSE_FBI} proposes a plausible explanation for the absence of a difference in the RSE between congruent and incongruent conditions. It suggests that the mere simultaneous occurrence of visual and vibrotactile stimuli might suffice to result in multisensory integration, irrespective of whether these multisensory stimuli are functionally linked at a higher level or not (e.g., touch in the hand holding the ball). An alternative explanation could be that the discrepancy observed in the incongruent case is so marginal that the statistical power of the present study might not be sufficient to detect it significantly.
+When looking at the RMI we see that the most found RT are located between 3100 ms and 3200 ms. With over one-third of all trials found in this 100 ms. Additionally, when performing a t-tes for all participant the cummulative functions for each condition Gx and Gz values are found significantly different also for this 100 ms period and not before or after. It is important to notice that altough it was not significatn the difference between Gx and Gy, for this period of 100 ms we can describe a potential violation of the RSE principal were a bimodal condition ($V \neq T$) was slower than a unimodal condition ($V$). 
 
-Regarding the power of the study, one conclusion is that, due to considerations of ecological validity, each trial in our IVR study spans a longer time frame compared to traditional psychophysics experiments (with a mean duration of 3400 ms as opposed to the typical 200 ms). This extended duration contributes to increased variance and skewness in response times (RT). Moreover, according to the literature, the influence of the cardiac cycle on stimuli ranges from 10 to 40 ms, posing a challenge when investigating its effects in IVR environments. Consequently, the statistical power of future research needs to be increased threefold, considering, for instance, involving 60 participants, especially if an additional condition related to heart cycles is to be included in the analysis.
+Also descriptively, we can see that the same relation between the visual only ($V$) and the congruent condition ($V=T$) holds throughout the whole range of RT. That is, in accordance with the RSE. That is not the case for RT between the incongruent condition and the visual only condition were the visual only condition is faster than the incongruent condition ($V \neq T$) for the first 100 ms of the trial. In violation of the RSE. Later, the incongruent condition is faster that the unimodal visual only condition; in accordance to what we would expect with RSE. 
+
+\Cite{RSE_FBI} proposes a plausible explanation for the absence of a difference in the RSE between congruent and incongruent conditions. It suggests that the mere simultaneous occurrence of visual and vibrotactile stimuli might suffice to result in multisensory integration, irrespective of whether these multisensory stimuli are functionally linked at a higher level or not (e.g., touch in the hand holding the ball). 
+
+An alternative explanation may have to due with context invariance assumption, which states that the processing of one signal is not affected by another.
+
+I believe the discrepancy observed in the incongruent case is so marginal that the statistical power of the present study might not be sufficient to detect it significantly. Regarding the power of the study, one conclusion is that, due to considerations of ecological validity, each trial in our IVR study spans a longer time frame compared to traditional psychophysics experiments (with a mean duration of 3400 ms as opposed to the typical 200 ms). This extended duration contributes to increased variance and skewness in response times (RT). Moreover, according to the literature, the influence of the cardiac cycle on stimuli ranges from 10 to 40 ms, posing a challenge when investigating its effects in IVR environments. Consequently, the statistical power of future research needs to be increased threefold, considering, for instance, involving 60 participants, especially if an additional condition related to heart cycles is to be included in the analysis.
 
 
 \newpage
