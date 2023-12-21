@@ -228,6 +228,36 @@
       \verb https://doi.org/10.1371/journal.pcbi.1010490
       \endverb
     \endentry
+    \entry{Barlow2012PossiblePU}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b3a0e1615a7f454a572d574eec1060e3}{%
+           family={Barlow},
+           familyi={B\bibinitperiod},
+           given={H.\bibnamedelimi B.},
+           giveni={H\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b3a0e1615a7f454a572d574eec1060e3}
+      \strng{fullhash}{b3a0e1615a7f454a572d574eec1060e3}
+      \strng{bibnamehash}{b3a0e1615a7f454a572d574eec1060e3}
+      \strng{authorbibnamehash}{b3a0e1615a7f454a572d574eec1060e3}
+      \strng{authornamehash}{b3a0e1615a7f454a572d574eec1060e3}
+      \strng{authorfullhash}{b3a0e1615a7f454a572d574eec1060e3}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Possible Principles Underlying the Transformations of Sensory Messages}
+      \field{year}{2012}
+      \verb{urlraw}
+      \verb https://api.semanticscholar.org/CorpusID:59790818
+      \endverb
+      \verb{url}
+      \verb https://api.semanticscholar.org/CorpusID:59790818
+      \endverb
+    \endentry
     \entry{GalvezPol2018ActiveSI}{article}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=0f9d2f5d2930275902961f11a0e7e61b}{%
@@ -715,6 +745,37 @@
       \range{pages}{3}
       \verb{doi}
       \verb 10.1109/SPMB55497.2022.10014819
+      \endverb
+    \endentry
+    \entry{Morten2021}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=445a3a772861ccdcdfac64aa860d2a12}{%
+           family={Morten\bibnamedelimb L\bibnamedelima Kringelbach},
+           familyi={M\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim K\bibinitperiod},
+           given={Gustavo\bibnamedelima Deco},
+           giveni={G\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{445a3a772861ccdcdfac64aa860d2a12}
+      \strng{fullhash}{445a3a772861ccdcdfac64aa860d2a12}
+      \strng{bibnamehash}{445a3a772861ccdcdfac64aa860d2a12}
+      \strng{authorbibnamehash}{445a3a772861ccdcdfac64aa860d2a12}
+      \strng{authornamehash}{445a3a772861ccdcdfac64aa860d2a12}
+      \strng{authorfullhash}{445a3a772861ccdcdfac64aa860d2a12}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Aeons}
+      \field{title}{The Brain Has a Team of Conductors Orchestrating Consciousness}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://psyche.co/ideas/the-brain-has-a-team-of-conductors-orchestrating-consciousness
+      \endverb
+      \verb{url}
+      \verb https://psyche.co/ideas/the-brain-has-a-team-of-conductors-orchestrating-consciousness
       \endverb
     \endentry
     \entry{motyka}{article}{}
