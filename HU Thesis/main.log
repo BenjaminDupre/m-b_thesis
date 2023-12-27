@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.10.25)  27 DEC 2023 18:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.10.25)  27 DEC 2023 19:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -713,64 +713,67 @@ Overfull \hbox (13.01964pt too wide) in paragraph at lines 90--91
  []
 
 [2] [3]
-Overfull \hbox (5.32375pt too wide) in paragraph at lines 118--119
+Overfull \hbox (5.32375pt too wide) in paragraph at lines 124--125
 \T1/phv/m/n/12 task, this study repli-cates the prin-ci-pal ob-ser-va-tions de-lin-eated in the ref-er-enced work by Saltafossi
  []
 
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 13.67995pt on input line 123.
+(Font)              scaled to size 13.67995pt on input line 129.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 13.67995pt on input line 123.
-</home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/participants.png, id=90, 698.8509pt x 311.4837pt>
+(Font)              scaled to size 13.67995pt on input line 129.
+</home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/participants.png, id=83, 698.8509pt x 311.4837pt>
 File: /home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/participants.png Graphic file (type png)
 <use /home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/participants.png>
-Package pdftex.def Info: /home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/participants.png  used on input line 128.
+Package pdftex.def Info: /home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/participants.png  used on input line 134.
 (pdftex.def)             Requested size: 341.43306pt x 152.17682pt.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 10.40245pt on input line 130.
-[4 </home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/participants.png>] [5] [6]
-</home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/design_ilustration.png, id=128, 716.6775pt x 446.66875pt>
+(Font)              scaled to size 10.40245pt on input line 136.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4] [5 </home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/participants.png>] [6]
+</home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/design_ilustration.png, id=124, 716.6775pt x 446.66875pt>
 File: /home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/design_ilustration.png Graphic file (type png)
 <use /home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/design_ilustration.png>
-Package pdftex.def Info: /home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/design_ilustration.png  used on input line 193.
+Package pdftex.def Info: /home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/design_ilustration.png  used on input line 199.
 (pdftex.def)             Requested size: 426.79134pt x 265.99951pt.
  [7]
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 5.69998pt on input line 224.
+(Font)              scaled to size 5.69998pt on input line 230.
  [8 </home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/design_ilustration.png>] [9] [10]
-</home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/bar_erros_bars_stimulus_constructions.png, id=179, 855.6768pt x 277.5168pt>
+</home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/bar_erros_bars_stimulus_constructions.png, id=175, 855.6768pt x 277.5168pt>
 File: /home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/bar_erros_bars_stimulus_constructions.png Graphic file (type png)
 <use /home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/bar_erros_bars_stimulus_constructions.png>
-Package pdftex.def Info: /home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/bar_erros_bars_stimulus_constructions.png  used on input line 264.
+Package pdftex.def Info: /home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/bar_erros_bars_stimulus_constructions.png  used on input line 270.
 (pdftex.def)             Requested size: 341.43306pt x 110.73373pt.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 279.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 285.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 11.39996pt on input line 279.
+(Font)              scaled to size 11.39996pt on input line 285.
  [11 </home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/bar_erros_bars_stimulus_constructions.png>]
-</home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/CDF.png, id=196, 1000.2168pt x 633.8079pt>
+</home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/CDF.png, id=192, 1000.2168pt x 633.8079pt>
 File: /home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/CDF.png Graphic file (type png)
 <use /home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/CDF.png>
-Package pdftex.def Info: /home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/CDF.png  used on input line 330.
+Package pdftex.def Info: /home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/CDF.png  used on input line 336.
 (pdftex.def)             Requested size: 426.79134pt x 270.44313pt.
  [12] [13] [14 </home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/CDF.png>] [15]
-</home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/questionaire_fig.png, id=223, 1657.1511pt x 705.3552pt>
+</home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/questionaire_fig.png, id=219, 1657.1511pt x 705.3552pt>
 File: /home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/questionaire_fig.png Graphic file (type png)
 <use /home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/questionaire_fig.png>
-Package pdftex.def Info: /home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/questionaire_fig.png  used on input line 361.
+Package pdftex.def Info: /home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/questionaire_fig.png  used on input line 367.
 (pdftex.def)             Requested size: 1657.14705pt x 705.35347pt.
  [16 </home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/questionaire_fig.png>]
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 372.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 378.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 9.49997pt on input line 372.
+(Font)              scaled to size 9.49997pt on input line 378.
 LaTeX Font Info:    Font shape `T1/phv/m/sc' will be
-(Font)              scaled to size 9.49997pt on input line 372.
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 372.
+(Font)              scaled to size 9.49997pt on input line 378.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 378.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-Overfull \hbox (25.79654pt too wide) in paragraph at lines 372--372
+Overfull \hbox (25.79654pt too wide) in paragraph at lines 378--378
 \T1/phv/m/n/10 Sick-ness''. In: \T1/phv/m/sl/10 The In-ter-na-tional Jour-nal of Avi-a-tion Psy-chol-ogy \T1/phv/m/n/10 3.3, pp. 203^^U220. \T1/phv/m/sc/10 doi\T1/phv/m/n/10 : [][]$\T1/cmtt/m/n/10 10 . 1207 / s15327108ijap0303 \
  []
 
@@ -787,18 +790,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 20239 strings out of 478287
- 356942 string characters out of 5849288
- 1071665 words of memory out of 5000000
+ 20238 strings out of 478287
+ 356931 string characters out of 5849288
+ 1071618 words of memory out of 5000000
  38092 multiletter control sequences out of 15000+600000
  519826 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,8n,77p,2002b,1652s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (20 pages, 1308281 bytes).
+Output written on main.pdf (20 pages, 1308607 bytes).
 PDF statistics:
- 378 PDF objects out of 1000 (max. 8388607)
- 317 compressed objects within 4 object streams
- 95 named destinations out of 1000 (max. 500000)
+ 376 PDF objects out of 1000 (max. 8388607)
+ 315 compressed objects within 4 object streams
+ 94 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
