@@ -302,7 +302,7 @@
       \verb https://api.semanticscholar.org/CorpusID:91565050
       \endverb
     \endentry
-    \entry{Garfinkel2013-st}{article}{}
+    \entry{Garfinkel2013-cy}{article}{}
       \name{author}{6}{}{%
         {{un=0,uniquepart=base,hash=700c95e054106318cecb4a12ebc8545a}{%
            family={Garfinkel},
@@ -890,6 +890,74 @@
       \verb https://www.biorxiv.org/content/early/2023/01/23/2023.01.23.525140
       \endverb
     \endentry
+    \entry{Kunzendorf2019-vz}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=12b890155b546a9989c37ab1cedd9aa6}{%
+           family={Kunzendorf},
+           familyi={K\bibinitperiod},
+           given={Stella},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=58f264448396164014fef8fe17c60219}{%
+           family={Klotzsche},
+           familyi={K\bibinitperiod},
+           given={Felix},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=36582c374719e77d582848ef6e14c20f}{%
+           family={Akbal},
+           familyi={A\bibinitperiod},
+           given={Mert},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c613692fc550ace0a952f7e3556e3ae8}{%
+           family={Villringer},
+           familyi={V\bibinitperiod},
+           given={Arno},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5da9b7cf581eed12754fd722455ea767}{%
+           family={Ohl},
+           familyi={O\bibinitperiod},
+           given={Sven},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f00128c3ab6c8d147c00d96e93f2c331}{%
+           family={Gaebler},
+           familyi={G\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {United States}%
+      }
+      \strng{namehash}{d8930601a6cefd302b735caeb2c5fa2d}
+      \strng{fullhash}{58703af35766528b1376e1d6a44db25b}
+      \strng{bibnamehash}{d8930601a6cefd302b735caeb2c5fa2d}
+      \strng{authorbibnamehash}{d8930601a6cefd302b735caeb2c5fa2d}
+      \strng{authornamehash}{d8930601a6cefd302b735caeb2c5fa2d}
+      \strng{authorfullhash}{58703af35766528b1376e1d6a44db25b}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Perception and cognition oscillate with fluctuating bodily states. For example, visual processing has been shown to change with alternating cardiac phases. Here, we study the heartbeat's role for active information sampling-testing whether humans implicitly act upon their environment so that relevant signals appear during preferred cardiac phases. During the encoding period of a visual memory experiment, participants clicked through a set of emotional pictures to memorize them for a later recognition test. By self-paced key press, they actively prompted the onset of short (100 ms) presented pictures. Simultaneously recorded electrocardiograms allowed us to analyze the self-initiated picture onsets relative to the heartbeat. We find that self-initiated picture onsets vary across the cardiac cycle, showing an increase during cardiac systole, while memory performance was not affected by the heartbeat. We conclude that active information sampling integrates heart-related signals, thereby extending previous findings on the association between body-brain interactions and behavior.}
+      \field{journaltitle}{Psychophysiology}
+      \field{month}{1}
+      \field{number}{5}
+      \field{title}{Active information sampling varies across the cardiac cycle}
+      \field{volume}{56}
+      \field{year}{2019}
+      \field{pages}{e13322}
+      \range{pages}{-1}
+      \keyw{cardiovascular; emotion; interoception; memory; sensation/perception; young adults}
+    \endentry
     \entry{Lo2015-fv}{article}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=6f809c9c0d1b5e4221c1d1fe48daf062}{%
@@ -1085,64 +1153,57 @@
       \endverb
       \keyw{cardiac cycle,heart rate,interoception,perceptual awareness,somatosensory perception}
     \endentry
-    \entry{Park2014}{article}{}
-      \name{author}{4}{}{%
-        {{un=0,uniquepart=base,hash=6d6cab37676c227ad30b8ba1ad16ca48}{%
-           family={Park},
-           familyi={P\bibinitperiod},
-           given={Hyeong-Dong},
-           giveni={H\bibinithyphendelim D\bibinitperiod},
+    \entry{NASTASE2020117254}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=44b7414110af6e1cf597419b4e6ff95c}{%
+           family={Nastase},
+           familyi={N\bibinitperiod},
+           given={Samuel\bibnamedelima A.},
+           giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=e6f6d253cf02f61d4d627b11f4718b01}{%
-           family={Correia},
-           familyi={C\bibinitperiod},
-           given={Stéphanie},
-           giveni={S\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=b6351941bff4a7abe9aaccda429ce8cd}{%
-           family={Ducorps},
-           familyi={D\bibinitperiod},
-           given={Antoine},
+        {{un=0,uniquepart=base,hash=3ddec04bc21069542450ec83e7db6766}{%
+           family={Goldstein},
+           familyi={G\bibinitperiod},
+           given={Ariel},
            giveni={A\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=9d0ec128f4414c4ed5467bd461926c06}{%
-           family={Tallon-Baudry},
-           familyi={T\bibinithyphendelim B\bibinitperiod},
-           given={Catherine},
-           giveni={C\bibinitperiod},
+        {{un=0,uniquepart=base,hash=9f8290b0c59d4aba9138f55107a580cd}{%
+           family={Hasson},
+           familyi={H\bibinitperiod},
+           given={Uri},
+           giveni={U\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{b064ebfefb305f7c3842c39db0327902}
-      \strng{fullhash}{cb1442ae542e00645eb75d2c3568ae50}
-      \strng{bibnamehash}{b064ebfefb305f7c3842c39db0327902}
-      \strng{authorbibnamehash}{b064ebfefb305f7c3842c39db0327902}
-      \strng{authornamehash}{b064ebfefb305f7c3842c39db0327902}
-      \strng{authorfullhash}{cb1442ae542e00645eb75d2c3568ae50}
-      \field{sortinit}{P}
-      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \strng{namehash}{9e90476d1400f17f5a87a2d66285f0df}
+      \strng{fullhash}{9e90476d1400f17f5a87a2d66285f0df}
+      \strng{bibnamehash}{9e90476d1400f17f5a87a2d66285f0df}
+      \strng{authorbibnamehash}{9e90476d1400f17f5a87a2d66285f0df}
+      \strng{authornamehash}{9e90476d1400f17f5a87a2d66285f0df}
+      \strng{authorfullhash}{9e90476d1400f17f5a87a2d66285f0df}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Here, using magnetoencephalography, the authors show that in humans, neural events locked to heartbeats before stimulus onset predict the detection of a faint visual grating in the posterior right inferior parietal lobule and ventral anterior cingulate cortex, two regions with multiple functional correlates that belong to the same resting-state network.}
-      \field{issn}{1546-1726}
-      \field{journaltitle}{Nature Neuroscience}
-      \field{month}{4}
-      \field{number}{4}
-      \field{title}{Spontaneous fluctuations in neural responses to heartbeats predict visual detection}
-      \field{volume}{17}
-      \field{year}{2014}
-      \field{pages}{612\bibrangedash 618}
-      \range{pages}{7}
+      \field{abstract}{Naturalistic experimental paradigms in neuroimaging arose from a pressure to test the validity of models we derive from highly-controlled experiments in real-world contexts. In many cases, however, such efforts led to the realization that models developed under particular experimental manipulations failed to capture much variance outside the context of that manipulation. The critique of non-naturalistic experiments is not a recent development; it echoes a persistent and subversive thread in the history of modern psychology. The brain has evolved to guide behavior in a multidimensional world with many interacting variables. The assumption that artificially decoupling and manipulating these variables will lead to a satisfactory understanding of the brain may be untenable. We develop an argument for the primacy of naturalistic paradigms, and point to recent developments in machine learning as an example of the transformative power of relinquishing control. Naturalistic paradigms should not be deployed as an afterthought if we hope to build models of brain and behavior that extend beyond the laboratory into the real world.}
+      \field{issn}{1053-8119}
+      \field{journaltitle}{NeuroImage}
+      \field{title}{Keep it real: rethinking the primacy of experimental control in cognitive neuroscience}
+      \field{volume}{222}
+      \field{year}{2020}
+      \field{pages}{117254}
+      \range{pages}{1}
       \verb{doi}
-      \verb 10.1038/nn.3671
+      \verb https://doi.org/10.1016/j.neuroimage.2020.117254
       \endverb
       \verb{urlraw}
-      \verb https://doi.org/10.1038/nn.3671
+      \verb https://www.sciencedirect.com/science/article/pii/S1053811920307400
       \endverb
       \verb{url}
-      \verb https://doi.org/10.1038/nn.3671
+      \verb https://www.sciencedirect.com/science/article/pii/S1053811920307400
       \endverb
+      \keyw{Ecological psychology,Ecological validity,Experimental design,Generalizability,Naturalistic stimuli,Representative design}
     \endentry
     \entry{SALTAFOSSI2023108642}{article}{}
       \name{author}{5}{}{%
@@ -1206,61 +1267,6 @@
       \verb https://www.sciencedirect.com/science/article/pii/S0301051123001606
       \endverb
       \keyw{interoception,multisensory integration,body-brain interactions,cardiac cycle,perception}
-    \endentry
-    \entry{Sandman1977-li}{article}{}
-      \name{author}{4}{}{%
-        {{un=0,uniquepart=base,hash=f10b50982f24b50bf184dce8906d5e76}{%
-           family={Sandman},
-           familyi={S\bibinitperiod},
-           given={C\bibnamedelima A},
-           giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=93fbba1ec66b1789537a603a3a2dfe6c}{%
-           family={McCanne},
-           familyi={M\bibinitperiod},
-           given={T\bibnamedelima R},
-           giveni={T\bibinitperiod\bibinitdelim R\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=aa190d4a157588a0d7597a8637d5e133}{%
-           family={Kaiser},
-           familyi={K\bibinitperiod},
-           given={D\bibnamedelima N},
-           giveni={D\bibinitperiod\bibinitdelim N\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=8895c9ba93cf24f5aa45fef9a46d06cd}{%
-           family={Diamond},
-           familyi={D\bibinitperiod},
-           given={B},
-           giveni={B\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{language}{1}{%
-        {en}%
-      }
-      \list{location}{1}{%
-        {United States}%
-      }
-      \strng{namehash}{ad3e40b3ed9b07c9b66eed9a1f76a3fb}
-      \strng{fullhash}{7088b953af84bc82c7a57ff55659689c}
-      \strng{bibnamehash}{ad3e40b3ed9b07c9b66eed9a1f76a3fb}
-      \strng{authorbibnamehash}{ad3e40b3ed9b07c9b66eed9a1f76a3fb}
-      \strng{authornamehash}{ad3e40b3ed9b07c9b66eed9a1f76a3fb}
-      \strng{authorfullhash}{7088b953af84bc82c7a57ff55659689c}
-      \field{sortinit}{S}
-      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Twenty-six subjects were tested with a tachistoscopic recognition task while heart rate and several other autonomic indexes were monitored. In Experiment 1, heart rate was employed as an independent variable, and stimulus presentation was contingent upon the presence of individually determined low, middle, and high heart rates. The results indicated that low heart rate facilitated performance especially for stimuli presented at the fastest exposure. In Experiment 2, stimulus presentation was dependent upon cardiac phase. The findings indicated that stimulus recognition was enhanced during the cardiac P wave, but the effect was apparent only during the fastest exposure. Multiple regression analyses of the individual subject's data during both experiments indicated that highly idiosyncratic patterns of physiological responses predicted perceptual performance. The results were interpreted as being consistent with the formulations of the Laceys and also suggested that cerebral perfusion be considered as a relevant determinant of behavior.}
-      \field{journaltitle}{J Comp Physiol Psychol}
-      \field{month}{2}
-      \field{number}{1}
-      \field{title}{Heart rate and cardiac phase influences on visual perception}
-      \field{volume}{91}
-      \field{year}{1977}
-      \field{pages}{189\bibrangedash 202}
-      \range{pages}{14}
     \endentry
     \entry{schmuckler2001ecological}{article}{}
       \name{author}{1}{}{%
