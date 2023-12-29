@@ -890,6 +890,70 @@
       \verb https://www.biorxiv.org/content/early/2023/01/23/2023.01.23.525140
       \endverb
     \endentry
+    \entry{KRAKAUER2017480}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=cf675af16b372565d5a699077c9f6746}{%
+           family={Krakauer},
+           familyi={K\bibinitperiod},
+           given={John\bibnamedelima W.},
+           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d652c52b8dc4ee1a54a12bdc4046c33e}{%
+           family={Ghazanfar},
+           familyi={G\bibinitperiod},
+           given={Asif\bibnamedelima A.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2e620ba6f55b6d1876cae0fe04bb8bb9}{%
+           family={Gomez-Marin},
+           familyi={G\bibinithyphendelim M\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=825b95b572893cab19905d5e4667da6a}{%
+           family={MacIver},
+           familyi={M\bibinitperiod},
+           given={Malcolm\bibnamedelima A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5a255466127f21ac513063a1ffd8cab6}{%
+           family={Poeppel},
+           familyi={P\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{60b9700a362ff1927be369ab4478a554}
+      \strng{fullhash}{818756386a82866fd7188e946b7faa83}
+      \strng{bibnamehash}{60b9700a362ff1927be369ab4478a554}
+      \strng{authorbibnamehash}{60b9700a362ff1927be369ab4478a554}
+      \strng{authornamehash}{60b9700a362ff1927be369ab4478a554}
+      \strng{authorfullhash}{818756386a82866fd7188e946b7faa83}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{There are ever more compelling tools available for neuroscience research, ranging from selective genetic targeting to optogenetic circuit control to mapping whole connectomes. These approaches are coupled with a deep-seated, often tacit, belief in the reductionist program for understanding the link between the brain and behavior. The aim of this program is causal explanation through neural manipulations that allow testing of necessity and sufficiency claims. We argue, however, that another equally important approach seeks an alternative form of understanding through careful theoretical and experimental decomposition of behavior. Specifically, the detailed analysis of tasks and of the behavior they elicit is best suited for discovering component processes and their underlying algorithms. In most cases, we argue that study of the neural implementation of behavior is best investigated after such behavioral work. Thus, we advocate a more pluralistic notion of neuroscience when it comes to the brain-behavior relationship: behavioral work provides understanding, whereas neural interventions test causality.}
+      \field{issn}{0896-6273}
+      \field{journaltitle}{Neuron}
+      \field{number}{3}
+      \field{title}{Neuroscience Needs Behavior: Correcting a Reductionist Bias}
+      \field{volume}{93}
+      \field{year}{2017}
+      \field{pages}{480\bibrangedash 490}
+      \range{pages}{11}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.neuron.2016.12.041
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0896627316310406
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0896627316310406
+      \endverb
+    \endentry
     \entry{Kunzendorf2019-vz}{article}{}
       \name{author}{6}{}{%
         {{un=0,uniquepart=base,hash=12b890155b546a9989c37ab1cedd9aa6}{%
@@ -1204,6 +1268,46 @@
       \verb https://www.sciencedirect.com/science/article/pii/S1053811920307400
       \endverb
       \keyw{Ecological psychology,Ecological validity,Experimental design,Generalizability,Naturalistic stimuli,Representative design}
+    \endentry
+    \entry{Proske2012ThePS}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=79bad4ccae4d07e4e8d74940be6cef3b}{%
+           family={Proske},
+           familyi={P\bibinitperiod},
+           given={Uwe},
+           giveni={U\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7566292ff35f2889f74e4484a0281324}{%
+           family={Gandevia},
+           familyi={G\bibinitperiod},
+           given={Simon\bibnamedelima C.},
+           giveni={S\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{0f5d6eeb16fab3329a9dd77bd899b3a9}
+      \strng{fullhash}{0f5d6eeb16fab3329a9dd77bd899b3a9}
+      \strng{bibnamehash}{0f5d6eeb16fab3329a9dd77bd899b3a9}
+      \strng{authorbibnamehash}{0f5d6eeb16fab3329a9dd77bd899b3a9}
+      \strng{authornamehash}{0f5d6eeb16fab3329a9dd77bd899b3a9}
+      \strng{authorfullhash}{0f5d6eeb16fab3329a9dd77bd899b3a9}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physiological reviews}
+      \field{title}{The proprioceptive senses: their roles in signaling body shape, body position and movement, and muscle force.}
+      \field{volume}{92 4}
+      \field{year}{2012}
+      \field{pages}{1651\bibrangedash 97}
+      \range{pages}{47}
+      \verb{urlraw}
+      \verb https://api.semanticscholar.org/CorpusID:1512089
+      \endverb
+      \verb{url}
+      \verb https://api.semanticscholar.org/CorpusID:1512089
+      \endverb
     \endentry
     \entry{SALTAFOSSI2023108642}{article}{}
       \name{author}{5}{}{%

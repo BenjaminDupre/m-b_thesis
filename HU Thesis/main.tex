@@ -107,31 +107,33 @@ So far, we've observed the influence of the heart cycle on perception, recogniti
 
 As our understanding of the role of the cardiac cycle grows, the gaps between perception of external stimuli and cognitive functions widens. How does the heart cycle manage to influence diverse cognitive functions, such as word recognition and stimuli perception?
 
-Several of the previously mentioned papers offer some explanation. Most point towards an interoceptive predictive framework . This framework posits that repetitive bodily signals, like the heartbeat cycle, can be predicted and suppressed to prevent entry into conscious perception, inadvertently leading to the suppression of external stimuli\parencite{AL2021118247, SALTAFOSSI2023108642}. 
+Several of the previously mentioned papers offer some explanation. Most point towards an interoceptive predictive framework . This framework posits that repetitive bodily signals, like the heartbeat cycle, can be predicted and suppressed to prevent entry into conscious perception, inadvertently leading to the suppression of external stimuli\parencite{AL2021118247, SALTAFOSSI2023108642,Allen2022}. 
 
-Another paper formulates a complete computational interoceptive predictive framework \parencite{Allen2022}. This paper goes beyond by utilizing Markov Desicion Process. The Agents infer which policy they are persuing (relax or aroused). The policies are defined operationally in terms of transitioning beween interoceptive states. For example in relaxed state, the shifts in probability among cardiac states result in two phases of diastole and one of systole. In contrast, arousal prompts an immediate transition from the initial diastolic state to systole. Essentially, arousal triggers cardiac acceleration and extends the average duration spent in systole. Its premise assumes that precise visual information is available only during specific phases of the cardiac cycle, contingent upon one's state of arousal. Among its findings, the paper demonstrates the model's ability to replicate various psychological and physiological phenomena found in the interoceptive inference literature. It provides a means to test such a model.
+Another paper formulates a complete computational interoceptive predictive framework \parencite{Allen2022}. This paper goes beyond by utilizing Markov Desicion Process. The Agents infer which policy they are persuing (relax or aroused) to produce the best mapping possible. The policies are defined operationally in terms of transitioning beween interoceptive states. For example, in relaxed state the shifts in probability among cardiac states result in two phases of diastole and one of systole. In contrast, arousal prompts an immediate transition from the initial diastolic state to systole. Essentially, arousal triggers cardiac acceleration and extends the average duration spent in systole. Its premise assumes that precise visual information is available only during specific phases of the cardiac cycle, contingent upon one's state of arousal. Among its findings, the paper demonstrates the model's ability to replicate various psychological and physiological phenomena found in the interoceptive inference literature. It provides a means to test such a model.
 
-These two proposed explanations are a start. Literature now needs to test the premises of the interoceptive predictive framework and propose mathematical models. To achieve this, a broader experimental paradigm should encompass both psychophysical stimuli and wider cognitive functions beyond perception only, engaging perceptual stimulation, multisensory integration, and cognitive outcomes simultaneously. Such an approach should mimic previous literature and align the experimental conditions closer to real-world scenarios, enhancing ecological validity and aiding our understanding of how body-brain phenomena translate into human psychology \parencite{schmuckler2001ecological}.
+The models porvided so far are used to explain for stimuli presented during a specific heart cycle, in which we are influeced by our proprioceptive state. Although they would only account for exteroceptive suppression and offer no explanation as to how they link with behavioral or cognitive outcomes. At the moment this theories are in need of behavioral work since this provides understanding, whereas physiological interventions test causality\parencite{KRAKAUER2017480}.
 
-A tool that could facilitate ecological validity is Immersive Virtual Reality (IVR). IVR, known for its effectiveness in studying cognitive processes within controlled yet complex scenarios, traditionally relies on visual displays and head-hand movement tracking. We propose a setup using VR head-mounted displays with Electrocardiogram (ECG) and haptic devices. However, the integration of these devices presents new challenges, both practical and technical, as well as in terms of alignment with existing literature \parencite{Klotzsche2023}. 
+To accomplish this, a more comprehensive experimental framework should encompass not just psychophysical stimuli but also broader cognitive functions extending beyond mere perception. Such tasks can help refine and assess an individual's strategies and level of involvement, minimizing the influence of uncontrolled higher-order processes \parencite{WASKOM2019100}. The initial phase of this approach involves replicating previous studies and aligning the experimental conditions more closely with real-world situations. This enhances the ecological validity and furthers our comprehension of how body-brain interactions manifest in human psychology \parencite{schmuckler2001ecological}. This process involves building on previous findings while integrating new experimental setups.
 
-Additionally, IVR is a system often involving visual, tactile, and proprioceptive senses. It inherently engages multiple senses or is intentionally designed as a multisensory experience. This is why the chosen study to mimic results is \textcite{SALTAFOSSI2023108642}, which is to my knowledge the only study looking into heart cycle and multisensory integration. 
+\subsubsection*{The Thesis}
 
-The primary objective of this study is to test the feasibility of incorporating a single touch and simultaneous stimuli cardiac cycle modulation studies into IVR setups.
-To achieve this, one outcome is to assess the impact of passive haptic stimuli on reported immersion. Here the participats reported that the gloves increased the sense of inmertion, altough as not to have a relevant effect in the performance of the task. Additionally, the respone times (RT) showed a significant overall difference for the touch condition, thus validating the set up.
+We are proposing new experimental setup using Immersive Virtual Reality (IVR). IVR, known for its effectiveness in studying cognitive processes within controlled yet complex scenarios, traditionally relies on visual displays and head-hand movement tracking. We propose a setup using VR head-mounted displays with Electrocardiogram (ECG) and haptic devices. However, the integration of these devices presents new challenges, both practical and technical, as well as in terms of alignment with existing literature \parencite{Klotzsche2023}.
 
-A secondary objective of this study is to to mimic the findings from \textcite{SALTAFOSSI2023108642} on the redundancy signal effect (RSE) and race model inequality (RMI). We observed that the overall performance partially adhered to the RSE, notably showing the congruent bimodal condition (V = T) significantly faster than the uni-modal condition (V). No significant differences were found between incongruent bimodal condition ($V \neq T$) and the single condition (V). Additinoally, when looking into the cumulative distibution functions (CDF) for different RT, we replicated the findings showing again faster bimodal conditions than unimodal conditions. Nonetheless, with potential violations specifically for the first 200ms
+Particularly in the realm of psychophysical experimental setups, notable distinctions emerge. For instance, most studies in existing literature involve very brief periods of Reaction Time (RT). Due to the nature of IVR, RT tends to be considerably longer. Furthermore, IVR inherently involves multiple senses,  often involving visual, tactile, and proprioceptive senses and making all studies inherently multisensory. In contrast with most psychophysical studies that are multisensory. 
 
+Therefore, the primary objective of this thesis is to validate the manipulation in the context of a multisensory heart cycle study. This is why the chosen study to mimic results is \textcite{SALTAFOSSI2023108642}, which is to my knowledge the only study looking into heart cycle and multisensory integration. Specifically to test the feasibility of manipulating touch within a heart cycle-IVR setups. To achieve this, one outcome is to assess the impact of passive haptic stimuli on reported immersion. Here the participats reported that the gloves increased the sense of inmertion, altough as not to have a relevant effect in the performance of the task. Additionally, the respone times (RT) showed a significant overall difference for the touch condition, thus validating the set up.
 
-Considerable distinctions exist between the stimuli employed in this study and the referenced one. In this investigation, sole reliance resides upon vision as the solitary modality, whereas the reference study integrates three distinct modalities. Furthermore, this inquiry revolves around conditions primarily focused on the tactile sense\footnote{Touch, within this thesis, adopts an encompassing classification of tactile sensation, encapsulating five distinct modes predicated upon the presence or absence of voluntary movement: (1) tactile (cutaneous) perception, (2) passive kinesthetic perception, (3) passive haptic perception, (4) active kinesthetic perception, and (5) active haptic perception \parencite{Healy2003HandbookOP}}. For the scope of this thesis, touch specifically denotes passive haptic perception generated through a vibrational Data-Glove.
+A secondary objective of this study is to to mimic the findings from \textcite{SALTAFOSSI2023108642}. Relevant for this study is the redundancy signal effect (RSE) and race model inequality (RMI). We observed that the overall performance partially adhered to the RSE, notably showing the congruent bimodal condition (V = T) significantly faster than the uni-modal condition (V). No significant differences were found between incongruent bimodal condition ($V \neq T$) and the single condition (V). Additinoally, when looking into the cumulative distibution functions (CDF) for different RT, we replicated the findings showing again faster bimodal conditions than unimodal conditions. Nonetheless, with potential violations specifically for the first 200ms
 
-By probing the influence of passive haptic stimuli on response time within a motor-memory task, this study replicates the principal observations delineated in the referenced work by Saltafossi et al. (2023), thereby affirming the legitimacy of IVR in scrutinizing the cardiac cycle. Such validation aids in establishing connections among various nascent discoveries.
+Considerable distinctions exist between the stimuli employed in this study and the referenced one. In this investigation, sole reliance resides upon vision as single modality, whereas the reference study has measurments for single modalities vision, touch and audio. Tactile in the reference study is determined for each participant with the method of the limits. In our study is simulated by a vibrotactile glove. Furthermore, this inquiry revolves around conditions primarily focused on the tactile sense\footnote{Touch, within this thesis, adopts an encompassing classification of tactile sensation, encapsulating five distinct modes predicated upon the presence or absence of voluntary movement: (1) tactile (cutaneous) perception, (2) passive kinesthetic perception, (3) passive haptic perception, (4) active kinesthetic perception, and (5) active haptic perception \parencite{Healy2003HandbookOP}}. For the scope of this thesis, touch specifically denotes passive haptic perception generated through a vibrational Data-Glove, compare to the reference study were is applied through a electrical current. Vibro-tactile stimu.lation significantly affected RT in participants and shows promising results for future heart-cycle analysis.
+
+By probing the influence of passive haptic stimuli on response time within a motor-memory task, this study replicates the principal observations delineated in heart cycle multisensory integration literature \parencite{SALTAFOSSI2023108642}, thereby confirming in IVR as means of developing pschophysical investigation of cognition.
 
 %I am Here at this point % I should jump to results and Discussion Section.
 
 \section*{2. Methods}
-\subsection*{2.1 Participants}
-The call for participants targeted healthy, non-smoking German-speaking individuals between 18 and 30 years old. Initially, 23 individuals participated in the study, but ultimately, only 20 participants were included in the final sample. Among the three excluded individuals, two failed to complete all necessary questionnaires, while the third exceeded the age limit. Consequently, our final sample comprised 20 participants. Notably, a greater number of women (15) responded to the call compared to men (5). The average age across the sample hovered around 25 years, with a slight deviation observed in one participant ($\mu=25.1, \sigma=6.3$).
+\subsection*{Participants}
+The call for participants targeted healthy, non-smoking German-speaking individuals between 18 and 30 years old. Initially, 23 individuals participated in the study, but ultimately, only 20 participants were included in the final sample. Among the three excluded individuals, two failed to complete all necessary questionnaires, while the third exceeded the age limit. Notably, a greater number of women (15) responded to the call compared to men (5). The average age across the sample hovered around 25 years, with a slight deviation observed in one participant ($\mu=25.1, \sigma=6.3$).
 
 \begin{figure}[h]
     \centering
@@ -142,83 +144,64 @@ The call for participants targeted healthy, non-smoking German-speaking individu
 \end{figure}
 
     
-\subsection*{2.2 Materials}
-\subsubsection*{2.2.1 Electrocardiogram (ECG):}
+\subsection*{Materials}
+\subsubsection*{Electrocardiogram (ECG):}
 Heart rate data was collected using an Arduino Uno and a SparkFun Single Lead Heart Rate Monitor - AD8232. The collected data is transferred through a USB 2.0 connection and integrated into the Unity log file at a frequency of 133 Hz. Compared to a clinical ECG, this device entails a serial interface that can send triggers via USB directly to a computer and software (e.g. Unity, Matlab) with minimal delay due to its architecture. Its software and hardware is open-source and publicly available \parencite{TimsECG}.
 
-\subsubsection*{2.2.2 Head Mounted Display \& Lighthouses:}
+\subsubsection*{Head Mounted Display \& Lighthouses:}
 The VR setup includes a HTC Vive head-mounted display (HMD) with two lighthouses. The headset specifications include a Dual AMOLED 3.6" diagonal display, with 1080 x 1200 pixels per eye (2160 x 1200 pixels combined), a 90 Hz refresh rate, and a 110-degree field of view. The lighthouses are equipped with SteamVR Tracking, G-sensors, gyroscopes, and proximity sensors. Both the HMD and lighthouses are connected using USB 2.0. For this study, the VR controllers were not used, and instead, hand tracking was performed using the Leap Motion sensor.
 
-\subsubsection*{2.2.3 Leap Motion Controller:}
+\subsubsection*{Leap Motion Controller:}
 The Leap Motion Controller has a field of view of 150x120 degrees, with a variable range of roughly 80 cm (arm's length). It weighs 32 grams and is mounted on the HMD. The device features two 640x240 infrared cameras with a frame rate of 120 fps.
 
-\subsubsection*{2.2.4 Data Gloves:}
+\subsubsection*{Data Gloves:}
 The data gloves used in the study are equipped with magnetic sensors and connected to Unity using a microUSB connection. These gloves provide haptic feedback through 10 vibrotactile actuators, offering a wide range of tactile sensations with 1,024 levels of intensity. The gloves also incorporate complete finger tracking using six 9-axis Inertial Measurement Units (IMUs). These IMUs enable precise tracking of finger movements, allowing for accurate gesture recognition and enhanced interaction in virtual environments.
 
-\subsection*{2.2 Materials}
-\subsubsection*{2.2.1 Electrocardiogram (ECG):}
-Heart rate data were collected using an Arduino Uno and a SparkFun Single Lead Heart Rate Monitor - AD8232. The collected data were transferred through a USB 2.0 connection and integrated into the Unity log file at a frequency of 133 Hz. Compared to a clinical ECG, this device entails a serial interface that can send triggers via USB directly to a computer and software (e.g. Unity, Matlab) with minimal delay due to its architecture. Its software and hardware are open-source and publicly available \parencite{TimsECG}.
 
-\subsubsection*{2.2.2 Head Mounted Display \& Lighthouses:}
-The VR setup included an HTC Vive head-mounted display (HMD) with two lighthouses. The headset specifications included a Dual AMOLED 3.6" diagonal display, with 1080 x 1200 pixels per eye (2160 x 1200 pixels combined), a 90 Hz refresh rate, and a 110-degree field of view. The lighthouses were equipped with SteamVR Tracking, G-sensors, gyroscopes, and proximity sensors. Both the HMD and lighthouses were connected using USB 2.0. For this study, the VR controllers were not used, and instead, hand tracking was performed using the Leap Motion sensor.
+\subsection*{Task}
 
-\subsubsection*{2.2.3 Leap Motion Controller:}
-The Leap Motion Controller had a field of view of 150x120 degrees, with a variable range of roughly 80 cm (arm's length). It weighed 32 grams and was mounted on the HMD. The device featured two 640x240 infrared cameras with a frame rate of 120 fps.
-
-\subsubsection*{2.2.4 Data Gloves:}
-The data gloves used in the study were equipped with magnetic sensors and connected to softwear (Unity) using a microUSB connection. These gloves provided haptic feedback through 10 vibrotactile actuators, offering a wide range of tactile sensations with 1,024 levels of intensity. The gloves also incorporated complete finger tracking using six 9-axis Inertial Measurement Units (IMUs). These IMUs enabled precise tracking of finger movements, allowing for accurate gesture recognition and enhanced interaction in virtual environments.
+Participants after being debiref with Covid-Specific rules, information privacy and ethical norms recieved information about the experiment. Here they cosent and proceed to do all following tasks. It is important to mention that I did not made use of tasks\footnote{Original study VR/ECG-study Akbal/Villinger} since I have modified the original hypothesis the primary study set out to answer. Nontheless, since all participants included answered all questionaires and performed all tasks I report all of them. Not only the ones use in the analysis section 
 
 
-\subsection*{2.3 Task}
+\textbf{Questionnaires:} Before the IVR experience, participants completed the Edinburgh Handedness Questionnaire and the PRE-Cybersickness Questionnaire. Following the IVR experience, participants filled out the Virtual Reality Subjective Evaluation Questionnaire and POST-Cybersickness Questionnaire. Both Questionaires are included in the Appendix section.
 
-Participants after being debiref with Covid-Specific rules, information privacy and ethical norms recieved information about the experiment. Here they cosent and proceed to do all following tasks. Important is to mention that not all task performed are used in this study. This is because this is a secondary study with a sligtly different focus from the original one. 
+\textbf{Heartbeat Count Task (HCT):} Participants performed a one-minute heartbeat count task before and after the IVR task. Note that this task is not considered within this thesis because of being out of the scope of this secondary study.
+
+Following the completion of the initial questionnaires and HCT, participants moved to another room where the IVR  equipment was set up. This included a head-mounted display, data gloves, and an ECG device. Participants received a brief training session before proceeding with the heartbeat count task and the IVR memory-motor task.
+
+\textbf{IVR Memory-Motor Task:} In Figure \ref{fig:looks}, two panels are depicted. On the left side of the figure Panel I, we observe the external view of a participant wearing the OVR, ready to commence the IVR Memory-Motor Task. Panel II on the right side of the figure showcases four out of the five steps participants undergo when initiating a trial set. These steps are outlined below:
 
 \begin{enumerate}
-\item[(i)] \textbf{Questionnaires:} Before the IVR experience, participants completed the Edinburgh Handedness Questionnaire and the PRE-Cybersickness Questionnaire. Following the IVR experience, participants filled out the Virtual Reality Subjective Evaluation Questionnaire and POST-Cybersickness Questionnaire. Both types of questionnaires are included in the Appendix section.
-
-\item[(ii)] \textbf{Heartbeat Count Task (HCT):} Participants performed a one-minute heartbeat count task before and after the IVR task. Note that this task is not considered within this thesis because of being out of the scope of this secondary study.
-\end{enumerate}
-
-Following the completion of the initial questionnaires and HCT, participants moved to another room where the IVR (Immersive Virtual Reality) equipment was set up. This included a head-mounted display (HMD), data gloves, and an ECG (Electrocardiogram) device. Participants received a brief training session before proceeding with the heartbeat count task and the IVR memory-motor task.
-
-
-The IVR Memory-Motor Task comprised the following steps:
-\begin{enumerate}
-    \item[\textbf{a.}] Participants stood in front of a virtual table, allowing ample time to acclimate to the virtual environment, as depicted in Figure \ref{fig:looks}.
-    
-    \item[\textbf{b.}] Prior to each trial, a new calibration process started. Participants placed their palms facing up within the shadowed hands, ensuring the standard positioning. Refer to Figure \ref{fig:looks} (b) for the calibration setup.
-    
-    \item[\textbf{c.}] Participants viewed a two-dimensional sketch (Figure \ref{fig:looks} (c)) displayed in the virtual environment, prompting them to memorize the red ball's position. During this phase, participants kept their virtual hands open with palms facing up.
-    
-    \item[\textbf{d.}] The sketch disappeared, and a red ball appeared from the top, landing in either lef or right hand of the participants. As son as the ball visually touch the hand the vibration in the glove started. The vibration could match the visual location redball or not. For example, the ball in left hand vibrating glove in left hand (congruent condtion). Or ball in left hand vibration in right hand (incongruent condition). 
-    
-    Participants then observed a template on the table, resembling the initial sketch they memorized. Their task was to place the ball in the correct location on the template as swiftly as possible.
-
-    \item[\textbf{e.}] After the ball is place in the template the ball and template dissapear. The complete process from a to d start again for 3 sets of 36 times. 
-    
+    \item[\textbf{a.}] Participants stand in front of a virtual table, allowing ample time to acclimate to the virtual environment, as depicted in Figure \ref{fig:looks}. When they feel prepared, the session commences as they calibrate by placing their hands on the virtual table.
+    \item[\textbf{b.}] Prior to each trial within every set, a new calibration process begins. Participants place their palms facing up within the shadowed hands, ensuring standardized positioning. Refer to Figure \ref{fig:looks} (b) for the calibration setup.
+    \item[\textbf{c.}] Once the calibration is complete, a two-dimensional sketch appears in front of them (Figure \ref{fig:looks} (c)), prompting them to memorize the red ball's position. Participants then observe a template on the table, resembling the initial sketch they memorized. Their task is to place the ball swiftly and accurately in the correct location on the template. In the memory-sketch, the relevant position of the ball is denoted by the red circle. During this phase, participants keep their virtual hands open with palms facing up.
+    \item[\textbf{d.}] As soon as the memory-sketch disappears, a red ball appears in either the left or right hand of the participants. Simultaneously, a vibration could start in the glove. The vibration may or may not match the visual location of the red ball. If the vibrating hand matches the visual location of the ball, the condition is congruent ($V=T$). If the vibrating hand does not match the visual location of the ball, then the trial is incongruent ($V \neq T$). If there is no vibration at all, the condition is purely visual ($V$).
+    \item[\textbf{e.}] After placing the ball on the template, the ball and template disappear. 
 \end{enumerate}
 
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=15cm]{/home/perdices/Dokumente/Github/m-b_thesis/Analysis/figures/design_ilustration.png}
+    \put(-420,240){\textbf{I}} % Adjust (-20,340) to position "I" label as desired
+    \put(-320,240){\textbf{II}} % Adjust (360,340) to position "II" label as desired
     \captionsetup{justification=justified, margin={2cm,2cm}, font={small}}
-    \caption{Illustration of the IVR Memory-Motor Task: (a) represents the acclimation period during initial setup; (b) showcases the first-person perspective of the calibration phase; (c) displays the 2D sketch for memorizing ball position; (d) presents the appearance of the ball and the 3D template for ball placement, marking the beginning of each trial.}
+    \caption{Illustration of the IVR Memory-Motor Task: Panel I show a participant wearing equipment. Panel II shows step (a) represents the acclimation period during initial setup and first step calibration; (b) showcases the first-person perspective of the second calibration phase; (c) displays the 2D sketch for memorizing ball position; (d) presents the appearance of the ball and the 3D template for ball placement, marking the beginning of each trial.}
     \label{fig:looks}
 \end{figure}
  
-In a sequence of 108 trials, three conditions—congruent ($V=T$), incongruent ($V \neq T$), and visual-only ($V$)—were presented randomly and rapidly, each occurring 36 times. Each trial commenced upon positioning the ball in a hand, concluding only upon its precise placement on the designated template (refer to Figure \ref{fig:looks}).
+In a sequence of 108 trials, three conditions—congruent ($V=T$), incongruent ($V \neq T$), and visual-only ($V$)—were presented randomly and rapidly, each occurring 36 times. Each trial commenced upon positioning the ball in a hand, concluding only upon its precise placement on the designated template (refer to Figure \ref{fig:looks}). 
 
-Moreover, both before and after the IVR test, participants underwent a final round of questionnaires, aiming for repetitive assessments of sickness levels. Simultaneously, initial and singular evaluations gauged the immersion experience involving the haptic glove and hands.
+Given that an IVR task inherently involves proprioceptive signals\footnote{Proprioceptive signals arise from our own actions, encompassing signals related to limb and trunk position and movement, sensations of effort, force, and heaviness. Proprioceptive receptors are situated in the skin, muscles, and joints. Information regarding limb position and movement doesn't stem from individual receptors but from clusters of afferents\parencite{Proske2012ThePS}.}, all conditions in the experiment integrate these signals and are thus multimodal. Consequently, the 'visual only' condition doesn't align with the unimodal classification commonly used in psychophysics literature. Nonetheless, for the sake of easier comparison to this literature in this thesis, I will refer to it as unimodal, and the congruent and incongruent conditions as bimodal.
 
 
-\subsection*{2.4 Mesurements}
-\subsubsection*{2.4.1 Immersive Virtual Reality (VR):}
+\subsection*{Mesurements}
+\subsubsection*{Immersive Virtual Reality (VR):}
 
  Movement data from the data gloves, Leap Motion device, and the HMD was collected. For movement analysis, only the wrist movements tracked by the Leap Motion device were considered, excluding the fingertips' magnetic tracking sensor data. All movements were recorded in a Euclidean coordinate system (X, Y, Z) with the original calibrating point set at (0, 0, 0). This provided a total of nine streaming sources of data (e.g., Headset X, Headset Y, Headset Z, and so on). Notably, rotational data was not included in the analysis.
 
 Additionally, in the game output data, there are flags that signal if a button was pressed, if the ball is placed in the holder, and when the trial started.
 
-\subsubsection*{2.4.3 Questionnaires:}
+\subsubsection*{Questionnaires:}
 Both of the described questionnaires are included in the appendix of this thesis for further reference.
 
 \begin{enumerate}
@@ -228,15 +211,15 @@ Both of the described questionnaires are included in the appendix of this thesis
 \end{enumerate}
 
 
-\subsection*{2.5 Data Analysis}
+\subsection*{Data Analysis}
 
 \subsubsection*{Questionnaire}
-The analysis of the questionnaire responses aimed to explore the impact of haptic gloves on reported immersion and related perceptions. Initially, the raw questionnaire data collected from 20 respondents, consisting of 27 questions rated on a scale from 1 to 7, underwent meticulous processing. Missing values were checked and handled appropriately, thus leaving us with 19 respondants. Statistical analysis included the calculation of descriptive statistics such as median ($\text{Mdn}$), mean ($\mu$), and standard deviation ($\sigma$) for each question. These statistics were instrumental in understanding the central tendencies and variability in respondents' perceptions. A full view of all answers can be found in the Supplements section. 
+The analysis of the questionnaire responses aimed to explore the impact of haptic gloves on reported immersion and related perceptions. Initially, the raw questionnaire data collected from 20 respondents, consisting of 27 questions rated on a scale from 1 to 7. Missing values were checked and handled appropriately, thus leaving us with 19. Statistical analysis included the calculation of descriptive statistics such as median ($\text{Mdn}$), mean ($\mu$), and standard deviation ($\sigma$) for each question. These statistics were instrumental in understanding the central tendencies and variability in respondents perceptions. A full view of all answers can be found in the Supplements section. 
 
 \subsubsection*{Response Time}
-We measured all response times from when the ball entered the scene in the trial until it disappeared. We excluded trials where the error button was pressed from the analysis. Before analyzing, we corrected outliers by removing data points that deviated more than 3 times the median absolute deviation (MAD), equivalent to 3 standard deviations assuming a normal distribution \parencite{Innes2019ACA}. We didn't eliminate responses for being too fast. However, we excluded 13\% of trials due to excessive slowness. The final sample included 1826 response times (approximately 24 per condition per participant). After removing outliers, we transformed the response times for each condition into rates (1/RT).
+All response times from the ball's entry into the scene until its disappearance were measured. Trials where the error button was pressed were excluded from the analysis. Prior to analysis, outliers were corrected by eliminating data points deviating more than 3 times the median absolute deviation (MAD), which is equivalent to 3 standard deviations assuming a normal distribution \parencite{Innes2019ACA}. Responses were not eliminated for being too fast; however, 13\% of trials were excluded due to excessive slowness. The final sample comprised 1826 response times (approximately 24 per condition per participant). Subsequent to the removal of outliers, the response times for each condition were transformed into rates (1/RT).
 
-The transformation method chosen aligns with the detailed and justified steps in \textcite{Innes2019ACA}, which provide more detail and justification compared to \textcite{SALTAFOSSI2023108642}. Although this transformation type is contested \parencite{Lo2015-fv}, this study prioritizes normality in the error distribution over other factors, such as property scale or interacting effects, as prioritized in the referenced studies. In cases where the results were ambiguous, we also applied a General Linear Mixed-Effect Model (GLMM). The analysis diverged from the referenced studies due to mixed results, necessitating a deeper exploration of individual differences in response times while retaining the original metric. The GLMM was used for this purpose.
+The transformation method entails the inversion of the RT and aligns with prior studies \parencite{Innes2019ACA}. However, this transformation method is not exempt from criticism \parencite{Lo2015-fv}. This study prioritizes normality in error distribution over other factors such as property scale or interacting effects. This prioritization allowed for the direct application of repeated measures ANOVA within subjects. Yet, when the ANOVA results were ambiguous, a General Linear Mixed-Effect Model (GLMM) was additionally applied, as recommended \parencite{Lo2015-fv}. Although this analysis is not present in the reference study, the utilization of GLMM aims to provide clarity regarding the significance of the conditions and the study's power.
 
 To allow comparisons with Saltafossi's reference paper, the primary goal was to confirm the established redundant signal effect—indicating faster response times to bimodal stimulation compared to single stimulation—and partially construct the Race model Inequality to assess its applicability across all time periods $t$.
 
