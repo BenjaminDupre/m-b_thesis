@@ -1065,6 +1065,86 @@
       \range{pages}{1}
       \keyw{RT transformations; additive factors; generalized linear mixed-effect models; interaction effects; mental chronometry}
     \endentry
+    \entry{Mahoney2019-yq}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=2ddf844195680edceb29c99a9660905d}{%
+           family={Mahoney},
+           familyi={M\bibinitperiod},
+           given={Jeannette\bibnamedelima R},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7d98d88bbdd071dffc29bb0d39079f58}{%
+           family={Verghese},
+           familyi={V\bibinitperiod},
+           given={Joe},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {United States}%
+      }
+      \strng{namehash}{657e84d34277a5eb2b52ab1aac308875}
+      \strng{fullhash}{657e84d34277a5eb2b52ab1aac308875}
+      \strng{bibnamehash}{657e84d34277a5eb2b52ab1aac308875}
+      \strng{authorbibnamehash}{657e84d34277a5eb2b52ab1aac308875}
+      \strng{authornamehash}{657e84d34277a5eb2b52ab1aac308875}
+      \strng{authorfullhash}{657e84d34277a5eb2b52ab1aac308875}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Multisensory integration research investigates how the brain processes simultaneous sensory information. Research on animals (mainly cats and primates) and humans reveal that intact multisensory integration is crucial for functioning in the real world, including both cognitive and physical activities. Much of the research conducted over the past several decades documents multisensory integration effects using diverse psychophysical, electrophysiological, and neuroimaging techniques. While its presence has been reported, the methods used to determine the magnitude of multisensory integration effects varies and typically faces much criticism. In what follows, limitations of previous behavioral studies are outlined and a step-by-step tutorial for calculating the magnitude of multisensory integration effects using robust probability models is provided.}
+      \field{journaltitle}{J Vis Exp}
+      \field{month}{5}
+      \field{number}{147}
+      \field{title}{Using the Race Model Inequality to Quantify Behavioral Multisensory Integration Effects}
+      \field{year}{2019}
+    \endentry
+    \entry{MILLER1982247}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c65a46371327e1f400d89362f8d27fa6}{%
+           family={Miller},
+           familyi={M\bibinitperiod},
+           given={Jeff},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c65a46371327e1f400d89362f8d27fa6}
+      \strng{fullhash}{c65a46371327e1f400d89362f8d27fa6}
+      \strng{bibnamehash}{c65a46371327e1f400d89362f8d27fa6}
+      \strng{authorbibnamehash}{c65a46371327e1f400d89362f8d27fa6}
+      \strng{authornamehash}{c65a46371327e1f400d89362f8d27fa6}
+      \strng{authorfullhash}{c65a46371327e1f400d89362f8d27fa6}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Many models of divided attention assume that signals presented on different channels produce separate activations, any one of which can initiate a response. According to these models, detection responses are especially fast when signals are presented on two channels at the same time because the system can detect a signal in either of two ways. Such models predict a testable relation among reaction time distributions for conditions in which a single signal is presented as compared with a condition in which two signals are presented, and this prediction is tested in two tasks. A bimodal detection task required a simple speeded response to either a visual or an auditory signal. A letter search task required a choice response depending on whether or not a two-letter display included the signal letter “A.” Data from both tasks are inconsistent with the prediction. When two signals are presented, responses are faster than separate-activation models can explain. The results favor “coactivation” models, in which signals presented on different channels contribute to a common pool of activation that initiates a response.}
+      \field{issn}{0010-0285}
+      \field{journaltitle}{Cognitive Psychology}
+      \field{number}{2}
+      \field{title}{Divided attention: Evidence for coactivation with redundant signals}
+      \field{volume}{14}
+      \field{year}{1982}
+      \field{pages}{247\bibrangedash 279}
+      \range{pages}{33}
+      \verb{doi}
+      \verb https://doi.org/10.1016/0010-0285(82)90010-X
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/001002858290010X
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/001002858290010X
+      \endverb
+    \endentry
     \entry{TimsECG}{inproceedings}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=4a75057e5e9c07b5a94ff29470178143}{%
