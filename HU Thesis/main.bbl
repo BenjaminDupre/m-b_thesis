@@ -228,36 +228,6 @@
       \verb https://doi.org/10.1371/journal.pcbi.1010490
       \endverb
     \endentry
-    \entry{Barlow2012PossiblePU}{inproceedings}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=b3a0e1615a7f454a572d574eec1060e3}{%
-           family={Barlow},
-           familyi={B\bibinitperiod},
-           given={H.\bibnamedelimi B.},
-           giveni={H\bibinitperiod\bibinitdelim B\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{b3a0e1615a7f454a572d574eec1060e3}
-      \strng{fullhash}{b3a0e1615a7f454a572d574eec1060e3}
-      \strng{bibnamehash}{b3a0e1615a7f454a572d574eec1060e3}
-      \strng{authorbibnamehash}{b3a0e1615a7f454a572d574eec1060e3}
-      \strng{authornamehash}{b3a0e1615a7f454a572d574eec1060e3}
-      \strng{authorfullhash}{b3a0e1615a7f454a572d574eec1060e3}
-      \field{sortinit}{B}
-      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Possible Principles Underlying the Transformations of Sensory Messages}
-      \field{year}{2012}
-      \verb{urlraw}
-      \verb https://api.semanticscholar.org/CorpusID:59790818
-      \endverb
-      \verb{url}
-      \verb https://api.semanticscholar.org/CorpusID:59790818
-      \endverb
-    \endentry
     \entry{GalvezPol2018ActiveSI}{article}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=0f9d2f5d2930275902961f11a0e7e61b}{%
@@ -301,6 +271,52 @@
       \verb{url}
       \verb https://api.semanticscholar.org/CorpusID:91565050
       \endverb
+    \endentry
+    \entry{Galvez-Pol2022-vb}{incollection}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=0f9d2f5d2930275902961f11a0e7e61b}{%
+           family={Galvez-Pol},
+           familyi={G\bibinithyphendelim P\bibinitperiod},
+           given={Alejandro},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=84329a5eee57714d9405c64710db44e1}{%
+           family={Munar},
+           familyi={M\bibinitperiod},
+           given={Enric},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5cd82d647750aa16bc5de00a06e1db79}{%
+           family={Kilner},
+           familyi={K\bibinitperiod},
+           given={James\bibnamedelima M},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {London}%
+      }
+      \list{publisher}{1}{%
+        {Routledge}%
+      }
+      \strng{namehash}{33604da805b4125ac2f4443de73a5c11}
+      \strng{fullhash}{33604da805b4125ac2f4443de73a5c11}
+      \strng{bibnamehash}{33604da805b4125ac2f4443de73a5c11}
+      \strng{authorbibnamehash}{33604da805b4125ac2f4443de73a5c11}
+      \strng{authornamehash}{33604da805b4125ac2f4443de73a5c11}
+      \strng{authorfullhash}{33604da805b4125ac2f4443de73a5c11}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{The Routledge International Handbook of Neuroaesthetics}
+      \field{month}{10}
+      \field{title}{The influence of interoceptive signals on the processing of external sensory stimuli}
+      \field{year}{2022}
+      \field{pages}{89\bibrangedash 102}
+      \range{pages}{14}
     \endentry
     \entry{Garfinkel2013-cy}{article}{}
       \name{author}{6}{}{%
@@ -368,6 +384,58 @@
       \field{year}{2013}
       \field{pages}{505\bibrangedash 512}
       \range{pages}{8}
+    \endentry
+    \entry{deGelder2018VirtualRA}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=f22e1432c43fb47fda536df325774ac4}{%
+           family={Gelder},
+           familyi={G\bibinitperiod},
+           given={Beatrice},
+           giveni={B\bibinitperiod},
+           givenun=0,
+           prefix={de},
+           prefixi={d\bibinitperiod},
+           prefixun=0}}%
+        {{un=0,uniquepart=base,hash=07c06d17cfff8aa6a15185246e91e622}{%
+           family={Kätsyri},
+           familyi={K\bibinitperiod},
+           given={Jari},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d4ab43dc5dfa006771685a2176893b2b}{%
+           family={Borst},
+           familyi={B\bibinitperiod},
+           given={Aline\bibnamedelima W.},
+           giveni={A\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0,
+           prefix={de},
+           prefixi={d\bibinitperiod},
+           prefixun=0}}%
+      }
+      \strng{namehash}{3f1f7257b967debcc4768f571463d469}
+      \strng{fullhash}{3f1f7257b967debcc4768f571463d469}
+      \strng{bibnamehash}{3f1f7257b967debcc4768f571463d469}
+      \strng{authorbibnamehash}{3f1f7257b967debcc4768f571463d469}
+      \strng{authornamehash}{3f1f7257b967debcc4768f571463d469}
+      \strng{authorfullhash}{3f1f7257b967debcc4768f571463d469}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{British journal of psychology}
+      \field{title}{Virtual reality and the new psychophysics.}
+      \field{volume}{109 3}
+      \field{year}{2018}
+      \field{pages}{421\bibrangedash 426}
+      \range{pages}{6}
+      \verb{urlraw}
+      \verb https://api.semanticscholar.org/CorpusID:44107926
+      \endverb
+      \verb{url}
+      \verb https://api.semanticscholar.org/CorpusID:44107926
+      \endverb
     \endentry
     \entry{Grund643}{article}{}
       \name{author}{8}{}{%
@@ -584,184 +652,6 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.1207/s15327108ijap0303_3
-      \endverb
-    \endentry
-    \entry{Khalsa2017InteroceptionAM}{article}{}
-      \name{author}{24}{}{%
-        {{un=0,uniquepart=base,hash=7eaafcc33a53fbb735ab6f5528edb96a}{%
-           family={Khalsa},
-           familyi={K\bibinitperiod},
-           given={Sahib\bibnamedelima S.},
-           giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=dfe8dca39ab144a9b903b597b9851da8}{%
-           family={Adolphs},
-           familyi={A\bibinitperiod},
-           given={Ralph},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=83807781aa2893f44d1bb24445adc676}{%
-           family={Cameron},
-           familyi={C\bibinitperiod},
-           given={Oliver\bibnamedelima G.},
-           giveni={O\bibinitperiod\bibinitdelim G\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=43af36734fd8bac612dff7786a9a36b8}{%
-           family={Critchley},
-           familyi={C\bibinitperiod},
-           given={Hugo\bibnamedelima D.},
-           giveni={H\bibinitperiod\bibinitdelim D\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=a4e791780ab0779d1c879a6f5c46de2d}{%
-           family={Davenport},
-           familyi={D\bibinitperiod},
-           given={Paul\bibnamedelima W.},
-           giveni={P\bibinitperiod\bibinitdelim W\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=e4236389ea38f18b79d3fa9fbbedcdb8}{%
-           family={Feinstein},
-           familyi={F\bibinitperiod},
-           given={Justin\bibnamedelima S.},
-           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=fa522ff058015c2dea64395d4cbb59c5}{%
-           family={Feusner},
-           familyi={F\bibinitperiod},
-           given={Jamie\bibnamedelima D.},
-           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=700c95e054106318cecb4a12ebc8545a}{%
-           family={Garfinkel},
-           familyi={G\bibinitperiod},
-           given={Sarah\bibnamedelima N.},
-           giveni={S\bibinitperiod\bibinitdelim N\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=579cae7a25e4f4f82d4397bf4121cbb2}{%
-           family={Lane},
-           familyi={L\bibinitperiod},
-           given={Richard\bibnamedelima D.},
-           giveni={R\bibinitperiod\bibinitdelim D\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=06335007e69f0bd84ca11f0b7a327b63}{%
-           family={Mehling},
-           familyi={M\bibinitperiod},
-           given={Wolf\bibnamedelima E},
-           giveni={W\bibinitperiod\bibinitdelim E\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=a6afe974a69d4bcc5239f798396f88b4}{%
-           family={Meuret},
-           familyi={M\bibinitperiod},
-           given={Alicia\bibnamedelima E.},
-           giveni={A\bibinitperiod\bibinitdelim E\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=0b06d243fcbddb6eb7607b770bea9cfc}{%
-           family={Nemeroff},
-           familyi={N\bibinitperiod},
-           given={Charles\bibnamedelima B.},
-           giveni={C\bibinitperiod\bibinitdelim B\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=3ad1925e1c979e88f519d9ecab661840}{%
-           family={Oppenheimer},
-           familyi={O\bibinitperiod},
-           given={Stephen},
-           giveni={S\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=0c5ad90c7829087495bf51d29fdd4a5e}{%
-           family={Petzschner},
-           familyi={P\bibinitperiod},
-           given={Frederike\bibnamedelima H.},
-           giveni={F\bibinitperiod\bibinitdelim H\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=5943722834e776fb72d90607350216a9}{%
-           family={Pollatos},
-           familyi={P\bibinitperiod},
-           given={Olga},
-           giveni={O\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=cd62d6baa7b099e0d2cef5e428a5f370}{%
-           family={Rhudy},
-           familyi={R\bibinitperiod},
-           given={Jamie\bibnamedelima L.},
-           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=7dad4999e65d2eaaa2a4a1eac5c89726}{%
-           family={Schramm},
-           familyi={S\bibinitperiod},
-           given={Lawrence\bibnamedelima P.},
-           giveni={L\bibinitperiod\bibinitdelim P\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=8715b62e660df3ef61584ae0927c7c4c}{%
-           family={Simmons},
-           familyi={S\bibinitperiod},
-           given={W.\bibnamedelimi Kyle},
-           giveni={W\bibinitperiod\bibinitdelim K\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=d94688604d149a828a66fc65e001e3bc}{%
-           family={Stein},
-           familyi={S\bibinitperiod},
-           given={Murray\bibnamedelima B.},
-           giveni={M\bibinitperiod\bibinitdelim B\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=0e0676e6d5237c94d30b708851df1f27}{%
-           family={Stephan},
-           familyi={S\bibinitperiod},
-           given={Klaas\bibnamedelima Enno},
-           giveni={K\bibinitperiod\bibinitdelim E\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=269bf262b91f9fd8711f01288c93abf7}{%
-           family={Bergh},
-           familyi={B\bibinitperiod},
-           given={Omer\bibnamedelima Van},
-           giveni={O\bibinitperiod\bibinitdelim V\bibinitperiod},
-           givenun=0,
-           prefix={den},
-           prefixi={d\bibinitperiod},
-           prefixun=0}}%
-        {{un=0,uniquepart=base,hash=816b5040f730c319e262a92005be51f8}{%
-           family={Diest},
-           familyi={D\bibinitperiod},
-           given={Ilse\bibnamedelima Van},
-           giveni={I\bibinitperiod\bibinitdelim V\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=75bacf91ab2b00d98be26eb4a03ffaf4}{%
-           family={Leupoldt},
-           familyi={L\bibinitperiod},
-           given={Andreas},
-           giveni={A\bibinitperiod},
-           givenun=0,
-           prefix={von},
-           prefixi={v\bibinitperiod},
-           prefixun=0}}%
-        {{un=0,uniquepart=base,hash=5448badfd3afe119ef59023ebd772e2d}{%
-           family={Paulus},
-           familyi={P\bibinitperiod},
-           given={Martin\bibnamedelima P.},
-           giveni={M\bibinitperiod\bibinitdelim P\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{0ec64c200f3297c67e3c03cc6f1b8102}
-      \strng{fullhash}{94d7d7827a79895adf9b2f1c2d5f7a53}
-      \strng{bibnamehash}{0ec64c200f3297c67e3c03cc6f1b8102}
-      \strng{authorbibnamehash}{0ec64c200f3297c67e3c03cc6f1b8102}
-      \strng{authornamehash}{0ec64c200f3297c67e3c03cc6f1b8102}
-      \strng{authorfullhash}{94d7d7827a79895adf9b2f1c2d5f7a53}
-      \field{sortinit}{K}
-      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Biological psychiatry. Cognitive neuroscience and neuroimaging}
-      \field{title}{Interoception and Mental Health: A Roadmap}
-      \field{volume}{3}
-      \field{year}{2017}
-      \field{pages}{501\bibrangedash 513}
-      \range{pages}{13}
-      \verb{urlraw}
-      \verb https://api.semanticscholar.org/CorpusID:3923477
-      \endverb
-      \verb{url}
-      \verb https://api.semanticscholar.org/CorpusID:3923477
       \endverb
     \endentry
     \entry{KINGDOM2012234}{incollection}{}
@@ -1193,37 +1083,6 @@
       \verb 10.1109/SPMB55497.2022.10014819
       \endverb
     \endentry
-    \entry{Morten2021}{article}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=445a3a772861ccdcdfac64aa860d2a12}{%
-           family={Morten\bibnamedelimb L\bibnamedelima Kringelbach},
-           familyi={M\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim K\bibinitperiod},
-           given={Gustavo\bibnamedelima Deco},
-           giveni={G\bibinitperiod\bibinitdelim D\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{445a3a772861ccdcdfac64aa860d2a12}
-      \strng{fullhash}{445a3a772861ccdcdfac64aa860d2a12}
-      \strng{bibnamehash}{445a3a772861ccdcdfac64aa860d2a12}
-      \strng{authorbibnamehash}{445a3a772861ccdcdfac64aa860d2a12}
-      \strng{authornamehash}{445a3a772861ccdcdfac64aa860d2a12}
-      \strng{authorfullhash}{445a3a772861ccdcdfac64aa860d2a12}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Aeons}
-      \field{title}{The Brain Has a Team of Conductors Orchestrating Consciousness}
-      \field{year}{2021}
-      \verb{urlraw}
-      \verb https://psyche.co/ideas/the-brain-has-a-team-of-conductors-orchestrating-consciousness
-      \endverb
-      \verb{url}
-      \verb https://psyche.co/ideas/the-brain-has-a-team-of-conductors-orchestrating-consciousness
-      \endverb
-    \endentry
     \entry{motyka}{article}{}
       \name{author}{6}{}{%
         {{un=0,uniquepart=base,hash=bc834131021c6fd6864253df26ee6262}{%
@@ -1452,6 +1311,46 @@
       \endverb
       \keyw{interoception,multisensory integration,body-brain interactions,cardiac cycle,perception}
     \endentry
+    \entry{SanchezVives2005FromPT}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=30abd35f97199ce8d31d186c714ead65}{%
+           family={Sanchez-Vives},
+           familyi={S\bibinithyphendelim V\bibinitperiod},
+           given={Maria\bibnamedelima V.},
+           giveni={M\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=df83b602f850d5091f5ab7de4726e66e}{%
+           family={Slater},
+           familyi={S\bibinitperiod},
+           given={Mel},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{19daf204e0b3850810ad7f204c0261bc}
+      \strng{fullhash}{19daf204e0b3850810ad7f204c0261bc}
+      \strng{bibnamehash}{19daf204e0b3850810ad7f204c0261bc}
+      \strng{authorbibnamehash}{19daf204e0b3850810ad7f204c0261bc}
+      \strng{authornamehash}{19daf204e0b3850810ad7f204c0261bc}
+      \strng{authorfullhash}{19daf204e0b3850810ad7f204c0261bc}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature Reviews Neuroscience}
+      \field{title}{From presence to consciousness through virtual reality}
+      \field{volume}{6}
+      \field{year}{2005}
+      \field{pages}{332\bibrangedash 339}
+      \range{pages}{8}
+      \verb{urlraw}
+      \verb https://api.semanticscholar.org/CorpusID:19179383
+      \endverb
+      \verb{url}
+      \verb https://api.semanticscholar.org/CorpusID:19179383
+      \endverb
+    \endentry
     \entry{schmuckler2001ecological}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=cbec6a652df2b7be1485282ec81464a4}{%
@@ -1594,6 +1493,46 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.3758/BF03193160
+      \endverb
+    \endentry
+    \entry{Vasser2020GuidelinesFI}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=0580d29fa438759158d0ea480d00431d}{%
+           family={Vasser},
+           familyi={V\bibinitperiod},
+           given={Madis},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=703e82ccd801f6a101bf5bf57d533a42}{%
+           family={Aru},
+           familyi={A\bibinitperiod},
+           given={Jaan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e98b8ba8be4d4b05052f618e84d6c04f}
+      \strng{fullhash}{e98b8ba8be4d4b05052f618e84d6c04f}
+      \strng{bibnamehash}{e98b8ba8be4d4b05052f618e84d6c04f}
+      \strng{authorbibnamehash}{e98b8ba8be4d4b05052f618e84d6c04f}
+      \strng{authornamehash}{e98b8ba8be4d4b05052f618e84d6c04f}
+      \strng{authorfullhash}{e98b8ba8be4d4b05052f618e84d6c04f}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Current opinion in psychology}
+      \field{title}{Guidelines for immersive virtual reality in psychological research.}
+      \field{volume}{36}
+      \field{year}{2020}
+      \field{pages}{71\bibrangedash 76}
+      \range{pages}{6}
+      \verb{urlraw}
+      \verb https://api.semanticscholar.org/CorpusID:219441124
+      \endverb
+      \verb{url}
+      \verb https://api.semanticscholar.org/CorpusID:219441124
       \endverb
     \endentry
     \entry{WASKOM2019100}{article}{}
