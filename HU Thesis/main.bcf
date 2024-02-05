@@ -2369,8 +2369,9 @@
     <bcf:citekey order="15">WASKOM2019100</bcf:citekey>
     <bcf:citekey order="16">WASKOM2019100</bcf:citekey>
     <bcf:citekey order="17">deGelder2018VirtualRA</bcf:citekey>
-    <bcf:citekey order="18">schmuckler2001ecological</bcf:citekey>
-    <bcf:citekey order="19">Klotzsche2023</bcf:citekey>
+    <bcf:citekey order="18">Klotzsche2023</bcf:citekey>
+    <bcf:citekey order="18">Kisker2024InducedOB</bcf:citekey>
+    <bcf:citekey order="19">Kisker2024InducedOB</bcf:citekey>
     <bcf:citekey order="20">SALTAFOSSI2023108642</bcf:citekey>
     <bcf:citekey order="21">SALTAFOSSI2023108642</bcf:citekey>
     <bcf:citekey order="22">TimsECG</bcf:citekey>
@@ -2406,8 +2407,8 @@
     <bcf:citekey order="50">Kunzendorf2019-vz</bcf:citekey>
     <bcf:citekey order="51">GalvezPol2018ActiveSI</bcf:citekey>
     <bcf:citekey order="52">Allen2022</bcf:citekey>
-    <bcf:citekey order="53">schmuckler2001ecological</bcf:citekey>
-    <bcf:citekey order="54">Klotzsche2023</bcf:citekey>
+    <bcf:citekey order="53">Klotzsche2023</bcf:citekey>
+    <bcf:citekey order="54">Kisker2024InducedOB</bcf:citekey>
     <bcf:citekey order="55">TimsECG</bcf:citekey>
     <bcf:citekey order="56">avpsy</bcf:citekey>
     <bcf:citekey order="57">Innes2019ACA</bcf:citekey>

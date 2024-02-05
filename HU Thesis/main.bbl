@@ -524,39 +524,6 @@
       \verb https://www.jneurosci.org/content/42/4/643
       \endverb
     \endentry
-    \entry{Healy2003HandbookOP}{article}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=76b1a1a5f3663c2326709118360d1d66}{%
-           family={Healy},
-           familyi={H\bibinitperiod},
-           given={Alice\bibnamedelima F.},
-           giveni={A\bibinitperiod\bibinitdelim F\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=6b6571f4b0bdcb21891d5703c4709f86}{%
-           family={Proctor},
-           familyi={P\bibinitperiod},
-           given={Robert\bibnamedelima W.},
-           giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{f5c0e022e7ac17d47bec4848cdb1053f}
-      \strng{fullhash}{f5c0e022e7ac17d47bec4848cdb1053f}
-      \strng{bibnamehash}{f5c0e022e7ac17d47bec4848cdb1053f}
-      \strng{authorbibnamehash}{f5c0e022e7ac17d47bec4848cdb1053f}
-      \strng{authornamehash}{f5c0e022e7ac17d47bec4848cdb1053f}
-      \strng{authorfullhash}{f5c0e022e7ac17d47bec4848cdb1053f}
-      \field{sortinit}{H}
-      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Handbook of Psychology, volume 4, Experimental Psychology}
-      \field{volume}{4}
-      \field{year}{2003}
-      \field{pages}{147\bibrangedash 176}
-      \range{pages}{30}
-    \endentry
     \entry{Innes2019ACA}{article}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=bb75fdd98fbdec4580de7d84c767c995}{%
@@ -710,6 +677,61 @@
       \endverb
       \keyw{Behavioral measurement,Forced‐choice procedures,Perceptual scaling,Psychometric function,Psychophysics}
     \endentry
+    \entry{Kisker2024InducedOB}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=65707e99a06700adb9347d0412493d73}{%
+           family={Kisker},
+           familyi={K\bibinitperiod},
+           given={Joanna},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=32cfa9fd8a0a763d3ae9f471bf02887b}{%
+           family={Johnsdorf},
+           familyi={J\bibinitperiod},
+           given={Marike},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0d3474a121dd3b1de822b0ba8dfe991c}{%
+           family={Sagehorn},
+           familyi={S\bibinitperiod},
+           given={Merle},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3471d0779b5e15c12f4780f8cf27ce7c}{%
+           family={Schöne},
+           familyi={S\bibinitperiod},
+           given={Benjamin},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=57f998ec37009b5de582c83e8c1fa294}{%
+           family={Gruber},
+           familyi={G\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3a1395e7fe50cb7761c18607f194f793}
+      \strng{fullhash}{37b0be104a4077d12fde3b79552e3881}
+      \strng{bibnamehash}{3a1395e7fe50cb7761c18607f194f793}
+      \strng{authorbibnamehash}{3a1395e7fe50cb7761c18607f194f793}
+      \strng{authornamehash}{3a1395e7fe50cb7761c18607f194f793}
+      \strng{authorfullhash}{37b0be104a4077d12fde3b79552e3881}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Experimental brain research}
+      \field{title}{Induced oscillatory brain responses under virtual reality conditions in the context of repetition priming.}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://api.semanticscholar.org/CorpusID:266931941
+      \endverb
+      \verb{url}
+      \verb https://api.semanticscholar.org/CorpusID:266931941
+      \endverb
+    \endentry
     \entry{Klotzsche2023}{article}{}
       \name{author}{6}{}{%
         {{un=0,uniquepart=base,hash=58f264448396164014fef8fe17c60219}{%
@@ -778,70 +800,6 @@
       \endverb
       \verb{url}
       \verb https://www.biorxiv.org/content/early/2023/01/23/2023.01.23.525140
-      \endverb
-    \endentry
-    \entry{KRAKAUER2017480}{article}{}
-      \name{author}{5}{}{%
-        {{un=0,uniquepart=base,hash=cf675af16b372565d5a699077c9f6746}{%
-           family={Krakauer},
-           familyi={K\bibinitperiod},
-           given={John\bibnamedelima W.},
-           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=d652c52b8dc4ee1a54a12bdc4046c33e}{%
-           family={Ghazanfar},
-           familyi={G\bibinitperiod},
-           given={Asif\bibnamedelima A.},
-           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=2e620ba6f55b6d1876cae0fe04bb8bb9}{%
-           family={Gomez-Marin},
-           familyi={G\bibinithyphendelim M\bibinitperiod},
-           given={Alex},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=825b95b572893cab19905d5e4667da6a}{%
-           family={MacIver},
-           familyi={M\bibinitperiod},
-           given={Malcolm\bibnamedelima A.},
-           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=5a255466127f21ac513063a1ffd8cab6}{%
-           family={Poeppel},
-           familyi={P\bibinitperiod},
-           given={David},
-           giveni={D\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{60b9700a362ff1927be369ab4478a554}
-      \strng{fullhash}{818756386a82866fd7188e946b7faa83}
-      \strng{bibnamehash}{60b9700a362ff1927be369ab4478a554}
-      \strng{authorbibnamehash}{60b9700a362ff1927be369ab4478a554}
-      \strng{authornamehash}{60b9700a362ff1927be369ab4478a554}
-      \strng{authorfullhash}{818756386a82866fd7188e946b7faa83}
-      \field{sortinit}{K}
-      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{There are ever more compelling tools available for neuroscience research, ranging from selective genetic targeting to optogenetic circuit control to mapping whole connectomes. These approaches are coupled with a deep-seated, often tacit, belief in the reductionist program for understanding the link between the brain and behavior. The aim of this program is causal explanation through neural manipulations that allow testing of necessity and sufficiency claims. We argue, however, that another equally important approach seeks an alternative form of understanding through careful theoretical and experimental decomposition of behavior. Specifically, the detailed analysis of tasks and of the behavior they elicit is best suited for discovering component processes and their underlying algorithms. In most cases, we argue that study of the neural implementation of behavior is best investigated after such behavioral work. Thus, we advocate a more pluralistic notion of neuroscience when it comes to the brain-behavior relationship: behavioral work provides understanding, whereas neural interventions test causality.}
-      \field{issn}{0896-6273}
-      \field{journaltitle}{Neuron}
-      \field{number}{3}
-      \field{title}{Neuroscience Needs Behavior: Correcting a Reductionist Bias}
-      \field{volume}{93}
-      \field{year}{2017}
-      \field{pages}{480\bibrangedash 490}
-      \range{pages}{11}
-      \verb{doi}
-      \verb https://doi.org/10.1016/j.neuron.2016.12.041
-      \endverb
-      \verb{urlraw}
-      \verb https://www.sciencedirect.com/science/article/pii/S0896627316310406
-      \endverb
-      \verb{url}
-      \verb https://www.sciencedirect.com/science/article/pii/S0896627316310406
       \endverb
     \endentry
     \entry{Kunzendorf2019-vz}{article}{}
@@ -954,86 +912,6 @@
       \field{pages}{1171}
       \range{pages}{1}
       \keyw{RT transformations; additive factors; generalized linear mixed-effect models; interaction effects; mental chronometry}
-    \endentry
-    \entry{Mahoney2019-yq}{article}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=2ddf844195680edceb29c99a9660905d}{%
-           family={Mahoney},
-           familyi={M\bibinitperiod},
-           given={Jeannette\bibnamedelima R},
-           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=7d98d88bbdd071dffc29bb0d39079f58}{%
-           family={Verghese},
-           familyi={V\bibinitperiod},
-           given={Joe},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{language}{1}{%
-        {en}%
-      }
-      \list{location}{1}{%
-        {United States}%
-      }
-      \strng{namehash}{657e84d34277a5eb2b52ab1aac308875}
-      \strng{fullhash}{657e84d34277a5eb2b52ab1aac308875}
-      \strng{bibnamehash}{657e84d34277a5eb2b52ab1aac308875}
-      \strng{authorbibnamehash}{657e84d34277a5eb2b52ab1aac308875}
-      \strng{authornamehash}{657e84d34277a5eb2b52ab1aac308875}
-      \strng{authorfullhash}{657e84d34277a5eb2b52ab1aac308875}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Multisensory integration research investigates how the brain processes simultaneous sensory information. Research on animals (mainly cats and primates) and humans reveal that intact multisensory integration is crucial for functioning in the real world, including both cognitive and physical activities. Much of the research conducted over the past several decades documents multisensory integration effects using diverse psychophysical, electrophysiological, and neuroimaging techniques. While its presence has been reported, the methods used to determine the magnitude of multisensory integration effects varies and typically faces much criticism. In what follows, limitations of previous behavioral studies are outlined and a step-by-step tutorial for calculating the magnitude of multisensory integration effects using robust probability models is provided.}
-      \field{journaltitle}{J Vis Exp}
-      \field{month}{5}
-      \field{number}{147}
-      \field{title}{Using the Race Model Inequality to Quantify Behavioral Multisensory Integration Effects}
-      \field{year}{2019}
-    \endentry
-    \entry{MILLER1982247}{article}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=c65a46371327e1f400d89362f8d27fa6}{%
-           family={Miller},
-           familyi={M\bibinitperiod},
-           given={Jeff},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{c65a46371327e1f400d89362f8d27fa6}
-      \strng{fullhash}{c65a46371327e1f400d89362f8d27fa6}
-      \strng{bibnamehash}{c65a46371327e1f400d89362f8d27fa6}
-      \strng{authorbibnamehash}{c65a46371327e1f400d89362f8d27fa6}
-      \strng{authornamehash}{c65a46371327e1f400d89362f8d27fa6}
-      \strng{authorfullhash}{c65a46371327e1f400d89362f8d27fa6}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Many models of divided attention assume that signals presented on different channels produce separate activations, any one of which can initiate a response. According to these models, detection responses are especially fast when signals are presented on two channels at the same time because the system can detect a signal in either of two ways. Such models predict a testable relation among reaction time distributions for conditions in which a single signal is presented as compared with a condition in which two signals are presented, and this prediction is tested in two tasks. A bimodal detection task required a simple speeded response to either a visual or an auditory signal. A letter search task required a choice response depending on whether or not a two-letter display included the signal letter “A.” Data from both tasks are inconsistent with the prediction. When two signals are presented, responses are faster than separate-activation models can explain. The results favor “coactivation” models, in which signals presented on different channels contribute to a common pool of activation that initiates a response.}
-      \field{issn}{0010-0285}
-      \field{journaltitle}{Cognitive Psychology}
-      \field{number}{2}
-      \field{title}{Divided attention: Evidence for coactivation with redundant signals}
-      \field{volume}{14}
-      \field{year}{1982}
-      \field{pages}{247\bibrangedash 279}
-      \range{pages}{33}
-      \verb{doi}
-      \verb https://doi.org/10.1016/0010-0285(82)90010-X
-      \endverb
-      \verb{urlraw}
-      \verb https://www.sciencedirect.com/science/article/pii/001002858290010X
-      \endverb
-      \verb{url}
-      \verb https://www.sciencedirect.com/science/article/pii/001002858290010X
-      \endverb
     \endentry
     \entry{TimsECG}{inproceedings}{}
       \name{author}{4}{}{%
@@ -1208,46 +1086,6 @@
       \endverb
       \keyw{Ecological psychology,Ecological validity,Experimental design,Generalizability,Naturalistic stimuli,Representative design}
     \endentry
-    \entry{Proske2012ThePS}{article}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=79bad4ccae4d07e4e8d74940be6cef3b}{%
-           family={Proske},
-           familyi={P\bibinitperiod},
-           given={Uwe},
-           giveni={U\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=7566292ff35f2889f74e4484a0281324}{%
-           family={Gandevia},
-           familyi={G\bibinitperiod},
-           given={Simon\bibnamedelima C.},
-           giveni={S\bibinitperiod\bibinitdelim C\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{0f5d6eeb16fab3329a9dd77bd899b3a9}
-      \strng{fullhash}{0f5d6eeb16fab3329a9dd77bd899b3a9}
-      \strng{bibnamehash}{0f5d6eeb16fab3329a9dd77bd899b3a9}
-      \strng{authorbibnamehash}{0f5d6eeb16fab3329a9dd77bd899b3a9}
-      \strng{authornamehash}{0f5d6eeb16fab3329a9dd77bd899b3a9}
-      \strng{authorfullhash}{0f5d6eeb16fab3329a9dd77bd899b3a9}
-      \field{sortinit}{P}
-      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Physiological reviews}
-      \field{title}{The proprioceptive senses: their roles in signaling body shape, body position and movement, and muscle force.}
-      \field{volume}{92 4}
-      \field{year}{2012}
-      \field{pages}{1651\bibrangedash 97}
-      \range{pages}{47}
-      \verb{urlraw}
-      \verb https://api.semanticscholar.org/CorpusID:1512089
-      \endverb
-      \verb{url}
-      \verb https://api.semanticscholar.org/CorpusID:1512089
-      \endverb
-    \endentry
     \entry{SALTAFOSSI2023108642}{article}{}
       \name{author}{5}{}{%
         {{un=0,uniquepart=base,hash=dbce7afabed97ed9c494eac5102c50b6}{%
@@ -1350,38 +1188,6 @@
       \verb{url}
       \verb https://api.semanticscholar.org/CorpusID:19179383
       \endverb
-    \endentry
-    \entry{schmuckler2001ecological}{article}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=cbec6a652df2b7be1485282ec81464a4}{%
-           family={Schmuckler},
-           familyi={S\bibinitperiod},
-           given={Mark\bibnamedelima A},
-           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {Wiley Online Library}%
-      }
-      \strng{namehash}{cbec6a652df2b7be1485282ec81464a4}
-      \strng{fullhash}{cbec6a652df2b7be1485282ec81464a4}
-      \strng{bibnamehash}{cbec6a652df2b7be1485282ec81464a4}
-      \strng{authorbibnamehash}{cbec6a652df2b7be1485282ec81464a4}
-      \strng{authornamehash}{cbec6a652df2b7be1485282ec81464a4}
-      \strng{authorfullhash}{cbec6a652df2b7be1485282ec81464a4}
-      \field{sortinit}{S}
-      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Infancy}
-      \field{number}{4}
-      \field{title}{What is ecological validity? A dimensional analysis}
-      \field{volume}{2}
-      \field{year}{2001}
-      \field{pages}{419\bibrangedash 436}
-      \range{pages}{18}
     \endentry
     \entry{RSE_FBI}{article}{}
       \name{author}{3}{}{%
