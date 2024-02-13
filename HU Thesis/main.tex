@@ -17,9 +17,11 @@
 \usepackage{caption}
 \usepackage{float}
 \usepackage{xcolor}
+
 \usepackage[style=authoryear,backend=biber]{biblatex}
 \addbibresource{bibliog.bib}
 \usepackage[colorlinks=true,linkcolor=black,anchorcolor=black,citecolor=black,filecolor=black,menucolor=black,runcolor=black,urlcolor=black]{hyperref}\usepackage{graphicx}
+\usepackage{adjustbox}
 \geometry{
   a4paper,
   left=20mm,
@@ -179,8 +181,7 @@ The VR setup included a HTC Vive head-mounted display (HMD) with two lighthouses
 This device was used to track the position of the hands. The Leap Motion Controller has a field of view of 150x120 degrees, with a variable range of roughly 80 cm (arm's length). It weighs 32 grams and is mounted on the HMD. The device features two 640x240 infrared cameras with a frame rate of 120 fps.
 
 \subsubsection*{Data Gloves:}
-The data gloves used in the study are equipped with magnetic sensors and connected to Unity using a microUSB connection. These gloves provide haptic feedback through 10 vibrotactile actuators, offering a wide range of tactile sensations with 1,024 levels of intensity. The gloves also incorporate complete finger tracking using six 9-axis Inertial Measurement Units (IMUs). These IMUs enable precise tracking of finger movements, allowing for accurate gesture recognition and enhanced interaction in virtual environments. The datagloves were  interfaced from the experimental code using the Unity plugin hmd-eyes (Pupil Labs, 2016/2019) and the Pupil software193
-(Pupil Labs, 2013/2019; Kassner et al., 2014
+The data gloves used in the study are equipped with magnetic sensors and connected to Unity using a microUSB connection. These gloves provide haptic feedback through 10 vibrotactile actuators, offering a wide range of tactile sensations with 1,024 levels of intensity. The gloves also incorporate complete finger tracking using six 9-axis Inertial Measurement Units (IMUs). These IMUs enable precise tracking of finger movements, allowing for accurate gesture recognition and enhanced interaction in virtual environments. The datagloves and finger tracking were interfaced from the experimental code using the UnityDll.Motion and c\# NeuroDigital licensed code (NeuroDigital Technologies, 2018).
 
 
 \subsection*{Task}
@@ -193,9 +194,11 @@ In the following I describe all task performed by participants. It's important t
 
 \textbf{IVR Memory-Motor Task:} 
 After completing the initial questionnaires and HCT, participants moved to another room where the IVR equipment was set up. As mentioned this included a head-mounted display, data gloves, and an ECG device. 
+For the implementation of the experiment, we used the Unity software (v2018.3.11; Unity Technologies, San Francisco, United States)  in combination with the SteamVR Unity plugin (Valve Corporation, Bellevue, United States). To synchronize the data streams (i.e., behavioral reports, hand positions, fingers positions,ECG), we used custom C\# scripts and network-based communication (i.e., timestamps). 
 
-The virtual environment simulated a retangular office with a window. 
-To synchronize the data streams (i.e., behavioral reports, hand positions, fingers positions,ECG), we used custom C\# scripts and network-based communication (i.e., timestamps). 
+The tactile stimuli was an activation of all 10 vibrotactile actuators for 100 ms. The intensity of a vibrotactile pulse used in haptic feedback ranges from 0.0 to 1.0. The set intensity for the program was of 0,2 as coded in Unity Game Engine. All levels had a maximal time of 2 minutes but all participants finished levels before tha cap time by placing the ball before. The parameters, types, and spatial aspects of haptic feedback are configurable, allowing for a versatile setup suitable for psychophysical studies.
+
+The virtual environment simulated a retangular office with a window. Participants appeared sitted in front of a table. With an initial prompt indicating them to  place their hands over the table. 
 
 In Figure \ref{fig:looks}, two panels are depicted. On the left side of the figure (Panel I), we observe the external view of a participant wearing the head device, ready to commence the IVR Memory-Motor Task. Panel II on the right side of the figure showcases four out of the five steps participants undergo when initiating a trial set. These steps are outlined below:
 
@@ -203,24 +206,24 @@ In Figure \ref{fig:looks}, two panels are depicted. On the left side of the figu
 \begin{enumerate}
     \item[\textbf{a.}] Participants stand in front of a virtual table, allowing ample time to acclimate to the virtual environment, as depicted in Figure \ref{fig:looks}. When they feel prepared, the session commences as they calibrate by placing their hands on the virtual table.
 
-    \item[\textbf{b.}] Prior to each trial within every set, a new calibration process begins. Participants place their palms facing up within the shadowed hands, ensuring standardized positioning. Refer to Figure \ref{fig:looks} (b) for the calibration setup.
+    \item[\textbf{b.}] Prior to each trial within every set, a new calibration process begins. Participants place their palms facing up within the shadowed hands, ensuring standardized positioning. Refer to Figure \ref{fig:looks}b for the calibration setup.
     
-    \item[\textbf{c.}] Once the calibration is complete, a two-dimensional sketch appears in front of them (Figure \ref{fig:looks} (c)), prompting them to memorize the red ball's position. Participants then observe a template on the table, resembling the initial sketch they memorized. Their task is to place the ball swiftly and accurately in the correct location on the template. In the memory-sketch, the relevant position of the ball is denoted by the red circle. During this phase, participants keep their virtual hands open with palms facing up.
+    \item[\textbf{c.}] Once the calibration is complete, a two-dimensional sketch appears in front of them (Figure \ref{fig:looks}c), prompting them to memorize the red ball's position. Participants then observe a template on the table, resembling the initial sketch they memorized. Their task is to place the ball swiftly and accurately in the correct location on the template. In the memory-sketch, the relevant position of the ball is denoted by the red circle. During this phase, participants keep their virtual hands open with palms facing up.
     
-    \item[\textbf{d.}] As soon as the memory-sketch disappears, a red ball appears in either the left or right hand of the participants. Simultaneously, a vibration could start in the glove. The vibration may or may not match the visual location of the red ball. If the vibrating hand matches the visual location of the ball, the condition is congruent ($V=T$). If the vibrating hand does not match the visual location of the ball, then the trial is incongruent ($V \neq T$). If there is no vibration at all, the condition is purely visual ($V$).
+    \item[\textbf{d.}] As soon as the memory-sketch disappears, a red ball appears in either the left or right hand of the participants. Simultaneously, a vibration could start in the glove. The vibration may or may not match the visual location of the red ball. If the vibrating hand matches the visual location of the ball,  the visual condition matches the tactile condition (V = T) and therefore the trail is congruent. If the vibrating hand does not match the visual location of the ball, then the visual condition does not match the tactile condition and the trial is incongruent ($V \neq T$). If there is no vibration at all, the trail condition is purely visual ($V$).
    
     \item[\textbf{e.}] After placing the ball on the template, the ball and template disappear. The whole process from (b) to (e) repeats.
 \end{enumerate}
 
-The tactile stimuli was an activation of all 10 vibrotactile actuators for 100 ms. The intensity of a vibrotactile pulse used in haptic feedback ranges from 0.0 to 1.0. The set intensity for the program was of 0,2 as coded in Unity Game Engine. All levels had a maximal time of 2 minutes but all participants finished levels before tha cap time by placing the ball before. The parameters, types, and spatial aspects of haptic feedback are configurable, allowing for a versatile setup suitable for psychophysical studies.
+
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=15cm]{/home/perdices/Dokumente/Github/m-b_thesis/HU Thesis/figures/design_ilustration2.png}
+    \includegraphics[width=15cm]{/home/perdices/Dokumente/Github/m-b_thesis/HU Thesis/figures/set_up_design.png}
     \put(-420,240){\textbf{I}} % Adjust (-20,340) to position "I" label as desired
     \put(-320,240){\textbf{II}} % Adjust (360,340) to position "II" label as desired
     \captionsetup{justification=justified, margin={2cm,2cm}, font={small}}
-    \caption{Illustration of the IVR Memory-Motor Task: Panel I show a participant wearing equipment. Panel II shows step (a) represents the acclimation period during initial setup and first step calibration; (b) showcases the first-person perspective of the second calibration phase; (c) displays the 2D sketch for memorizing ball position; (d) presents the appearance of the ball and the 3D template for ball placement, marking the beginning of each trial.}
+    \caption{Illustration of the IVR Memory-Motor Task: Panel I shows a participant wearing equipment. Panel II shows step (a) represents the acclimation period during initial setup and first step calibration; (b) showcases the first-person perspective of the second calibration phase; (c) displays the 2D sketch for memorizing ball position; (d) presents the appearance of the ball and the 3D template for ball placement, marking the beginning of each trial.}
     \label{fig:looks}
 \end{figure}
  
@@ -229,32 +232,32 @@ In a sequence of 105 trials, three conditions—congruent ($V=T$), incongruent (
 Given that an IVR task inherently involves proprioceptive signals, all conditions in the experiment integrate these signals and are thus multimodal. Consequently, the 'visual only' condition doesn't align with the unimodal classification commonly used in psychophysics literature. Nonetheless, for the sake of easier comparison to this literature in this thesis, I will refer to it as unimodal, and the congruent and incongruent conditions as bimodal.
 
 
-\subsection*{Mesurements}
+\subsection*{Measures}
 \subsubsection*{Immersive Virtual Reality (VR):}
 
-Movement data from the data gloves, Leap Motion device, and the HMD was collected. For movement analysis, only the wrist movements tracked by the Leap Motion device were considered, excluding the fingertips' magnetic tracking sensor data. All movements were recorded in a Euclidean coordinate system (X, Y, Z) with the original calibrating point set at (0, 0, 0). This provided a total of nine streaming sources of data (e.g., Headset X, Headset Y, Headset Z, and so on). Notably, rotational data was not included in the analysis.
+Movement data from 3 devices was recorded (data gloves, Leap Motion device, and the HMD was collected). For movement analysis, only the wrist movements tracked by the Leap Motion device were considered, excluding the fingertips' magnetic tracking sensor data. All movements were recorded in an Euclidean coordinate system (X, Y, Z) with the original calibrating point set at (0, 0, 0). As each device had three coordinates, this provided a total of nine streaming sources of data (e.g., Headset X, Headset Y, Headset Z, and so on). Additionally, rotational data was recorded. Both sources are not included in the analysis since at the moment it does not help to compare with the race inqeulaity model. 
 
-Additionally, in the game output data, there are flags that signal if a button was pressed, if the ball is placed in the holder, and when the trial started.
+Additionally, in the game output data, there are flags that signal if a button was pressed, if the ball is placed in the holder, and when the trial started. Trials where the error button was pressed were excluded from the analysis.
 
 \subsubsection*{Questionnaires:}
-Both of the described questionnaires are included in the appendix of this thesis for further reference. Questionaire validation is outside the scope of this thesis
+Both of the described questionnaires are included in the appendix of this thesis for further reference. Questionaire validation is outside the scope of this thesis:
 
 \begin{enumerate}
 \item[(i)] \textbf{Virtual Reality Subjective Evaluation Questionnaire:} This self-designed questionnaire comprises 26 items aimed at assessing the sense of reality experienced during the VR session. It explores factors like engagement level, hand movement, task difficulty, and other controlling aspects. Participants responded using a Likert scale rating them on a scale from 1 (Does Not Apply) to 7 (Totally Applies). The questions were organized in groups and inverted to confirm participants' responses. Both questionnaires can be found in the Appendix section.
 
-\item[(ii)] \textbf{PRE/POST-Cybersickness Questionnaire:} This study employs a shortened version of the simulator sickness questionnaire (SSQ) \parencite*{avpsy}. It utilizes a Likert scale ranging from one to four, featuring labels such as "not present," "somewhat," "clearly," and "very strongly." The questionnaire consists of 16 items, gauging symptoms like "fatigue" and "general discomfort," among others.
+\item[(ii)] \textbf{PRE/POST-Cybersickness Questionnaire:} This study employs a shortened version of the simulator sickness questionnaire \parencite{avpsy}. It utilizes a Likert scale ranging from one to four, featuring labels such as "not present," "somewhat," "clearly," and "very strongly." The questionnaire consists of 16 items, gauging symptoms like "fatigue" and "general discomfort," among others.
 \end{enumerate}
 
 \subsection*{Data Analysis}
 
-\subsubsection*{Questionnaire}
-The analysis of the questionnaire responses aimed to explore the impact of haptic gloves on reported immersion and related perceptions. Initially, the raw questionnaire data collected from 20 respondents, consisting of 27 questions rated on a scale from 1 to 7. Missing values were checked and handled appropriately, thus leaving us with 19. Statistical analysis included the calculation of descriptive statistics such as median ($\text{Mdn}$), mean ($\mu$), and standard deviation ($\sigma$) for each question. These statistics were instrumental in understanding the central tendencies and variability in respondents perceptions. A full view of all answers can be found in the Supplements section. 
+\subsubsection*{Virtual Reality Subjective Evaluation}
+The analysis of the questionnaire responses aimed to explore the impact of haptic gloves on reported immersion and related perceptions. Initially, the raw questionnaire data collected from 20 respondents, consisting of 27 questions rated on a scale from 1 to 7. Some participants did not answered all questions, thus creating missing values that were ommited. Statistical analysis included the calculation of descriptive statistics such as median ($\text{Mdn}$), mean ($\mu$), and standard deviation ($\sigma$) for each question. These statistics were instrumental in understanding the central tendencies and variability in respondents perceptions. A full view of all answers can be found in the Supplements section. 
 
 \subsubsection*{Response Time}
 
 All response times from the ball's entry into the scene until its disappearance were measured. Trials where the error button was pressed were excluded from the analysis. Prior to analysis, outliers were corrected by eliminating data points deviating more than 3 times the median absolute deviation (MAD), which is equivalent to 3 standard deviations assuming a normal distribution \parencite{Innes2019ACA}. Responses were not eliminated for being too fast; however, 13\% of trials were excluded due to excessive slowness. The final sample comprised 1826 response times (approximately 24 per condition per participant). Subsequent to the removal of outliers, the response times for each condition were transformed into rates (1/RT).
 
-The transformation method entails the inversion of the RT and aligns with prior studies \parencite{Innes2019ACA}. However, this transformation method is not exempt from criticism \parencite{Lo2015-fv}. This study prioritizes normality in error distribution over other factors such as property scale or interacting effects. This prioritization allowed for the direct application of repeated measures ANOVA within subjects. Yet, when the ANOVA results were ambiguous, a General Linear Mixed-Effect Model (GLMM) was additionally applied, as recommended \parencite{Lo2015-fv}. By using GLMM, instead of imposing normality and eliminating error deviation, we allow the use of distributions that match the properties of the measured RT \parencite{Lo2015-fv}. I utilized the \textit{statsmodels} statistical package in Python, specifically the \textit{mixedlm} function, similar to other studies \parencite{RSE_FBI}. Although this analysis is not present in the reference study, the utilization of GLMM aims to provide clarity regarding the significance of the conditions and the study's power.
+The transformation method entails the inversion of the RT and aligns with prior studies \parencite{Innes2019ACA}. However, this transformation method is not exempt from criticism \parencite{Lo2015-fv}. This study prioritizes normality in error distribution over other factors such as property scale or interacting effects. This prioritization allowed for the direct application of repeated measures ANOVA within subjects. Yet, when the ANOVA results were ambiguous, a General Linear Mixed-Effect Model (GLMM) was additionally applied, as recommended \textcite{Lo2015-fv}. By using GLMM, instead of imposing normality and eliminating error deviation, we allow the use of distributions that match the properties of the measured RT \parencite{Lo2015-fv}. I utilized the \textit{statsmodels} statistical package in Python, specifically the \textit{mixedlm} function, similar to other studies \parencite{RSE_FBI}. Although this analysis is not present in the reference study, the utilization of GLMM aims to provide clarity regarding the significance of the conditions and the study's power.
 
 \subsubsection*{Redundancy Signal Effect and Race Model Inequality}
 
@@ -281,7 +284,7 @@ To mimic the results from \Cite{SALTAFOSSI2023108642}, I conducted a series of t
 \section*{Results}
 \subsection*{Questionnaires}
  
-All participants were right-handed and exhibited a significant increase in reported sickness. A comparison between Pre and Post VR-Cybersickness Questionnaires indicated a rise in the average cybersickness among all experiment participants. Overall results leaned towards symptoms being "not present". We performed a paired-samples t-test to assess the cybersickness levels before (Pre) and after (Post) the Virtual Reality Experience. There was a significant difference in the scores between the Pre (M=1.10, SD=0.12) and Post (M=1.18, SD=0.19) conditions; $t(21)=-2.65$, $p = 0.015$. On average, the symptoms moved from "not present" to "somewhat present". 
+All participants were right-handed and exhibited a significant increase in reported sickness. Preliminary inspection indicated that participants registered in the average cybersickness. Overall results change from leaned towards symptoms being "not present". We performed a paired-samples t-test to assess the cybersickness levels before (Pre) and after (Post) the Virtual Reality Experience. There was a significant difference in the scores between the Pre (M=1.10, SD=0.12) and Post (M=1.18, SD=0.19) conditions; $t(21)=-2.65$, $p = 0.015$. On average, the symptoms moved from "not present" to "somewhat present". 
 
 \subsubsection*{Virtual Reality Subjective Evaluation Questionnaire}
 Nineteen respondents answered 27 questions, rating them on a scale from 1 (Does Not Apply) to 7 (Totally Applies). The key facts from the questionnaire are as follows:
@@ -322,36 +325,38 @@ Thus, the 'Congruent' condition demonstrated significantly faster performance co
 \subsubsection*{Race Model Inequeality}
 
 In this section, I utilize the Cumulative Distribution Function (CDF) from the Race Model Inequality (RMI) model to evaluate the significance of differences between conditions at different time points ($t$). The t-test conducted between the three experimental conditions revealed significant differences between the 'Congruent' and visual-only ($V=T$ ; $V$) conditions, but no significant differences emerged between the 'Congruent' and 'Incongruent' conditions ($V=T$ ; $V \neq T$). The results between $F_x$ and $F_z$ ($V$ ; $V=T$) are presented in Table \ref{tab:response-time-range}, which illustrates the results for all time frames and percentiles. Notably, significant differences emerged between $F_x$ and $F_y$ from the 16th percentile onwards. Interestingly, for this percentile (as depicted in Figure \ref{fig:CDF}), the single modality visual ($V$) appears to be faster than the bimodal incongruent condition ($V \neq T$), suggesting a potential violation of the Race-Specific Exclusion (RSE) principle. Conversely, from the 40th percentile onwards, both redundant signals consistently demonstrate faster response times compared to the unimodal signal, aligning with our expectations based on the RSE. It's important to note that when considering the distribution of all response times, the highest density is observed between 3100 and 3200 ms, accounting for 33\% of all response times.
- 
+
 \begin{table}[!ht]
     \centering
-    \begin{tabular}{ccccc}
+    \adjustbox{max width=\textwidth}{
+    \begin{tabular}{ccccccccc}
     \hline
-    \textbf{$F_x$ Time Range (ms)} & \textbf{$F_x$ Min Max Diff (ms)} & \textbf{Percentile Estimation} & \textbf{T-value} & \textbf{p-value} \\ \hline
-    (3070, 3621) & 551 & 10  & 1.19 & 0.12 \\
-    (3078, 3626) & 548 & 13 & 1.31 & 0.1  \\
-    (3084, 3648) & 564 & 16 & 1.88 & 0.04* \\
-    (3086, 3687) & 600 & 19 & 2.04 & 0.03* \\
-    (3087, 3708) & 621 & 20  & 2.01 & 0.03* \\
-    (3092, 3748) & 656 & 23 & 1.97 & 0.03* \\
-    (3094, 3760) & 665 & 26 & 2.06 & 0.03* \\
-    (3098, 3766) & 668 & 29 & 2.03 & 0.03* \\
-    (3099, 3768) & 668 & 30  & 2.02 & 0.03* \\
-    (3104, 3814) & 709 & 33 & 2.11 & 0.02* \\
-    (3106, 3838) & 732 & 36 & 2.08 & 0.03* \\
-    (3111, 3846) & 735 & 39 & 1.83 & 0.04* \\
-    (3114, 3848) & 734 & 40  & 1.79 & 0.04* \\
-    (3119, 3861) & 741 & 43 & 1.74 & 0.05* \\
-    (3121, 3907) & 786 & 46 & 1.55 & 0.07  \\
-    (3123, 3969) & 846 & 49 & 1.36 & 0.09  \\
-    (3124, 3978) & 855 & 50  & 1.33 & 0.1   \\
-    (3130, 4171) & 1041 & 60  & 1.25 & 0.11  \\
-    (3141, 4352) & 1211 & 70  & 1.21 & 0.12  \\
-    (3153, 4645) & 1492 & 80  & 1.47 & 0.08  \\
-    (3176, 4948) & 1772 & 90 & 0.53 & 0.3   \\ \hline
-    \end{tabular}
+    \textbf{Percentile Estimation} & \textbf{$F_z$ Time Range (ms)} & \textbf{$F_z$ Min Max Diff (ms)} & \textbf{$F_z$ T-value} & \textbf{$F_z$ p-value} & \textbf{$F_y$ Time Range (ms)} & \textbf{$F_y$ Min Max Diff (ms)} & \textbf{$F_y$ T-value} & \textbf{$F_y$ p-value}  \\ \hline
+    10 & (3070, 3621) & 551 & 1.19 & 0.12 & (3121, 3907) & 786 & 1.1 & 0.14 \\
+    13 & (3078, 3626) & 548 & 1.31 & 0.1 & (3123, 3969) & 846 & 0.79 & 0.22 \\
+    16 & (3084, 3648) & 564 & 1.88 & 0.04* & (3130, 4171) & 1041 & 0.92 & 0.18 \\
+    19 & (3086, 3687) & 600 & 2.04 & 0.03* & (3141, 4352) & 1211 & 0.96 & 0.18 \\
+    20 & (3087, 3708) & 621 & 2.01 & 0.03* & (3153, 4645) & 1492 & 0.96 & 0.17 \\
+    23 & (3092, 3748) & 656 & 1.97 & 0.03* & (3176, 4948) & 1772 & 0.99 & 0.17 \\
+    26 & (3094, 3760) & 665 & 2.06 & 0.03* & (3202, 5060) & 1857 & 1.04 & 0.16 \\
+    29 & (3098, 3766) & 668 & 2.03 & 0.03* & (3221, 5184) & 1963 & 1.33 & 0.1 \\
+    30 & (3099, 3768) & 668 & 2.02 & 0.03* & (3241, 5290) & 2049 & 1.34 & 0.1 \\
+    33 & (3104, 3814) & 709 & 2.11 & 0.02* & (3264, 5391) & 2127 & 1.02 & 0.16 \\
+    36 & (3106, 3838) & 732 & 2.08 & 0.03* & (3287, 5558) & 2271 & 0.95 & 0.18 \\
+    39 & (3111, 3846) & 735 & 1.83 & 0.04* & (3311, 5739) & 2427 & 1.13 & 0.14 \\
+    40 & (3114, 3848) & 734 & 1.79 & 0.04* & (3336, 5884) & 2548 & 1.19 & 0.12 \\
+    43 & (3119, 3861) & 741 & 1.74 & 0.05* & (3361, 6067) & 2706 & 1.16 & 0.13 \\
+    46 & (3121, 3907) & 786 & 1.55 & 0.07 & (3396, 6271) & 2946 & 0.85 & 0.2 \\
+    49 & (3123, 3969) & 846 & 1.36 & 0.09 & (3431, 6503) & 3181 & 0.48 & 0.32 \\
+    50 & (3124, 3978) & 855 & 1.33 & 0.1 & (3466, 6723) & 3421 & 0.29 & 0.39 \\
+    60 & (3130, 4171) & 1041 & 1.25 & 0.11 & (3499, 6989) & 3680 & 0.91 & 0.19 \\
+    70 & (3141, 4352) & 1211 & 1.21 & 0.12 & (3530, 7310) & 3939 & 0.4 & 0.35 \\
+    80 & (3153, 4645) & 1492 & 1.47 & 0.08 & (3560, 7674) & 4253 & -0.54 & 0.7 \\
+    90 & (3176, 4948) & 1772 & 0.53 & 0.3 & (3589, 8081) & 4632 & -0.27 & 0.61 \\ \hline
+    \end{tabular}}
     \captionsetup{justification=justified, margin={2cm,2cm}, font={small}}
-    \caption{T-test results between $F_x$ \& and $F_z$ conditions. Response Time Range (ms), Difference RT (ms), Percentile Estimation, T-value, and p-value for each Percentile using the results of t-tests. * indicates significant p-values.}
+    \caption{Let $G_x$ be the individual CDF estimate of the visual-only condition, and $F_y$ and $F_z$ denote the redun-
+    dant CDF for the incongruent and congruent conditions. Each row represents a percentile. Each t-test evaluates a significant difference compare to $G_x$, * indicates significant p-values.}
     \label{tab:response-time-range}
 \end{table}
 

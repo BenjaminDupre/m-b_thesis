@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.10.25)  5 FEB 2024 11:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.10.25)  13 FEB 2024 13:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -554,47 +554,90 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
 )
 \Hy@SectionHShift=\skip86
+) (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2020/08/19 v1.3 Adjusting TeX boxes (trim, clip, ...)
+ (/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
+ (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks30
+\XKV@tempa@toks=\toks31
 )
-\@quotelevel=\count424
-\@quotereset=\count425
+\XKV@depth=\count424
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)) (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back-ends (calc, etex, pgfmath)
+) (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/trimclip.sty
+Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
+ (/usr/share/texlive/texmf-dist/tex/latex/collectbox/collectbox.sty
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box59
+)
+\tc@llx=\dimen176
+\tc@lly=\dimen177
+\tc@urx=\dimen178
+\tc@ury=\dimen179
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+ (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen180
+\adjbox@Height=\dimen181
+\adjbox@Depth=\dimen182
+\adjbox@Totalheight=\dimen183
+\adjbox@pwidth=\dimen184
+\adjbox@pheight=\dimen185
+\adjbox@pdepth=\dimen186
+\adjbox@ptotalheight=\dimen187
+ (/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count425
+) (/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box60
+\sift@deathcycles=\count426
+\@vwid@loff=\dimen188
+\@vwid@roff=\dimen189
+))
+\@quotelevel=\count427
+\@quotereset=\count428
  (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count426
-\scratchdimen=\dimen176
-\scratchbox=\box59
-\nofMPsegments=\count427
-\nofMParguments=\count428
-\everyMPshowfont=\toks30
-\MPscratchCnt=\count429
-\MPscratchDim=\dimen177
-\MPnumerator=\count430
-\makeMPintoPDFobject=\count431
-\everyMPtoPDFconversion=\toks31
+\scratchcounter=\count429
+\scratchdimen=\dimen190
+\scratchbox=\box61
+\nofMPsegments=\count430
+\nofMParguments=\count431
+\everyMPshowfont=\toks32
+\MPscratchCnt=\count432
+\MPscratchDim=\dimen191
+\MPnumerator=\count433
+\makeMPintoPDFobject=\count434
+\everyMPtoPDFconversion=\toks33
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -655,9 +698,9 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 43.
-Package biblatex Info: Reference segment=0 on input line 43.
-Package hyperref Info: Link coloring ON on input line 43.
+Package biblatex Info: Reference section=0 on input line 45.
+Package biblatex Info: Reference segment=0 on input line 45.
+Package hyperref Info: Link coloring ON on input line 45.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
@@ -665,11 +708,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count432
+\c@section@level=\count435
 )
-LaTeX Info: Redefining \ref on input line 43.
-LaTeX Info: Redefining \pageref on input line 43.
-LaTeX Info: Redefining \nameref on input line 43.
+LaTeX Info: Redefining \ref on input line 45.
+LaTeX Info: Redefining \pageref on input line 45.
+LaTeX Info: Redefining \nameref on input line 45.
  (./main.out) (./main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
@@ -677,16 +720,16 @@ LaTeX Info: Redefining \nameref on input line 43.
 <Hu-logo.png, id=4, 1868.20795pt x 871.79243pt>
 File: Hu-logo.png Graphic file (type png)
 <use Hu-logo.png>
-Package pdftex.def Info: Hu-logo.png  used on input line 48.
+Package pdftex.def Info: Hu-logo.png  used on input line 50.
 (pdftex.def)             Requested size: 241.84843pt x 112.8448pt.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 23.63593pt on input line 51.
+(Font)              scaled to size 23.63593pt on input line 53.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 23.63593pt on input line 51.
+(Font)              scaled to size 23.63593pt on input line 53.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 19.70294pt on input line 53.
+(Font)              scaled to size 19.70294pt on input line 55.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 11.39996pt on input line 55.
+(Font)              scaled to size 11.39996pt on input line 57.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Hu-logo.png
@@ -694,89 +737,83 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 pdfTeX warning: pdflatex (file ./Hu-logo.png): large interlaced PNG might cause out of memory (use non-interlaced PNG to fix this)
 >]
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 16.41594pt on input line 79.
+(Font)              scaled to size 16.41594pt on input line 81.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 16.41594pt on input line 79.
+(Font)              scaled to size 16.41594pt on input line 81.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.85 \clearpage
+l.87 \clearpage
                 [1] [2
 
 ] [3] [4] [5]
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 13.67995pt on input line 156.
+(Font)              scaled to size 13.67995pt on input line 158.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 13.67995pt on input line 156.
-LaTeX Font Info:    Trying to load font information for TS1+phv on input line 157.
+(Font)              scaled to size 13.67995pt on input line 158.
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 159.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1phv.fd
 File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
 LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
-(Font)              scaled to size 11.39996pt on input line 157.
+(Font)              scaled to size 11.39996pt on input line 159.
  [6]
 </home/perdices/Dokumente/Github/m-b_thesis/HU Thesis/figures/participants.png, id=92, 686.565pt x 290.5254pt>
 File: /home/perdices/Dokumente/Github/m-b_thesis/HU Thesis/figures/participants.png Graphic file (type png)
 <use /home/perdices/Dokumente/Github/m-b_thesis/HU Thesis/figures/participants.png>
-Package pdftex.def Info: /home/perdices/Dokumente/Github/m-b_thesis/HU Thesis/figures/participants.png  used on input line 163.
+Package pdftex.def Info: /home/perdices/Dokumente/Github/m-b_thesis/HU Thesis/figures/participants.png  used on input line 165.
 (pdftex.def)             Requested size: 426.79134pt x 180.59822pt.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 10.40245pt on input line 165.
+(Font)              scaled to size 10.40245pt on input line 167.
  [7 </home/perdices/Dokumente/Github/m-b_thesis/HU Thesis/figures/participants.png>]
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 7.59998pt on input line 191.
+(Font)              scaled to size 7.59998pt on input line 193.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 9.49997pt on input line 191.
+(Font)              scaled to size 9.49997pt on input line 193.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 6.64998pt on input line 191.
-
-Overfull \hbox (12.4886pt too wide) in paragraph at lines 196--197
-[]\T1/phv/m/n/12 To syn-chro-nize the data streams (i.e., be-hav-ioral re-ports, hand po-si-tions, fin-gers po-si-tions,ECG),
- []
-
-[8]
-</home/perdices/Dokumente/Github/m-b_thesis/HU Thesis/figures/design_ilustration2.png, id=120, 539.01375pt x 304.13625pt>
-File: /home/perdices/Dokumente/Github/m-b_thesis/HU Thesis/figures/design_ilustration2.png Graphic file (type png)
-<use /home/perdices/Dokumente/Github/m-b_thesis/HU Thesis/figures/design_ilustration2.png>
-Package pdftex.def Info: /home/perdices/Dokumente/Github/m-b_thesis/HU Thesis/figures/design_ilustration2.png  used on input line 217.
-(pdftex.def)             Requested size: 426.79134pt x 240.81725pt.
- [9]
+(Font)              scaled to size 6.64998pt on input line 193.
+ [8]
+</home/perdices/Dokumente/Github/m-b_thesis/HU Thesis/figures/set_up_design.png, id=119, 540.51938pt x 301.8778pt>
+File: /home/perdices/Dokumente/Github/m-b_thesis/HU Thesis/figures/set_up_design.png Graphic file (type png)
+<use /home/perdices/Dokumente/Github/m-b_thesis/HU Thesis/figures/set_up_design.png>
+Package pdftex.def Info: /home/perdices/Dokumente/Github/m-b_thesis/HU Thesis/figures/set_up_design.png  used on input line 222.
+(pdftex.def)             Requested size: 426.79134pt x 238.36569pt.
+ [9] [10 </home/perdices/Dokumente/Github/m-b_thesis/HU Thesis/figures/set_up_design.png>]
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 5.69998pt on input line 249.
- [10 </home/perdices/Dokumente/Github/m-b_thesis/HU Thesis/figures/design_ilustration2.png>]
+(Font)              scaled to size 5.69998pt on input line 254.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 255.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 260.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 11.39996pt on input line 255.
+(Font)              scaled to size 11.39996pt on input line 260.
  [11] [12] [13]
-</home/perdices/Dokumente/Github/m-b_thesis/HU Thesis/figures/bar_erros_bars_stimulus_constructions.png, id=178, 855.6768pt x 277.5168pt>
+</home/perdices/Dokumente/Github/m-b_thesis/HU Thesis/figures/bar_erros_bars_stimulus_constructions.png, id=176, 855.6768pt x 277.5168pt>
 File: /home/perdices/Dokumente/Github/m-b_thesis/HU Thesis/figures/bar_erros_bars_stimulus_constructions.png Graphic file (type png)
 <use /home/perdices/Dokumente/Github/m-b_thesis/HU Thesis/figures/bar_erros_bars_stimulus_constructions.png>
-Package pdftex.def Info: /home/perdices/Dokumente/Github/m-b_thesis/HU Thesis/figures/bar_erros_bars_stimulus_constructions.png  used on input line 306.
+Package pdftex.def Info: /home/perdices/Dokumente/Github/m-b_thesis/HU Thesis/figures/bar_erros_bars_stimulus_constructions.png  used on input line 311.
 (pdftex.def)             Requested size: 426.79134pt x 138.41928pt.
  [14 </home/perdices/Dokumente/Github/m-b_thesis/HU Thesis/figures/bar_erros_bars_stimulus_constructions.png>]
-</home/perdices/Dokumente/Github/m-b_thesis/HU Thesis/figures/CDF.png, id=192, 1000.2168pt x 633.0852pt>
+</home/perdices/Dokumente/Github/m-b_thesis/HU Thesis/figures/CDF.png, id=191, 1000.2168pt x 633.0852pt>
 File: /home/perdices/Dokumente/Github/m-b_thesis/HU Thesis/figures/CDF.png Graphic file (type png)
 <use /home/perdices/Dokumente/Github/m-b_thesis/HU Thesis/figures/CDF.png>
-Package pdftex.def Info: /home/perdices/Dokumente/Github/m-b_thesis/HU Thesis/figures/CDF.png  used on input line 359.
+Package pdftex.def Info: /home/perdices/Dokumente/Github/m-b_thesis/HU Thesis/figures/CDF.png  used on input line 366.
 (pdftex.def)             Requested size: 483.69687pt x 306.15723pt.
  [15] [16 </home/perdices/Dokumente/Github/m-b_thesis/HU Thesis/figures/CDF.png>] [17] [18]
 </home/perdices/Dokumente/Github/m-b_thesis/HU Thesis/figures/questionaire_fig.png, id=218, 1657.1511pt x 705.3552pt>
 File: /home/perdices/Dokumente/Github/m-b_thesis/HU Thesis/figures/questionaire_fig.png Graphic file (type png)
 <use /home/perdices/Dokumente/Github/m-b_thesis/HU Thesis/figures/questionaire_fig.png>
-Package pdftex.def Info: /home/perdices/Dokumente/Github/m-b_thesis/HU Thesis/figures/questionaire_fig.png  used on input line 392.
+Package pdftex.def Info: /home/perdices/Dokumente/Github/m-b_thesis/HU Thesis/figures/questionaire_fig.png  used on input line 399.
 (pdftex.def)             Requested size: 1657.14705pt x 705.35347pt.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 403.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 410.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 9.49997pt on input line 403.
+(Font)              scaled to size 9.49997pt on input line 410.
 LaTeX Font Info:    Font shape `T1/phv/m/sc' will be
-(Font)              scaled to size 9.49997pt on input line 403.
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 403.
+(Font)              scaled to size 9.49997pt on input line 410.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 410.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-Overfull \hbox (25.79654pt too wide) in paragraph at lines 403--403
+Overfull \hbox (25.79654pt too wide) in paragraph at lines 410--410
 \T1/phv/m/n/10 Sick-ness''. In: \T1/phv/m/sl/10 The In-ter-na-tional Jour-nal of Avi-a-tion Psy-chol-ogy \T1/phv/m/n/10 3.3, pp. 203^^U220. \T1/phv/m/sc/10 doi\T1/phv/m/n/10 : [][]$\T1/cmtt/m/n/10 10 . 1207 / s15327108ijap0303 \
  []
 
@@ -788,15 +825,15 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 20269 strings out of 478287
- 357720 string characters out of 5849288
- 1070861 words of memory out of 5000000
- 38129 multiletter control sequences out of 15000+600000
+ 21397 strings out of 478287
+ 378327 string characters out of 5849288
+ 1099845 words of memory out of 5000000
+ 39223 multiletter control sequences out of 15000+600000
  520139 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,9n,77p,2002b,1537s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 67i,9n,77p,2002b,1544s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (23 pages, 1365937 bytes).
+Output written on main.pdf (23 pages, 1473792 bytes).
 PDF statistics:
  373 PDF objects out of 1000 (max. 8388607)
  309 compressed objects within 4 object streams
