@@ -11,7 +11,7 @@
 \usepackage{graphicx} % Add the graphicx package for including images
 \usepackage{geometry}
 \usepackage{amsmath} % Add this line to your LaTeX preamble to use \text
-
+\usepackage{changepage}
 \usepackage{pdfpages}
 \usepackage{afterpage}
 \usepackage{caption}
@@ -78,11 +78,17 @@
 
 \newpage
 %\thispagestyle{empty}
-\section*{Acknowledgments}
+\section*{\centering Acknowledgments}
 
-I would like thank to Michael Geabler and Arno Villringer for their support in making this thesis possible. To Max Hellrigel-Holderbaum for his editing and references, Zaynep Akbal and Tim Julian Möller for their knowledge and time and making this study possible. 
+\begin{adjustwidth}{1cm}{1cm}
+%\begin{center}
 
-This thesis was made possible through the support of Max-Plank Institute by Zaynep Akbal and Arno Villringer (NRO-228), Study-DB (0218807).
+    I would like to express my sincere gratitude to Dr Michael Geabler and Prof. Dr Arno Villringer for their advice and support in making this thesis possible. Many thanks to Max Hellrigel-Holderbaum for his friendly editing and references, as well as to Zaynep Akbal and Tim Julian Möller for generously sharing their expertise and time.
+
+    I am deeply grateful for the support provided by the Max-Plank Institute, specifically from Zeynep Akbal and Arno Villringer (NRO-228), and Study-DB (0218807).
+    
+%\end{center}
+\end{adjustwidth}
 
 \clearpage
 
