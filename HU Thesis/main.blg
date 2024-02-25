@@ -1,17 +1,17 @@
 [0] Config.pm:307> INFO - This is Biber 2.17
 [0] Config.pm:310> INFO - Logfile is 'main.blg'
-[72] biber:340> INFO - === Do Feb 22, 2024, 15:46:50
-[84] Biber.pm:418> INFO - Reading 'main.bcf'
-[143] Biber.pm:972> INFO - Found 16 citekeys in bib section 0
-[154] Biber.pm:4383> INFO - Processing section 0
-[163] Biber.pm:4574> INFO - Looking for bibtex file 'bibliog.bib' for section 0
+[74] biber:340> INFO - === So Feb 25, 2024, 16:03:11
+[85] Biber.pm:418> INFO - Reading 'main.bcf'
+[143] Biber.pm:972> INFO - Found 18 citekeys in bib section 0
+[153] Biber.pm:4383> INFO - Processing section 0
+[161] Biber.pm:4574> INFO - Looking for bibtex file 'bibliog.bib' for section 0
 [167] bibtex.pm:1713> INFO - LaTeX decoding ...
-[222] bibtex.pm:1518> INFO - Found BibTeX data source 'bibliog.bib'
-[365] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[365] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[365] Biber.pm:4203> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
-[365] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
-[388] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[406] bbl.pm:757> INFO - Output to main.bbl
-[406] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_OX0M/154047b50563e9fe3dc07153ccf06cae_11946.utf8, line 486, warning: 3 characters of junk seen at toplevel
-[406] Biber.pm:132> INFO - WARNINGS: 1
+[225] bibtex.pm:1518> INFO - Found BibTeX data source 'bibliog.bib'
+[372] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[372] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[372] Biber.pm:4203> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[372] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[389] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[404] bbl.pm:757> INFO - Output to main.bbl
+[404] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_trOx/154047b50563e9fe3dc07153ccf06cae_17675.utf8, line 502, warning: 3 characters of junk seen at toplevel
+[404] Biber.pm:132> INFO - WARNINGS: 1
