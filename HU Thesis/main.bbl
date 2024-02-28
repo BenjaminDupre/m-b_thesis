@@ -208,129 +208,66 @@
       \verb https://doi.org/10.1207/s15327108ijap0303_3
       \endverb
     \endentry
-    \entry{Kisker2024InducedOB}{article}{}
-      \name{author}{5}{}{%
-        {{un=0,uniquepart=base,hash=65707e99a06700adb9347d0412493d73}{%
-           family={Kisker},
-           familyi={K\bibinitperiod},
-           given={Joanna},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=32cfa9fd8a0a763d3ae9f471bf02887b}{%
-           family={Johnsdorf},
-           familyi={J\bibinitperiod},
-           given={Marike},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=0d3474a121dd3b1de822b0ba8dfe991c}{%
-           family={Sagehorn},
-           familyi={S\bibinitperiod},
-           given={Merle},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=3471d0779b5e15c12f4780f8cf27ce7c}{%
-           family={Schöne},
-           familyi={S\bibinitperiod},
-           given={Benjamin},
-           giveni={B\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=57f998ec37009b5de582c83e8c1fa294}{%
-           family={Gruber},
-           familyi={G\bibinitperiod},
-           given={Thomas},
-           giveni={T\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{3a1395e7fe50cb7761c18607f194f793}
-      \strng{fullhash}{37b0be104a4077d12fde3b79552e3881}
-      \strng{bibnamehash}{3a1395e7fe50cb7761c18607f194f793}
-      \strng{authorbibnamehash}{3a1395e7fe50cb7761c18607f194f793}
-      \strng{authornamehash}{3a1395e7fe50cb7761c18607f194f793}
-      \strng{authorfullhash}{37b0be104a4077d12fde3b79552e3881}
-      \field{sortinit}{K}
-      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Experimental brain research}
-      \field{title}{Induced oscillatory brain responses under virtual reality conditions in the context of repetition priming.}
-      \field{year}{2024}
-      \verb{urlraw}
-      \verb https://api.semanticscholar.org/CorpusID:266931941
-      \endverb
-      \verb{url}
-      \verb https://api.semanticscholar.org/CorpusID:266931941
-      \endverb
-    \endentry
-    \entry{Klotzsche2023}{article}{}
+    \entry{Laurienti2003CrossmodalSP}{article}{}
       \name{author}{6}{}{%
-        {{un=0,uniquepart=base,hash=58f264448396164014fef8fe17c60219}{%
-           family={Klotzsche},
-           familyi={K\bibinitperiod},
-           given={Felix},
-           giveni={F\bibinitperiod},
+        {{un=0,uniquepart=base,hash=9b0999436ddf605d4fea7b63af2b5f7d}{%
+           family={Laurienti},
+           familyi={L\bibinitperiod},
+           given={Paul\bibnamedelima J.},
+           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=f00128c3ab6c8d147c00d96e93f2c331}{%
-           family={Gaebler},
-           familyi={G\bibinitperiod},
-           given={Michael},
-           giveni={M\bibinitperiod},
+        {{un=0,uniquepart=base,hash=e559dd2f520f14fd083c6e61cd334445}{%
+           family={Wallace},
+           familyi={W\bibinitperiod},
+           given={Mark\bibnamedelima T.},
+           giveni={M\bibinitperiod\bibinitdelim T\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=c613692fc550ace0a952f7e3556e3ae8}{%
-           family={Villringer},
-           familyi={V\bibinitperiod},
-           given={Arno},
-           giveni={A\bibinitperiod},
+        {{un=0,uniquepart=base,hash=6c7c8c2393c2a64881c75f0ac3fbd1df}{%
+           family={Maldjian},
+           familyi={M\bibinitperiod},
+           given={Joseph\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=ae8629988b2b7b8ffb0717c610f9bff7}{%
-           family={Sommer},
+        {{un=0,uniquepart=base,hash=e8448349c12a31e1aa71f5509f5ac78b}{%
+           family={Susi},
            familyi={S\bibinitperiod},
-           given={Werner},
-           giveni={W\bibinitperiod},
+           given={Christina\bibnamedelima M.},
+           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=9e40a1bc2913bdee081db8d4767086b7}{%
-           family={Nikulin},
-           familyi={N\bibinitperiod},
-           given={Vadim},
-           giveni={V\bibinitperiod},
+        {{un=0,uniquepart=base,hash=ae8a850077a36244e57de12a604650ad}{%
+           family={Stein},
+           familyi={S\bibinitperiod},
+           given={Barry\bibnamedelima E.},
+           giveni={B\bibinitperiod\bibinitdelim E\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=5da9b7cf581eed12754fd722455ea767}{%
-           family={Ohl},
-           familyi={O\bibinitperiod},
-           given={Sven},
-           giveni={S\bibinitperiod},
+        {{un=0,uniquepart=base,hash=267ca1ca36ddf1f0e999e12255d1190b}{%
+           family={Burdette},
+           familyi={B\bibinitperiod},
+           given={Jonathan\bibnamedelima H.},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod},
            givenun=0}}%
       }
-      \list{publisher}{1}{%
-        {Cold Spring Harbor Laboratory}%
-      }
-      \strng{namehash}{61ea547803f2bb9d63670a1dc6173b04}
-      \strng{fullhash}{76a3ac0e91eb57752942e3336aa5a97f}
-      \strng{bibnamehash}{61ea547803f2bb9d63670a1dc6173b04}
-      \strng{authorbibnamehash}{61ea547803f2bb9d63670a1dc6173b04}
-      \strng{authornamehash}{61ea547803f2bb9d63670a1dc6173b04}
-      \strng{authorfullhash}{76a3ac0e91eb57752942e3336aa5a97f}
-      \field{sortinit}{K}
-      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \strng{namehash}{786482611cc23daeaf6cda0a24b170a2}
+      \strng{fullhash}{a5554bdeb914ca4ca29e8540096e9ebd}
+      \strng{bibnamehash}{786482611cc23daeaf6cda0a24b170a2}
+      \strng{authorbibnamehash}{786482611cc23daeaf6cda0a24b170a2}
+      \strng{authornamehash}{786482611cc23daeaf6cda0a24b170a2}
+      \strng{authorfullhash}{a5554bdeb914ca4ca29e8540096e9ebd}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{bioRxiv}
-      \field{title}{Visual short-term memory related EEG components in a virtual reality setup}
-      \field{year}{2023}
-      \verb{doi}
-      \verb 10.1101/2023.01.23.525140
-      \endverb
-      \verb{eprint}
-      \verb https://www.biorxiv.org/content/early/2023/01/23/2023.01.23.525140.full.pdf
-      \endverb
+      \field{journaltitle}{Human Brain Mapping}
+      \field{title}{Cross‐modal sensory processing in the anterior cingulate and medial prefrontal cortices}
+      \field{volume}{19}
+      \field{year}{2003}
       \verb{urlraw}
-      \verb https://www.biorxiv.org/content/early/2023/01/23/2023.01.23.525140
+      \verb https://api.semanticscholar.org/CorpusID:24621333
       \endverb
       \verb{url}
-      \verb https://www.biorxiv.org/content/early/2023/01/23/2023.01.23.525140
+      \verb https://api.semanticscholar.org/CorpusID:24621333
       \endverb
     \endentry
     \entry{Lo2015-fv}{article}{}
@@ -375,6 +312,46 @@
       \field{pages}{1171}
       \range{pages}{1}
       \keyw{RT transformations; additive factors; generalized linear mixed-effect models; interaction effects; mental chronometry}
+    \endentry
+    \entry{MILLER1982247}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c65a46371327e1f400d89362f8d27fa6}{%
+           family={Miller},
+           familyi={M\bibinitperiod},
+           given={Jeff},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c65a46371327e1f400d89362f8d27fa6}
+      \strng{fullhash}{c65a46371327e1f400d89362f8d27fa6}
+      \strng{bibnamehash}{c65a46371327e1f400d89362f8d27fa6}
+      \strng{authorbibnamehash}{c65a46371327e1f400d89362f8d27fa6}
+      \strng{authornamehash}{c65a46371327e1f400d89362f8d27fa6}
+      \strng{authorfullhash}{c65a46371327e1f400d89362f8d27fa6}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Many models of divided attention assume that signals presented on different channels produce separate activations, any one of which can initiate a response. According to these models, detection responses are especially fast when signals are presented on two channels at the same time because the system can detect a signal in either of two ways. Such models predict a testable relation among reaction time distributions for conditions in which a single signal is presented as compared with a condition in which two signals are presented, and this prediction is tested in two tasks. A bimodal detection task required a simple speeded response to either a visual or an auditory signal. A letter search task required a choice response depending on whether or not a two-letter display included the signal letter “A.” Data from both tasks are inconsistent with the prediction. When two signals are presented, responses are faster than separate-activation models can explain. The results favor “coactivation” models, in which signals presented on different channels contribute to a common pool of activation that initiates a response.}
+      \field{issn}{0010-0285}
+      \field{journaltitle}{Cognitive Psychology}
+      \field{number}{2}
+      \field{title}{Divided attention: Evidence for coactivation with redundant signals}
+      \field{volume}{14}
+      \field{year}{1982}
+      \field{pages}{247\bibrangedash 279}
+      \range{pages}{33}
+      \verb{doi}
+      \verb https://doi.org/10.1016/0010-0285(82)90010-X
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/001002858290010X
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/001002858290010X
+      \endverb
     \endentry
     \entry{TimsECG}{inproceedings}{}
       \name{author}{4}{}{%
@@ -423,58 +400,6 @@
       \verb{doi}
       \verb 10.1109/SPMB55497.2022.10014819
       \endverb
-    \endentry
-    \entry{NASTASE2020117254}{article}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=44b7414110af6e1cf597419b4e6ff95c}{%
-           family={Nastase},
-           familyi={N\bibinitperiod},
-           given={Samuel\bibnamedelima A.},
-           giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=3ddec04bc21069542450ec83e7db6766}{%
-           family={Goldstein},
-           familyi={G\bibinitperiod},
-           given={Ariel},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=9f8290b0c59d4aba9138f55107a580cd}{%
-           family={Hasson},
-           familyi={H\bibinitperiod},
-           given={Uri},
-           giveni={U\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{9e90476d1400f17f5a87a2d66285f0df}
-      \strng{fullhash}{9e90476d1400f17f5a87a2d66285f0df}
-      \strng{bibnamehash}{9e90476d1400f17f5a87a2d66285f0df}
-      \strng{authorbibnamehash}{9e90476d1400f17f5a87a2d66285f0df}
-      \strng{authornamehash}{9e90476d1400f17f5a87a2d66285f0df}
-      \strng{authorfullhash}{9e90476d1400f17f5a87a2d66285f0df}
-      \field{sortinit}{N}
-      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Naturalistic experimental paradigms in neuroimaging arose from a pressure to test the validity of models we derive from highly-controlled experiments in real-world contexts. In many cases, however, such efforts led to the realization that models developed under particular experimental manipulations failed to capture much variance outside the context of that manipulation. The critique of non-naturalistic experiments is not a recent development; it echoes a persistent and subversive thread in the history of modern psychology. The brain has evolved to guide behavior in a multidimensional world with many interacting variables. The assumption that artificially decoupling and manipulating these variables will lead to a satisfactory understanding of the brain may be untenable. We develop an argument for the primacy of naturalistic paradigms, and point to recent developments in machine learning as an example of the transformative power of relinquishing control. Naturalistic paradigms should not be deployed as an afterthought if we hope to build models of brain and behavior that extend beyond the laboratory into the real world.}
-      \field{issn}{1053-8119}
-      \field{journaltitle}{NeuroImage}
-      \field{title}{Keep it real: rethinking the primacy of experimental control in cognitive neuroscience}
-      \field{volume}{222}
-      \field{year}{2020}
-      \field{pages}{117254}
-      \range{pages}{1}
-      \verb{doi}
-      \verb https://doi.org/10.1016/j.neuroimage.2020.117254
-      \endverb
-      \verb{urlraw}
-      \verb https://www.sciencedirect.com/science/article/pii/S1053811920307400
-      \endverb
-      \verb{url}
-      \verb https://www.sciencedirect.com/science/article/pii/S1053811920307400
-      \endverb
-      \keyw{Ecological psychology,Ecological validity,Experimental design,Generalizability,Naturalistic stimuli,Representative design}
     \endentry
     \entry{SALTAFOSSI2023108642}{article}{}
       \name{author}{5}{}{%

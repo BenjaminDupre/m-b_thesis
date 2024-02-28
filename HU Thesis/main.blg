@@ -1,17 +1,17 @@
 [0] Config.pm:307> INFO - This is Biber 2.17
 [0] Config.pm:310> INFO - Logfile is 'main.blg'
-[76] biber:340> INFO - === Di Feb 27, 2024, 12:32:32
-[89] Biber.pm:418> INFO - Reading 'main.bcf'
-[155] Biber.pm:972> INFO - Found 19 citekeys in bib section 0
-[166] Biber.pm:4383> INFO - Processing section 0
-[177] Biber.pm:4574> INFO - Looking for bibtex file 'bibliog.bib' for section 0
-[182] bibtex.pm:1713> INFO - LaTeX decoding ...
-[246] bibtex.pm:1518> INFO - Found BibTeX data source 'bibliog.bib'
-[408] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[408] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[408] Biber.pm:4203> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
-[408] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
-[433] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[454] bbl.pm:757> INFO - Output to main.bbl
-[455] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_YdHX/154047b50563e9fe3dc07153ccf06cae_12284.utf8, line 522, warning: 3 characters of junk seen at toplevel
-[455] Biber.pm:132> INFO - WARNINGS: 1
+[71] biber:340> INFO - === Mi Feb 28, 2024, 18:28:11
+[82] Biber.pm:418> INFO - Reading 'main.bcf'
+[162] Biber.pm:972> INFO - Found 18 citekeys in bib section 0
+[174] Biber.pm:4383> INFO - Processing section 0
+[184] Biber.pm:4574> INFO - Looking for bibtex file 'bibliog.bib' for section 0
+[189] bibtex.pm:1713> INFO - LaTeX decoding ...
+[248] bibtex.pm:1518> INFO - Found BibTeX data source 'bibliog.bib'
+[383] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[383] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[383] Biber.pm:4203> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[383] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[400] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[413] bbl.pm:757> INFO - Output to main.bbl
+[413] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_vG23/154047b50563e9fe3dc07153ccf06cae_28825.utf8, line 540, warning: 3 characters of junk seen at toplevel
+[413] Biber.pm:132> INFO - WARNINGS: 1
