@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.10.25)  6 MAR 2024 15:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.10.25)  6 MAR 2024 15:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -828,20 +828,15 @@ Overfull \hbox (25.79654pt too wide) in paragraph at lines 386--386
 [17] [18] [19] [20 </home/perdices/Dokumente/Github/m-b_thesis/HU Thesis/figures/questionaire_fig.png>] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-
-
-Package biblatex Warning: Please rerun LaTeX.
-(biblatex)                Page breaks have changed.
-
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 21396 strings out of 478287
- 378050 string characters out of 5849288
- 1103270 words of memory out of 5000000
- 39224 multiletter control sequences out of 15000+600000
+ 21397 strings out of 478287
+ 378061 string characters out of 5849288
+ 1103275 words of memory out of 5000000
+ 39225 multiletter control sequences out of 15000+600000
  520139 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,9n,77p,2002b,1520s stack positions out of 5000i,500n,10000p,200000b,80000s
