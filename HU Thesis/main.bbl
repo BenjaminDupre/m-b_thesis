@@ -19,6 +19,32 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global}
+    \entry{nature_Ed}{article}{}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Virtual worlds are typically encountered through simulated visual and auditory perceptions. Incorporating touch can create more immersive experiences with a sense of agency.}
+      \field{issn}{2522-5839}
+      \field{journaltitle}{Nature Machine Intelligence}
+      \field{month}{6}
+      \field{number}{6}
+      \field{title}{A touch of virtual reality}
+      \field{volume}{5}
+      \field{year}{2023}
+      \field{pages}{557\bibrangedash 557}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1038/s42256-023-00686-6
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1038/s42256-023-00686-6
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1038/s42256-023-00686-6
+      \endverb
+    \endentry
     \entry{Diederich2004BimodalAT}{article}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=9b90d5de9be5c78215ccdd23bf58eba7}{%

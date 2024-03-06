@@ -1,17 +1,19 @@
 [0] Config.pm:307> INFO - This is Biber 2.17
 [0] Config.pm:310> INFO - Logfile is 'main.blg'
-[71] biber:340> INFO - === Mi Feb 28, 2024, 18:28:11
-[82] Biber.pm:418> INFO - Reading 'main.bcf'
-[162] Biber.pm:972> INFO - Found 18 citekeys in bib section 0
-[174] Biber.pm:4383> INFO - Processing section 0
-[184] Biber.pm:4574> INFO - Looking for bibtex file 'bibliog.bib' for section 0
-[189] bibtex.pm:1713> INFO - LaTeX decoding ...
-[248] bibtex.pm:1518> INFO - Found BibTeX data source 'bibliog.bib'
-[383] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[383] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[383] Biber.pm:4203> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
-[383] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
-[400] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[413] bbl.pm:757> INFO - Output to main.bbl
-[413] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_vG23/154047b50563e9fe3dc07153ccf06cae_28825.utf8, line 540, warning: 3 characters of junk seen at toplevel
-[413] Biber.pm:132> INFO - WARNINGS: 1
+[79] biber:340> INFO - === Mi Mär  6, 2024, 14:32:38
+[92] Biber.pm:418> INFO - Reading 'main.bcf'
+[160] Biber.pm:972> INFO - Found 19 citekeys in bib section 0
+[172] Biber.pm:4383> INFO - Processing section 0
+[183] Biber.pm:4574> INFO - Looking for bibtex file 'bibliog.bib' for section 0
+[187] bibtex.pm:1713> INFO - LaTeX decoding ...
+[268] bibtex.pm:1518> INFO - Found BibTeX data source 'bibliog.bib'
+[443] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[444] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[444] Biber.pm:4203> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[444] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[468] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[485] bbl.pm:757> INFO - Output to main.bbl
+[486] Biber.pm:130> WARN - legacy month field 'Jun' in entry 'nature_Ed' is not an integer - this will probably not sort properly.
+[486] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_UwVO/154047b50563e9fe3dc07153ccf06cae_14414.utf8, line 123, warning: 3 characters of junk seen at toplevel
+[486] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_UwVO/154047b50563e9fe3dc07153ccf06cae_14414.utf8, line 565, warning: 3 characters of junk seen at toplevel
+[486] Biber.pm:132> INFO - WARNINGS: 3
