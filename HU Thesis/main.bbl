@@ -339,6 +339,89 @@
       \range{pages}{1}
       \keyw{RT transformations; additive factors; generalized linear mixed-effect models; interaction effects; mental chronometry}
     \endentry
+    \entry{Marucci2021TheIO}{article}{}
+      \name{author}{9}{}{%
+        {{un=0,uniquepart=base,hash=d54da24738c4de5af89d533fffbfd93f}{%
+           family={Marucci},
+           familyi={M\bibinitperiod},
+           given={Matteo},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8101180f50b8d38b48ab36a18a197693}{%
+           family={Flumeri},
+           familyi={F\bibinitperiod},
+           given={Gianluca},
+           giveni={G\bibinitperiod},
+           givenun=0,
+           prefix={di},
+           prefixi={d\bibinitperiod},
+           prefixun=0}}%
+        {{un=0,uniquepart=base,hash=a30f60e6a3e66a2164f20e1799128f87}{%
+           family={Borghini},
+           familyi={B\bibinitperiod},
+           given={Gianluca},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=14d3a89e866845c487d68420acdbd4e5}{%
+           family={Sciaraffa},
+           familyi={S\bibinitperiod},
+           given={Nicolina},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=de926da87d5a5e2be514cf85f69012c3}{%
+           family={Scandola},
+           familyi={S\bibinitperiod},
+           given={Michele},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=82e6a16b4d7ae9f87e344c7abc3e63b3}{%
+           family={Pavone},
+           familyi={P\bibinitperiod},
+           given={Enea\bibnamedelima Francesco},
+           giveni={E\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8cd015ce7b0ef8498a4f8eb8fe2c6259}{%
+           family={Babiloni},
+           familyi={B\bibinitperiod},
+           given={Fabio},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e62a1a8df8097ceda2bc22dcef184527}{%
+           family={Betti},
+           familyi={B\bibinitperiod},
+           given={Viviana},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=556b3d6e619711a2821d3eb359e4786a}{%
+           family={Aricó},
+           familyi={A\bibinitperiod},
+           given={Pietro},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4743366b161abc173d3f7c870bcc8de2}
+      \strng{fullhash}{9a15cd56aed12ad175b42d7375d22be4}
+      \strng{bibnamehash}{4743366b161abc173d3f7c870bcc8de2}
+      \strng{authorbibnamehash}{4743366b161abc173d3f7c870bcc8de2}
+      \strng{authornamehash}{4743366b161abc173d3f7c870bcc8de2}
+      \strng{authorfullhash}{9a15cd56aed12ad175b42d7375d22be4}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Scientific Reports}
+      \field{title}{The impact of multisensory integration and perceptual load in virtual reality settings on performance, workload and presence}
+      \field{volume}{11}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://api.semanticscholar.org/CorpusID:232089107
+      \endverb
+      \verb{url}
+      \verb https://api.semanticscholar.org/CorpusID:232089107
+      \endverb
+    \endentry
     \entry{MILLER1982247}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=c65a46371327e1f400d89362f8d27fa6}{%
