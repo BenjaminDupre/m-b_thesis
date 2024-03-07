@@ -19,32 +19,6 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global}
-    \entry{nature_Ed}{article}{}
-      \field{sortinit}{A}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Virtual worlds are typically encountered through simulated visual and auditory perceptions. Incorporating touch can create more immersive experiences with a sense of agency.}
-      \field{issn}{2522-5839}
-      \field{journaltitle}{Nature Machine Intelligence}
-      \field{month}{6}
-      \field{number}{6}
-      \field{title}{A touch of virtual reality}
-      \field{volume}{5}
-      \field{year}{2023}
-      \field{pages}{557\bibrangedash 557}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.1038/s42256-023-00686-6
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1038/s42256-023-00686-6
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1038/s42256-023-00686-6
-      \endverb
-    \endentry
     \entry{Diederich2004BimodalAT}{article}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=9b90d5de9be5c78215ccdd23bf58eba7}{%
@@ -1007,6 +981,88 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.1371/journal.pone.0231152
+      \endverb
+    \endentry
+    \entry{Zhang2023ActiveMH}{article}{}
+      \name{author}{9}{}{%
+        {{un=0,uniquepart=base,hash=22c452a08aa34df3f1aa9092879b8174}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Zhuang},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b15c1c5e7156acb824c2a0fd0f39d5e0}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Zhenghao},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=60304d29bd49b3b0bfddde09641f9db0}{%
+           family={Emu},
+           familyi={E\bibinitperiod},
+           given={Luoqian},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=02e617e0d0bcf0cfcdbac9122b40c64c}{%
+           family={Wei},
+           familyi={W\bibinitperiod},
+           given={Pingdong},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9b714fca9d18068e636a8ad43f9fd873}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={S.-E.},
+           giveni={S\bibinithyphendelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=02ff1732e513da44b02885a6dfdcfd6f}{%
+           family={Zhai},
+           familyi={Z\bibinitperiod},
+           given={Zirui},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=836e63ff11dc2db7318b7eafc7aeddc8}{%
+           family={Kong},
+           familyi={K\bibinitperiod},
+           given={Lingyu},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=97ea4addef0a6948a5af2dcd3a97e675}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Yong},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2e8683bb210cbedf96fc44e41b244bf5}{%
+           family={Jiang},
+           familyi={J\bibinitperiod},
+           given={Hanqing},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{cadb87579fbed547e69e5719f80cf363}
+      \strng{fullhash}{7ad139ae2745e79b949e247f91a988fe}
+      \strng{bibnamehash}{cadb87579fbed547e69e5719f80cf363}
+      \strng{authorbibnamehash}{cadb87579fbed547e69e5719f80cf363}
+      \strng{authornamehash}{cadb87579fbed547e69e5719f80cf363}
+      \strng{authorfullhash}{7ad139ae2745e79b949e247f91a988fe}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature Machine Intelligence}
+      \field{title}{Active mechanical haptics with high-fidelity perceptions for immersive virtual reality}
+      \field{volume}{5}
+      \field{year}{2023}
+      \field{pages}{643\bibrangedash 655}
+      \range{pages}{13}
+      \verb{urlraw}
+      \verb https://api.semanticscholar.org/CorpusID:258973937
+      \endverb
+      \verb{url}
+      \verb https://api.semanticscholar.org/CorpusID:258973937
       \endverb
     \endentry
   \enddatalist

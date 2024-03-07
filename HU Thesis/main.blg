@@ -1,0 +1,17 @@
+[0] Config.pm:307> INFO - This is Biber 2.17
+[0] Config.pm:310> INFO - Logfile is 'main.blg'
+[70] biber:340> INFO - === Do Mär  7, 2024, 11:35:27
+[81] Biber.pm:418> INFO - Reading 'main.bcf'
+[137] Biber.pm:972> INFO - Found 20 citekeys in bib section 0
+[147] Biber.pm:4383> INFO - Processing section 0
+[156] Biber.pm:4574> INFO - Looking for bibtex file 'bibliog.bib' for section 0
+[162] bibtex.pm:1713> INFO - LaTeX decoding ...
+[242] bibtex.pm:1518> INFO - Found BibTeX data source 'bibliog.bib'
+[398] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[399] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[399] Biber.pm:4203> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[399] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[421] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[440] bbl.pm:757> INFO - Output to main.bbl
+[440] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_Nwth/154047b50563e9fe3dc07153ccf06cae_6945.utf8, line 560, warning: 3 characters of junk seen at toplevel
+[440] Biber.pm:132> INFO - WARNINGS: 1
